@@ -1,0 +1,1605 @@
+/* =========================================================
+   MONANGO ACADEMY
+   Formation & Développement des compétences
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES DE PAGE
+   ========================================================= */
+
+.m-academy-page {
+  --academy-couleur: #d4a72c;
+  --academy-couleur-foncee: #a67d12;
+  --academy-tint: rgb(212 167 44 / 8%);
+  --academy-tint-forte: rgb(212 167 44 / 14%);
+  --academy-bordure: rgb(212 167 44 / 24%);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.m-academy-hero {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: stretch;
+
+  background:
+    radial-gradient(
+      circle at 76% 45%,
+      rgb(212 167 44 / 12%),
+      transparent 27%
+    ),
+    var(--couleur-group);
+
+  color: #fff;
+}
+
+
+.m-academy-hero__conteneur {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, .8fr);
+  align-items: center;
+
+  gap: var(--espace-8);
+
+  padding: 54px 0 104px;
+}
+
+
+.m-academy-hero__contenu {
+  max-width: 690px;
+}
+
+
+.m-academy-hero__marque {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: var(--espace-4);
+
+  font-family: var(--police-titre);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+
+  color: rgb(255 255 255 / 72%);
+
+  animation: academy-fade-up .65s ease both;
+}
+
+
+.m-academy-hero__point {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--academy-couleur);
+
+  box-shadow:
+    0 0 0 6px rgb(212 167 44 / 12%);
+}
+
+
+.m-academy-hero h1 {
+  max-width: 700px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(3rem, 6vw, 5.6rem);
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -.045em;
+
+  animation: academy-fade-up .75s .08s ease both;
+}
+
+
+.m-academy-hero h1 span {
+  color: var(--academy-couleur);
+}
+
+
+.m-academy-hero__description {
+  max-width: 590px;
+
+  margin: var(--espace-5) 0 0;
+
+  font-family: var(--police-texte);
+  font-size: 1.05rem;
+  line-height: 1.75;
+
+  color: rgb(255 255 255 / 72%);
+
+  animation: academy-fade-up .75s .18s ease both;
+}
+
+
+.m-academy-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: var(--espace-6);
+
+  animation: academy-fade-up .75s .28s ease both;
+}
+
+
+.m-academy-hero__bouton {
+  color: var(--couleur-group);
+  background: var(--academy-couleur);
+  border-color: var(--academy-couleur);
+}
+
+
+.m-academy-hero__bouton:hover,
+.m-academy-hero__bouton:focus-visible {
+  background: #e0b847;
+  border-color: #e0b847;
+}
+
+
+.m-academy-hero__bouton-secondaire {
+  color: #fff;
+  background: transparent;
+  border-color: rgb(255 255 255 / 30%);
+}
+
+
+.m-academy-hero__bouton-secondaire:hover,
+.m-academy-hero__bouton-secondaire:focus-visible {
+  color: #fff;
+  background: rgb(255 255 255 / 8%);
+  border-color: rgb(255 255 255 / 55%);
+}
+
+
+/* =========================================================
+   STRUCTURE DÉCORATIVE HERO
+   ========================================================= */
+
+.m-academy-hero__structure {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+
+.m-academy-hero__orb {
+  position: absolute;
+
+  border: 1px solid rgb(212 167 44 / 16%);
+  border-radius: 50%;
+}
+
+
+.m-academy-hero__orb--one {
+  width: 540px;
+  height: 540px;
+
+  right: -130px;
+  top: 30px;
+}
+
+
+.m-academy-hero__orb--two {
+  width: 350px;
+  height: 350px;
+
+  right: 70px;
+  top: 125px;
+
+  border-color: rgb(255 255 255 / 7%);
+}
+
+
+.m-academy-hero__line {
+  position: absolute;
+
+  width: 1px;
+  height: 700px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(212 167 44 / 22%),
+    transparent
+  );
+
+  transform: rotate(38deg);
+}
+
+
+.m-academy-hero__line--one {
+  right: 31%;
+  top: -140px;
+}
+
+
+.m-academy-hero__line--two {
+  right: 15%;
+  top: -180px;
+
+  opacity: .5;
+}
+
+
+/* =========================================================
+   ILLUSTRATION HERO
+   ========================================================= */
+
+.m-academy-hero__illustration {
+  position: relative;
+
+  min-height: 440px;
+
+  display: grid;
+  place-items: center;
+
+  animation: academy-visual-in .9s .35s ease both;
+}
+
+
+.m-academy-visual {
+  position: relative;
+
+  width: min(430px, 100%);
+  aspect-ratio: 1;
+
+  display: grid;
+  place-items: center;
+}
+
+
+.m-academy-visual__halo {
+  position: absolute;
+  inset: 7%;
+
+  border: 1px solid rgb(212 167 44 / 24%);
+  border-radius: 50%;
+
+  box-shadow:
+    inset 0 0 80px rgb(212 167 44 / 5%);
+}
+
+
+.m-academy-visual__halo::before,
+.m-academy-visual__halo::after {
+  content: "";
+
+  position: absolute;
+  inset: 12%;
+
+  border: 1px solid rgb(255 255 255 / 7%);
+  border-radius: 50%;
+}
+
+
+.m-academy-visual__halo::after {
+  inset: 25%;
+  border-color: rgb(212 167 44 / 20%);
+}
+
+
+.m-academy-visual__core {
+  position: relative;
+  z-index: 3;
+
+  width: 150px;
+  height: 150px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgb(212 167 44 / 40%);
+  border-radius: 32px;
+
+  background: rgb(212 167 44 / 10%);
+
+  box-shadow:
+    0 20px 70px rgb(0 0 0 / 20%),
+    inset 0 0 35px rgb(212 167 44 / 8%);
+}
+
+
+.m-academy-visual__symbol {
+  width: 68px;
+  height: 68px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  gap: 7px;
+}
+
+
+.m-academy-visual__symbol span {
+  display: block;
+
+  border-radius: 3px 3px 0 0;
+
+  background: var(--academy-couleur);
+}
+
+
+.m-academy-visual__symbol span:nth-child(1) {
+  height: 38%;
+}
+
+
+.m-academy-visual__symbol span:nth-child(2) {
+  height: 70%;
+}
+
+
+.m-academy-visual__symbol span:nth-child(3) {
+  height: 100%;
+}
+
+
+/* Cartes flottantes */
+
+.m-academy-visual__card {
+  position: absolute;
+  z-index: 5;
+
+  min-width: 150px;
+
+  padding: 14px 16px;
+
+  display: grid;
+  gap: 3px;
+
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 12px;
+
+  background: rgb(23 37 84 / 82%);
+
+  box-shadow:
+    0 18px 45px rgb(0 0 0 / 20%),
+    inset 0 1px 0 rgb(255 255 255 / 5%);
+
+  backdrop-filter: blur(12px);
+}
+
+
+.m-academy-visual__card-number {
+  font-family: var(--police-titre);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--academy-couleur);
+}
+
+
+.m-academy-visual__card strong {
+  font-family: var(--police-titre);
+  font-size: .9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+
+.m-academy-visual__card small {
+  font-family: var(--police-texte);
+  font-size: .72rem;
+  color: rgb(255 255 255 / 55%);
+}
+
+
+.m-academy-visual__card--top {
+  top: 7%;
+  left: 3%;
+}
+
+
+.m-academy-visual__card--right {
+  top: 42%;
+  right: -2%;
+}
+
+
+.m-academy-visual__card--bottom {
+  right: 10%;
+  bottom: 5%;
+}
+
+
+/* Signature */
+
+.m-academy-hero__signature {
+  position: absolute;
+  z-index: 4;
+
+  left: max(32px, calc((100% - 1200px) / 2));
+  bottom: 30px;
+}
+
+
+.m-academy-hero__signature img {
+  display: block;
+
+  width: 132px;
+  height: auto;
+
+  opacity: .78;
+}
+
+
+.m-academy-hero__marker {
+  position: absolute;
+  z-index: 4;
+
+  right: max(32px, calc((100% - 1200px) / 2));
+  bottom: 31px;
+
+  font-family: var(--police-titre);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+
+  color: rgb(255 255 255 / 38%);
+}
+
+
+/* =========================================================
+   STRUCTURE COMMUNE DES SECTIONS
+   ========================================================= */
+
+.m-academy-section {
+  background: var(--couleur-fond);
+}
+
+
+.m-academy-section--surface {
+  background: var(--couleur-surface);
+}
+
+
+.m-academy-section__conteneur {
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+
+  padding-block: 112px;
+}
+
+
+.m-academy-section__entete {
+  max-width: 780px;
+}
+
+
+.m-academy-section__entete--large {
+  max-width: none;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .65fr);
+  gap: var(--espace-8);
+
+  align-items: end;
+}
+
+
+.m-academy-section__entete h2,
+.m-academy-model__texte h2,
+.m-academy-digital__contenu h2,
+.m-academy-cta h2 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(2.25rem, 4.5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+
+  color: var(--couleur-group);
+}
+
+
+.m-academy-section__entete h2 span,
+.m-academy-model__texte h2 span,
+.m-academy-digital__contenu h2 span {
+  color: var(--academy-couleur);
+}
+
+
+.m-academy-section__intro {
+  margin: 0;
+
+  font-size: .95rem;
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.m-academy-intro {
+  margin-top: 64px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .75fr);
+  gap: 80px;
+}
+
+
+.m-academy-intro__lead {
+  padding-left: 24px;
+
+  border-left: 3px solid var(--academy-couleur);
+}
+
+
+.m-academy-intro__lead p {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+
+  color: var(--couleur-group);
+}
+
+
+.m-academy-intro__texte {
+  max-width: 560px;
+}
+
+
+.m-academy-intro__texte p {
+  margin: 0 0 var(--espace-4);
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+.m-academy-intro__texte p:last-child {
+  margin-bottom: 0;
+}
+
+
+.m-academy-intro__texte strong {
+  color: var(--couleur-group);
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   EXPERTISES
+   ========================================================= */
+
+.m-academy-expertises {
+  margin-top: 64px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+
+.m-academy-expertise {
+  position: relative;
+
+  min-height: 330px;
+
+  padding: 30px 26px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--academy-bordure);
+  border-top: 3px solid var(--academy-couleur);
+
+  background: #fff;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+
+.m-academy-expertise:hover {
+  transform: translateY(-6px);
+
+  border-color: rgb(212 167 44 / 40%);
+
+  box-shadow:
+    0 18px 45px rgb(23 37 84 / 8%);
+}
+
+
+.m-academy-expertise__numero {
+  align-self: flex-end;
+
+  font-family: var(--police-titre);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+
+  color: var(--academy-couleur);
+}
+
+
+.m-academy-expertise__icone {
+  width: 48px;
+  height: 48px;
+
+  margin-top: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: var(--academy-tint);
+
+  color: var(--academy-couleur);
+}
+
+
+.m-academy-expertise__icone svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.m-academy-expertise h3 {
+  margin: 24px 0 10px;
+
+  font-family: var(--police-titre);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.25;
+
+  color: var(--couleur-group);
+}
+
+
+.m-academy-expertise p {
+  margin: 0;
+
+  font-size: .88rem;
+  line-height: 1.7;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   MODÈLE MONANGO
+   ========================================================= */
+
+.m-academy-section--model {
+  background: #fff;
+}
+
+
+.m-academy-model {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
+  gap: 100px;
+
+  align-items: center;
+}
+
+
+.m-academy-model__texte {
+  max-width: 540px;
+}
+
+
+.m-academy-model__texte p:not(.m-section__eyebrow) {
+  margin: 22px 0 0;
+
+  font-size: .98rem;
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+.m-academy-model__texte strong {
+  color: var(--couleur-group);
+  font-weight: 650;
+}
+
+
+.m-academy-model__schema {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+
+.m-academy-model__etape {
+  position: relative;
+  z-index: 2;
+
+  min-height: 180px;
+
+  padding: 28px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  border: 1px solid var(--academy-bordure);
+  border-radius: 50%;
+
+  background: #fff;
+
+  box-shadow:
+    0 15px 45px rgb(23 37 84 / 7%);
+}
+
+
+.m-academy-model__etape span {
+  margin-bottom: 8px;
+
+  font-family: var(--police-titre);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+
+  color: var(--academy-couleur);
+}
+
+
+.m-academy-model__etape strong {
+  font-family: var(--police-titre);
+  font-size: .95rem;
+  font-weight: 600;
+
+  color: var(--couleur-group);
+}
+
+
+.m-academy-model__etape small {
+  margin-top: 5px;
+
+  font-size: .72rem;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+.m-academy-model__liaison {
+  position: relative;
+  z-index: 1;
+
+  height: 1px;
+
+  margin-inline: -1px;
+
+  background:
+    linear-gradient(
+      to right,
+      rgb(212 167 44 / 20%),
+      rgb(212 167 44 / 55%),
+      rgb(212 167 44 / 20%)
+    );
+}
+
+
+/* =========================================================
+   PARCOURS
+   ========================================================= */
+
+.m-academy-parcours {
+  position: relative;
+
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+.m-academy-parcours__ligne {
+  position: absolute;
+
+  top: 21px;
+  left: 10%;
+  right: 10%;
+
+  height: 1px;
+
+  background: rgb(212 167 44 / 35%);
+}
+
+
+.m-academy-parcours__etape {
+  position: relative;
+  z-index: 2;
+
+  padding-right: 30px;
+}
+
+
+.m-academy-parcours__etape > span {
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 28px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--academy-couleur);
+  border-radius: 50%;
+
+  background: var(--couleur-fond);
+
+  font-family: var(--police-titre);
+  font-size: .7rem;
+  font-weight: 600;
+
+  color: var(--academy-couleur);
+}
+
+
+.m-academy-parcours__etape h3 {
+  margin: 0 0 9px;
+
+  font-family: var(--police-titre);
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  color: var(--couleur-group);
+}
+
+
+.m-academy-parcours__etape p {
+  max-width: 230px;
+
+  margin: 0;
+
+  font-size: .86rem;
+  line-height: 1.7;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   DIGITAL
+   ========================================================= */
+
+.m-academy-section--digital {
+  background: var(--couleur-group);
+
+  color: #fff;
+}
+
+
+.m-academy-digital {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(320px, .8fr);
+  gap: 100px;
+
+  align-items: center;
+}
+
+
+.m-academy-digital__contenu {
+  max-width: 610px;
+}
+
+
+.m-academy-digital__contenu h2 {
+  color: #fff;
+}
+
+
+.m-academy-digital__contenu h2 span {
+  color: var(--academy-couleur);
+}
+
+
+.m-academy-digital__contenu p:not(.m-section__eyebrow) {
+  margin: 24px 0 0;
+
+  font-size: .98rem;
+  line-height: 1.8;
+
+  color: rgb(255 255 255 / 68%);
+}
+
+
+.m-academy-digital__visual {
+  min-height: 350px;
+
+  display: grid;
+  place-items: center;
+}
+
+
+.m-academy-screen {
+  width: min(410px, 100%);
+
+  border: 1px solid rgb(212 167 44 / 30%);
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  background: rgb(255 255 255 / 4%);
+
+  box-shadow:
+    0 30px 80px rgb(0 0 0 / 22%);
+}
+
+
+.m-academy-screen__bar {
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding-inline: 15px;
+
+  border-bottom: 1px solid rgb(255 255 255 / 8%);
+}
+
+
+.m-academy-screen__bar span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: rgb(255 255 255 / 28%);
+}
+
+
+.m-academy-screen__body {
+  padding: 35px;
+}
+
+
+.m-academy-screen__line {
+  width: 72%;
+  height: 10px;
+
+  border-radius: 3px;
+
+  background: rgb(255 255 255 / 17%);
+}
+
+
+.m-academy-screen__line--short {
+  width: 45%;
+
+  margin-top: 10px;
+
+  background: rgb(255 255 255 / 9%);
+}
+
+
+.m-academy-screen__progress {
+  height: 8px;
+
+  margin-top: 40px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: rgb(255 255 255 / 8%);
+}
+
+
+.m-academy-screen__progress span {
+  display: block;
+
+  width: 68%;
+  height: 100%;
+
+  background: var(--academy-couleur);
+}
+
+
+.m-academy-screen__modules {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  margin-top: 35px;
+}
+
+
+.m-academy-screen__modules span {
+  height: 80px;
+
+  border: 1px solid rgb(212 167 44 / 16%);
+  border-radius: 8px;
+
+  background: rgb(212 167 44 / 5%);
+}
+
+
+/* =========================================================
+   PUBLICS / PARCOURS
+   ========================================================= */
+
+.m-academy-publics {
+  margin-top: 64px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+
+.m-academy-public {
+  padding: 32px 28px;
+
+  border-top: 2px solid var(--academy-couleur);
+
+  background: #fff;
+}
+
+
+.m-academy-public > span {
+  font-family: var(--police-titre);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+
+  color: var(--academy-couleur);
+}
+
+
+.m-academy-public h3 {
+  margin: 35px 0 10px;
+
+  font-family: var(--police-titre);
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  color: var(--couleur-group);
+}
+
+
+.m-academy-public p {
+  margin: 0;
+
+  font-size: .88rem;
+  line-height: 1.7;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   CTA FINAL
+   ========================================================= */
+
+.m-academy-cta {
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--couleur-fond);
+}
+
+
+.m-academy-cta__conteneur {
+  position: relative;
+  z-index: 2;
+
+  width: min(850px, calc(100% - 64px));
+  margin-inline: auto;
+
+  padding-block: 120px;
+
+  text-align: center;
+}
+
+
+.m-academy-cta .m-section__eyebrow {
+  color: var(--academy-couleur);
+}
+
+
+.m-academy-cta h2 {
+  max-width: 800px;
+
+  margin-inline: auto;
+}
+
+
+.m-academy-cta > .m-academy-cta__conteneur > p:not(.m-section__eyebrow) {
+  max-width: 590px;
+
+  margin: 24px auto 0;
+
+  font-size: .98rem;
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+.m-academy-cta__bouton {
+  margin-top: 34px;
+
+  color: var(--couleur-group);
+  background: var(--academy-couleur);
+  border-color: var(--academy-couleur);
+}
+
+
+.m-academy-cta__structure {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+
+.m-academy-cta__structure span {
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  border: 1px solid rgb(212 167 44 / 12%);
+  border-radius: 50%;
+}
+
+
+.m-academy-cta__structure span:nth-child(1) {
+  top: -170px;
+  left: -80px;
+}
+
+
+.m-academy-cta__structure span:nth-child(2) {
+  right: -130px;
+  bottom: -170px;
+}
+
+
+.m-academy-cta__structure span:nth-child(3) {
+  width: 100px;
+  height: 100px;
+
+  top: 25%;
+  right: 15%;
+
+  border-color: rgb(212 167 44 / 20%);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes academy-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes academy-visual-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ — RÉDUCTION DES MOUVEMENTS
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .m-academy-hero__marque,
+  .m-academy-hero h1,
+  .m-academy-hero__description,
+  .m-academy-hero__actions,
+  .m-academy-hero__illustration {
+    animation: none;
+  }
+
+  .m-academy-expertise {
+    transition: none;
+  }
+
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-academy-hero {
+    min-height: 600px;
+  }
+
+
+  .m-academy-hero__conteneur {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .7fr);
+
+    gap: var(--espace-5);
+  }
+
+
+  .m-academy-hero h1 {
+    font-size: clamp(2.8rem, 7vw, 4.8rem);
+  }
+
+
+  .m-academy-hero__illustration {
+    min-height: 360px;
+  }
+
+
+  .m-academy-visual {
+    width: 360px;
+  }
+
+
+  .m-academy-visual__card {
+    min-width: 125px;
+    padding: 11px 13px;
+  }
+
+
+  .m-academy-section__entete--large {
+    grid-template-columns: 1fr;
+    gap: var(--espace-5);
+  }
+
+
+  .m-academy-intro {
+    gap: 50px;
+  }
+
+
+  .m-academy-expertises {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .m-academy-model {
+    gap: 50px;
+  }
+
+
+  .m-academy-model__schema {
+    transform: scale(.9);
+  }
+
+
+  .m-academy-digital {
+    gap: 50px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-academy-hero {
+    min-height: 0;
+  }
+
+
+  .m-academy-hero__conteneur {
+    width: calc(100% - 32px);
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 20px;
+
+    padding: 30px 0 100px;
+  }
+
+
+  .m-academy-hero h1 {
+    max-width: 100%;
+
+    font-size: clamp(2.7rem, 14vw, 4rem);
+
+    overflow-wrap: break-word;
+  }
+
+
+  .m-academy-hero__description {
+    font-size: .92rem;
+    line-height: 1.7;
+  }
+
+
+  .m-academy-hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  .m-academy-hero__bouton,
+  .m-academy-hero__bouton-secondaire {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .m-academy-hero__illustration {
+    min-height: 330px;
+  }
+
+
+  .m-academy-visual {
+    width: min(330px, 100%);
+  }
+
+
+  .m-academy-visual__core {
+    width: 120px;
+    height: 120px;
+  }
+
+
+  .m-academy-visual__card {
+    min-width: 112px;
+    padding: 10px 11px;
+  }
+
+
+  .m-academy-visual__card--top {
+    top: 2%;
+    left: 0;
+  }
+
+
+  .m-academy-visual__card--right {
+    right: -3%;
+  }
+
+
+  .m-academy-visual__card--bottom {
+    right: 2%;
+    bottom: 0;
+  }
+
+
+  .m-academy-hero__signature {
+    left: 16px;
+    bottom: 28px;
+  }
+
+
+  .m-academy-hero__signature img {
+    width: 112px;
+  }
+
+
+  .m-academy-hero__marker {
+    display: none;
+  }
+
+
+  .m-academy-section__conteneur {
+    width: calc(100% - 32px);
+
+    padding-block: 76px;
+  }
+
+
+  .m-academy-section__entete h2,
+  .m-academy-model__texte h2,
+  .m-academy-digital__contenu h2,
+  .m-academy-cta h2 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+
+  .m-academy-intro {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    margin-top: 42px;
+  }
+
+
+  .m-academy-intro__lead {
+    padding-left: 18px;
+  }
+
+
+  .m-academy-intro__lead p {
+    font-size: 1.55rem;
+  }
+
+
+  .m-academy-expertises {
+    grid-template-columns: 1fr;
+
+    margin-top: 42px;
+  }
+
+
+  .m-academy-expertise {
+    min-height: 280px;
+  }
+
+
+  .m-academy-model {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  .m-academy-model__schema {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    transform: none;
+  }
+
+
+  .m-academy-model__etape {
+    width: 150px;
+    min-height: 150px;
+
+    margin-inline: auto;
+  }
+
+
+  .m-academy-model__liaison {
+    width: 1px;
+    height: 30px;
+
+    margin: 0 auto;
+
+    background: linear-gradient(
+      to bottom,
+      rgb(212 167 44 / 20%),
+      rgb(212 167 44 / 55%),
+      rgb(212 167 44 / 20%)
+    );
+  }
+
+
+  .m-academy-parcours {
+    grid-template-columns: 1fr;
+
+    gap: 34px;
+
+    margin-top: 45px;
+  }
+
+
+  .m-academy-parcours__ligne {
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: auto;
+
+    width: 1px;
+    height: auto;
+  }
+
+
+  .m-academy-parcours__etape {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 20px;
+
+    padding: 0;
+  }
+
+
+  .m-academy-parcours__etape > span {
+    margin: 0;
+  }
+
+
+  .m-academy-parcours__etape h3 {
+    margin-top: 3px;
+  }
+
+
+  .m-academy-digital {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .m-academy-digital__visual {
+    min-height: 280px;
+  }
+
+
+  .m-academy-screen__body {
+    padding: 25px;
+  }
+
+
+  .m-academy-publics {
+    grid-template-columns: 1fr;
+
+    margin-top: 42px;
+  }
+
+
+  .m-academy-public {
+    padding: 26px 24px;
+  }
+
+
+  .m-academy-cta__conteneur {
+    width: calc(100% - 32px);
+
+    padding-block: 82px;
+  }
+
+}

@@ -1,0 +1,1501 @@
+/* =========================================================
+   MONANGO AGRO
+   Agriculture & Agro-industrie
+   ========================================================= */
+
+.m-agro-page {
+  --agro-couleur: #16a34a;
+  --agro-couleur-foncee: #15803d;
+  --agro-couleur-claire: #4ade80;
+
+  --agro-tint: rgb(22 163 74 / 7%);
+  --agro-tint-forte: rgb(22 163 74 / 12%);
+  --agro-bordure: rgb(22 163 74 / 20%);
+
+  --agro-texte: #172554;
+  --agro-texte-secondaire: #64748b;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.m-agro-hero {
+  position: relative;
+
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 78% 48%,
+      rgb(22 163 74 / 15%),
+      transparent 35%
+    ),
+    var(--couleur-group);
+
+  color: #fff;
+}
+
+.m-agro-hero__conteneur {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+
+  align-items: center;
+
+  gap: clamp(48px, 7vw, 100px);
+
+  padding: 56px 0 96px;
+}
+
+.m-agro-hero__contenu {
+  max-width: 650px;
+}
+
+.m-agro-hero__identite {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  font-family: var(--police-titre);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: rgb(255 255 255 / 72%);
+}
+
+.m-agro-hero__pastille {
+  width: 10px;
+  height: 10px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 50%;
+}
+
+.m-agro-hero__pastille span {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--agro-couleur-claire);
+}
+
+.m-agro-hero h1 {
+  max-width: 700px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(3rem, 6vw, 5.25rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.m-agro-hero h1 span {
+  color: var(--agro-couleur-claire);
+}
+
+.m-agro-hero__description {
+  max-width: 590px;
+
+  margin: 28px 0 0;
+
+  color: rgb(255 255 255 / 74%);
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.m-agro-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 34px;
+}
+
+.m-agro-bouton {
+  border-color: var(--agro-couleur);
+  background: var(--agro-couleur);
+}
+
+.m-agro-bouton:hover,
+.m-agro-bouton:focus-visible {
+  border-color: var(--agro-couleur-claire);
+  background: var(--agro-couleur-claire);
+}
+
+.m-agro-bouton-secondaire {
+  border-color: rgb(255 255 255 / 25%);
+  color: #fff;
+  background: rgb(255 255 255 / 5%);
+}
+
+.m-agro-bouton-secondaire:hover,
+.m-agro-bouton-secondaire:focus-visible {
+  border-color: rgb(255 255 255 / 45%);
+  background: rgb(255 255 255 / 10%);
+}
+
+
+/* =========================================================
+   HERO — VISUEL TERRITOIRE
+   ========================================================= */
+
+.m-agro-hero__visual {
+  position: relative;
+
+  min-height: 390px;
+
+  display: grid;
+  place-items: center;
+}
+
+.m-agro-territoire {
+  position: relative;
+
+  width: min(100%, 450px);
+  height: 390px;
+}
+
+.m-agro-territoire__centre {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 160px;
+  height: 160px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgb(74 222 128 / 30%);
+  border-radius: 50%;
+
+  background: rgb(255 255 255 / 5%);
+
+  box-shadow:
+    0 0 0 24px rgb(22 163 74 / 5%),
+    0 25px 70px rgb(0 0 0 / 20%);
+
+  transform: translate(-50%, -50%);
+}
+
+.m-agro-territoire__noyau {
+  position: relative;
+
+  width: 76px;
+  height: 76px;
+
+  border: 1px solid rgb(74 222 128 / 35%);
+  border-radius: 50%;
+}
+
+.m-agro-territoire__noyau span {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--agro-couleur-claire);
+}
+
+.m-agro-territoire__noyau span:nth-child(1) {
+  top: 11px;
+  left: 34px;
+}
+
+.m-agro-territoire__noyau span:nth-child(2) {
+  right: 12px;
+  bottom: 17px;
+}
+
+.m-agro-territoire__noyau span:nth-child(3) {
+  bottom: 15px;
+  left: 13px;
+}
+
+.m-agro-territoire__anneau {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid rgb(74 222 128 / 16%);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.m-agro-territoire__anneau.anneau--1 {
+  width: 270px;
+  height: 270px;
+}
+
+.m-agro-territoire__anneau.anneau--2 {
+  width: 370px;
+  height: 370px;
+
+  border-style: dashed;
+  border-color: rgb(74 222 128 / 11%);
+}
+
+.m-agro-territoire__point {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-family: var(--police-titre);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  color: rgb(255 255 255 / 65%);
+}
+
+.m-agro-territoire__point span {
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: var(--agro-couleur-claire);
+
+  box-shadow:
+    0 0 0 5px rgb(74 222 128 / 8%);
+}
+
+.m-agro-territoire__point.point--1 {
+  top: 8%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.m-agro-territoire__point.point--2 {
+  right: 0;
+  top: 53%;
+}
+
+.m-agro-territoire__point.point--3 {
+  left: 0;
+  bottom: 17%;
+}
+
+.m-agro-territoire__sol {
+  position: absolute;
+
+  left: 50%;
+  bottom: 7px;
+
+  width: 250px;
+  height: 38px;
+
+  transform: translateX(-50%);
+}
+
+.m-agro-territoire__sol::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 17px;
+
+  height: 1px;
+
+  background: rgb(74 222 128 / 20%);
+}
+
+.m-agro-territoire__sol span {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 1px;
+
+  height: 25px;
+
+  background: rgb(74 222 128 / 25%);
+
+  transform-origin: bottom;
+}
+
+.m-agro-territoire__sol span:nth-child(1) {
+  left: 14%;
+  transform: rotate(17deg);
+}
+
+.m-agro-territoire__sol span:nth-child(2) {
+  left: 32%;
+  height: 31px;
+  transform: rotate(11deg);
+}
+
+.m-agro-territoire__sol span:nth-child(3) {
+  left: 50%;
+  height: 35px;
+}
+
+.m-agro-territoire__sol span:nth-child(4) {
+  left: 68%;
+  height: 31px;
+  transform: rotate(-11deg);
+}
+
+.m-agro-territoire__sol span:nth-child(5) {
+  left: 86%;
+  transform: rotate(-17deg);
+}
+
+
+/* =========================================================
+   FOND HERO
+   ========================================================= */
+
+.m-agro-hero__fond {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+.m-agro-hero__orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgb(74 222 128 / 8%);
+}
+
+.m-agro-hero__orb--1 {
+  width: 500px;
+  height: 500px;
+
+  top: -300px;
+  right: -170px;
+}
+
+.m-agro-hero__orb--2 {
+  width: 280px;
+  height: 280px;
+
+  bottom: -190px;
+  left: -100px;
+}
+
+.m-agro-hero__ligne {
+  position: absolute;
+
+  width: 42%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(74 222 128 / 18%),
+    transparent
+  );
+}
+
+.m-agro-hero__ligne--1 {
+  top: 26%;
+  right: -5%;
+
+  transform: rotate(-12deg);
+}
+
+.m-agro-hero__ligne--2 {
+  bottom: 21%;
+  left: -6%;
+
+  transform: rotate(10deg);
+}
+
+
+/* =========================================================
+   SIGNATURE HERO
+   ========================================================= */
+
+.m-agro-hero__signature {
+  position: absolute;
+  z-index: 3;
+
+  left: max(32px, calc((100% - 1200px) / 2));
+  bottom: 28px;
+}
+
+.m-agro-hero__signature img {
+  display: block;
+
+  width: 112px;
+  height: auto;
+
+  opacity: 0.72;
+}
+
+.m-agro-hero__marqueur {
+  position: absolute;
+  z-index: 3;
+
+  right: max(32px, calc((100% - 1200px) / 2));
+  bottom: 31px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: var(--police-titre);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+
+  color: rgb(255 255 255 / 45%);
+}
+
+.m-agro-hero__marqueur span {
+  width: 28px;
+  height: 1px;
+
+  background: var(--agro-couleur-claire);
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.m-agro-section {
+  padding-block: clamp(72px, 9vw, 120px);
+}
+
+.m-agro-section__entete {
+  max-width: 800px;
+}
+
+.m-agro-section h2,
+.m-agro-positionnement h2,
+.m-agro-cta h2 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+
+  color: var(--agro-texte);
+}
+
+.m-agro-section h2 span,
+.m-agro-positionnement h2 span,
+.m-agro-cta h2 span {
+  color: var(--agro-couleur);
+}
+
+.m-agro-section__introduction {
+  max-width: 650px;
+
+  margin: 20px 0 0;
+
+  color: var(--agro-texte-secondaire);
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.m-agro-intro {
+  background: #fff;
+}
+
+.m-agro-intro__grille {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1fr);
+
+  align-items: center;
+
+  gap: clamp(50px, 8vw, 110px);
+
+  margin-top: 60px;
+}
+
+.m-agro-intro__texte {
+  max-width: 560px;
+}
+
+.m-agro-intro__texte p {
+  margin: 0;
+
+  color: var(--agro-texte-secondaire);
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.m-agro-intro__texte p + p {
+  margin-top: 20px;
+}
+
+
+/* =========================================================
+   CYCLE DE VALEUR
+   ========================================================= */
+
+.m-agro-intro__visual {
+  min-height: 390px;
+
+  display: grid;
+  place-items: center;
+}
+
+.m-agro-cycle {
+  position: relative;
+
+  width: min(100%, 390px);
+  aspect-ratio: 1;
+}
+
+.m-agro-cycle__centre {
+  position: absolute;
+  z-index: 2;
+
+  top: 50%;
+  left: 50%;
+
+  width: 120px;
+  aspect-ratio: 1;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--agro-bordure);
+  border-radius: 50%;
+
+  background: #fff;
+
+  box-shadow:
+    0 20px 45px rgb(23 37 84 / 10%),
+    0 0 0 18px var(--agro-tint);
+
+  transform: translate(-50%, -50%);
+}
+
+.m-agro-cycle__centre span {
+  font-family: var(--police-titre);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+
+  color: var(--agro-couleur);
+}
+
+.m-agro-cycle__element {
+  position: absolute;
+  z-index: 2;
+
+  width: 86px;
+  min-height: 68px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 8px;
+
+  border: 1px solid var(--agro-bordure);
+  border-radius: 15px;
+
+  background: #fff;
+
+  box-shadow: 0 15px 35px rgb(23 37 84 / 9%);
+}
+
+.m-agro-cycle__element span {
+  font-family: var(--police-titre);
+  font-size: 0.55rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--agro-couleur);
+}
+
+.m-agro-cycle__element.cycle--1 {
+  top: 2%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.m-agro-cycle__element.cycle--2 {
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-50%);
+}
+
+.m-agro-cycle__element.cycle--3 {
+  bottom: 2%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.m-agro-cycle__element.cycle--4 {
+  top: 50%;
+  left: 0;
+
+  transform: translateY(-50%);
+}
+
+.m-agro-cycle__liaison {
+  position: absolute;
+  z-index: 1;
+
+  top: 50%;
+  left: 50%;
+
+  width: 145px;
+  height: 1px;
+
+  background: var(--agro-bordure);
+
+  transform-origin: left center;
+}
+
+.m-agro-cycle__liaison::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  right: 0;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--agro-couleur);
+
+  transform: translateY(-50%);
+}
+
+.m-agro-cycle__liaison.liaison--1 {
+  transform: rotate(-90deg);
+}
+
+.m-agro-cycle__liaison.liaison--2 {
+  transform: rotate(0deg);
+}
+
+.m-agro-cycle__liaison.liaison--3 {
+  transform: rotate(90deg);
+}
+
+.m-agro-cycle__liaison.liaison--4 {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   EXPERTISES
+   ========================================================= */
+
+.m-agro-expertises {
+  background: #f7fbf8;
+}
+
+.m-agro-expertises__grille {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-top: 58px;
+}
+
+.m-agro-expertise {
+  position: relative;
+
+  min-height: 220px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  gap: 22px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border: 1px solid #e3eee7;
+  border-radius: 16px;
+
+  background: #fff;
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+.m-agro-expertise::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 4px;
+  height: 0;
+
+  background: var(--agro-couleur);
+
+  transition: height 220ms ease;
+}
+
+.m-agro-expertise:hover {
+  border-color: var(--agro-bordure);
+
+  background: var(--agro-tint);
+
+  box-shadow: 0 18px 38px rgb(23 37 84 / 7%);
+
+  transform: translateY(-3px);
+}
+
+.m-agro-expertise:hover::after {
+  height: 100%;
+}
+
+.m-agro-expertise__icone {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--agro-bordure);
+  border-radius: 13px;
+
+  background: var(--agro-tint);
+}
+
+.m-agro-expertise__icone svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke: var(--agro-couleur);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 220ms ease;
+}
+
+.m-agro-expertise:hover .m-agro-expertise__icone svg {
+  transform: translateY(-2px);
+}
+
+.m-agro-expertise h3 {
+  margin: 3px 0 9px;
+
+  font-family: var(--police-titre);
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  color: var(--agro-texte);
+}
+
+.m-agro-expertise p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: var(--agro-texte-secondaire);
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.m-agro-expertise__index {
+  position: absolute;
+
+  right: 24px;
+  bottom: 20px;
+
+  font-family: var(--police-titre);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  color: rgb(22 163 74 / 35%);
+}
+
+
+/* =========================================================
+   PROCESSUS
+   ========================================================= */
+
+.m-agro-processus {
+  background: #fff;
+}
+
+.m-agro-processus__grille {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: clamp(60px, 9vw, 120px);
+}
+
+.m-agro-processus__visual {
+  min-height: 430px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--agro-tint-forte),
+      rgb(22 163 74 / 3%)
+    );
+}
+
+.m-agro-flow {
+  width: min(78%, 370px);
+}
+
+.m-agro-flow__item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 18px 20px;
+
+  border: 1px solid var(--agro-bordure);
+  border-radius: 13px;
+
+  background: #fff;
+
+  box-shadow: 0 10px 25px rgb(23 37 84 / 6%);
+}
+
+.m-agro-flow__item span {
+  font-family: var(--police-titre);
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  color: var(--agro-couleur);
+}
+
+.m-agro-flow__item strong {
+  font-family: var(--police-titre);
+  font-size: 1rem;
+
+  color: var(--agro-texte);
+}
+
+.m-agro-flow > i {
+  display: block;
+
+  width: 1px;
+  height: 32px;
+
+  margin-left: 30px;
+
+  background: var(--agro-bordure);
+}
+
+.m-agro-processus__contenu {
+  max-width: 590px;
+}
+
+.m-agro-processus__contenu > p:not(.m-section__eyebrow) {
+  color: var(--agro-texte-secondaire);
+
+  line-height: 1.8;
+}
+
+.m-agro-processus__contenu > p + p {
+  margin-top: 16px;
+}
+
+.m-agro-processus__liste {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  padding: 0;
+  margin: 32px 0 0;
+
+  list-style: none;
+}
+
+.m-agro-processus__liste li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 48px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #e5eee8;
+  border-radius: 9px;
+
+  color: var(--agro-texte);
+
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.m-agro-processus__liste span {
+  color: var(--agro-couleur);
+
+  font-family: var(--police-titre);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DURABILITÉ
+   ========================================================= */
+
+.m-agro-durabilite {
+  background: #f7fbf8;
+}
+
+.m-agro-durabilite__grille {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-top: 58px;
+}
+
+.m-agro-durabilite__carte {
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 30px;
+
+  border: 1px solid #e3eee7;
+  border-radius: 15px;
+
+  background: #fff;
+}
+
+.m-agro-durabilite__carte > span {
+  margin-bottom: 18px;
+
+  font-family: var(--police-titre);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  color: var(--agro-couleur);
+}
+
+.m-agro-durabilite__carte strong {
+  font-family: var(--police-titre);
+  font-size: 1.08rem;
+
+  color: var(--agro-texte);
+}
+
+.m-agro-durabilite__carte p {
+  margin: 10px 0 0;
+
+  color: var(--agro-texte-secondaire);
+
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   POSITIONNEMENT
+   ========================================================= */
+
+.m-agro-positionnement {
+  padding-block: clamp(82px, 10vw, 130px);
+
+  background: var(--couleur-group);
+
+  color: #fff;
+}
+
+.m-agro-positionnement .m-section__eyebrow {
+  color: rgb(255 255 255 / 50%);
+}
+
+.m-agro-positionnement__contenu {
+  max-width: 850px;
+}
+
+.m-agro-positionnement h2 {
+  color: #fff;
+}
+
+.m-agro-positionnement h2 span {
+  color: var(--agro-couleur-claire);
+}
+
+.m-agro-positionnement__contenu > p:last-child {
+  max-width: 680px;
+
+  margin: 26px 0 0;
+
+  color: rgb(255 255 255 / 65%);
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.m-agro-positionnement__signature {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+
+  margin-top: 70px;
+
+  font-family: var(--police-titre);
+
+  letter-spacing: -0.04em;
+}
+
+.m-agro-positionnement__signature span {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+
+  color: rgb(255 255 255 / 35%);
+}
+
+.m-agro-positionnement__signature strong {
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  font-weight: 700;
+
+  color: var(--agro-couleur-claire);
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.m-agro-cta {
+  padding-block: clamp(72px, 9vw, 110px);
+
+  background: #fff;
+}
+
+.m-agro-cta__contenu {
+  max-width: 800px;
+}
+
+.m-agro-cta h2 {
+  max-width: 760px;
+}
+
+.m-agro-cta__contenu > p:not(.m-section__eyebrow) {
+  max-width: 590px;
+
+  margin: 20px 0 0;
+
+  color: var(--agro-texte-secondaire);
+
+  line-height: 1.75;
+}
+
+.m-agro-cta__bouton {
+  margin-top: 30px;
+
+  border-color: var(--agro-couleur);
+  background: var(--agro-couleur);
+}
+
+.m-agro-cta__bouton:hover,
+.m-agro-cta__bouton:focus-visible {
+  border-color: var(--agro-couleur-foncee);
+  background: var(--agro-couleur-foncee);
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-agro-hero {
+    min-height: 0;
+  }
+
+  .m-agro-hero__conteneur {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(320px, 0.8fr);
+
+    gap: 40px;
+
+    padding-block: 48px 92px;
+  }
+
+  .m-agro-hero h1 {
+    font-size: clamp(2.8rem, 7vw, 4.4rem);
+  }
+
+  .m-agro-hero__visual {
+    min-height: 330px;
+  }
+
+  .m-agro-territoire {
+    height: 330px;
+  }
+
+  .m-agro-territoire__centre {
+    width: 130px;
+    height: 130px;
+  }
+
+  .m-agro-territoire__anneau.anneau--1 {
+    width: 225px;
+    height: 225px;
+  }
+
+  .m-agro-territoire__anneau.anneau--2 {
+    width: 315px;
+    height: 315px;
+  }
+
+  .m-agro-intro__grille,
+  .m-agro-processus__grille {
+    gap: 50px;
+  }
+
+  .m-agro-intro__visual {
+    min-height: 330px;
+  }
+
+  .m-agro-durabilite__grille {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-agro-hero__conteneur {
+    width: calc(100% - 32px);
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 40px;
+
+    padding-block: 34px 94px;
+  }
+
+  .m-agro-hero__identite {
+    margin-bottom: 18px;
+  }
+
+  .m-agro-hero h1 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(2.55rem, 13vw, 3.65rem);
+    line-height: 0.98;
+
+    overflow-wrap: break-word;
+  }
+
+  .m-agro-hero__description {
+    margin-top: 22px;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .m-agro-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    margin-top: 28px;
+  }
+
+  .m-agro-hero__actions .m-bouton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .m-agro-hero__visual {
+    min-height: 285px;
+  }
+
+  .m-agro-territoire {
+    width: 100%;
+    height: 285px;
+  }
+
+  .m-agro-territoire__centre {
+    width: 105px;
+    height: 105px;
+  }
+
+  .m-agro-territoire__noyau {
+    width: 55px;
+    height: 55px;
+  }
+
+  .m-agro-territoire__noyau span {
+    width: 6px;
+    height: 6px;
+  }
+
+  .m-agro-territoire__noyau span:nth-child(1) {
+    top: 8px;
+    left: 25px;
+  }
+
+  .m-agro-territoire__noyau span:nth-child(2) {
+    right: 8px;
+    bottom: 12px;
+  }
+
+  .m-agro-territoire__noyau span:nth-child(3) {
+    bottom: 10px;
+    left: 9px;
+  }
+
+  .m-agro-territoire__anneau.anneau--1 {
+    width: 185px;
+    height: 185px;
+  }
+
+  .m-agro-territoire__anneau.anneau--2 {
+    width: 270px;
+    height: 270px;
+  }
+
+  .m-agro-territoire__point {
+    font-size: 0.48rem;
+  }
+
+  .m-agro-territoire__point.point--2 {
+    right: -2px;
+  }
+
+  .m-agro-territoire__point.point--3 {
+    left: -2px;
+  }
+
+  .m-agro-territoire__sol {
+    width: 180px;
+  }
+
+  .m-agro-hero__signature {
+    left: 16px;
+    bottom: 22px;
+  }
+
+  .m-agro-hero__signature img {
+    width: 92px;
+  }
+
+  .m-agro-hero__marqueur {
+    right: 16px;
+    bottom: 24px;
+
+    font-size: 0.55rem;
+  }
+
+  .m-agro-hero__marqueur span {
+    width: 18px;
+  }
+
+
+  .m-agro-section {
+    padding-block: 70px;
+  }
+
+  .m-agro-section h2,
+  .m-agro-positionnement h2,
+  .m-agro-cta h2 {
+    font-size: clamp(1.95rem, 9vw, 2.65rem);
+  }
+
+
+  .m-agro-intro__grille {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 45px;
+
+    margin-top: 42px;
+  }
+
+  .m-agro-intro__visual {
+    min-height: 290px;
+  }
+
+  .m-agro-cycle {
+    width: min(100%, 300px);
+  }
+
+  .m-agro-cycle__centre {
+    width: 90px;
+  }
+
+  .m-agro-cycle__element {
+    width: 68px;
+    min-height: 55px;
+
+    border-radius: 13px;
+  }
+
+  .m-agro-cycle__element span {
+    font-size: 0.47rem;
+  }
+
+  .m-agro-cycle__liaison {
+    width: 108px;
+  }
+
+
+  .m-agro-expertises__grille {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 12px;
+
+    margin-top: 42px;
+  }
+
+  .m-agro-expertise {
+    min-height: 0;
+
+    padding: 24px;
+  }
+
+  .m-agro-expertise__icone {
+    width: 42px;
+    height: 42px;
+  }
+
+  .m-agro-expertise__icone svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .m-agro-processus__grille {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 42px;
+  }
+
+  .m-agro-processus__visual {
+    min-height: 330px;
+  }
+
+  .m-agro-flow {
+    width: min(82%, 320px);
+  }
+
+  .m-agro-processus__liste {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+
+  .m-agro-durabilite__grille {
+    grid-template-columns: minmax(0, 1fr);
+
+    margin-top: 42px;
+  }
+
+  .m-agro-durabilite__carte {
+    min-height: 170px;
+
+    padding: 24px;
+  }
+
+
+  .m-agro-positionnement {
+    padding-block: 75px;
+  }
+
+  .m-agro-positionnement__signature {
+    margin-top: 48px;
+  }
+
+
+  .m-agro-cta {
+    padding-block: 70px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ — RÉDUCTION DES ANIMATIONS
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .m-agro-expertise,
+  .m-agro-expertise__icone svg {
+    transition: none;
+    transform: none;
+  }
+
+}

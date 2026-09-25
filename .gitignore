@@ -1,0 +1,56 @@
+# Environnement local
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.bak
+
+# Secrets / configuration locale
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Bases de données locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Rapports et fichiers générés localement
+coverage/
+.pytest_cache/
+__pycache__/
+
+# Fichiers temporaires de bureautique
+.~lock.*
+~$*
+
+
+# Fichiers temporaires bureautiques
+.~lock.*
+~$*
+
+
+# Fichiers temporaires bureautiques
+.~lock.*
+~$*
+
+
+docs/
+tests/
+requirements.txt
+

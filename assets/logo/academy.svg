@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 991.99 276.22">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        fill: #d4a72c;
+        font-family: Montserrat-Bold, Montserrat;
+        font-size: 80px;
+      }
+
+      .cls-2, .cls-3 {
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-5, .cls-3 {
+        fill: #172554;
+      }
+
+      .cls-3 {
+        font-family: Montserrat-ExtraBold, Montserrat;
+        font-size: 165px;
+      }
+
+      .cls-6 {
+        letter-spacing: -.01em;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1-2" data-name="Calque 1">
+    <rect class="cls-5" x="64.42" y="7.43" width="35.87" height="35.87" transform="translate(6.19 65.66) rotate(-45)"/>
+    <polygon class="cls-5" points="44.31 156.35 6.27 156.35 6.27 42.21 44.31 42.21 56.99 42.21 82.35 67.58 107.72 42.21 158.44 42.21 158.44 156.35 120.4 156.35 120.4 80.26 95.03 111.96 69.67 111.96 44.31 80.26 44.31 156.35"/>
+    <text class="cls-3" transform="translate(163.6 154.53)"><tspan x="0" y="0">ONANGO</tspan></text>
+    <text class="cls-2" transform="translate(.72 237.58)"><tspan class="cls-1" x="0" y="0">A</tspan><tspan class="cls-4" x="60.48" y="0">C</tspan><tspan x="117.28" y="0">ADE</tspan><tspan class="cls-6" x="298.32" y="0">M</tspan><tspan x="373.84" y="0">Y</tspan></text>
+  </g>
+</svg>

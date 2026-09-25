@@ -1,0 +1,1579 @@
+/* =========================================================
+   MONANGO ENERGY
+   Énergie & Ingénierie électrique
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES DE PAGE
+   ========================================================= */
+
+.m-energy-page {
+  --energy-couleur: #f97316;
+  --energy-couleur-claire: #fb923c;
+  --energy-tint: rgb(249 115 22 / 8%);
+  --energy-tint-forte: rgb(249 115 22 / 14%);
+  --energy-bordure: rgb(249 115 22 / 24%);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.m-energy-hero {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: stretch;
+
+  background:
+    radial-gradient(
+      circle at 76% 48%,
+      rgb(249 115 22 / 12%),
+      transparent 28%
+    ),
+    var(--couleur-group);
+
+  color: #fff;
+}
+
+
+.m-energy-hero__conteneur {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, .8fr);
+  align-items: center;
+
+  gap: var(--espace-8);
+
+  padding: 54px 0 104px;
+}
+
+
+.m-energy-hero__contenu {
+  max-width: 700px;
+}
+
+
+.m-energy-hero__marque {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: var(--espace-4);
+
+  font-family: var(--police-titre);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+
+  color: rgb(255 255 255 / 72%);
+
+  animation: energy-fade-up .65s ease both;
+}
+
+
+.m-energy-hero__point {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--energy-couleur);
+
+  box-shadow:
+    0 0 0 6px rgb(249 115 22 / 12%);
+}
+
+
+.m-energy-hero h1 {
+  max-width: 700px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(3rem, 6vw, 5.6rem);
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -.045em;
+
+  animation: energy-fade-up .75s .08s ease both;
+}
+
+
+.m-energy-hero h1 span {
+  color: var(--energy-couleur);
+}
+
+
+.m-energy-hero__description {
+  max-width: 600px;
+
+  margin: var(--espace-5) 0 0;
+
+  font-family: var(--police-texte);
+  font-size: 1.05rem;
+  line-height: 1.75;
+
+  color: rgb(255 255 255 / 72%);
+
+  animation: energy-fade-up .75s .18s ease both;
+}
+
+
+.m-energy-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: var(--espace-6);
+
+  animation: energy-fade-up .75s .28s ease both;
+}
+
+
+.m-energy-hero__bouton {
+  color: var(--couleur-group);
+  background: var(--energy-couleur);
+  border-color: var(--energy-couleur);
+}
+
+
+.m-energy-hero__bouton:hover,
+.m-energy-hero__bouton:focus-visible {
+  background: var(--energy-couleur-claire);
+  border-color: var(--energy-couleur-claire);
+}
+
+
+.m-energy-hero__bouton-secondaire {
+  color: #fff;
+  background: transparent;
+  border-color: rgb(255 255 255 / 30%);
+}
+
+
+.m-energy-hero__bouton-secondaire:hover,
+.m-energy-hero__bouton-secondaire:focus-visible {
+  color: #fff;
+  background: rgb(255 255 255 / 8%);
+  border-color: rgb(255 255 255 / 55%);
+}
+
+
+/* =========================================================
+   STRUCTURE HERO
+   ========================================================= */
+
+.m-energy-hero__structure {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+
+.m-energy-hero__grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: .22;
+
+  background-image:
+    linear-gradient(
+      rgb(255 255 255 / 4%) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(255 255 255 / 4%) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent,
+      black 55%,
+      transparent
+    );
+}
+
+
+.m-energy-hero__orb {
+  position: absolute;
+
+  border: 1px solid rgb(249 115 22 / 15%);
+  border-radius: 50%;
+}
+
+
+.m-energy-hero__orb--one {
+  width: 570px;
+  height: 570px;
+
+  right: -150px;
+  top: 20px;
+}
+
+
+.m-energy-hero__orb--two {
+  width: 380px;
+  height: 380px;
+
+  right: -20px;
+  top: 115px;
+
+  border-color: rgb(255 255 255 / 7%);
+}
+
+
+.m-energy-hero__line {
+  position: absolute;
+
+  width: 1px;
+  height: 720px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgb(249 115 22 / 30%),
+      transparent
+    );
+
+  transform: rotate(39deg);
+}
+
+
+.m-energy-hero__line--one {
+  right: 28%;
+  top: -170px;
+}
+
+
+.m-energy-hero__line--two {
+  right: 12%;
+  top: -210px;
+
+  opacity: .45;
+}
+
+
+/* =========================================================
+   CIRCUIT HERO
+   ========================================================= */
+
+.m-energy-hero__illustration {
+  position: relative;
+
+  min-height: 440px;
+
+  display: grid;
+  place-items: center;
+
+  animation: energy-visual-in .9s .35s ease both;
+}
+
+
+.m-energy-circuit {
+  position: relative;
+
+  width: min(430px, 100%);
+  aspect-ratio: 1;
+
+  display: grid;
+  place-items: center;
+}
+
+
+.m-energy-circuit__anneau {
+  position: absolute;
+  inset: 6%;
+
+  border: 1px solid rgb(249 115 22 / 24%);
+  border-radius: 50%;
+}
+
+
+.m-energy-circuit__anneau::before,
+.m-energy-circuit__anneau::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgb(255 255 255 / 7%);
+  border-radius: 50%;
+}
+
+
+.m-energy-circuit__anneau::before {
+  inset: 12%;
+}
+
+
+.m-energy-circuit__anneau::after {
+  inset: 25%;
+
+  border-color: rgb(249 115 22 / 18%);
+}
+
+
+.m-energy-circuit__centre {
+  position: relative;
+  z-index: 4;
+
+  width: 145px;
+  height: 145px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgb(249 115 22 / 42%);
+  border-radius: 28px;
+
+  background: rgb(249 115 22 / 10%);
+
+  box-shadow:
+    0 25px 75px rgb(0 0 0 / 22%),
+    inset 0 0 40px rgb(249 115 22 / 7%);
+}
+
+
+.m-energy-circuit__eclair {
+  width: 52px;
+  height: 70px;
+
+  color: var(--energy-couleur);
+}
+
+
+.m-energy-circuit__eclair svg {
+  width: 100%;
+  height: 100%;
+
+  fill: currentColor;
+}
+
+
+/* Points électriques */
+
+.m-energy-circuit__point {
+  position: absolute;
+  z-index: 2;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: var(--energy-couleur);
+
+  box-shadow:
+    0 0 0 7px rgb(249 115 22 / 10%),
+    0 0 25px rgb(249 115 22 / 30%);
+}
+
+
+.m-energy-circuit__point--one {
+  top: 10%;
+  left: 48%;
+}
+
+
+.m-energy-circuit__point--two {
+  right: 8%;
+  top: 48%;
+}
+
+
+.m-energy-circuit__point--three {
+  bottom: 9%;
+  left: 48%;
+}
+
+
+.m-energy-circuit__point--four {
+  left: 8%;
+  top: 48%;
+}
+
+
+/* Cartes */
+
+.m-energy-circuit__card {
+  position: absolute;
+  z-index: 6;
+
+  min-width: 150px;
+
+  padding: 14px 16px;
+
+  display: grid;
+  gap: 3px;
+
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-left: 2px solid var(--energy-couleur);
+  border-radius: 10px;
+
+  background: rgb(23 37 84 / 84%);
+
+  box-shadow:
+    0 18px 45px rgb(0 0 0 / 20%);
+
+  backdrop-filter: blur(12px);
+}
+
+
+.m-energy-circuit__card span {
+  font-family: var(--police-titre);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+
+  color: var(--energy-couleur);
+}
+
+
+.m-energy-circuit__card strong {
+  font-family: var(--police-titre);
+  font-size: .88rem;
+  font-weight: 600;
+
+  color: #fff;
+}
+
+
+.m-energy-circuit__card small {
+  font-size: .7rem;
+
+  color: rgb(255 255 255 / 54%);
+}
+
+
+.m-energy-circuit__card--top {
+  top: 7%;
+  left: 1%;
+}
+
+
+.m-energy-circuit__card--right {
+  right: -4%;
+  top: 43%;
+}
+
+
+.m-energy-circuit__card--bottom {
+  right: 9%;
+  bottom: 4%;
+}
+
+
+/* Signature */
+
+.m-energy-hero__signature {
+  position: absolute;
+  z-index: 4;
+
+  left: max(32px, calc((100% - 1200px) / 2));
+  bottom: 30px;
+}
+
+
+.m-energy-hero__signature img {
+  display: block;
+
+  width: 132px;
+  height: auto;
+
+  opacity: .78;
+}
+
+
+.m-energy-hero__marker {
+  position: absolute;
+  z-index: 4;
+
+  right: max(32px, calc((100% - 1200px) / 2));
+  bottom: 31px;
+
+  font-family: var(--police-titre);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+
+  color: rgb(255 255 255 / 38%);
+}
+
+
+/* =========================================================
+   SECTIONS COMMUNES
+   ========================================================= */
+
+.m-energy-section {
+  background: var(--couleur-fond);
+}
+
+
+.m-energy-section--surface {
+  background: var(--couleur-surface);
+}
+
+
+.m-energy-section__conteneur {
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+
+  padding-block: 112px;
+}
+
+
+.m-energy-section__entete {
+  max-width: 800px;
+}
+
+
+.m-energy-section__entete--large {
+  max-width: none;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .65fr);
+  gap: var(--espace-8);
+
+  align-items: end;
+}
+
+
+.m-energy-section__entete h2,
+.m-energy-systeme__texte h2,
+.m-energy-intervention__contenu h2,
+.m-energy-approche h2,
+.m-energy-cta h2 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(2.25rem, 4.5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+
+  color: var(--couleur-group);
+}
+
+
+.m-energy-section__entete h2 span,
+.m-energy-systeme__texte h2 span,
+.m-energy-intervention__contenu h2 span,
+.m-energy-approche h2 span {
+  color: var(--energy-couleur);
+}
+
+
+.m-energy-section__intro {
+  margin: 0;
+
+  font-size: .95rem;
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.m-energy-intro {
+  margin-top: 64px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .75fr);
+  gap: 80px;
+}
+
+
+.m-energy-intro__lead {
+  padding-left: 24px;
+
+  border-left: 3px solid var(--energy-couleur);
+}
+
+
+.m-energy-intro__lead p {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+
+  color: var(--couleur-group);
+}
+
+
+.m-energy-intro__texte {
+  max-width: 560px;
+}
+
+
+.m-energy-intro__texte p {
+  margin: 0 0 var(--espace-4);
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+.m-energy-intro__texte p:last-child {
+  margin-bottom: 0;
+}
+
+
+.m-energy-intro__texte strong {
+  color: var(--couleur-group);
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   EXPERTISES
+   ========================================================= */
+
+.m-energy-expertises {
+  margin-top: 64px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+
+.m-energy-expertise {
+  position: relative;
+
+  min-height: 330px;
+
+  padding: 30px 26px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--energy-bordure);
+  border-top: 3px solid var(--energy-couleur);
+
+  background: #fff;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+
+.m-energy-expertise:hover {
+  transform: translateY(-6px);
+
+  border-color: rgb(249 115 22 / 42%);
+
+  box-shadow:
+    0 18px 45px rgb(23 37 84 / 8%);
+}
+
+
+.m-energy-expertise__numero {
+  align-self: flex-end;
+
+  font-family: var(--police-titre);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+
+  color: var(--energy-couleur);
+}
+
+
+.m-energy-expertise__icone {
+  width: 48px;
+  height: 48px;
+
+  margin-top: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: var(--energy-tint);
+
+  color: var(--energy-couleur);
+}
+
+
+.m-energy-expertise__icone svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.m-energy-expertise h3 {
+  margin: 24px 0 10px;
+
+  font-family: var(--police-titre);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.25;
+
+  color: var(--couleur-group);
+}
+
+
+.m-energy-expertise p {
+  margin: 0;
+
+  font-size: .88rem;
+  line-height: 1.7;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   APPROCHE SYSTÈME
+   ========================================================= */
+
+.m-energy-section--systeme {
+  background: #fff;
+}
+
+
+.m-energy-systeme {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
+  gap: 100px;
+
+  align-items: center;
+}
+
+
+.m-energy-systeme__texte {
+  max-width: 540px;
+}
+
+
+.m-energy-systeme__texte p:not(.m-section__eyebrow) {
+  margin: 22px 0 0;
+
+  font-size: .98rem;
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* Schéma */
+
+.m-energy-systeme__schema {
+  display: grid;
+  grid-template-columns:
+    minmax(90px, 1fr)
+    28px
+    minmax(90px, 1fr)
+    28px
+    minmax(90px, 1fr)
+    28px
+    minmax(90px, 1fr);
+
+  align-items: center;
+}
+
+
+.m-energy-systeme__noeud {
+  min-height: 150px;
+
+  padding: 18px 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  border: 1px solid var(--energy-bordure);
+  border-radius: 14px;
+
+  background: #fff;
+
+  box-shadow:
+    0 14px 40px rgb(23 37 84 / 7%);
+}
+
+
+.m-energy-systeme__noeud span {
+  margin-bottom: 9px;
+
+  font-family: var(--police-titre);
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+
+  color: var(--energy-couleur);
+}
+
+
+.m-energy-systeme__noeud strong {
+  font-family: var(--police-titre);
+  font-size: .82rem;
+  font-weight: 600;
+
+  color: var(--couleur-group);
+}
+
+
+.m-energy-systeme__noeud small {
+  margin-top: 5px;
+
+  font-size: .67rem;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+.m-energy-systeme__connexion {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      rgb(249 115 22 / 20%),
+      rgb(249 115 22 / 55%),
+      rgb(249 115 22 / 20%)
+    );
+}
+
+
+/* =========================================================
+   RENOUVELABLES
+   ========================================================= */
+
+.m-energy-section--renouvelable {
+  background: var(--couleur-surface);
+}
+
+
+.m-energy-renouvelables {
+  margin-top: 64px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+
+.m-energy-renouvelable {
+  position: relative;
+
+  min-height: 310px;
+
+  padding: 30px;
+
+  border: 1px solid var(--energy-bordure);
+
+  background: #fff;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+
+.m-energy-renouvelable:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 45px rgb(23 37 84 / 8%);
+}
+
+
+.m-energy-renouvelable__icone {
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--energy-tint);
+
+  color: var(--energy-couleur);
+}
+
+
+.m-energy-renouvelable__icone svg {
+  width: 27px;
+  height: 27px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.m-energy-renouvelable h3 {
+  margin: 34px 0 10px;
+
+  font-family: var(--police-titre);
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  color: var(--couleur-group);
+}
+
+
+.m-energy-renouvelable p {
+  max-width: 330px;
+
+  margin: 0;
+
+  font-size: .88rem;
+  line-height: 1.7;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   INTERVENTION
+   ========================================================= */
+
+.m-energy-section--intervention {
+  background: var(--couleur-group);
+}
+
+
+.m-energy-intervention {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
+  gap: 90px;
+
+  align-items: center;
+}
+
+
+.m-energy-intervention__contenu {
+  max-width: 540px;
+}
+
+
+.m-energy-intervention__contenu h2 {
+  color: #fff;
+}
+
+
+.m-energy-intervention__contenu p:not(.m-section__eyebrow) {
+  margin: 24px 0 0;
+
+  font-size: .98rem;
+  line-height: 1.8;
+
+  color: rgb(255 255 255 / 67%);
+}
+
+
+.m-energy-intervention__etapes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+
+.m-energy-intervention__etape {
+  min-height: 145px;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 1px solid rgb(249 115 22 / 24%);
+  border-left: 2px solid var(--energy-couleur);
+
+  background: rgb(255 255 255 / 4%);
+}
+
+
+.m-energy-intervention__etape span {
+  margin-bottom: 12px;
+
+  font-family: var(--police-titre);
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+
+  color: var(--energy-couleur);
+}
+
+
+.m-energy-intervention__etape strong {
+  font-family: var(--police-titre);
+  font-size: .95rem;
+  font-weight: 600;
+
+  color: #fff;
+}
+
+
+.m-energy-intervention__etape small {
+  margin-top: 5px;
+
+  font-size: .7rem;
+
+  color: rgb(255 255 255 / 48%);
+}
+
+
+/* =========================================================
+   APPROCHE
+   ========================================================= */
+
+.m-energy-section--approche {
+  background: var(--couleur-fond);
+}
+
+
+.m-energy-approche {
+  max-width: 850px;
+}
+
+
+.m-energy-approche__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  font-family: var(--police-titre);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+
+  color: var(--couleur-group);
+}
+
+
+.m-energy-approche__badge span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--energy-couleur);
+}
+
+
+.m-energy-approche h2 {
+  max-width: 850px;
+}
+
+
+.m-energy-approche > p {
+  max-width: 640px;
+
+  margin: 26px 0 0;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.m-energy-cta {
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--couleur-surface);
+}
+
+
+.m-energy-cta__conteneur {
+  position: relative;
+  z-index: 2;
+
+  width: min(850px, calc(100% - 64px));
+  margin-inline: auto;
+
+  padding-block: 120px;
+
+  text-align: center;
+}
+
+
+.m-energy-cta .m-section__eyebrow {
+  color: var(--energy-couleur);
+}
+
+
+.m-energy-cta h2 {
+  max-width: 800px;
+
+  margin-inline: auto;
+}
+
+
+.m-energy-cta__conteneur > p:not(.m-section__eyebrow) {
+  max-width: 590px;
+
+  margin: 24px auto 0;
+
+  font-size: .98rem;
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+.m-energy-cta__bouton {
+  margin-top: 34px;
+
+  color: #fff;
+  background: var(--energy-couleur);
+  border-color: var(--energy-couleur);
+}
+
+
+.m-energy-cta__bouton:hover,
+.m-energy-cta__bouton:focus-visible {
+  background: var(--energy-couleur-claire);
+  border-color: var(--energy-couleur-claire);
+}
+
+
+.m-energy-cta__structure {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+
+.m-energy-cta__structure span {
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  border: 1px solid rgb(249 115 22 / 12%);
+  border-radius: 50%;
+}
+
+
+.m-energy-cta__structure span:nth-child(1) {
+  top: -170px;
+  left: -80px;
+}
+
+
+.m-energy-cta__structure span:nth-child(2) {
+  right: -130px;
+  bottom: -170px;
+}
+
+
+.m-energy-cta__structure span:nth-child(3) {
+  width: 100px;
+  height: 100px;
+
+  top: 25%;
+  right: 15%;
+
+  border-color: rgb(249 115 22 / 20%);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes energy-fade-up {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes energy-visual-in {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .m-energy-hero__marque,
+  .m-energy-hero h1,
+  .m-energy-hero__description,
+  .m-energy-hero__actions,
+  .m-energy-hero__illustration {
+    animation: none;
+  }
+
+  .m-energy-expertise,
+  .m-energy-renouvelable {
+    transition: none;
+  }
+
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-energy-hero {
+    min-height: 600px;
+  }
+
+
+  .m-energy-hero__conteneur {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(280px, .7fr);
+
+    gap: var(--espace-5);
+  }
+
+
+  .m-energy-hero h1 {
+    font-size: clamp(2.8rem, 7vw, 4.8rem);
+  }
+
+
+  .m-energy-hero__illustration {
+    min-height: 360px;
+  }
+
+
+  .m-energy-circuit {
+    width: 360px;
+  }
+
+
+  .m-energy-circuit__card {
+    min-width: 125px;
+    padding: 11px 13px;
+  }
+
+
+  .m-energy-section__entete--large {
+    grid-template-columns: 1fr;
+    gap: var(--espace-5);
+  }
+
+
+  .m-energy-intro {
+    gap: 50px;
+  }
+
+
+  .m-energy-expertises {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .m-energy-systeme,
+  .m-energy-intervention {
+    gap: 55px;
+  }
+
+
+  .m-energy-systeme__schema {
+    transform: scale(.9);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-energy-hero {
+    min-height: 0;
+  }
+
+
+  .m-energy-hero__conteneur {
+    width: calc(100% - 32px);
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 20px;
+
+    padding: 30px 0 100px;
+  }
+
+
+  .m-energy-hero h1 {
+    max-width: 100%;
+
+    font-size: clamp(2.7rem, 14vw, 4rem);
+
+    overflow-wrap: break-word;
+  }
+
+
+  .m-energy-hero__description {
+    font-size: .92rem;
+    line-height: 1.7;
+  }
+
+
+  .m-energy-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+  }
+
+
+  .m-energy-hero__bouton,
+  .m-energy-hero__bouton-secondaire {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .m-energy-hero__illustration {
+    min-height: 330px;
+  }
+
+
+  .m-energy-circuit {
+    width: min(330px, 100%);
+  }
+
+
+  .m-energy-circuit__centre {
+    width: 120px;
+    height: 120px;
+  }
+
+
+  .m-energy-circuit__card {
+    min-width: 112px;
+
+    padding: 10px 11px;
+  }
+
+
+  .m-energy-circuit__card--top {
+    top: 2%;
+    left: 0;
+  }
+
+
+  .m-energy-circuit__card--right {
+    right: -3%;
+  }
+
+
+  .m-energy-circuit__card--bottom {
+    right: 2%;
+    bottom: 0;
+  }
+
+
+  .m-energy-hero__signature {
+    left: 16px;
+    bottom: 28px;
+  }
+
+
+  .m-energy-hero__signature img {
+    width: 112px;
+  }
+
+
+  .m-energy-hero__marker {
+    display: none;
+  }
+
+
+  .m-energy-section__conteneur {
+    width: calc(100% - 32px);
+
+    padding-block: 76px;
+  }
+
+
+  .m-energy-section__entete h2,
+  .m-energy-systeme__texte h2,
+  .m-energy-intervention__contenu h2,
+  .m-energy-approche h2,
+  .m-energy-cta h2 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+
+  .m-energy-intro {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    margin-top: 42px;
+  }
+
+
+  .m-energy-intro__lead {
+    padding-left: 18px;
+  }
+
+
+  .m-energy-intro__lead p {
+    font-size: 1.55rem;
+  }
+
+
+  .m-energy-expertises {
+    grid-template-columns: 1fr;
+
+    margin-top: 42px;
+  }
+
+
+  .m-energy-expertise {
+    min-height: 280px;
+  }
+
+
+  .m-energy-systeme {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+
+  .m-energy-systeme__schema {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    transform: none;
+  }
+
+
+  .m-energy-systeme__noeud {
+    width: 160px;
+    min-height: 135px;
+
+    margin-inline: auto;
+  }
+
+
+  .m-energy-systeme__connexion {
+    width: 1px;
+    height: 30px;
+
+    margin-inline: auto;
+
+    background:
+      linear-gradient(
+        to bottom,
+        rgb(249 115 22 / 20%),
+        rgb(249 115 22 / 55%),
+        rgb(249 115 22 / 20%)
+      );
+  }
+
+
+  .m-energy-renouvelables {
+    grid-template-columns: 1fr;
+
+    margin-top: 42px;
+  }
+
+
+  .m-energy-intervention {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .m-energy-intervention__etapes {
+    grid-template-columns: 1fr;
+  }
+
+
+  .m-energy-intervention__etape {
+    min-height: 125px;
+  }
+
+
+  .m-energy-cta__conteneur {
+    width: calc(100% - 32px);
+
+    padding-block: 82px;
+  }
+
+}

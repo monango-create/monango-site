@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="MONANGO Agro développe des activités liées à l’agriculture, à la transformation et à la valorisation des productions afin de contribuer à des chaînes de valeur agricoles plus structurées et durables."
+  >
+
+  <title>MONANGO Agro — Agriculture & Agro-industrie</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+
+  <link rel="stylesheet" href="/css/composants/badge.css">
+  <link rel="stylesheet" href="/css/composants/bouton.css">
+  <link rel="stylesheet" href="/css/composants/card.css">
+  <link rel="stylesheet" href="/css/composants/footer.css">
+  <link rel="stylesheet" href="/css/composants/header.css">
+  <link rel="stylesheet" href="/css/composants/hero.css">
+
+  <link rel="stylesheet" href="/css/pages/filiales-agro.css">
+</head>
+
+<body class="m-agro-page">
+
+  <div id="composant-header"></div>
+
+  <main>
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section
+      class="m-agro-hero"
+      aria-labelledby="agro-hero-title"
+    >
+
+      <div class="m-agro-hero__fond" aria-hidden="true">
+        <span class="m-agro-hero__orb m-agro-hero__orb--1"></span>
+        <span class="m-agro-hero__orb m-agro-hero__orb--2"></span>
+
+        <span class="m-agro-hero__ligne m-agro-hero__ligne--1"></span>
+        <span class="m-agro-hero__ligne m-agro-hero__ligne--2"></span>
+      </div>
+
+
+      <div class="m-agro-hero__conteneur">
+
+        <div class="m-agro-hero__contenu">
+
+          <div class="m-agro-hero__identite">
+
+            <span
+              class="m-agro-hero__pastille"
+              aria-hidden="true"
+            >
+              <span></span>
+            </span>
+
+            <span>MONANGO Agro</span>
+
+          </div>
+
+
+          <h1 id="agro-hero-title">
+            Produire,
+            <span>transformer,</span>
+            valoriser
+          </h1>
+
+
+          <p class="m-agro-hero__description">
+            Développer des activités agricoles et agro-industrielles
+            capables de structurer les productions, renforcer les
+            chaînes de valeur et créer davantage de valeur localement
+          </p>
+
+
+          <div class="m-agro-hero__actions">
+
+            <a
+              href="#expertises"
+              class="m-bouton m-bouton--primaire m-agro-bouton"
+            >
+              Découvrir nos activités
+            </a>
+
+            <a
+              href="/contact/"
+              class="m-bouton m-bouton--secondaire m-agro-bouton-secondaire"
+            >
+              Parler d’un projet
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Composition visuelle -->
+        <div
+          class="m-agro-hero__visual"
+          aria-hidden="true"
+        >
+
+          <div class="m-agro-territoire">
+
+            <div class="m-agro-territoire__centre">
+
+              <div class="m-agro-territoire__noyau">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+            </div>
+
+
+            <div class="m-agro-territoire__anneau anneau--1"></div>
+            <div class="m-agro-territoire__anneau anneau--2"></div>
+
+
+            <div class="m-agro-territoire__point point--1">
+              <span></span>
+              <strong>PRODUIRE</strong>
+            </div>
+
+            <div class="m-agro-territoire__point point--2">
+              <span></span>
+              <strong>TRANSFORMER</strong>
+            </div>
+
+            <div class="m-agro-territoire__point point--3">
+              <span></span>
+              <strong>VALORISER</strong>
+            </div>
+
+
+            <div class="m-agro-territoire__sol">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="m-agro-hero__signature">
+        <img
+          src="/assets/logo/monango-group-blanc.svg"
+          alt=""
+          aria-hidden="true"
+        >
+      </div>
+
+
+      <div class="m-agro-hero__marqueur">
+        <span></span>
+        AGRICULTURE · AGRO-INDUSTRIE
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRODUCTION
+         ===================================================== -->
+
+    <section
+      class="m-agro-section m-agro-intro"
+      aria-labelledby="agro-intro-title"
+    >
+
+      <div class="m-conteneur">
+
+        <div class="m-agro-section__entete">
+
+          <p class="m-section__eyebrow">
+            01 — LA PRODUCTION
+          </p>
+
+          <h2 id="agro-intro-title">
+            De la production
+            <span>à la création de valeur</span>
+          </h2>
+
+        </div>
+
+
+        <div class="m-agro-intro__grille">
+
+          <div class="m-agro-intro__texte">
+
+            <p>
+              MONANGO Agro développe une approche intégrée de
+              l’agriculture et de l’agro-industrie, depuis la production
+              jusqu’à la transformation et la valorisation
+            </p>
+
+            <p>
+              L’objectif est de contribuer à des chaînes de valeur
+              agricoles mieux structurées, capables de rapprocher
+              production, transformation, marché et consommation
+            </p>
+
+          </div>
+
+
+          <div
+            class="m-agro-intro__visual"
+            aria-hidden="true"
+          >
+
+            <div class="m-agro-cycle">
+
+              <div class="m-agro-cycle__centre">
+                <span>VALEUR</span>
+              </div>
+
+              <div class="m-agro-cycle__element cycle--1">
+                <span>TERRE</span>
+              </div>
+
+              <div class="m-agro-cycle__element cycle--2">
+                <span>PRODUCTION</span>
+              </div>
+
+              <div class="m-agro-cycle__element cycle--3">
+                <span>TRANSFORMATION</span>
+              </div>
+
+              <div class="m-agro-cycle__element cycle--4">
+                <span>MARCHÉ</span>
+              </div>
+
+              <span class="m-agro-cycle__liaison liaison--1"></span>
+              <span class="m-agro-cycle__liaison liaison--2"></span>
+              <span class="m-agro-cycle__liaison liaison--3"></span>
+              <span class="m-agro-cycle__liaison liaison--4"></span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EXPERTISES
+         ===================================================== -->
+
+    <section
+      class="m-agro-section m-agro-expertises"
+      id="expertises"
+      aria-labelledby="agro-expertises-title"
+    >
+
+      <div class="m-conteneur">
+
+        <div class="m-agro-section__entete">
+
+          <p class="m-section__eyebrow">
+            02 — NOS ACTIVITÉS
+          </p>
+
+          <h2 id="agro-expertises-title">
+            Une chaîne de valeur,
+            <span>plusieurs capacités</span>
+          </h2>
+
+          <p class="m-agro-section__introduction">
+            L’activité agro repose sur la complémentarité des métiers,
+            des ressources et des infrastructures mobilisés autour
+            d’une même chaîne de valeur
+          </p>
+
+        </div>
+
+
+        <div class="m-agro-expertises__grille">
+
+          <article class="m-agro-expertise">
+
+            <div class="m-agro-expertise__icone">
+
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M24 40V17"></path>
+                <path d="M24 24c-7 0-11-4-11-10 7 0 11 4 11 10Z"></path>
+                <path d="M24 30c7 0 11-4 11-10-7 0-11 4-11 10Z"></path>
+                <path d="M24 18c-5-2-7-6-6-11 5 1 7 5 6 11Z"></path>
+              </svg>
+
+            </div>
+
+            <div>
+
+              <h3>Production agricole</h3>
+
+              <p>
+                Développement de productions adaptées aux
+                caractéristiques des territoires, aux besoins des
+                marchés et aux possibilités de valorisation
+              </p>
+
+            </div>
+
+            <span class="m-agro-expertise__index">
+              01
+            </span>
+
+          </article>
+
+
+          <article class="m-agro-expertise">
+
+            <div class="m-agro-expertise__icone">
+
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M10 34h28"></path>
+                <path d="M14 34V20h20v14"></path>
+                <path d="M18 20v-7h12v7"></path>
+                <path d="M20 27h8"></path>
+                <path d="M24 13V8"></path>
+              </svg>
+
+            </div>
+
+            <div>
+
+              <h3>Transformation</h3>
+
+              <p>
+                Mise en valeur des productions par des opérations de
+                transformation destinées à améliorer leur conservation,
+                leur utilisation et leur valeur économique
+              </p>
+
+            </div>
+
+            <span class="m-agro-expertise__index">
+              02
+            </span>
+
+          </article>
+
+
+          <article class="m-agro-expertise">
+
+            <div class="m-agro-expertise__icone">
+
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M9 19h30"></path>
+                <path d="M13 19v20"></path>
+                <path d="M35 19v20"></path>
+                <path d="M10 39h28"></path>
+                <path d="M15 19l9-10 9 10"></path>
+                <path d="M19 27h10"></path>
+              </svg>
+
+            </div>
+
+            <div>
+
+              <h3>Conditionnement</h3>
+
+              <p>
+                Organisation des étapes nécessaires à la préparation
+                des produits pour leur stockage, leur transport et
+                leur mise à disposition
+              </p>
+
+            </div>
+
+            <span class="m-agro-expertise__index">
+              03
+            </span>
+
+          </article>
+
+
+          <article class="m-agro-expertise">
+
+            <div class="m-agro-expertise__icone">
+
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <rect x="8" y="14" width="32" height="23" rx="3"></rect>
+                <path d="M15 21h18"></path>
+                <path d="M15 27h11"></path>
+                <circle cx="34" cy="29" r="3"></circle>
+              </svg>
+
+            </div>
+
+            <div>
+
+              <h3>Commercialisation</h3>
+
+              <p>
+                Structuration des circuits de distribution et
+                rapprochement entre les productions, les produits
+                transformés et les marchés
+              </p>
+
+            </div>
+
+            <span class="m-agro-expertise__index">
+              04
+            </span>
+
+          </article>
+
+
+          <article class="m-agro-expertise">
+
+            <div class="m-agro-expertise__icone">
+
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="15"></circle>
+                <path d="M9 24h30"></path>
+                <path d="M24 9c5 5 7 10 7 15s-2 10-7 15"></path>
+                <path d="M24 9c-5 5-7 10-7 15s2 10 7 15"></path>
+              </svg>
+
+            </div>
+
+            <div>
+
+              <h3>Chaînes de valeur</h3>
+
+              <p>
+                Identification des complémentarités entre producteurs,
+                transformateurs, distributeurs et autres acteurs
+                nécessaires à la création de valeur
+              </p>
+
+            </div>
+
+            <span class="m-agro-expertise__index">
+              05
+            </span>
+
+          </article>
+
+
+          <article class="m-agro-expertise">
+
+            <div class="m-agro-expertise__icone">
+
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M24 8v32"></path>
+                <path d="M10 24h28"></path>
+                <path d="M14 14l20 20"></path>
+                <path d="M34 14L14 34"></path>
+                <circle cx="24" cy="24" r="5"></circle>
+              </svg>
+
+            </div>
+
+            <div>
+
+              <h3>Valorisation durable</h3>
+
+              <p>
+                Recherche de modèles capables de préserver les
+                ressources, réduire les pertes et renforcer la valeur
+                créée à chaque étape
+              </p>
+
+            </div>
+
+            <span class="m-agro-expertise__index">
+              06
+            </span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROCESSUS
+         ===================================================== -->
+
+    <section
+      class="m-agro-section m-agro-processus"
+      aria-labelledby="agro-processus-title"
+    >
+
+      <div class="m-conteneur">
+
+        <div class="m-agro-processus__grille">
+
+          <div
+            class="m-agro-processus__visual"
+            aria-hidden="true"
+          >
+
+            <div class="m-agro-flow">
+
+              <div class="m-agro-flow__item">
+                <span>01</span>
+                <strong>Produire</strong>
+              </div>
+
+              <i></i>
+
+              <div class="m-agro-flow__item">
+                <span>02</span>
+                <strong>Collecter</strong>
+              </div>
+
+              <i></i>
+
+              <div class="m-agro-flow__item">
+                <span>03</span>
+                <strong>Transformer</strong>
+              </div>
+
+              <i></i>
+
+              <div class="m-agro-flow__item">
+                <span>04</span>
+                <strong>Valoriser</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="m-agro-processus__contenu">
+
+            <p class="m-section__eyebrow">
+              03 — LE PROCESSUS
+            </p>
+
+            <h2 id="agro-processus-title">
+              Relier la production
+              <span>au marché</span>
+            </h2>
+
+            <p>
+              Une chaîne agricole performante ne s’arrête pas à la
+              production. Elle dépend aussi de la capacité à collecter,
+              transformer, conserver et valoriser les produits
+            </p>
+
+            <p>
+              MONANGO Agro inscrit ainsi ses activités dans une logique
+              de chaîne de valeur, avec une attention portée à la
+              continuité entre les différentes étapes
+            </p>
+
+
+            <ul class="m-agro-processus__liste">
+
+              <li>
+                <span>01</span>
+                Identifier les besoins
+              </li>
+
+              <li>
+                <span>02</span>
+                Structurer la production
+              </li>
+
+              <li>
+                <span>03</span>
+                Organiser la transformation
+              </li>
+
+              <li>
+                <span>04</span>
+                Accéder aux marchés
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DURABILITÉ
+         ===================================================== -->
+
+    <section
+      class="m-agro-section m-agro-durabilite"
+      aria-labelledby="agro-durabilite-title"
+    >
+
+      <div class="m-conteneur">
+
+        <div class="m-agro-section__entete">
+
+          <p class="m-section__eyebrow">
+            04 — DURABILITÉ
+          </p>
+
+          <h2 id="agro-durabilite-title">
+            Produire davantage de valeur
+            <span>avec les ressources disponibles</span>
+          </h2>
+
+        </div>
+
+
+        <div class="m-agro-durabilite__grille">
+
+          <div class="m-agro-durabilite__carte">
+
+            <span>01</span>
+
+            <strong>Ressources</strong>
+
+            <p>
+              Prendre en compte les ressources naturelles et les
+              conditions propres aux territoires
+            </p>
+
+          </div>
+
+
+          <div class="m-agro-durabilite__carte">
+
+            <span>02</span>
+
+            <strong>Réduction des pertes</strong>
+
+            <p>
+              Améliorer la conservation et la transformation pour
+              limiter les pertes tout au long de la chaîne
+            </p>
+
+          </div>
+
+
+          <div class="m-agro-durabilite__carte">
+
+            <span>03</span>
+
+            <strong>Valeur locale</strong>
+
+            <p>
+              Favoriser la transformation et la création de valeur
+              au plus près des bassins de production
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         POSITIONNEMENT
+         ===================================================== -->
+
+    <section
+      class="m-agro-positionnement"
+      aria-labelledby="agro-positionnement-title"
+    >
+
+      <div class="m-conteneur">
+
+        <div class="m-agro-positionnement__contenu">
+
+          <p class="m-section__eyebrow">
+            05 — LE SAVOIR-FAIRE
+          </p>
+
+          <h2 id="agro-positionnement-title">
+            Transformer les productions
+            <span>en opportunités durables</span>
+          </h2>
+
+          <p>
+            MONANGO Agro inscrit l’agriculture dans une vision plus
+            large : produire, structurer les chaînes de valeur et
+            renforcer la capacité des territoires à créer de la valeur
+          </p>
+
+        </div>
+
+
+        <div class="m-agro-positionnement__signature">
+          <span>MONANGO</span>
+          <strong>AGRO</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
+
+    <section
+      class="m-agro-cta"
+      aria-labelledby="agro-cta-title"
+    >
+
+      <div class="m-conteneur">
+
+        <div class="m-agro-cta__contenu">
+
+          <p class="m-section__eyebrow">
+            ALLER PLUS LOIN
+          </p>
+
+          <h2 id="agro-cta-title">
+            Un projet agricole,
+            <span>une chaîne de valeur à structurer ?</span>
+          </h2>
+
+          <p>
+            Échangeons autour d’une activité, d’une production ou
+            d’un projet de transformation et de valorisation
+          </p>
+
+          <a
+            href="/contact/"
+            class="m-bouton m-bouton--primaire m-agro-cta__bouton"
+          >
+            Parler de votre projet
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <div id="composant-footer"></div>
+
+
+  <script src="/js/utils.js" defer></script>
+  <script src="/js/donnees.js" defer></script>
+  <script src="/js/navigation.js" defer></script>
+
+</body>
+
+</html>

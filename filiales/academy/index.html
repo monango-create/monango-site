@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="MONANGO Academy développe les compétences et les savoir-faire à travers la formation professionnelle, la certification, l'apprentissage numérique et des parcours adaptés."
+  >
+
+  <title>MONANGO Academy — Formation & Développement des compétences</title>
+
+  <!-- Polices -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Système global -->
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+
+  <!-- Composants -->
+  <link rel="stylesheet" href="/css/composants/header.css">
+  <link rel="stylesheet" href="/css/composants/footer.css">
+  <link rel="stylesheet" href="/css/composants/bouton.css">
+
+  <!-- Page -->
+  <link rel="stylesheet" href="/css/pages/filiales-academy.css">
+
+  <!-- Scripts globaux -->
+  <script src="/js/utils.js" defer></script>
+  <script src="/js/donnees.js" defer></script>
+  <script src="/js/navigation.js" defer></script>
+</head>
+
+<body class="m-academy-page">
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <div id="composant-header"></div>
+
+
+  <main>
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section
+      class="m-academy-hero"
+      aria-labelledby="academy-hero-title"
+    >
+
+      <div class="m-academy-hero__structure" aria-hidden="true">
+        <span class="m-academy-hero__orb m-academy-hero__orb--one"></span>
+        <span class="m-academy-hero__orb m-academy-hero__orb--two"></span>
+        <span class="m-academy-hero__line m-academy-hero__line--one"></span>
+        <span class="m-academy-hero__line m-academy-hero__line--two"></span>
+      </div>
+
+
+      <div class="m-academy-hero__conteneur">
+
+        <div class="m-academy-hero__contenu">
+
+          <div class="m-academy-hero__marque">
+            <span class="m-academy-hero__point"></span>
+
+            <span>MONANGO Academy</span>
+          </div>
+
+
+          <h1 id="academy-hero-title">
+            Apprendre,
+            <span>développer</span>,
+            évoluer
+          </h1>
+
+
+          <p class="m-academy-hero__description">
+            Nous transformons les connaissances en compétences utiles,
+            les compétences en savoir-faire et les parcours d'apprentissage
+            en capacités durables.
+          </p>
+
+
+          <div class="m-academy-hero__actions">
+
+            <a
+              href="#expertises"
+              class="m-bouton m-bouton--principal m-academy-hero__bouton"
+            >
+              Découvrir Academy
+            </a>
+
+            <a
+              href="/contact/"
+              class="m-bouton m-bouton--secondaire m-academy-hero__bouton-secondaire"
+            >
+              Parler de votre projet
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Illustration éditoriale -->
+        <div
+          class="m-academy-hero__illustration"
+          aria-hidden="true"
+        >
+
+          <div class="m-academy-visual">
+
+            <div class="m-academy-visual__halo"></div>
+
+            <div class="m-academy-visual__core">
+
+              <div class="m-academy-visual__symbol">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+            </div>
+
+
+            <div class="m-academy-visual__card m-academy-visual__card--top">
+              <span class="m-academy-visual__card-number">01</span>
+              <strong>Apprendre</strong>
+              <small>Comprendre</small>
+            </div>
+
+
+            <div class="m-academy-visual__card m-academy-visual__card--right">
+              <span class="m-academy-visual__card-number">02</span>
+              <strong>Pratiquer</strong>
+              <small>Expérimenter</small>
+            </div>
+
+
+            <div class="m-academy-visual__card m-academy-visual__card--bottom">
+              <span class="m-academy-visual__card-number">03</span>
+              <strong>Évoluer</strong>
+              <small>Maîtriser</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="m-academy-hero__signature">
+        <img
+          src="/assets/logo/monango-group-blanc.svg"
+          alt=""
+        >
+      </div>
+
+
+      <div class="m-academy-hero__marker">
+        <span>FORMATION & DÉVELOPPEMENT DES COMPÉTENCES</span>
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRODUCTION
+         ===================================================== -->
+
+    <section
+      class="m-academy-section m-academy-section--intro"
+      aria-labelledby="academy-intro-title"
+    >
+
+      <div class="m-academy-section__conteneur">
+
+        <div class="m-academy-section__entete">
+
+          <p class="m-section__eyebrow">
+            01 — LA MISSION
+          </p>
+
+          <h2 id="academy-intro-title">
+            Le savoir comme
+            <span>point de départ</span>
+          </h2>
+
+        </div>
+
+
+        <div class="m-academy-intro">
+
+          <div class="m-academy-intro__lead">
+            <p>
+              MONANGO Academy place le développement des compétences
+              au cœur de la construction des parcours professionnels
+              et de l'évolution des organisations.
+            </p>
+          </div>
+
+
+          <div class="m-academy-intro__texte">
+
+            <p>
+              La formation ne se limite pas à transmettre des connaissances.
+              Elle doit permettre de comprendre, de pratiquer, de progresser
+              et de mobiliser réellement ce qui a été appris.
+            </p>
+
+            <p>
+              Academy développe ainsi des parcours qui articulent
+              <strong>formation professionnelle</strong>,
+              <strong>certification</strong>,
+              <strong>apprentissage numérique</strong> et
+              <strong>accompagnement</strong>.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EXPERTISES
+         ===================================================== -->
+
+    <section
+      id="expertises"
+      class="m-academy-section m-academy-section--surface"
+      aria-labelledby="academy-expertises-title"
+    >
+
+      <div class="m-academy-section__conteneur">
+
+        <div class="m-academy-section__entete m-academy-section__entete--large">
+
+          <div>
+            <p class="m-section__eyebrow">
+              02 — NOS EXPERTISES
+            </p>
+
+            <h2 id="academy-expertises-title">
+              Des parcours conçus pour
+              <span>faire progresser</span>
+            </h2>
+          </div>
+
+          <p class="m-academy-section__intro">
+            Academy rassemble plusieurs approches complémentaires pour
+            accompagner l'acquisition, la pratique et l'évolution des
+            compétences.
+          </p>
+
+        </div>
+
+
+        <div class="m-academy-expertises">
+
+          <!-- Carte 01 -->
+          <article class="m-academy-expertise">
+
+            <div class="m-academy-expertise__numero">
+              01
+            </div>
+
+            <div class="m-academy-expertise__icone">
+              <svg
+                viewBox="0 0 48 48"
+                aria-hidden="true"
+              >
+                <path d="M8 12h32v24H8z"></path>
+                <path d="M16 20h16"></path>
+                <path d="M16 27h10"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Formation professionnelle
+            </h3>
+
+            <p>
+              Développer des compétences directement mobilisables
+              dans les contextes professionnels et techniques.
+            </p>
+
+          </article>
+
+
+          <!-- Carte 02 -->
+          <article class="m-academy-expertise">
+
+            <div class="m-academy-expertise__numero">
+              02
+            </div>
+
+            <div class="m-academy-expertise__icone">
+              <svg
+                viewBox="0 0 48 48"
+                aria-hidden="true"
+              >
+                <circle cx="24" cy="24" r="15"></circle>
+                <path d="M17 24l5 5 10-11"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Certification
+            </h3>
+
+            <p>
+              Structurer les parcours d'apprentissage autour de
+              compétences identifiables et de niveaux de maîtrise.
+            </p>
+
+          </article>
+
+
+          <!-- Carte 03 -->
+          <article class="m-academy-expertise">
+
+            <div class="m-academy-expertise__numero">
+              03
+            </div>
+
+            <div class="m-academy-expertise__icone">
+              <svg
+                viewBox="0 0 48 48"
+                aria-hidden="true"
+              >
+                <rect
+                  x="8"
+                  y="10"
+                  width="32"
+                  height="25"
+                  rx="3"
+                ></rect>
+                <path d="M17 40h14"></path>
+                <path d="M24 35v5"></path>
+                <path d="M19 22l4 4 7-8"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Apprentissage numérique
+            </h3>
+
+            <p>
+              Utiliser les outils numériques et les approches EdTech
+              pour rendre l'apprentissage plus accessible et flexible.
+            </p>
+
+          </article>
+
+
+          <!-- Carte 04 -->
+          <article class="m-academy-expertise">
+
+            <div class="m-academy-expertise__numero">
+              04
+            </div>
+
+            <div class="m-academy-expertise__icone">
+              <svg
+                viewBox="0 0 48 48"
+                aria-hidden="true"
+              >
+                <circle cx="17" cy="17" r="6"></circle>
+                <circle cx="32" cy="17" r="6"></circle>
+                <path d="M7 36c1-7 5-10 10-10s9 3 10 10"></path>
+                <path d="M27 27c6-2 11 1 13 9"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Accompagnement
+            </h3>
+
+            <p>
+              Adapter les parcours aux besoins, aux niveaux et aux
+              objectifs des personnes et des organisations.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SAVOIR / SAVOIR-FAIRE / SAVOIR-ÊTRE
+         ===================================================== -->
+
+    <section
+      class="m-academy-section m-academy-section--model"
+      aria-labelledby="academy-model-title"
+    >
+
+      <div class="m-academy-section__conteneur">
+
+        <div class="m-academy-model">
+
+          <div class="m-academy-model__texte">
+
+            <p class="m-section__eyebrow">
+              03 — LE MODÈLE MONANGO
+            </p>
+
+            <h2 id="academy-model-title">
+              Du savoir à la
+              <span>capacité d'agir</span>
+            </h2>
+
+            <p>
+              Une compétence prend toute sa valeur lorsqu'elle peut être
+              comprise, appliquée et intégrée dans la manière d'agir.
+            </p>
+
+            <p>
+              Academy articule ainsi trois dimensions complémentaires :
+              le <strong>savoir</strong>, le <strong>savoir-faire</strong>
+              et le <strong>savoir-être</strong>.
+            </p>
+
+          </div>
+
+
+          <div class="m-academy-model__schema">
+
+            <div class="m-academy-model__etape">
+              <span>01</span>
+              <strong>Savoir</strong>
+              <small>Comprendre</small>
+            </div>
+
+            <div
+              class="m-academy-model__liaison"
+              aria-hidden="true"
+            ></div>
+
+            <div class="m-academy-model__etape">
+              <span>02</span>
+              <strong>Savoir-faire</strong>
+              <small>Pratiquer</small>
+            </div>
+
+            <div
+              class="m-academy-model__liaison"
+              aria-hidden="true"
+            ></div>
+
+            <div class="m-academy-model__etape">
+              <span>03</span>
+              <strong>Savoir-être</strong>
+              <small>Agir</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PARCOURS
+         ===================================================== -->
+
+    <section
+      class="m-academy-section m-academy-section--parcours"
+      aria-labelledby="academy-parcours-title"
+    >
+
+      <div class="m-academy-section__conteneur">
+
+        <div class="m-academy-section__entete">
+
+          <p class="m-section__eyebrow">
+            04 — LE PARCOURS
+          </p>
+
+          <h2 id="academy-parcours-title">
+            Apprendre pour
+            <span>progresser durablement</span>
+          </h2>
+
+        </div>
+
+
+        <div class="m-academy-parcours">
+
+          <div class="m-academy-parcours__ligne" aria-hidden="true"></div>
+
+
+          <article class="m-academy-parcours__etape">
+            <span>01</span>
+            <div>
+              <h3>Identifier</h3>
+              <p>
+                Comprendre les besoins, les objectifs et les compétences
+                à développer.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="m-academy-parcours__etape">
+            <span>02</span>
+            <div>
+              <h3>Apprendre</h3>
+              <p>
+                Acquérir les connaissances et les méthodes nécessaires
+                à la progression.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="m-academy-parcours__etape">
+            <span>03</span>
+            <div>
+              <h3>Pratiquer</h3>
+              <p>
+                Mettre les acquis en application dans des situations
+                concrètes.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="m-academy-parcours__etape">
+            <span>04</span>
+            <div>
+              <h3>Évoluer</h3>
+              <p>
+                Consolider les compétences et poursuivre son développement.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NUMÉRIQUE
+         ===================================================== -->
+
+    <section
+      class="m-academy-section m-academy-section--digital"
+      aria-labelledby="academy-digital-title"
+    >
+
+      <div class="m-academy-section__conteneur">
+
+        <div class="m-academy-digital">
+
+          <div class="m-academy-digital__contenu">
+
+            <p class="m-section__eyebrow">
+              05 — APPRENTISSAGE NUMÉRIQUE
+            </p>
+
+            <h2 id="academy-digital-title">
+              La technologie au service
+              de <span>l'apprentissage</span>
+            </h2>
+
+            <p>
+              Le numérique permet d'élargir les possibilités de formation,
+              de diversifier les formats d'apprentissage et de construire
+              des parcours plus flexibles.
+            </p>
+
+            <p>
+              Academy intègre cette dimension dans une approche où la
+              technologie reste au service de la progression et de
+              l'expérience d'apprentissage.
+            </p>
+
+          </div>
+
+
+          <div
+            class="m-academy-digital__visual"
+            aria-hidden="true"
+          >
+
+            <div class="m-academy-screen">
+
+              <div class="m-academy-screen__bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="m-academy-screen__body">
+
+                <div class="m-academy-screen__line"></div>
+                <div class="m-academy-screen__line m-academy-screen__line--short"></div>
+
+                <div class="m-academy-screen__progress">
+                  <span></span>
+                </div>
+
+                <div class="m-academy-screen__modules">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PUBLICS
+         ===================================================== -->
+
+    <section
+      class="m-academy-section m-academy-section--publics"
+      aria-labelledby="academy-publics-title"
+    >
+
+      <div class="m-academy-section__conteneur">
+
+        <div class="m-academy-section__entete m-academy-section__entete--large">
+
+          <div>
+
+            <p class="m-section__eyebrow">
+              06 — LES PARCOURS
+            </p>
+
+            <h2 id="academy-publics-title">
+              Des compétences utiles
+              <span>dans différents contextes</span>
+            </h2>
+
+          </div>
+
+          <p class="m-academy-section__intro">
+            Les besoins d'apprentissage varient selon les personnes,
+            les parcours et les organisations. L'approche Academy
+            s'adapte à ces différentes réalités.
+          </p>
+
+        </div>
+
+
+        <div class="m-academy-publics">
+
+          <article class="m-academy-public">
+            <span>01</span>
+            <h3>Développer</h3>
+            <p>
+              Acquérir de nouvelles compétences et renforcer ses capacités.
+            </p>
+          </article>
+
+          <article class="m-academy-public">
+            <span>02</span>
+            <h3>Se professionnaliser</h3>
+            <p>
+              Relier l'apprentissage aux exigences des environnements
+              professionnels.
+            </p>
+          </article>
+
+          <article class="m-academy-public">
+            <span>03</span>
+            <h3>Transmettre</h3>
+            <p>
+              Faire circuler les connaissances et les savoir-faire
+              au sein des organisations.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
+
+    <section
+      class="m-academy-cta"
+      aria-labelledby="academy-cta-title"
+    >
+
+      <div class="m-academy-cta__structure" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+
+      <div class="m-academy-cta__conteneur">
+
+        <p class="m-section__eyebrow">
+          07 — ALLER PLUS LOIN
+        </p>
+
+        <h2 id="academy-cta-title">
+          Une compétence à développer,
+          un parcours à construire
+        </h2>
+
+        <p>
+          Échangeons autour de vos besoins de formation,
+          de développement des compétences ou d'apprentissage.
+        </p>
+
+        <a
+          href="/contact/"
+          class="m-bouton m-bouton--principal m-academy-cta__bouton"
+        >
+          Parlons de votre projet
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <div id="composant-footer"></div>
+
+</body>
+
+</html>

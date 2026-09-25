@@ -1,0 +1,224 @@
+/* =========================================
+   FOOTER — MONANGO
+   ========================================= */
+
+.m-footer {
+  color: var(--couleur-texte-inverse);
+  
+}
+
+
+/* =========================================
+   ZONE PRINCIPALE
+   ========================================= */
+
+.m-footer__principal {
+  background: var(--couleur-group);
+}
+
+.m-footer__conteneur {
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+  padding: var(--espace-6) 0;
+  
+}
+
+
+/* =========================================
+   GRILLE
+   ========================================= */
+
+.m-footer__grille {
+  display: grid;
+  grid-template-columns:
+    1.4fr
+    repeat(3, 1fr);
+
+  gap: var(--espace-6);
+}
+
+
+/* =========================================
+   MARQUE
+   ========================================= */
+
+.m-footer__marque {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.m-footer__logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.m-footer__logo img {
+  display: block;
+  width: auto;
+  height: 42px;
+  align-items: center
+}
+
+.m-footer__signature {
+  margin: var(--espace-1) 0 0;
+
+  color: rgb(255 255 255 / 72%);
+
+  font-family: var(--police-titre);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* =========================================
+   COLONNES
+   ========================================= */
+
+.m-footer__colonne {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-footer__colonne h2 {
+  margin: 0 0 var(--espace-2);
+
+  color: var(--couleur-texte-inverse);
+
+  font-family: var(--police-titre);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.m-footer__colonne nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.m-footer__colonne nav a {
+  color: rgb(255 255 255 / 72%);
+
+  font-family: var(--police-texte);
+  font-size: var(--taille-petit);
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.m-footer__colonne nav a:hover,
+.m-footer__colonne nav a:focus-visible {
+  color: var(--couleur-texte-inverse);
+}
+
+
+/* =========================================
+   BARRE INFÉRIEURE
+   ========================================= */
+
+.m-footer__bas {
+  background: #000;
+}
+
+.m-footer__bas-conteneur {
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+justify-content: center;
+
+
+}
+
+.m-footer__bas p {
+  margin: 0;
+
+  color: rgb(255 255 255 / 60%);
+
+  font-family: var(--police-texte);
+  font-size: 0.8125rem;
+}
+
+.m-footer__bas nav {
+  display: flex;
+  align-items: center;
+  gap: var(--espace-3);
+}
+
+.m-footer__bas a {
+  color: rgb(255 255 255 / 60%);
+
+  font-family: var(--police-texte);
+  font-size: 0.8125rem;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.m-footer__bas a:hover,
+.m-footer__bas a:focus-visible {
+  color: var(--couleur-texte-inverse);
+}
+
+
+/* =========================================
+   TABLETTE
+   ========================================= */
+
+@media (max-width: 1023px) {
+
+  .m-footer__grille {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: var(--espace-5);
+  }
+
+  .m-footer__marque {
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+/* =========================================
+   SMARTPHONE
+   ========================================= */
+
+@media (max-width: 639px) {
+
+  .m-footer__conteneur,
+  .m-footer__bas-conteneur {
+    width: calc(100% - 32px);
+  }
+
+  .m-footer__conteneur {
+    padding: var(--espace-5) 0;
+  }
+
+  .m-footer__grille {
+    grid-template-columns: 1fr;
+    gap: var(--espace-4);
+  }
+
+  .m-footer__bas-conteneur {
+    min-height: 0;
+
+    padding:
+      var(--espace-3)
+      0;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: var(--espace-1);
+  }
+
+}

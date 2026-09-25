@@ -1,0 +1,127 @@
+/* =========================================
+   BOUTONS — MONANGO
+   ========================================= */
+
+
+/* =========================================
+   BASE
+   ========================================= */
+
+.m-bouton {
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+
+  padding:
+    10px
+    var(--espace-3);
+
+  border:
+    1px solid
+    transparent;
+
+  border-radius:
+    var(--rayon-defaut);
+
+  font-family:
+    var(--police-titre);
+
+  font-size:
+    var(--taille-petit);
+
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+
+/* =========================================
+   BOUTON PRINCIPAL
+   ========================================= */
+
+.m-bouton--primaire {
+
+  background:
+    var(--couleur-digital);
+
+  color:
+    var(--couleur-texte-inverse);
+
+}
+
+
+.m-bouton--primaire:hover {
+
+  background:
+    var(--couleur-digital-hover);
+
+  transform:
+    translateY(-1px);
+
+}
+
+
+/* =========================================
+   ÉTAT FOCUS
+   ========================================= */
+
+.m-bouton:focus-visible {
+
+  outline:
+    3px solid
+    var(--couleur-digital);
+
+  outline-offset:
+    3px;
+
+}
+
+
+/* =========================================
+   ÉTAT DÉSACTIVÉ
+   ========================================= */
+
+.m-bouton:disabled,
+.m-bouton[aria-disabled="true"] {
+
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+}
+
+
+/* =========================================
+   SMARTPHONE
+   ========================================= */
+
+@media (max-width: 639px) {
+
+  .m-bouton {
+
+    min-height: 44px;
+
+    padding:
+      10px
+      var(--espace-2);
+
+  }
+
+}

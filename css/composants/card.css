@@ -1,0 +1,433 @@
+/* =========================================================
+   CARTE FILIALE — MONANGO
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   CARTE
+   --------------------------------------------------------- */
+
+.m-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+
+  padding: 24px;
+
+  overflow: hidden;
+
+  color: var(--couleur-texte, #172554);
+  text-decoration: none;
+
+  background: #ffffff;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--couleur-carte) 28%,
+      #dbe3f0
+    );
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    background-color 300ms ease,
+    opacity 500ms ease;
+}
+
+
+/* ---------------------------------------------------------
+   ACCENT
+   --------------------------------------------------------- */
+
+.m-card__accent {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: var(--couleur-carte);
+
+  transform-origin: left;
+
+  transition:
+    height 250ms ease;
+}
+
+
+/* ---------------------------------------------------------
+   EN-TÊTE
+   --------------------------------------------------------- */
+
+.m-card__entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 44px;
+}
+
+
+.m-card__logo {
+  display: block;
+
+  width: auto;
+  max-width: 150px;
+  height: 40px;
+
+  object-fit: contain;
+  object-position: left center;
+}
+
+
+.m-card__indicateur {
+  flex: 0 0 auto;
+
+  width: 8px;
+  height: 8px;
+
+  margin-left: 16px;
+
+  background: var(--couleur-carte);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 5px
+    color-mix(
+      in srgb,
+      var(--couleur-carte) 10%,
+      transparent
+    );
+}
+
+
+/* ---------------------------------------------------------
+   VISUEL
+   --------------------------------------------------------- */
+
+.m-card__visuel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 150px;
+
+  margin: 20px 0 8px;
+
+  padding: 16px;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--couleur-carte) 7%,
+      #ffffff
+    );
+
+  border-radius: 16px;
+
+  transition:
+    background-color 300ms ease;
+}
+
+
+.m-card__illustration {
+  display: block;
+
+  width: min(100%, 180px);
+  height: 130px;
+
+  object-fit: contain;
+
+  transform: translateY(0);
+
+  transition:
+    transform 350ms ease;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENU
+   --------------------------------------------------------- */
+
+.m-card__contenu {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  padding-top: 12px;
+}
+
+
+.m-card__domaine {
+  margin: 0 0 7px;
+
+  color: var(--couleur-carte);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+
+.m-card__titre {
+  margin: 0;
+
+  color: #172554;
+
+  /*
+   * Taille volontairement maîtrisée :
+   * le nom de la filiale ne doit pas dominer
+   * toute la carte.
+   */
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+
+.m-card__description {
+  margin: 10px 0 0;
+
+  color: #475569;
+
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   ACTION
+   --------------------------------------------------------- */
+
+.m-card__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  width: fit-content;
+
+  margin-top: 22px;
+
+  color: var(--couleur-carte);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+
+.m-card__fleche {
+  display: inline-block;
+
+  transition:
+    transform 250ms ease;
+}
+
+
+/* ---------------------------------------------------------
+   ÉTAT — HOVER
+   --------------------------------------------------------- */
+
+.m-card:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--couleur-carte);
+
+  background:
+    color-mix(
+      in srgb,
+      var(--couleur-carte) 2%,
+      #ffffff
+    );
+
+  box-shadow:
+    0 18px 40px
+    rgba(15, 23, 42, 0.10);
+}
+
+
+.m-card:hover .m-card__accent {
+  height: 5px;
+}
+
+
+.m-card:hover .m-card__visuel {
+  background:
+    color-mix(
+      in srgb,
+      var(--couleur-carte) 10%,
+      #ffffff
+    );
+}
+
+
+.m-card:hover .m-card__illustration {
+  transform: translateY(-3px);
+}
+
+
+.m-card:hover .m-card__fleche {
+  transform: translateX(4px);
+}
+
+
+/* ---------------------------------------------------------
+   ACCESSIBILITÉ — FOCUS CLAVIER
+   --------------------------------------------------------- */
+
+.m-card:focus-visible {
+  outline: 3px solid
+    color-mix(
+      in srgb,
+      var(--couleur-carte) 45%,
+      #ffffff
+    );
+
+  outline-offset: 4px;
+}
+
+
+/* ---------------------------------------------------------
+   ANIMATION D'APPARITION
+   --------------------------------------------------------- */
+
+/*
+ * IMPORTANT :
+ *
+ * .m-card reste visible par défaut.
+ *
+ * Cette classe n'est ajoutée que par JavaScript.
+ * Ainsi, sans JavaScript, les cartes restent accessibles
+ * et visibles.
+ */
+
+.m-card--animation {
+  opacity: 0;
+
+  transform: translateY(24px);
+
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    background-color 300ms ease;
+}
+
+
+/*
+ * État final lorsque IntersectionObserver
+ * détecte la carte dans le viewport.
+ */
+
+.m-card--animation.m-card--visible {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  transition-delay: var(--delai-apparition, 0ms);
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TABLETTE
+   --------------------------------------------------------- */
+
+@media (min-width: 640px) {
+
+  .m-card {
+    padding: 26px;
+  }
+
+
+  .m-card__visuel {
+    min-height: 165px;
+  }
+
+
+  .m-card__illustration {
+    height: 140px;
+  }
+
+
+  .m-card__titre {
+    font-size: 1.2rem;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — DESKTOP
+   --------------------------------------------------------- */
+
+@media (min-width: 1024px) {
+
+  .m-card {
+    padding: 28px;
+  }
+
+
+  .m-card__visuel {
+    min-height: 175px;
+
+    margin-top: 22px;
+  }
+
+
+  .m-card__illustration {
+    width: min(100%, 190px);
+    height: 145px;
+  }
+
+
+  .m-card__description {
+    font-size: 0.92rem;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   RÉDUCTION DES ANIMATIONS
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .m-card,
+  .m-card__accent,
+  .m-card__visuel,
+  .m-card__illustration,
+  .m-card__fleche {
+    transition: none;
+  }
+
+
+  .m-card--animation {
+    opacity: 1;
+    transform: none;
+  }
+
+
+  .m-card--animation.m-card--visible {
+    transition-delay: 0s;
+  }
+
+}

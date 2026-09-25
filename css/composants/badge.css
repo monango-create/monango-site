@@ -1,0 +1,82 @@
+/* =========================================
+   BADGES — MONANGO
+   ========================================= */
+
+
+/* =========================================
+   BADGE DE BASE
+   ========================================= */
+
+.m-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  min-height: 28px;
+
+  padding:
+    4px
+    10px;
+
+  border-radius:
+    999px;
+
+  font-family:
+    var(--police-titre);
+
+  font-size:
+    0.75rem;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+
+}
+
+
+/* =========================================
+   BADGE ACTIF
+   ========================================= */
+
+.m-badge--actif {
+
+  background:
+    rgb(22 163 74 / 10%);
+
+  color:
+    #15803D;
+
+}
+
+
+/* =========================================
+   BADGE À VENIR
+   ========================================= */
+
+.m-badge--a-venir {
+
+  background:
+    rgb(212 167 45 / 12%);
+
+  color:
+    #8A6A00;
+
+}
+
+
+/* =========================================
+   BADGE INACTIF
+   ========================================= */
+
+.m-badge--inactif {
+
+  background:
+    rgb(75 85 99 / 10%);
+
+  color:
+    var(--couleur-texte-secondaire);
+
+}

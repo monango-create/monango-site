@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="MONANGO Creation valorise la création artisanale et les savoir-faire manuels à travers la couture, le stylisme, la broderie, le perlage et la conception d’objets créatifs."
+  >
+
+  <title>MONANGO Creation — Création & Artisanat</title>
+
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Système global -->
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+
+  <!-- Composants -->
+  <link rel="stylesheet" href="/css/composants/header.css">
+  <link rel="stylesheet" href="/css/composants/footer.css">
+  <link rel="stylesheet" href="/css/composants/bouton.css">
+
+  <!-- Page -->
+  <link rel="stylesheet" href="/css/pages/filiales-creation.css">
+
+  <!-- Scripts globaux -->
+  <script src="/js/utils.js" defer></script>
+  <script src="/js/donnees.js" defer></script>
+  <script src="/js/navigation.js" defer></script>
+</head>
+
+
+<body class="m-creation-page">
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <div id="composant-header"></div>
+
+
+  <main>
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section
+      class="m-creation-hero"
+      aria-labelledby="creation-hero-title"
+    >
+
+      <div class="m-creation-hero__fond" aria-hidden="true">
+
+        <span class="m-creation-hero__forme m-creation-hero__forme--one"></span>
+        <span class="m-creation-hero__forme m-creation-hero__forme--two"></span>
+        <span class="m-creation-hero__forme m-creation-hero__forme--three"></span>
+
+        <span class="m-creation-hero__fil m-creation-hero__fil--one"></span>
+        <span class="m-creation-hero__fil m-creation-hero__fil--two"></span>
+        <span class="m-creation-hero__fil m-creation-hero__fil--three"></span>
+
+      </div>
+
+
+      <div class="m-creation-hero__conteneur">
+
+        <div class="m-creation-hero__contenu">
+
+          <div class="m-creation-hero__marque">
+            <span class="m-creation-hero__point"></span>
+            <span>MONANGO Creation</span>
+          </div>
+
+
+          <h1 id="creation-hero-title">
+            Imaginer,
+            <span>façonner</span>,
+            créer
+          </h1>
+
+
+          <p class="m-creation-hero__description">
+            Nous valorisons la création artisanale et les savoir-faire
+            manuels à travers la couture, le stylisme, la broderie,
+            le perlage et la conception d’objets créatifs.
+          </p>
+
+
+          <div class="m-creation-hero__actions">
+
+            <a
+              href="#expertises"
+              class="m-bouton m-bouton--principal m-creation-hero__bouton"
+            >
+              Découvrir Creation
+            </a>
+
+            <a
+              href="/contact/"
+              class="m-bouton m-bouton--secondaire m-creation-hero__bouton-secondaire"
+            >
+              Parler de votre projet
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             COMPOSITION CRÉATIVE
+             ================================================= -->
+
+        <div
+          class="m-creation-hero__illustration"
+          aria-hidden="true"
+        >
+
+          <div class="m-creation-composition">
+
+            <div class="m-creation-composition__cercle"></div>
+
+            <div class="m-creation-composition__forme">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="m-creation-composition__aiguille">
+              <span></span>
+            </div>
+
+            <div class="m-creation-composition__fil">
+              <span></span>
+            </div>
+
+
+            <div class="m-creation-composition__etiquette m-creation-composition__etiquette--top">
+              <span>01</span>
+              <strong>Imaginer</strong>
+              <small>Concept</small>
+            </div>
+
+
+            <div class="m-creation-composition__etiquette m-creation-composition__etiquette--right">
+              <span>02</span>
+              <strong>Façonner</strong>
+              <small>Geste</small>
+            </div>
+
+
+            <div class="m-creation-composition__etiquette m-creation-composition__etiquette--bottom">
+              <span>03</span>
+              <strong>Créer</strong>
+              <small>Pièce</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="m-creation-hero__signature">
+        <img
+          src="/assets/logo/monango-group-blanc.svg"
+          alt=""
+        >
+      </div>
+
+
+      <div class="m-creation-hero__marker">
+        <span>CRÉATION & ARTISANAT</span>
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRODUCTION
+         ===================================================== -->
+
+    <section
+      class="m-creation-section m-creation-section--intro"
+      aria-labelledby="creation-intro-title"
+    >
+
+      <div class="m-creation-section__conteneur">
+
+        <div class="m-creation-section__entete">
+
+          <p class="m-section__eyebrow">
+            01 — LA CRÉATION
+          </p>
+
+          <h2 id="creation-intro-title">
+            Transformer le geste
+            en <span>création</span>
+          </h2>
+
+        </div>
+
+
+        <div class="m-creation-intro">
+
+          <div class="m-creation-intro__lead">
+
+            <p>
+              La création commence par un savoir-faire,
+              se développe par la maîtrise du geste et prend
+              forme dans une réalisation concrète.
+            </p>
+
+          </div>
+
+
+          <div class="m-creation-intro__texte">
+
+            <p>
+              MONANGO Creation met en valeur les métiers et pratiques
+              artisanales qui associent précision, créativité et travail
+              manuel.
+            </p>
+
+            <p>
+              Notre approche relie
+              <strong>création</strong>,
+              <strong>savoir-faire</strong> et
+              <strong>expression</strong> pour donner naissance
+              à des pièces et objets porteurs d'une identité propre.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EXPERTISES
+         ===================================================== -->
+
+    <section
+      id="expertises"
+      class="m-creation-section m-creation-section--surface"
+      aria-labelledby="creation-expertises-title"
+    >
+
+      <div class="m-creation-section__conteneur">
+
+        <div class="m-creation-section__entete m-creation-section__entete--large">
+
+          <div>
+
+            <p class="m-section__eyebrow">
+              02 — NOS SAVOIR-FAIRE
+            </p>
+
+            <h2 id="creation-expertises-title">
+              Plusieurs gestes,
+              une même <span>exigence</span>
+            </h2>
+
+          </div>
+
+          <p class="m-creation-section__intro">
+            Chaque pratique possède ses techniques et ses codes,
+            mais toutes reposent sur la précision, la patience
+            et la maîtrise du geste.
+          </p>
+
+        </div>
+
+
+        <div class="m-creation-expertises">
+
+          <!-- Couture -->
+          <article class="m-creation-expertise">
+
+            <div class="m-creation-expertise__numero">
+              01
+            </div>
+
+            <div class="m-creation-expertise__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M10 12h28"></path>
+                <path d="M14 12v24"></path>
+                <path d="M34 12v24"></path>
+                <path d="M14 36h20"></path>
+                <path d="M18 18h12"></path>
+                <path d="M18 24h12"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Couture
+            </h3>
+
+            <p>
+              Concevoir et réaliser des pièces à travers la maîtrise
+              des techniques de coupe, d'assemblage et de finition.
+            </p>
+
+          </article>
+
+
+          <!-- Stylisme -->
+          <article class="m-creation-expertise">
+
+            <div class="m-creation-expertise__numero">
+              02
+            </div>
+
+            <div class="m-creation-expertise__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M24 7v7"></path>
+                <path d="M17 14h14"></path>
+                <path d="M19 14c0 6-5 8-8 13"></path>
+                <path d="M29 14c0 6 5 8 8 13"></path>
+                <path d="M11 27h26"></path>
+                <path d="M15 27l3 14h12l3-14"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Stylisme
+            </h3>
+
+            <p>
+              Développer une vision esthétique et transformer
+              une intention créative en proposition cohérente.
+            </p>
+
+          </article>
+
+
+          <!-- Broderie -->
+          <article class="m-creation-expertise">
+
+            <div class="m-creation-expertise__numero">
+              03
+            </div>
+
+            <div class="m-creation-expertise__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="15"></circle>
+                <circle cx="24" cy="24" r="5"></circle>
+                <path d="M24 9v10"></path>
+                <path d="M24 29v10"></path>
+                <path d="M9 24h10"></path>
+                <path d="M29 24h10"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Broderie
+            </h3>
+
+            <p>
+              Enrichir les matières par le travail du fil,
+              des motifs et des détails réalisés avec précision.
+            </p>
+
+          </article>
+
+
+          <!-- Perlage -->
+          <article class="m-creation-expertise">
+
+            <div class="m-creation-expertise__numero">
+              04
+            </div>
+
+            <div class="m-creation-expertise__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="13" cy="14" r="4"></circle>
+                <circle cx="35" cy="14" r="4"></circle>
+                <circle cx="24" cy="24" r="4"></circle>
+                <circle cx="13" cy="34" r="4"></circle>
+                <circle cx="35" cy="34" r="4"></circle>
+                <path d="M16 16l5 5"></path>
+                <path d="M32 16l-5 5"></path>
+                <path d="M21 27l-5 4"></path>
+                <path d="M27 27l5 4"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Perlage
+            </h3>
+
+            <p>
+              Composer des motifs et des ornements à partir
+              de perles et de matières choisies avec soin.
+            </p>
+
+          </article>
+
+
+          <!-- Objets créatifs -->
+          <article class="m-creation-expertise">
+
+            <div class="m-creation-expertise__numero">
+              05
+            </div>
+
+            <div class="m-creation-expertise__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M10 18l14-8 14 8-14 8z"></path>
+                <path d="M10 18v14l14 8 14-8V18"></path>
+                <path d="M24 26v14"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Objets créatifs
+            </h3>
+
+            <p>
+              Concevoir des objets issus du travail manuel,
+              en associant matière, forme, usage et expression.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROCESSUS CRÉATIF
+         ===================================================== -->
+
+    <section
+      class="m-creation-section m-creation-section--processus"
+      aria-labelledby="creation-processus-title"
+    >
+
+      <div class="m-creation-section__conteneur">
+
+        <div class="m-creation-processus">
+
+          <div class="m-creation-processus__texte">
+
+            <p class="m-section__eyebrow">
+              03 — LE PROCESSUS
+            </p>
+
+            <h2 id="creation-processus-title">
+              De l'idée à la
+              <span>matière</span>
+            </h2>
+
+            <p>
+              Une création aboutie naît d'une succession de choix :
+              comprendre l'intention, sélectionner les matières,
+              maîtriser les techniques puis donner forme à l'idée.
+            </p>
+
+            <p>
+              Cette progression permet de préserver à la fois
+              l'intention créative et la qualité d'exécution.
+            </p>
+
+          </div>
+
+
+          <div class="m-creation-processus__schema">
+
+            <div class="m-creation-processus__etape">
+
+              <span>01</span>
+
+              <div>
+                <strong>Imaginer</strong>
+                <small>Intention & idée</small>
+              </div>
+
+            </div>
+
+
+            <div class="m-creation-processus__ligne"></div>
+
+
+            <div class="m-creation-processus__etape">
+
+              <span>02</span>
+
+              <div>
+                <strong>Choisir</strong>
+                <small>Matière & forme</small>
+              </div>
+
+            </div>
+
+
+            <div class="m-creation-processus__ligne"></div>
+
+
+            <div class="m-creation-processus__etape">
+
+              <span>03</span>
+
+              <div>
+                <strong>Façonner</strong>
+                <small>Technique & geste</small>
+              </div>
+
+            </div>
+
+
+            <div class="m-creation-processus__ligne"></div>
+
+
+            <div class="m-creation-processus__etape">
+
+              <span>04</span>
+
+              <div>
+                <strong>Finaliser</strong>
+                <small>Détail & finition</small>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MATIÈRES ET GESTES
+         ===================================================== -->
+
+    <section
+      class="m-creation-section m-creation-section--matiere"
+      aria-labelledby="creation-matiere-title"
+    >
+
+      <div class="m-creation-section__conteneur">
+
+        <div class="m-creation-section__entete">
+
+          <p class="m-section__eyebrow">
+            04 — MATIÈRE & GESTE
+          </p>
+
+          <h2 id="creation-matiere-title">
+            La matière devient
+            <span>langage</span>
+          </h2>
+
+        </div>
+
+
+        <div class="m-creation-matiere">
+
+          <div class="m-creation-matiere__bloc m-creation-matiere__bloc--large">
+
+            <span class="m-creation-matiere__mot">
+              MATIÈRE
+            </span>
+
+            <div class="m-creation-matiere__motif"></div>
+
+            <p>
+              Textile, fil, perles et autres matières deviennent
+              le support d'une expression créative.
+            </p>
+
+          </div>
+
+
+          <div class="m-creation-matiere__bloc">
+
+            <span class="m-creation-matiere__numero">
+              01
+            </span>
+
+            <strong>
+              Précision
+            </strong>
+
+            <p>
+              Chaque détail participe à la qualité de la pièce.
+            </p>
+
+          </div>
+
+
+          <div class="m-creation-matiere__bloc">
+
+            <span class="m-creation-matiere__numero">
+              02
+            </span>
+
+            <strong>
+              Patience
+            </strong>
+
+            <p>
+              Le temps du geste contribue à la maîtrise du résultat.
+            </p>
+
+          </div>
+
+
+          <div class="m-creation-matiere__bloc">
+
+            <span class="m-creation-matiere__numero">
+              03
+            </span>
+
+            <strong>
+              Expression
+            </strong>
+
+            <p>
+              La technique devient un moyen de traduire une identité.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SAVOIR-FAIRE
+         ===================================================== -->
+
+    <section
+      class="m-creation-section m-creation-section--savoir"
+      aria-labelledby="creation-savoir-title"
+    >
+
+      <div class="m-creation-section__conteneur">
+
+        <div class="m-creation-savoir">
+
+          <div class="m-creation-savoir__contenu">
+
+            <p class="m-section__eyebrow">
+              05 — LE SAVOIR-FAIRE
+            </p>
+
+            <h2 id="creation-savoir-title">
+              Préserver le geste,
+              <span>faire évoluer la création</span>
+            </h2>
+
+            <p>
+              Le savoir-faire artisanal se construit dans la pratique.
+              Il se transmet, se perfectionne et peut évoluer avec
+              les usages, les matières et les inspirations.
+            </p>
+
+          </div>
+
+
+          <div class="m-creation-savoir__piliers">
+
+            <div class="m-creation-savoir__pilier">
+              <span>01</span>
+              <strong>Apprendre</strong>
+              <small>Acquérir les techniques</small>
+            </div>
+
+            <div class="m-creation-savoir__pilier">
+              <span>02</span>
+              <strong>Pratiquer</strong>
+              <small>Développer la maîtrise</small>
+            </div>
+
+            <div class="m-creation-savoir__pilier">
+              <span>03</span>
+              <strong>Créer</strong>
+              <small>Exprimer une vision</small>
+            </div>
+
+            <div class="m-creation-savoir__pilier">
+              <span>04</span>
+              <strong>Transmettre</strong>
+              <small>Faire vivre le savoir-faire</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         POSITIONNEMENT
+         ===================================================== -->
+
+    <section
+      class="m-creation-section m-creation-section--positionnement"
+      aria-labelledby="creation-positionnement-title"
+    >
+
+      <div class="m-creation-section__conteneur">
+
+        <div class="m-creation-positionnement">
+
+          <div class="m-creation-positionnement__badge">
+            <span></span>
+            MONANGO CREATION
+          </div>
+
+          <h2 id="creation-positionnement-title">
+            Créer avec les mains,
+            <span>penser avec intention</span>
+          </h2>
+
+          <p>
+            Creation inscrit les savoir-faire manuels dans une démarche
+            où la technique, la créativité et l'identité peuvent
+            se rencontrer.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
+
+    <section
+      class="m-creation-cta"
+      aria-labelledby="creation-cta-title"
+    >
+
+      <div class="m-creation-cta__fond" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+
+      <div class="m-creation-cta__conteneur">
+
+        <p class="m-section__eyebrow">
+          06 — ALLER PLUS LOIN
+        </p>
+
+        <h2 id="creation-cta-title">
+          Un projet de création,
+          une idée ou un savoir-faire
+        </h2>
+
+        <p>
+          Échangeons autour de votre projet, de vos besoins
+          ou d'une idée à faire prendre forme.
+        </p>
+
+        <a
+          href="/contact/"
+          class="m-bouton m-bouton--principal m-creation-cta__bouton"
+        >
+          Parlons de votre projet
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <div id="composant-footer"></div>
+
+</body>
+
+</html>

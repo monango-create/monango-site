@@ -1,0 +1,689 @@
+/* =========================================================
+   PAGE CONFIDENTIALITÉ — MONANGO
+   ========================================================= */
+
+
+/* =========================================================
+   SOMMAIRE DE LA POLITIQUE DE CONFIDENTIALITÉ
+   ========================================================= */
+
+.m-confidentialite-sommaire {
+
+  background: var(--couleur-surface);
+
+  border-top: 1px solid var(--couleur-bordure);
+
+  border-bottom: 1px solid var(--couleur-bordure);
+
+}
+
+
+.m-confidentialite-sommaire__conteneur {
+
+  width: min(1200px, calc(100% - 64px));
+
+  margin-inline: auto;
+
+  padding-block: var(--espace-6);
+
+}
+
+
+/* =========================================================
+   INTRODUCTION DU SOMMAIRE
+   ========================================================= */
+
+.m-confidentialite-sommaire__intro {
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: var(--espace-4);
+
+  margin-bottom: var(--espace-4);
+
+}
+
+
+.m-confidentialite-sommaire__intro .m-section__eyebrow {
+
+  margin: 0;
+
+}
+
+
+.m-confidentialite-sommaire__description {
+
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: 0.875rem;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+/* =========================================================
+   LISTE
+   ========================================================= */
+
+.m-confidentialite-sommaire__liste {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 1px;
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+
+  border: 1px solid var(--couleur-bordure);
+
+}
+
+
+.m-confidentialite-sommaire__liste li {
+
+  min-width: 0;
+
+}
+
+
+.m-confidentialite-sommaire__liste a {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--espace-1);
+
+  height: 100%;
+
+  padding: var(--espace-3);
+
+  background: var(--couleur-fond);
+
+  color: var(--couleur-texte);
+
+  text-decoration: none;
+
+  font-family: var(--police-texte);
+
+  font-size: 0.875rem;
+
+  line-height: 1.4;
+
+  font-weight: 500;
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+
+}
+
+
+.m-confidentialite-sommaire__liste a span {
+
+  font-family: var(--police-titre);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  color: var(--couleur-digital);
+
+}
+
+
+.m-confidentialite-sommaire__liste a:hover {
+
+  background: var(--couleur-group);
+
+  color: var(--couleur-fond);
+
+}
+
+
+.m-confidentialite-sommaire__liste a:hover span {
+
+  color: inherit;
+
+}
+
+
+.m-confidentialite-sommaire__liste a:focus-visible {
+
+  outline: 2px solid var(--couleur-digital);
+
+  outline-offset: -2px;
+
+}
+
+
+/* =========================================================
+   ANCRAGE DES SECTIONS
+   ========================================================= */
+
+.m-confidentialite-section {
+
+  scroll-margin-top: 96px;
+
+}
+
+
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.m-confidentialite-section {
+
+  background: var(--couleur-fond);
+
+}
+
+
+.m-confidentialite-section--surface {
+
+  background: var(--couleur-surface);
+
+}
+
+
+.m-confidentialite-section--contact {
+
+  background: var(--couleur-group);
+
+  color: #ffffff;
+
+}
+
+
+.m-confidentialite-section--revision {
+
+  background: var(--couleur-surface);
+
+}
+
+
+/* =========================================================
+   CONTENEUR
+   ========================================================= */
+
+.m-confidentialite-section__conteneur {
+
+  width: min(1200px, calc(100% - 64px));
+
+  margin-inline: auto;
+
+  padding-block: var(--espace-9);
+
+}
+
+
+/* =========================================================
+   CONTENU — TITRE / TEXTE
+   ========================================================= */
+
+.m-confidentialite-section__contenu {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.8fr);
+
+  gap: var(--espace-8);
+
+  align-items: start;
+
+}
+
+
+/* =========================================================
+   GRAND TITRE
+   ========================================================= */
+
+.m-confidentialite-section__contenu h2 {
+
+  max-width: 680px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  font-weight: 600;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.025em;
+
+  color: var(--couleur-group);
+
+}
+
+
+.m-confidentialite-section__contenu h2 span {
+
+  color: var(--couleur-digital);
+
+}
+
+
+/* =========================================================
+   TEXTE
+   ========================================================= */
+
+.m-confidentialite-section__contenu > div {
+
+  max-width: 560px;
+
+}
+
+
+.m-confidentialite-section__contenu > div p {
+
+  margin: 0 0 var(--espace-3);
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+.m-confidentialite-section__contenu > div strong {
+
+  font-weight: 650;
+
+  color: inherit;
+
+}
+
+
+/* =========================================================
+   LIENS
+   ========================================================= */
+
+.m-confidentialite-section__contenu a:not(.m-bouton) {
+
+  color: var(--couleur-digital);
+
+  font-weight: 600;
+
+  text-decoration-thickness: 1px;
+
+  text-underline-offset: 3px;
+
+}
+
+
+.m-confidentialite-section__contenu a:not(.m-bouton):hover {
+
+  text-decoration-thickness: 2px;
+
+}
+
+
+/* =========================================================
+   LISTES
+   ========================================================= */
+
+.m-confidentialite-section__liste {
+
+  margin: 0 0 var(--espace-4);
+
+  padding-left: 1.25rem;
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+.m-confidentialite-section__liste li {
+
+  padding-left: 0.35rem;
+
+  margin-bottom: var(--espace-2);
+
+}
+
+
+.m-confidentialite-section__liste li:last-child {
+
+  margin-bottom: 0;
+
+}
+
+
+/* =========================================================
+   FICHES — INFORMATIONS IMPORTANTES
+   ========================================================= */
+
+.m-confidentialite-section__fiche {
+
+  margin-top: var(--espace-4);
+
+  padding: var(--espace-4);
+
+  border: 1px solid var(--couleur-bordure);
+
+  border-left: 3px solid var(--couleur-digital);
+
+  background: var(--couleur-surface);
+
+}
+
+
+.m-confidentialite-section--surface
+.m-confidentialite-section__fiche {
+
+  background: var(--couleur-fond);
+
+}
+
+
+.m-confidentialite-section__fiche p {
+
+  margin: 0 0 var(--espace-2) !important;
+
+}
+
+
+.m-confidentialite-section__fiche p:last-child {
+
+  margin-bottom: 0 !important;
+
+}
+
+
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.m-confidentialite-section__note {
+
+  margin-top: var(--espace-3) !important;
+
+  font-size: 0.875rem !important;
+
+  line-height: 1.6 !important;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.m-confidentialite-section--contact
+.m-confidentialite-section__contenu h2 {
+
+  color: #ffffff;
+
+}
+
+
+.m-confidentialite-section--contact
+.m-confidentialite-section__contenu h2 span {
+
+  color: #ffffff;
+
+}
+
+
+.m-confidentialite-section--contact
+.m-confidentialite-section__contenu > div p {
+
+  color: rgba(255, 255, 255, 0.78);
+
+}
+
+
+/* =========================================================
+   RÉVISION
+   ========================================================= */
+
+.m-confidentialite-section__revision {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: var(--espace-5);
+
+  padding-top: var(--espace-2);
+
+}
+
+
+.m-confidentialite-section__revision p {
+
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: 0.875rem;
+
+  line-height: 1.6;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+.m-confidentialite-section__revision strong {
+
+  font-weight: 650;
+
+  color: var(--couleur-group);
+
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-confidentialite-sommaire__conteneur {
+
+    width: min(100% - 48px, 900px);
+
+    grid-template-columns: 1fr;
+
+    gap: var(--espace-4);
+
+  }
+
+  .m-confidentialite-sommaire__liste { 
+    
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+
+
+}
+
+
+  .m-confidentialite-sommaire__intro {
+
+    position: static;
+
+  }
+
+
+  .m-confidentialite-sommaire__navigation {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  }
+
+
+  .m-confidentialite-section__conteneur {
+
+    width: min(100% - 48px, 900px);
+
+  }
+
+
+  .m-confidentialite-section__contenu {
+
+    grid-template-columns: 1fr;
+
+    gap: var(--espace-5);
+
+  }
+
+
+  .m-confidentialite-section__contenu > div {
+
+    max-width: 700px;
+
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-confidentialite-sommaire__conteneur {
+
+    width: calc(100% - 32px);
+
+    padding-block: var(--espace-5);
+
+  }
+
+
+  .m-confidentialite-sommaire__intro { 
+    
+    display: block; 
+    
+    margin-bottom: var(--espace-3); }
+
+
+  .m-confidentialite-sommaire__navigation {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .m-confidentialite-sommaire__description { 
+    
+    margin-top: var(--espace-1); 
+
+  } 
+
+  .m-confidentialite-sommaire__liste { 
+        
+    grid-template-columns: 1fr; 
+  
+  } 
+
+  .m-confidentialite-sommaire__liste a { 
+    
+    flex-direction: row; 
+    
+    align-items: center; 
+    
+    gap: var(--espace-3); 
+    
+    padding: var(--espace-3); 
+
+  } 
+
+
+  .m-confidentialite-sommaire__lien {
+
+    min-height: 50px;
+
+    padding: var(--espace-2) var(--espace-3);
+
+    font-size: 0.8125rem;
+
+  }
+
+
+  .m-confidentialite-section__conteneur {
+
+    width: calc(100% - 32px);
+
+    padding-block: var(--espace-7);
+
+  }
+
+
+  .m-confidentialite-section__contenu {
+
+    gap: var(--espace-4);
+
+  }
+
+
+  .m-confidentialite-section__contenu h2 {
+
+    font-size: clamp(1.9rem, 9vw, 2.5rem);
+
+  }
+
+
+  .m-confidentialite-section__contenu > div p {
+
+    font-size: 0.9375rem;
+
+    line-height: 1.65;
+
+  }
+
+
+  .m-confidentialite-section__liste {
+
+    font-size: 0.9375rem;
+
+    line-height: 1.65;
+
+  }
+
+
+  .m-confidentialite-section__fiche {
+
+    padding: var(--espace-3);
+
+  }
+
+
+  .m-confidentialite-section__revision {
+
+    flex-direction: column;
+
+    gap: var(--espace-2);
+
+  }
+
+}

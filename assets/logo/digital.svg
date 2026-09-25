@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 991.27 276.22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2e6bff;
+        font-family: Montserrat-Bold, Montserrat;
+        font-size: 80px;
+      }
+
+      .cls-1, .cls-2 {
+        font-weight: 700;
+      }
+
+      .cls-3, .cls-2 {
+        fill: #172554;
+      }
+
+      .cls-4 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-2 {
+        font-family: Montserrat-ExtraBold, Montserrat;
+        font-size: 165px;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1-2" data-name="Calque 1">
+    <rect class="cls-3" x="63.7" y="7.43" width="35.87" height="35.87" transform="translate(5.98 65.15) rotate(-45)"/>
+    <polygon class="cls-3" points="43.59 156.35 5.55 156.35 5.55 42.21 43.59 42.21 56.27 42.21 81.63 67.58 107 42.21 157.72 42.21 157.72 156.35 119.68 156.35 119.68 80.26 94.32 111.96 68.95 111.96 43.59 80.26 43.59 156.35"/>
+    <text class="cls-2" transform="translate(162.88 154.53)"><tspan x="0" y="0">ONANGO</tspan></text>
+    <text class="cls-1" transform="translate(0 237.58)"><tspan x="0" y="0">DIGI</tspan><tspan class="cls-4" x="180.24" y="0">T</tspan><tspan x="226.88" y="0">AL</tspan></text>
+  </g>
+</svg>

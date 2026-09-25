@@ -1,0 +1,1360 @@
+/* ==========================================================================
+   MONANGO — PAGE ACCUEIL
+   ========================================================================== */
+
+.m-accueil-page {
+  --accueil-bleu: #172554;
+  --accueil-bleu-clair: #2E6BFF;
+  --accueil-bleu-accent: #7EA2FF;
+
+  --accueil-fond: #f8fafc;
+  --accueil-fond-alt: #f1f5f9;
+
+  --accueil-texte: #172554;
+  --accueil-secondaire: #526071;
+
+  --accueil-bordure: #e2e8f0;
+
+  --accueil-tint: rgb(46 107 255 / 6%);
+  --accueil-tint-forte: rgb(46 107 255 / 11%);
+
+  overflow-x: hidden;
+}
+
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.accueil-hero {
+  position: relative;
+  min-height: min(820px, 100svh);
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #172554 0%,
+      #172554 58%,
+      #1d326c 100%
+    );
+
+  color: #fff;
+}
+
+.accueil-hero__fond {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.accueil-hero__orb {
+  position: absolute;
+  display: block;
+
+  border: 1px solid rgb(126 162 255 / 18%);
+  border-radius: 50%;
+
+  background: rgb(126 162 255 / 3%);
+}
+
+.accueil-hero__orb--1 {
+  width: 560px;
+  height: 560px;
+  right: -180px;
+  top: -170px;
+}
+
+.accueil-hero__orb--2 {
+  width: 380px;
+  height: 380px;
+  left: -230px;
+  bottom: -210px;
+}
+
+.accueil-hero__ligne {
+  position: absolute;
+
+  width: 60%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgb(126 162 255 / 25%),
+      transparent
+    );
+}
+
+.accueil-hero__ligne--1 {
+  top: 28%;
+  right: -10%;
+  transform: rotate(-24deg);
+}
+
+.accueil-hero__ligne--2 {
+  bottom: 25%;
+  left: -10%;
+  transform: rotate(24deg);
+}
+
+.accueil-hero__anneau {
+  position: absolute;
+
+  border: 1px solid rgb(126 162 255 / 15%);
+  border-radius: 50%;
+}
+
+.accueil-hero__anneau--1 {
+  width: 720px;
+  height: 720px;
+
+  right: -320px;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.accueil-hero__anneau--2 {
+  width: 480px;
+  height: 480px;
+
+  right: -195px;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.accueil-hero__conteneur {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+
+  align-items: center;
+
+  gap: clamp(40px, 7vw, 96px);
+
+  padding: 28px 0 108px;
+}
+
+.accueil-hero__contenu {
+  max-width: 720px;
+}
+
+.accueil-hero h1 {
+  max-width: 760px;
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(3.3rem, 6vw, 6.2rem);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+
+  color: #fff;
+}
+
+.accueil-hero h1 span {
+  color: var(--accueil-bleu-accent);
+}
+
+.accueil-hero__description {
+  max-width: 610px;
+  margin: 32px 0 0;
+
+  font-family: var(--police-texte);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.75;
+
+  color: rgb(255 255 255 / 78%);
+}
+
+.accueil-hero__motto {
+  margin: 20px 0 0;
+
+  font-family: var(--police-titre);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.5;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--accueil-bleu-accent);
+}
+
+.accueil-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-top: 36px;
+}
+
+.accueil-hero__actions .m-bouton--primaire {
+  background: #fff;
+  border-color: #fff;
+  color: var(--accueil-bleu);
+}
+
+.accueil-hero__actions .m-bouton--primaire:hover,
+.accueil-hero__actions .m-bouton--primaire:focus-visible {
+  background: var(--accueil-bleu-accent);
+  border-color: var(--accueil-bleu-accent);
+  color: var(--accueil-bleu);
+}
+
+.accueil-hero__actions .m-bouton--secondaire {
+  color: #fff;
+  border-color: rgb(255 255 255 / 30%);
+  background: rgb(255 255 255 / 5%);
+}
+
+.accueil-hero__actions .m-bouton--secondaire:hover,
+.accueil-hero__actions .m-bouton--secondaire:focus-visible {
+  border-color: rgb(255 255 255 / 60%);
+  background: rgb(255 255 255 / 10%);
+}
+
+
+/* --------------------------------------------------------------------------
+   HERO — VISUEL
+   -------------------------------------------------------------------------- */
+
+.accueil-hero__visual {
+  position: relative;
+
+  width: min(100%, 560px);
+  aspect-ratio: 1;
+
+  margin-inline: auto;
+}
+
+.accueil-hero__visual-noyau {
+  position: absolute;
+  z-index: 3;
+
+  top: 50%;
+  left: 50%;
+
+  display: grid;
+  place-items: center;
+
+  width: 150px;
+  height: 150px;
+
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 50%;
+
+  background: rgb(255 255 255 / 8%);
+
+  backdrop-filter: blur(8px);
+
+  transform: translate(-50%, -50%);
+}
+
+.accueil-hero__visual-noyau img {
+  width: 76px;
+  height: auto;
+}
+
+.accueil-hero__visual-orbite {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid rgb(126 162 255 / 28%);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.accueil-hero__visual-orbite--1 {
+  width: 46%;
+  height: 46%;
+}
+
+.accueil-hero__visual-orbite--2 {
+  width: 68%;
+  height: 68%;
+}
+
+.accueil-hero__visual-orbite--3 {
+  width: 92%;
+  height: 92%;
+  border-color: rgb(126 162 255 / 16%);
+}
+
+.accueil-hero__visual-point {
+  position: absolute;
+  z-index: 4;
+
+  width: 10px;
+  height: 10px;
+
+  border: 2px solid var(--accueil-bleu);
+  border-radius: 50%;
+
+  background: var(--accueil-bleu-accent);
+
+  box-shadow:
+    0 0 0 7px rgb(126 162 255 / 8%);
+}
+
+.accueil-hero__visual-point--1 {
+  top: 15%;
+  left: 50%;
+}
+
+.accueil-hero__visual-point--2 {
+  top: 50%;
+  right: 7%;
+}
+
+.accueil-hero__visual-point--3 {
+  bottom: 15%;
+  left: 50%;
+}
+
+.accueil-hero__visual-point--4 {
+  top: 50%;
+  left: 7%;
+}
+
+.accueil-hero__signature {
+  position: absolute;
+  z-index: 3;
+
+  right: clamp(24px, 5vw, 72px);
+  bottom: 34px;
+}
+
+.accueil-hero__signature img {
+  width: 110px;
+  height: auto;
+  opacity: 0.7;
+}
+
+.accueil-hero__marker {
+  position: absolute;
+  z-index: 3;
+
+  left: 50%;
+  bottom: 28px;
+
+  display: flex;
+  gap: 7px;
+
+  transform: translateX(-50%);
+}
+
+.accueil-hero__marker span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+  background: rgb(255 255 255 / 35%);
+}
+
+.accueil-hero__marker span:first-child {
+  width: 24px;
+  border-radius: 999px;
+  background: var(--accueil-bleu-accent);
+}
+
+
+/* ==========================================================================
+   SECTIONS COMMUNES
+   ========================================================================== */
+
+.accueil-section {
+  position: relative;
+
+  padding-block: clamp(80px, 10vw, 140px);
+
+  background: var(--accueil-fond);
+}
+
+.accueil-section:nth-of-type(even) {
+  background: var(--accueil-fond-alt);
+}
+
+.accueil-section__entete {
+  margin-bottom: clamp(44px, 6vw, 72px);
+}
+
+.accueil-section__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+
+  align-items: center;
+
+  gap: clamp(50px, 8vw, 110px);
+}
+
+.accueil-section__intro-principale {
+  max-width: 760px;
+}
+
+.accueil-section__entete h2,
+.accueil-talents__contenu h2,
+.accueil-vision__contenu h2 {
+  max-width: 760px;
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+
+  color: var(--couleur-group);
+}
+
+.accueil-section__entete h2 span,
+.accueil-talents__contenu h2 span,
+.accueil-vision__contenu h2 span {
+  color: var(--accueil-bleu-clair);
+}
+
+.accueil-section__entete > p:last-child,
+.accueil-section__intro-principale > p,
+.accueil-talents__contenu > p,
+.accueil-vision__contenu > p {
+  max-width: 680px;
+  margin: 24px 0 0;
+
+  font-family: var(--police-texte);
+  font-size: var(--taille-texte);
+  line-height: 1.75;
+
+  color: var(--accueil-secondaire);
+}
+
+
+/* ==========================================================================
+   ÉCOSYSTÈME — VISUEL D'ACCOMPAGNEMENT
+   ========================================================================== */
+
+.accueil-section__intro-visuel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 300px;
+}
+
+.accueil-section__intro-schema {
+  position: relative;
+
+  width: min(100%, 330px);
+  aspect-ratio: 1;
+
+  border: 1px solid var(--accueil-bordure);
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgb(46 107 255 / 8%),
+      transparent 62%
+    );
+}
+
+.accueil-section__intro-schema::before,
+.accueil-section__intro-schema::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid rgb(46 107 255 / 12%);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.accueil-section__intro-schema::before {
+  width: 68%;
+  height: 68%;
+}
+
+.accueil-section__intro-schema::after {
+  width: 40%;
+  height: 40%;
+}
+
+.accueil-section__schema-centre {
+  position: absolute;
+  z-index: 3;
+
+  top: 50%;
+  left: 50%;
+
+  display: grid;
+  place-items: center;
+
+  width: 92px;
+  height: 92px;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  box-shadow:
+    0 12px 35px rgb(23 37 84 / 10%);
+
+  transform: translate(-50%, -50%);
+}
+
+.accueil-section__schema-centre img {
+  width: 48px;
+  height: auto;
+}
+
+.accueil-section__schema-ligne {
+  position: absolute;
+  z-index: 1;
+
+  top: 50%;
+  left: 50%;
+
+  width: 42%;
+  height: 1px;
+
+  background: rgb(46 107 255 / 25%);
+
+  transform-origin: left center;
+}
+
+.accueil-section__schema-ligne--1 {
+  transform: rotate(25deg);
+}
+
+.accueil-section__schema-ligne--2 {
+  transform: rotate(145deg);
+}
+
+.accueil-section__schema-ligne--3 {
+  transform: rotate(265deg);
+}
+
+.accueil-section__schema-point {
+  position: absolute;
+  z-index: 4;
+
+  width: 11px;
+  height: 11px;
+
+  border: 3px solid var(--accueil-fond);
+  border-radius: 50%;
+
+  background: var(--accueil-bleu-clair);
+  box-shadow: 0 0 0 1px rgb(46 107 255 / 25%);
+}
+
+.accueil-section__schema-point--1 {
+  top: 19%;
+  right: 23%;
+}
+
+.accueil-section__schema-point--2 {
+  bottom: 21%;
+  right: 19%;
+}
+
+.accueil-section__schema-point--3 {
+  bottom: 19%;
+  left: 23%;
+}
+
+
+/* ==========================================================================
+   ÉCOSYSTÈME — CARTES
+   ========================================================================== */
+
+.accueil-ecosysteme__grille {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.accueil-ecosysteme__grille .m-card {
+  min-height: 100%;
+}
+
+.accueil-section__action {
+  margin-top: 38px;
+}
+
+.accueil-section__action .m-bouton--texte {
+  color: var(--accueil-bleu-clair);
+}
+
+
+/* ==========================================================================
+   TALENTS
+   ========================================================================== */
+
+.accueil-talents {
+  background: #fff;
+}
+
+.accueil-talents__conteneur {
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.9fr)
+    minmax(0, 1.1fr);
+
+  align-items: center;
+
+  gap: clamp(56px, 9vw, 120px);
+}
+
+.accueil-talents__visuel {
+  display: grid;
+  place-items: center;
+}
+
+.accueil-talents__visuel-cadre {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  width: min(100%, 430px);
+  aspect-ratio: 1;
+
+  border: 1px solid var(--accueil-bordure);
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      var(--accueil-tint-forte),
+      transparent 62%
+    );
+}
+
+.accueil-talents__visuel-cadre::before,
+.accueil-talents__visuel-cadre::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 13%;
+
+  border: 1px solid rgb(46 107 255 / 15%);
+  border-radius: 50%;
+}
+
+.accueil-talents__visuel-cadre::after {
+  inset: 28%;
+  border-color: rgb(46 107 255 / 20%);
+}
+
+.accueil-talents__visuel-ligne {
+  position: absolute;
+
+  width: 72%;
+  height: 1px;
+
+  background: rgb(46 107 255 / 15%);
+
+  transform: rotate(45deg);
+}
+
+.accueil-talents__visuel-point {
+  position: absolute;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+  background: var(--accueil-bleu-clair);
+}
+
+.accueil-talents__visuel-centre {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  place-items: center;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+  background: var(--accueil-bleu);
+}
+
+.accueil-talents__visuel-centre img {
+  width: 58px;
+}
+
+.accueil-talents__contenu {
+  max-width: 720px;
+}
+
+.accueil-talents__points {
+  display: grid;
+  gap: 0;
+
+  margin-top: 38px;
+}
+
+.accueil-talents__point {
+  display: grid;
+
+  grid-template-columns: 52px minmax(0, 1fr);
+
+  gap: 18px;
+
+  padding: 22px 0;
+
+  border-top: 1px solid var(--accueil-bordure);
+}
+
+.accueil-talents__point:last-child {
+  border-bottom: 1px solid var(--accueil-bordure);
+}
+
+.accueil-talents__point > span {
+  font-family: var(--police-titre);
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  color: var(--accueil-bleu-clair);
+}
+
+.accueil-talents__point h3 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  color: var(--accueil-texte);
+}
+
+.accueil-talents__point p {
+  margin: 5px 0 0;
+
+  font-size: 0.92rem;
+  line-height: 1.6;
+
+  color: var(--accueil-secondaire);
+}
+
+
+/* ==========================================================================
+   TRANSFORMATION
+   ========================================================================== */
+
+.accueil-transformation {
+  background: var(--accueil-fond-alt);
+}
+
+.accueil-transformation__parcours {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid var(--accueil-bordure);
+}
+
+.accueil-transformation__etape {
+  position: relative;
+
+  padding: 30px 26px 12px;
+
+  border-right: 1px solid var(--accueil-bordure);
+}
+
+.accueil-transformation__etape:first-child {
+  border-right: 0;
+}
+
+.accueil-transformation__etape:last-child {
+  border-right: 0;
+}
+
+.accueil-transformation__etape--active::before {
+  content: "";
+
+  position: absolute;
+
+  top: -2px;
+  left: 0;
+
+  width: 70px;
+  height: 3px;
+
+  background: var(--accueil-bleu-clair);
+}
+
+.accueil-transformation__numero {
+  display: block;
+
+  margin-bottom: 28px;
+
+  font-family: var(--police-titre);
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  color: var(--accueil-bleu-clair);
+}
+
+.accueil-transformation__etape h3 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  color: var(--accueil-texte);
+}
+
+.accueil-transformation__etape p {
+  margin: 10px 0 0;
+
+  font-size: 0.92rem;
+  line-height: 1.65;
+
+  color: var(--accueil-secondaire);
+}
+
+
+/* ==========================================================================
+   VISION
+   ========================================================================== */
+
+.accueil-vision {
+  background: #fff;
+}
+
+.accueil-vision__conteneur {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(300px, 0.9fr);
+
+  gap: clamp(60px, 10vw, 130px);
+
+  align-items: start;
+}
+
+.accueil-vision__contenu {
+  max-width: 760px;
+}
+
+.accueil-vision__points {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.accueil-vision__point {
+  min-height: 150px;
+  padding: 24px;
+
+  border: 1px solid var(--accueil-bordure);
+
+  background: var(--accueil-fond);
+
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.accueil-vision__point:hover {
+  border-color: rgb(46 107 255 / 30%);
+  background: var(--accueil-tint);
+
+  transform: translateY(-3px);
+}
+
+.accueil-vision__point > span {
+  display: block;
+
+  margin-bottom: 34px;
+
+  font-family: var(--police-titre);
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  color: var(--accueil-bleu-clair);
+}
+
+.accueil-vision__point p {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+
+  color: var(--accueil-texte);
+}
+
+
+/* ==========================================================================
+   CTA
+   ========================================================================== */
+
+.accueil-cta {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-block: clamp(80px, 10vw, 120px);
+
+  background: var(--accueil-bleu);
+  color: #fff;
+}
+
+.accueil-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -220px;
+  top: 50%;
+
+  border: 1px solid rgb(126 162 255 / 15%);
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+}
+
+.accueil-cta__conteneur {
+  position: relative;
+  z-index: 1;
+}
+
+.accueil-cta__contenu {
+  max-width: 760px;
+}
+
+.accueil-cta .m-section__eyebrow {
+  color: rgb(255 255 255 / 60%);
+}
+
+.accueil-cta h2 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+
+  color: #fff;
+}
+
+.accueil-cta h2 span {
+  color: var(--accueil-bleu-accent);
+}
+
+.accueil-cta__contenu > p {
+  max-width: 620px;
+  margin: 22px 0 32px;
+
+  font-family: var(--police-texte);
+  font-size: var(--taille-texte);
+  line-height: 1.75;
+
+  color: rgb(255 255 255 / 72%);
+}
+
+.accueil-cta .m-bouton--primaire {
+  background: #fff;
+  border-color: #fff;
+  color: var(--accueil-bleu);
+}
+
+.accueil-cta .m-bouton--primaire:hover,
+.accueil-cta .m-bouton--primaire:focus-visible {
+  background: var(--accueil-bleu-accent);
+  border-color: var(--accueil-bleu-accent);
+}
+
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .accueil-hero__contenu {
+    animation: accueil-apparition 700ms ease both;
+  }
+
+  .accueil-hero__visual {
+    animation: accueil-apparition-visuel 900ms 180ms ease both;
+  }
+
+  .accueil-hero__signature {
+    animation: accueil-apparition 700ms 350ms ease both;
+  }
+
+  .accueil-talents__point,
+  .accueil-vision__point,
+  .accueil-transformation__etape {
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease;
+  }
+}
+
+@keyframes accueil-apparition {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes accueil-apparition-visuel {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* ==========================================================================
+   TABLETTE
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+
+  .accueil-hero__conteneur {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(280px, 0.75fr);
+
+    gap: 40px;
+  }
+
+  .accueil-hero h1 {
+    font-size: clamp(3rem, 6.5vw, 4.8rem);
+  }
+
+  .accueil-section__intro {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(250px, 0.7fr);
+
+    gap: 50px;
+  }
+
+  .accueil-ecosysteme__grille {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .accueil-transformation__parcours {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .accueil-transformation__etape:nth-child(2) {
+    border-right: 0;
+  }
+
+  .accueil-transformation__etape:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--accueil-bordure);
+  }
+
+  .accueil-talents__conteneur,
+  .accueil-vision__conteneur {
+    gap: 50px;
+  }
+}
+
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 639px) {
+
+  .accueil-hero {
+    min-height: 0;
+  }
+
+  .accueil-hero__conteneur {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 38px;
+
+    padding: 22px 0 110px;
+  }
+
+  .accueil-hero__contenu {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .accueil-hero h1 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(2.35rem, 12vw, 3.25rem);
+    line-height: 1;
+
+    overflow-wrap: break-word;
+  }
+
+  .accueil-hero__description {
+    margin-top: 24px;
+
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .accueil-hero__motto {
+    margin-top: 18px;
+
+    font-size: 0.68rem;
+    letter-spacing: 0.11em;
+  }
+
+  .accueil-hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+
+    margin-top: 28px;
+  }
+
+  .accueil-hero__actions .m-bouton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .accueil-hero__visual {
+    width: min(100%, 330px);
+  }
+
+  .accueil-hero__visual-noyau {
+    width: 100px;
+    height: 100px;
+  }
+
+  .accueil-hero__visual-noyau img {
+    width: 54px;
+  }
+
+  .accueil-hero__signature {
+    right: 18px;
+    bottom: 28px;
+  }
+
+  .accueil-hero__signature img {
+    width: 82px;
+  }
+
+  .accueil-hero__marker {
+    bottom: 30px;
+  }
+
+
+  /* ------------------------------------------------------------------------
+     Sections
+     ------------------------------------------------------------------------ */
+
+  .accueil-section {
+    padding-block: 76px;
+  }
+
+  .accueil-section__entete {
+    margin-bottom: 38px;
+  }
+
+  .accueil-section__intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 42px;
+  }
+
+  .accueil-section__entete h2,
+  .accueil-talents__contenu h2,
+  .accueil-vision__contenu h2 {
+    font-size: clamp(1.9rem, 9vw, 2.5rem);
+  }
+
+  .accueil-section__entete > p:last-child,
+  .accueil-section__intro-principale > p,
+  .accueil-talents__contenu > p,
+  .accueil-vision__contenu > p {
+    margin-top: 18px;
+
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+
+  .accueil-section__intro-visuel {
+    min-height: 260px;
+  }
+
+  .accueil-section__intro-schema {
+    width: min(100%, 270px);
+  }
+
+  .accueil-section__schema-centre {
+    width: 76px;
+    height: 76px;
+  }
+
+  .accueil-section__schema-centre img {
+    width: 40px;
+  }
+
+  .accueil-ecosysteme__grille {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+
+  /* ------------------------------------------------------------------------
+     Talents
+     ------------------------------------------------------------------------ */
+
+  .accueil-talents__conteneur,
+  .accueil-vision__conteneur {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 54px;
+  }
+
+  .accueil-talents__visuel {
+    order: 2;
+  }
+
+  .accueil-talents__contenu {
+    order: 1;
+  }
+
+  .accueil-talents__visuel-cadre {
+    width: min(100%, 300px);
+  }
+
+  .accueil-talents__point {
+    grid-template-columns: 40px minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 18px 0;
+  }
+
+
+  /* ------------------------------------------------------------------------
+     Transformation
+     ------------------------------------------------------------------------ */
+
+  .accueil-transformation__parcours {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .accueil-transformation__etape,
+  .accueil-transformation__etape:first-child {
+    padding: 24px 0;
+
+    border-right: 0;
+    border-bottom: 1px solid var(--accueil-bordure);
+  }
+
+  .accueil-transformation__etape:last-child {
+    border-bottom: 0;
+  }
+
+  .accueil-transformation__numero {
+    margin-bottom: 16px;
+  }
+
+
+  /* ------------------------------------------------------------------------
+     Vision
+     ------------------------------------------------------------------------ */
+
+  .accueil-vision__points {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .accueil-vision__point {
+    min-height: 0;
+  }
+
+  .accueil-vision__point > span {
+    margin-bottom: 22px;
+  }
+
+
+  /* ------------------------------------------------------------------------
+     CTA
+     ------------------------------------------------------------------------ */
+
+  .accueil-cta {
+    padding-block: 76px;
+  }
+
+  .accueil-cta h2 {
+    font-size: clamp(2.1rem, 10vw, 3rem);
+  }
+}
+
+
+/* ==========================================================================
+   TRÈS PETITS ÉCRANS
+   ========================================================================== */
+
+@media (max-width: 380px) {
+
+  .accueil-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .accueil-hero__description {
+    font-size: 0.88rem;
+  }
+
+  .accueil-talents__point {
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+}

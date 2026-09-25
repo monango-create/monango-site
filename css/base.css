@@ -1,0 +1,232 @@
+/* =========================================
+   BASE — MONANGO
+   ========================================= */
+
+
+/* =========================================
+   RESET MINIMAL
+   ========================================= */
+
+*,
+*::before,
+*::after {
+
+  box-sizing: border-box;
+
+}
+
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+
+body {
+
+  margin: 0;
+
+  min-width: 320px;
+
+  font-family:
+    var(--police-texte);
+
+  font-size:
+    var(--taille-texte);
+
+  line-height: 1.6;
+
+  color:
+    var(--couleur-texte);
+
+  background:
+    var(--couleur-fond);
+
+}
+
+
+/* =========================================
+   TYPOGRAPHIE
+   ========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  margin-top: 0;
+
+  font-family:
+    var(--police-titre);
+
+  color:
+    var(--couleur-texte);
+
+}
+
+
+p {
+
+  margin-top: 0;
+
+}
+
+
+a {
+
+  color:
+    inherit;
+
+}
+
+
+img,
+svg {
+
+  max-width: 100%;
+
+}
+
+
+img {
+
+  height: auto;
+
+  display: block;
+
+}
+
+/* =========================================
+   ESPACEMENT GLOBAL DES SECTIONS
+   ========================================= */
+
+.m-section {
+  padding-block: var(--espace-9);
+}
+
+/* =========================================
+   REPÈRE DE SECTION
+   ========================================= */
+
+.m-section__eyebrow {
+
+  margin: 0 0 var(--espace-5);
+
+  font-family:
+    var(--police-titre);
+
+  font-size:
+    var(--taille-petit);
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color:
+    var(--couleur-texte-secondaire);
+
+}
+
+/* =========================================
+   ACCESSIBILITÉ
+   ========================================= */
+
+button,
+input,
+textarea,
+select {
+
+  font: inherit;
+
+}
+
+
+button {
+
+  cursor: pointer;
+
+}
+
+
+:focus-visible {
+
+  outline:
+    3px solid
+    var(--couleur-digital);
+
+  outline-offset: 3px;
+
+}
+
+
+/* =========================================
+   CONTENU MASQUÉ MAIS ACCESSIBLE
+   ========================================= */
+
+.sr-only {
+
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+
+}
+
+
+/* =========================================
+   RÉDUCTION DES ANIMATIONS
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+
+    scroll-behavior: auto;
+
+  }
+
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+
+  }
+
+}
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+
+@media (max-width: 639px) {
+  .m-section {
+    padding-block: var(--espace-7);
+  }
+}

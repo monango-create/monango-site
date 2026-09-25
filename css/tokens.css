@@ -1,0 +1,76 @@
+:root {
+  /* ================================
+     COULEURS — MONANGO
+     ================================ */
+
+  --couleur-group: #172554;
+
+  --couleur-digital: #2E6BFF;
+  --couleur-energy: #F97316;
+  --couleur-creation: #7C3AED;
+  --couleur-academy: #D4A72C;
+  --couleur-industry: #0D9488;
+  --couleur-agro: #16A34A;
+
+  --couleur-digital-hover: #1E4FD6;
+
+  --couleur-texte: #1A1A1A;
+  --couleur-texte-secondaire: #4B5563;
+  --couleur-texte-inverse: #FFFFFF;
+
+  --couleur-fond: #FFFFFF;
+  --couleur-surface: #F8FAFC;
+  --couleur-bordure: #E5E7EB;
+   --couleur-erreur: #DC2626;
+  
+   /* Fond du header lorsqu'il devient sticky */
+  --couleur-header: rgb(255 255 255 / 94%);
+
+
+  /* ================================
+     TYPOGRAPHIE
+     ================================ */
+
+  --police-titre: 'Poppins', sans-serif;
+  --police-texte: 'Inter', sans-serif;
+
+  --taille-h1: 2.5rem;
+  --taille-h2: 2rem;
+  --taille-h3: 1.5rem;
+  --taille-texte: 1rem;
+  --taille-petit: 0.875rem;
+
+
+  /* ================================
+     ESPACEMENTS
+     ================================ */
+
+  --espace-1: 8px;
+  --espace-2: 16px;
+  --espace-3: 24px;
+  --espace-4: 32px;
+  --espace-5: 48px;
+  --espace-6: 64px;
+  --espace-7: 80px;
+  --espace-8: 96px;
+  --espace-9: 112px;
+
+
+  /* ================================
+     FORMES
+     ================================ */
+
+  --rayon-defaut: 8px;
+  --rayon-carte: 12px;
+
+
+  /* ================================
+     OMBRES
+     ================================ */
+
+  --ombre-carte:
+    0 2px 8px rgb(23 37 84 / 8%);
+
+  --ombre-carte-hover:
+    0 12px 28px rgb(23 37 84 / 12%);
+}

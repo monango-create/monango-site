@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Nos filiales — MONANGO Group</title>
+
+  <meta
+    name="description"
+    content="Découvrez les filiales de MONANGO Group et les expertises complémentaires qui composent son écosystème."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+
+  <link rel="stylesheet" href="/css/composants/header.css">
+  <link rel="stylesheet" href="/css/composants/footer.css">
+  <link rel="stylesheet" href="/css/composants/card.css">
+  <link rel="stylesheet" href="/css/composants/bouton.css">
+  <link rel="stylesheet" href="/css/composants/hero.css">
+
+  <link rel="stylesheet" href="/css/pages/filiales.css">
+
+  <link
+    rel="icon"
+    href="/assets/icones/monango-icone.svg"
+  >
+
+</head>
+
+
+<body>
+
+  <!-- ====================================================
+       HEADER
+  ==================================================== -->
+
+  <div id="composant-header"></div>
+
+
+  <main>
+
+    <!-- ====================================================
+         HERO — MONANGO
+         HERO CONSERVÉ
+    ==================================================== -->
+
+    <section
+      class="m-hero m-hero--page"
+      aria-labelledby="hero-titre"
+    >
+
+      <div class="m-hero__conteneur">
+
+        <div class="m-hero__contenu">
+
+          <h1 id="hero-titre">
+            Plusieurs expertises,
+            <span>un même écosystème</span>
+          </h1>
+
+          <p class="m-hero__description">
+            MONANGO réunit plusieurs domaines d’expertise
+            pour concevoir, développer et déployer des
+            solutions adaptées aux besoins des entreprises
+            et des territoires
+          </p>
+
+          <div class="m-hero__actions">
+
+            <a
+              href="#ecosysteme-titre"
+              class="m-bouton m-bouton--primaire"
+            >
+              Explorer l’écosystème
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- ==================================================
+             ÉCOSYSTÈME DYNAMIQUE
+        ================================================== -->
+
+        <div
+          class="m-hero__ecosysteme"
+          role="group"
+          aria-label="Les domaines d’expertise actifs de MONANGO"
+        >
+
+          <div
+            class="m-hero__connexions"
+            aria-hidden="true"
+          ></div>
+
+
+          <div class="m-hero__noyau">
+
+            <img
+              class="m-hero__noyau-logo"
+              src="/assets/logo/monango-blanc.svg"
+              alt="MONANGO"
+            >
+
+          </div>
+
+
+          <div class="m-hero__domaines"></div>
+
+        </div>
+
+      </div>
+
+      <!-- <div
+        class="filiales-hero__marker"
+        aria-hidden="true"
+      >
+        <span></span>
+        <span ></span>
+        <span></span>
+      </div> -->
+
+    </section>
+
+
+    <!-- ====================================================
+         01 — NOTRE ÉCOSYSTÈME
+    ==================================================== -->
+
+    <section
+      class="m-filiales"
+      aria-labelledby="ecosysteme-titre"
+    >
+
+      <div class="m-filiales__conteneur">
+
+        <div class="m-filiales__entete">
+
+          <div>
+
+            <p class="m-section__eyebrow">
+              01 — NOTRE ÉCOSYSTÈME
+            </p>
+
+            <h2 id="ecosysteme-titre">
+              Plusieurs domaines,
+              <span>une même dynamique</span>
+            </h2>
+
+          </div>
+
+
+          <p>
+            Chaque filiale développe une expertise propre,
+            tout en s’inscrivant dans une même vision :
+            révéler les compétences, développer les savoir-faire
+            et transformer les besoins en solutions concrètes.
+          </p>
+
+        </div>
+
+
+        <!-- ==================================================
+             FILIALES — GÉNÉRÉES DEPUIS LE JSON
+        ================================================== -->
+
+        <div
+          class="m-grille m-grille--filiales"
+          id="grille-filiales"
+          data-loading="true"
+          aria-live="polite"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         02 — LA COMPLÉMENTARITÉ
+    ==================================================== -->
+
+    <section
+      class="m-filiales__complementarite"
+      aria-labelledby="complementarite-titre"
+    >
+
+      <div class="m-filiales__complementarite-conteneur">
+
+        <div class="m-filiales__complementarite-contenu">
+
+          <div>
+
+            <p class="m-section__eyebrow">
+              02 — LA COMPLÉMENTARITÉ
+            </p>
+
+            <h2 id="complementarite-titre">
+              Des expertises qui
+              <span>se renforcent</span>
+            </h2>
+
+          </div>
+
+
+          <div>
+
+            <p>
+              Les domaines de MONANGO évoluent de manière
+              autonome tout en pouvant mobiliser les ressources,
+              les compétences et les technologies des autres filiales.
+            </p>
+
+            <p>
+              Cette organisation permet de passer plus facilement
+              de la compétence à la conception, de la conception
+              à l’exécution et de l’exécution à une solution durable.
+            </p>
+
+          </div>
+
+        </div>
+        
+
+
+        <!-- ==================================================
+             CAPACITÉS COMMUNES
+        ================================================== -->
+
+        <div
+          class="m-filiales__capacites"
+          aria-label="Les capacités communes de MONANGO"
+        >
+
+          <article class="m-filiales__capacite">
+
+            <span class="m-filiales__capacite-numero">
+              01
+            </span>
+
+            <div>
+
+              <h3>
+                Révéler
+              </h3>
+
+              <p>
+                Identifier les talents, développer les compétences
+                et faire émerger les savoir-faire
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="m-filiales__capacite">
+
+            <span class="m-filiales__capacite-numero">
+              02
+            </span>
+
+            <div>
+
+              <h3>
+                Concevoir
+              </h3>
+
+              <p>
+                Transformer les besoins et les idées en expertises,
+                produits et solutions structurées
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="m-filiales__capacite">
+
+            <span class="m-filiales__capacite-numero">
+              03
+            </span>
+
+            <div>
+
+              <h3>
+                Déployer
+              </h3>
+
+              <p>
+                Mettre les compétences et les solutions au service
+                des organisations et des territoires
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="m-filiales__capacite">
+
+            <span class="m-filiales__capacite-numero">
+              04
+            </span>
+
+            <div>
+
+              <h3>
+                Impacter
+              </h3>
+
+              <p>
+                Construire des réponses utiles, durables
+                et adaptées aux réalités locales
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         03 — UNE LOGIQUE DE GROUPE
+    ==================================================== -->
+
+    <section
+      class="m-filiales__approche"
+      aria-labelledby="logique-groupe-titre"
+    >
+
+      <div class="m-filiales__approche-conteneur">
+
+        <div class="m-filiales__approche-contenu">
+
+          <p class="m-section__eyebrow">
+            03 — UNE LOGIQUE DE GROUPE
+          </p>
+
+          <h2 id="logique-groupe-titre">
+            Des métiers différents,
+            <span>des fondations communes</span>
+          </h2>
+
+
+          <p>
+            MONANGO rassemble des activités différentes autour
+            d’une même architecture : les compétences humaines,
+            l’expertise métier, l’innovation et la capacité à réaliser.
+          </p>
+
+          <p>
+            Cette approche permet au Groupe de développer plusieurs
+            domaines sans perdre son identité ni sa cohérence.
+          </p>
+
+          <p>
+            Chaque filiale apporte ainsi sa propre réponse, tandis
+            que l’écosystème MONANGO crée les conditions pour faire
+            circuler les connaissances, les technologies et les opportunités.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         04 — CTA
+    ==================================================== -->
+
+    <section
+      class="m-filiales__approche"
+      aria-labelledby="filiales-cta-titre"
+    >
+
+      <div class="m-filiales__approche-conteneur">
+
+        <div class="m-filiales__cta">
+
+          <div>
+
+            <p class="m-section__eyebrow">
+              04 — ALLER PLUS LOIN
+            </p>
+
+            <h2 id="filiales-cta-titre">
+              Une expertise vous intéresse ?
+            </h2>
+
+            <p>
+              Découvrez le domaine, ses activités et les solutions
+              développées par MONANGO
+            </p>
+
+          </div>
+
+
+          <a
+            href="/contact/"
+            class="m-bouton m-bouton--primaire"
+          >
+            Échanger avec MONANGO
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ====================================================
+       FOOTER
+  ==================================================== -->
+
+  <div id="composant-footer"></div>
+
+
+  <!-- ====================================================
+       JAVASCRIPT
+  ==================================================== -->
+
+  <script src="/js/utils.js" defer></script>
+  <script src="/js/donnees.js" defer></script>
+  <script src="/js/filiales.js" defer></script>
+  <script src="/js/rendu-filiales.js" defer></script>
+  <script src="/js/navigation.js" defer></script>
+
+</body>
+
+</html>

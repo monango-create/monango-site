@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="MONANGO Energy conçoit, installe, entretient et dépanne des solutions électriques et énergétiques, avec une expertise orientée vers les installations électriques et les énergies renouvelables."
+  >
+
+  <title>MONANGO Energy — Énergie & Ingénierie électrique</title>
+
+  <!-- Polices -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Système global -->
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+
+  <!-- Composants -->
+  <link rel="stylesheet" href="/css/composants/header.css">
+  <link rel="stylesheet" href="/css/composants/footer.css">
+  <link rel="stylesheet" href="/css/composants/bouton.css">
+
+  <!-- Page -->
+  <link rel="stylesheet" href="/css/pages/filiales-energy.css">
+
+  <!-- Scripts globaux -->
+  <script src="/js/utils.js" defer></script>
+  <script src="/js/donnees.js" defer></script>
+  <script src="/js/navigation.js" defer></script>
+</head>
+
+
+<body class="m-energy-page">
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <div id="composant-header"></div>
+
+
+  <main>
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section
+      class="m-energy-hero"
+      aria-labelledby="energy-hero-title"
+    >
+
+      <div class="m-energy-hero__structure" aria-hidden="true">
+        <span class="m-energy-hero__grid"></span>
+        <span class="m-energy-hero__orb m-energy-hero__orb--one"></span>
+        <span class="m-energy-hero__orb m-energy-hero__orb--two"></span>
+        <span class="m-energy-hero__line m-energy-hero__line--one"></span>
+        <span class="m-energy-hero__line m-energy-hero__line--two"></span>
+      </div>
+
+
+      <div class="m-energy-hero__conteneur">
+
+        <div class="m-energy-hero__contenu">
+
+          <div class="m-energy-hero__marque">
+            <span class="m-energy-hero__point"></span>
+            <span>MONANGO Energy</span>
+          </div>
+
+
+          <h1 id="energy-hero-title">
+            Alimenter,
+            <span>construire</span>,
+            maintenir
+          </h1>
+
+
+          <p class="m-energy-hero__description">
+            Nous concevons, installons, entretenons et dépannons
+            des solutions électriques et énergétiques adaptées
+            aux besoins des installations, des projets et des territoires.
+          </p>
+
+
+          <div class="m-energy-hero__actions">
+
+            <a
+              href="#expertises"
+              class="m-bouton m-bouton--principal m-energy-hero__bouton"
+            >
+              Découvrir Energy
+            </a>
+
+            <a
+              href="/contact/"
+              class="m-bouton m-bouton--secondaire m-energy-hero__bouton-secondaire"
+            >
+              Parler de votre projet
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             VISUEL TECHNIQUE
+             ================================================= -->
+
+        <div
+          class="m-energy-hero__illustration"
+          aria-hidden="true"
+        >
+
+          <div class="m-energy-circuit">
+
+            <div class="m-energy-circuit__anneau"></div>
+
+            <div class="m-energy-circuit__centre">
+
+              <div class="m-energy-circuit__eclair">
+                <svg viewBox="0 0 48 64">
+                  <path d="M29 2L8 35h14l-4 27 22-36H26z"></path>
+                </svg>
+              </div>
+
+            </div>
+
+
+            <span class="m-energy-circuit__point m-energy-circuit__point--one"></span>
+            <span class="m-energy-circuit__point m-energy-circuit__point--two"></span>
+            <span class="m-energy-circuit__point m-energy-circuit__point--three"></span>
+            <span class="m-energy-circuit__point m-energy-circuit__point--four"></span>
+
+
+            <div class="m-energy-circuit__card m-energy-circuit__card--top">
+              <span>01</span>
+              <strong>Électricité</strong>
+              <small>Installation</small>
+            </div>
+
+
+            <div class="m-energy-circuit__card m-energy-circuit__card--right">
+              <span>02</span>
+              <strong>Énergie</strong>
+              <small>Solutions</small>
+            </div>
+
+
+            <div class="m-energy-circuit__card m-energy-circuit__card--bottom">
+              <span>03</span>
+              <strong>Maintenance</strong>
+              <small>Continuité</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="m-energy-hero__signature">
+        <img
+          src="/assets/logo/monango-group-blanc.svg"
+          alt=""
+        >
+      </div>
+
+
+      <div class="m-energy-hero__marker">
+        <span>ÉNERGIE & INGÉNIERIE ÉLECTRIQUE</span>
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRODUCTION
+         ===================================================== -->
+
+    <section
+      class="m-energy-section m-energy-section--intro"
+      aria-labelledby="energy-intro-title"
+    >
+
+      <div class="m-energy-section__conteneur">
+
+        <div class="m-energy-section__entete">
+
+          <p class="m-section__eyebrow">
+            01 — LA MISSION
+          </p>
+
+          <h2 id="energy-intro-title">
+            L'énergie comme
+            <span>infrastructure essentielle</span>
+          </h2>
+
+        </div>
+
+
+        <div class="m-energy-intro">
+
+          <div class="m-energy-intro__lead">
+
+            <p>
+              MONANGO Energy transforme les besoins énergétiques
+              en installations concrètes, fiables et adaptées
+              aux réalités du terrain.
+            </p>
+
+          </div>
+
+
+          <div class="m-energy-intro__texte">
+
+            <p>
+              Notre approche couvre les différentes étapes d'un projet,
+              de l'installation à la maintenance, en passant par
+              l'étude des besoins et l'intervention technique.
+            </p>
+
+            <p>
+              L'expertise s'étend aux
+              <strong>installations électriques</strong> et aux
+              <strong>énergies renouvelables</strong>, notamment
+              les solutions solaires, hydrauliques et éoliennes.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EXPERTISES
+         ===================================================== -->
+
+    <section
+      id="expertises"
+      class="m-energy-section m-energy-section--surface"
+      aria-labelledby="energy-expertises-title"
+    >
+
+      <div class="m-energy-section__conteneur">
+
+        <div class="m-energy-section__entete m-energy-section__entete--large">
+
+          <div>
+
+            <p class="m-section__eyebrow">
+              02 — NOS EXPERTISES
+            </p>
+
+            <h2 id="energy-expertises-title">
+              Une expertise pensée
+              pour le <span>terrain</span>
+            </h2>
+
+          </div>
+
+          <p class="m-energy-section__intro">
+            Energy réunit les compétences nécessaires pour concevoir,
+            réaliser et maintenir des installations électriques
+            et énergétiques.
+          </p>
+
+        </div>
+
+
+        <div class="m-energy-expertises">
+
+          <!-- Installation -->
+          <article class="m-energy-expertise">
+
+            <div class="m-energy-expertise__numero">
+              01
+            </div>
+
+            <div class="m-energy-expertise__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M10 38V17l14-9 14 9v21"></path>
+                <path d="M18 38V26h12v12"></path>
+                <path d="M7 38h34"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Installations électriques
+            </h3>
+
+            <p>
+              Réaliser des installations électriques adaptées
+              aux besoins des bâtiments, équipements et projets.
+            </p>
+
+          </article>
+
+
+          <!-- Solaire -->
+          <article class="m-energy-expertise">
+
+            <div class="m-energy-expertise__numero">
+              02
+            </div>
+
+            <div class="m-energy-expertise__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="8"></circle>
+                <path d="M24 4v6"></path>
+                <path d="M24 38v6"></path>
+                <path d="M4 24h6"></path>
+                <path d="M38 24h6"></path>
+                <path d="M10 10l4 4"></path>
+                <path d="M34 34l4 4"></path>
+                <path d="M38 10l-4 4"></path>
+                <path d="M14 34l-4 4"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Énergies renouvelables
+            </h3>
+
+            <p>
+              Explorer et mettre en œuvre des solutions fondées
+              sur le solaire, l'hydraulique et l'éolien.
+            </p>
+
+          </article>
+
+
+          <!-- Maintenance -->
+          <article class="m-energy-expertise">
+
+            <div class="m-energy-expertise__numero">
+              03
+            </div>
+
+            <div class="m-energy-expertise__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M30 9a10 10 0 0 0-12 12L8 31a6 6 0 0 0 9 9l10-10A10 10 0 0 0 39 18l-8 8"></path>
+                <path d="M34 8l6 6"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Maintenance
+            </h3>
+
+            <p>
+              Entretenir les installations afin de préserver leur
+              fonctionnement et leur continuité dans le temps.
+            </p>
+
+          </article>
+
+
+          <!-- Dépannage -->
+          <article class="m-energy-expertise">
+
+            <div class="m-energy-expertise__numero">
+              04
+            </div>
+
+            <div class="m-energy-expertise__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M27 6L11 27h11l-2 15 17-23H26z"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Dépannage
+            </h3>
+
+            <p>
+              Identifier les anomalies et intervenir pour rétablir
+              le fonctionnement des installations.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SYSTÈME ÉNERGÉTIQUE
+         ===================================================== -->
+
+    <section
+      class="m-energy-section m-energy-section--systeme"
+      aria-labelledby="energy-systeme-title"
+    >
+
+      <div class="m-energy-section__conteneur">
+
+        <div class="m-energy-systeme">
+
+          <div class="m-energy-systeme__texte">
+
+            <p class="m-section__eyebrow">
+              03 — UNE APPROCHE SYSTÈME
+            </p>
+
+            <h2 id="energy-systeme-title">
+              De la source à
+              <span>l'usage</span>
+            </h2>
+
+            <p>
+              Une installation énergétique ne se résume pas à un
+              équipement isolé. Elle s'inscrit dans un ensemble où
+              production, distribution, protection, utilisation et
+              maintenance doivent fonctionner de manière cohérente.
+            </p>
+
+            <p>
+              Energy aborde les projets avec cette vision globale,
+              en reliant les contraintes techniques aux besoins réels
+              du site.
+            </p>
+
+          </div>
+
+
+          <div class="m-energy-systeme__schema">
+
+            <div class="m-energy-systeme__noeud">
+              <span>01</span>
+              <strong>Source</strong>
+              <small>Produire</small>
+            </div>
+
+            <div class="m-energy-systeme__connexion"></div>
+
+            <div class="m-energy-systeme__noeud">
+              <span>02</span>
+              <strong>Distribution</strong>
+              <small>Transmettre</small>
+            </div>
+
+            <div class="m-energy-systeme__connexion"></div>
+
+            <div class="m-energy-systeme__noeud">
+              <span>03</span>
+              <strong>Usage</strong>
+              <small>Alimenter</small>
+            </div>
+
+            <div class="m-energy-systeme__connexion"></div>
+
+            <div class="m-energy-systeme__noeud">
+              <span>04</span>
+              <strong>Maintenance</strong>
+              <small>Préserver</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ÉNERGIES RENOUVELABLES
+         ===================================================== -->
+
+    <section
+      class="m-energy-section m-energy-section--renouvelable"
+      aria-labelledby="energy-renouvelable-title"
+    >
+
+      <div class="m-energy-section__conteneur">
+
+        <div class="m-energy-section__entete">
+
+          <p class="m-section__eyebrow">
+            04 — ÉNERGIES RENOUVELABLES
+          </p>
+
+          <h2 id="energy-renouvelable-title">
+            Produire autrement,
+            <span>adapter les solutions</span>
+          </h2>
+
+        </div>
+
+
+        <div class="m-energy-renouvelables">
+
+          <article class="m-energy-renouvelable">
+
+            <div class="m-energy-renouvelable__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="8"></circle>
+                <path d="M24 4v6"></path>
+                <path d="M24 38v6"></path>
+                <path d="M4 24h6"></path>
+                <path d="M38 24h6"></path>
+                <path d="M10 10l4 4"></path>
+                <path d="M34 34l4 4"></path>
+                <path d="M38 10l-4 4"></path>
+                <path d="M14 34l-4 4"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Solaire
+            </h3>
+
+            <p>
+              Exploiter l'énergie solaire à travers des solutions
+              adaptées aux besoins énergétiques des sites.
+            </p>
+
+          </article>
+
+
+          <article class="m-energy-renouvelable">
+
+            <div class="m-energy-renouvelable__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M24 5v38"></path>
+                <path d="M24 16L9 27"></path>
+                <path d="M24 16l15 11"></path>
+                <path d="M24 16L18 6"></path>
+                <path d="M24 16l6-10"></path>
+                <circle cx="24" cy="16" r="3"></circle>
+              </svg>
+            </div>
+
+            <h3>
+              Éolien
+            </h3>
+
+            <p>
+              Intégrer les possibilités offertes par l'énergie du vent
+              dans des configurations énergétiques adaptées.
+            </p>
+
+          </article>
+
+
+          <article class="m-energy-renouvelable">
+
+            <div class="m-energy-renouvelable__icone">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M5 30c6-6 10 6 16 0s10 6 22 0"></path>
+                <path d="M5 38c6-6 10 6 16 0s10 6 22 0"></path>
+                <path d="M24 7v16"></path>
+                <path d="M18 14l6 6 6-6"></path>
+              </svg>
+            </div>
+
+            <h3>
+              Hydraulique
+            </h3>
+
+            <p>
+              Considérer les ressources hydrauliques comme une composante
+              possible des solutions énergétiques.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTERVENTION
+         ===================================================== -->
+
+    <section
+      class="m-energy-section m-energy-section--intervention"
+      aria-labelledby="energy-intervention-title"
+    >
+
+      <div class="m-energy-section__conteneur">
+
+        <div class="m-energy-intervention">
+
+          <div class="m-energy-intervention__contenu">
+
+            <p class="m-section__eyebrow">
+              05 — DU PROJET À L'INTERVENTION
+            </p>
+
+            <h2 id="energy-intervention-title">
+              Une logique orientée
+              <span>terrain</span>
+            </h2>
+
+            <p>
+              Chaque installation possède ses propres contraintes.
+              L'intervention technique doit donc partir du contexte
+              réel du site et de ses usages.
+            </p>
+
+          </div>
+
+
+          <div class="m-energy-intervention__etapes">
+
+            <div class="m-energy-intervention__etape">
+              <span>01</span>
+              <strong>Comprendre</strong>
+              <small>Besoin & contexte</small>
+            </div>
+
+            <div class="m-energy-intervention__etape">
+              <span>02</span>
+              <strong>Étudier</strong>
+              <small>Solution technique</small>
+            </div>
+
+            <div class="m-energy-intervention__etape">
+              <span>03</span>
+              <strong>Installer</strong>
+              <small>Mise en œuvre</small>
+            </div>
+
+            <div class="m-energy-intervention__etape">
+              <span>04</span>
+              <strong>Maintenir</strong>
+              <small>Continuité</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         APPROCHE
+         ===================================================== -->
+
+    <section
+      class="m-energy-section m-energy-section--approche"
+      aria-labelledby="energy-approche-title"
+    >
+
+      <div class="m-energy-section__conteneur">
+
+        <div class="m-energy-approche">
+
+          <div class="m-energy-approche__badge">
+            <span></span>
+            MONANGO ENERGY
+          </div>
+
+          <h2 id="energy-approche-title">
+            Technique dans la conception,
+            <span>concrète dans l'exécution</span>
+          </h2>
+
+          <p>
+            Notre approche associe expertise électrique, compréhension
+            des systèmes énergétiques et attention portée aux réalités
+            d'exploitation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
+
+    <section
+      class="m-energy-cta"
+      aria-labelledby="energy-cta-title"
+    >
+
+      <div class="m-energy-cta__structure" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+
+      <div class="m-energy-cta__conteneur">
+
+        <p class="m-section__eyebrow">
+          06 — ALLER PLUS LOIN
+        </p>
+
+        <h2 id="energy-cta-title">
+          Un besoin électrique,
+          énergétique ou technique
+        </h2>
+
+        <p>
+          Échangeons autour de votre installation, de votre projet
+          ou de vos besoins d'intervention.
+        </p>
+
+        <a
+          href="/contact/"
+          class="m-bouton m-bouton--principal m-energy-cta__bouton"
+        >
+          Parlons de votre projet
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <div id="composant-footer"></div>
+
+</body>
+
+</html>

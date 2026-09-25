@@ -1,0 +1,958 @@
+/* =========================================================
+   HERO — MONANGO
+   Langage visuel institutionnel
+   ========================================================= */
+
+
+/* =========================================================
+   STRUCTURE
+   ========================================================= */
+
+.m-hero {
+  position: relative;
+
+  min-height: 620px;
+
+  display: flex;
+  align-items: stretch;
+
+  overflow: hidden;
+
+  background: var(--couleur-group);
+  color: var(--couleur-texte-inverse);
+}
+
+
+/* =========================================================
+   FOND GRAPHIQUE
+   ========================================================= */
+
+.m-hero__fond {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.m-hero__cercle {
+  position: absolute;
+
+  display: block;
+
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 50%;
+}
+
+.m-hero__cercle--1 {
+  width: 620px;
+  height: 620px;
+
+  top: -260px;
+  right: -190px;
+}
+
+.m-hero__cercle--2 {
+  width: 360px;
+  height: 360px;
+
+  left: -180px;
+  bottom: -220px;
+
+  border-color: rgb(255 255 255 / 9%);
+}
+
+
+/* =========================================================
+   GRILLE DISCRÈTE
+   ========================================================= */
+
+.m-hero__grille {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.08;
+
+  background-image:
+    linear-gradient(
+      rgb(255 255 255 / 12%) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(255 255 255 / 12%) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 35%,
+    black 100%
+  );
+}
+
+
+/* =========================================================
+   TRAITS
+   ========================================================= */
+
+.m-hero__ligne {
+  position: absolute;
+
+  display: block;
+
+  width: 260px;
+  height: 1px;
+
+  background: rgb(255 255 255 / 15%);
+
+  transform-origin: left center;
+}
+
+.m-hero__ligne--1 {
+  top: 23%;
+  right: 9%;
+
+  transform: rotate(-28deg);
+}
+
+.m-hero__ligne--2 {
+  left: 3%;
+  bottom: 22%;
+
+  transform: rotate(-28deg);
+}
+
+
+/* =========================================================
+   CONTENEUR
+   ========================================================= */
+
+.m-hero__conteneur {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 64px));
+
+  margin-inline: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(420px, 0.82fr);
+
+  align-items: center;
+
+  gap: clamp(48px, 7vw, 100px);
+
+  padding-block: 34px 88px;
+}
+
+
+/* =========================================================
+   CONTENU
+   ========================================================= */
+
+.m-hero__contenu {
+  position: relative;
+
+  z-index: 3;
+
+  max-width: 690px;
+}
+
+
+/* =========================================================
+   SUR-TITRE
+   ========================================================= */
+
+.m-hero__sur-titre {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 0 0 var(--espace-4);
+
+  color: rgb(255 255 255 / 64%);
+
+  font-family: var(--police-titre);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.m-hero__sur-titre::before {
+  content: "";
+
+  width: 28px;
+  height: 1px;
+
+  flex: 0 0 auto;
+
+  background: rgb(255 255 255 / 55%);
+}
+
+
+/* =========================================================
+   TITRE
+   ========================================================= */
+
+.m-hero h1 {
+  max-width: 760px;
+
+  margin: 0;
+
+  color: var(--couleur-texte-inverse);
+
+  font-family: var(--police-titre);
+  font-size: clamp(3rem, 5.5vw, 5.25rem);
+  font-weight: 600;
+
+  line-height: 1.03;
+  letter-spacing: -0.045em;
+}
+
+.m-hero h1 span {
+  display: block;
+
+  color: #7EA2FF;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.m-hero__description {
+  max-width: 650px;
+
+  margin: var(--espace-5) 0 0;
+
+  color: rgb(255 255 255 / 80%);
+
+  font-family: var(--police-texte);
+  font-size: 1.05rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.m-hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: var(--espace-3);
+
+  margin-top: var(--espace-5);
+}
+
+/* =========================================================
+   ÉCOSYSTÈME VISUEL
+   ========================================================= */
+
+.m-hero__ecosysteme {
+  position: relative;
+
+  width: min(100%, 520px);
+  aspect-ratio: 1;
+
+  justify-self: end;
+}
+
+
+/* =========================================================
+   NOYAU MONANGO
+   ========================================================= */
+
+.m-hero__noyau {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  z-index: 4;
+
+  width: 150px;
+  height: 150px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgb(255 255 255 / 30%);
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgb(255 255 255 / 12%) 0%,
+      rgb(255 255 255 / 3%) 70%
+    );
+
+  box-shadow:
+    0 0 0 18px rgb(255 255 255 / 2%),
+    0 0 0 42px rgb(255 255 255 / 1%);
+
+  transform: translate(-50%, -50%);
+}
+
+.m-hero__noyau-logo {
+  width: 92px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   DOMAINES — POSITIONNEMENT CIRCULAIRE
+   ========================================================= */
+
+.m-hero__domaines {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+.m-hero__domaine {
+  --distance: 190px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-width: 120px;
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 14px;
+
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 10px;
+
+  background: rgb(255 255 255 / 6%);
+  backdrop-filter: blur(8px);
+
+  color: rgb(255 255 255 / 92%);
+
+  font-family: var(--police-titre);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  /* Position circulaire */
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--angle))
+    translateY(calc(var(--distance) * -1))
+    rotate(calc(var(--angle) * -1));
+
+  opacity: 1;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.m-hero__domaine:hover {
+  border-color: var(--couleur-filiale);
+  background: rgb(255 255 255 / 10%);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+}
+
+.m-hero__domaine-point {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: var(--couleur-filiale);
+
+  box-shadow:
+    0 0 0 5px
+    color-mix(
+      in srgb,
+      var(--couleur-filiale) 14%,
+      transparent
+    );
+}
+
+.m-hero__domaine-nom {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CONNEXIONS
+   ========================================================= */
+
+.m-hero__connexions {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.m-hero__connexion {
+  --distance: 185px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: var(--distance);
+  height: 1px;
+
+  transform-origin: left center;
+
+  background:
+    linear-gradient(
+      to right,
+      rgb(255 255 255 / 26%),
+      rgb(255 255 255 / 4%)
+    );
+
+  transform:
+    rotate(
+      calc(
+        -90deg +
+        (360deg / var(--nombre-domaines)) *
+        var(--index)
+      )
+    );
+
+  opacity: 0.8;
+}
+
+/* =========================================================
+   POINT DE COULEUR
+   ========================================================= */
+
+.m-hero__domaine-point {
+  width: 10px;
+  height: 10px;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: var(--couleur-filiale);
+
+  box-shadow:
+    0 0 0 5px
+    color-mix(
+      in srgb,
+      var(--couleur-filiale) 14%,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   SIGNATURE
+   ========================================================= */
+
+.m-hero__signature {
+  position: absolute;
+
+  right: 0;
+  bottom: 34px;
+
+  z-index: 5;
+}
+
+.m-hero__signature-logo {
+  width: 145px;
+  height: auto;
+
+  opacity: 0.78;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   REPÈRE INFÉRIEUR
+   ========================================================= */
+
+.m-hero__bas {
+  position: absolute;
+
+  left: 50%;
+  bottom: 22px;
+
+  z-index: 5;
+
+  width: min(1200px, calc(100% - 64px));
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  transform: translateX(-50%);
+
+  color: rgb(255 255 255 / 55%);
+
+  font-family: var(--police-titre);
+  font-size: 0.6875rem;
+  font-weight: 500;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.m-hero__bas-ligne {
+  width: 42px;
+  height: 1px;
+
+  flex: 0 0 auto;
+
+  background: rgb(255 255 255 / 38%);
+}
+
+
+/* =========================================================
+   ANIMATIONS HERO
+   ========================================================= */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .m-hero h1,
+  .m-hero__description,
+  .m-hero__actions,
+  .m-hero__ecosysteme {
+    opacity: 0;
+
+    transform: translateY(18px);
+
+    animation:
+      m-hero-apparition
+      0.65s
+      cubic-bezier(.22, .61, .36, 1)
+      forwards;
+  }
+
+  .m-hero h1 {
+    animation-delay: 0.30s;
+  }
+
+  .m-hero__description {
+    animation-delay: 0.48s;
+  }
+
+  .m-hero__actions {
+    animation-delay: 0.65s;
+  }
+
+  .m-hero__ecosysteme {
+    animation-delay: 0.78s;
+  }
+
+
+  /* Les domaines apparaissent sans toucher
+     au transform qui les positionne autour du noyau */
+
+  .m-hero__domaine {
+    opacity: 0;
+
+    animation:
+      m-hero-domaine-apparition
+      0.5s
+      cubic-bezier(.22, .61, .36, 1)
+      forwards;
+
+    animation-delay:
+      calc(
+        1s +
+        (var(--index) * 80ms)
+      );
+  }
+
+
+  /* Connexions */
+
+  .m-hero__connexion {
+    opacity: 0;
+
+    animation:
+      m-hero-connexion-apparition
+      0.7s
+      ease
+      0.9s
+      forwards;
+  }
+
+
+  /* =======================================================
+     KEYFRAMES
+     ======================================================= */
+
+  @keyframes m-hero-apparition {
+
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  }
+
+
+  @keyframes m-hero-domaine-apparition {
+
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+
+  }
+
+
+  @keyframes m-hero-connexion-apparition {
+
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 0.8;
+    }
+
+  }
+
+}
+
+
+/* =========================================================
+   RÉDUCTION DES MOUVEMENTS
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .m-hero h1,
+  .m-hero__description,
+  .m-hero__actions,
+  .m-hero__ecosysteme,
+  .m-hero__domaine,
+  .m-hero__connexion {
+    opacity: 1;
+    animation: none;
+  }
+
+}
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-hero {
+    min-height: 0;
+  }
+
+  .m-hero__conteneur {
+    width: min(100% - 48px, 1000px);
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      360px;
+
+    gap: 40px;
+
+    padding-block: 30px 80px;
+  }
+
+  .m-hero h1 {
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+  }
+
+  .m-hero__ecosysteme {
+    width: 360px;
+  }
+
+  .m-hero__noyau {
+    width: 120px;
+    height: 120px;
+  }
+
+  .m-hero__domaine {
+    min-width: 102px;
+    min-height: 46px;
+
+    padding: 8px 10px;
+
+    font-size: 0.68rem;
+  }
+
+  .m-hero__domaine-icone {
+    width: 23px;
+    height: 23px;
+  }
+
+  .m-hero__signature {
+    bottom: 38px;
+  }
+
+  .m-hero__bas {
+    width: min(100% - 48px, 1000px);
+  }
+}
+
+/* =========================================================
+   SMARTPHONE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-hero {
+    min-height: 0;
+  }
+
+
+  .m-hero__conteneur {
+    width: calc(100% - 32px);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 34px;
+
+    padding-block: 24px 72px;
+  }
+
+
+  /* -----------------------------------------
+     Contenu
+     ----------------------------------------- */
+
+  .m-hero__contenu {
+    width: 100%;
+    max-width: none;
+  }
+
+
+  .m-hero h1 {
+    width: 100%;
+    max-width: none;
+
+    font-size:
+      clamp(
+        2.2rem,
+        10vw,
+        3.1rem
+      );
+
+    line-height: 1.04;
+  }
+
+
+  .m-hero__description {
+    margin-top: var(--espace-4);
+
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+
+  .m-hero__actions {
+    margin-top: var(--espace-4);
+  }
+
+
+  /* -----------------------------------------
+     Écosystème
+     ----------------------------------------- */
+
+  .m-hero__ecosysteme {
+
+    width: min(100%, 340px);
+
+    max-width: 340px;
+
+    align-self: center;
+
+    margin-inline: auto;
+  }
+
+
+  /* -----------------------------------------
+     Noyau MONANGO
+     ----------------------------------------- */
+
+  .m-hero__noyau {
+
+    width: 105px;
+    height: 105px;
+  }
+
+
+  .m-hero__noyau-logo {
+
+    width: 68px;
+  }
+
+
+  /* -----------------------------------------
+     Domaines
+     ----------------------------------------- */
+
+  .m-hero__domaine {
+
+    --distance: 116px;
+
+    min-width: 88px;
+    min-height: 42px;
+
+    gap: 6px;
+
+    padding: 7px 8px;
+
+    border-radius: 8px;
+
+    font-size: 0.62rem;
+  }
+
+
+  .m-hero__domaine-point {
+
+    width: 8px;
+    height: 8px;
+
+    box-shadow:
+      0 0 0 4px
+      color-mix(
+        in srgb,
+        var(--couleur-filiale) 14%,
+        transparent
+      );
+  }
+
+
+  .m-hero__domaine-nom {
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+  }
+
+
+  /* -----------------------------------------
+     Connexions
+     ----------------------------------------- */
+
+  .m-hero__connexion {
+
+    --distance: 112px;
+  }
+
+
+  /* -----------------------------------------
+     Signature
+     ----------------------------------------- */
+
+  .m-hero__signature {
+    right: 16px;
+    bottom: 30px;
+  }
+
+  .m-hero__signature-logo {
+    width: 105px;
+  }
+
+
+  /* -----------------------------------------
+     Fond
+     ----------------------------------------- */
+
+  .m-hero__grille {
+    background-size: 42px 42px;
+  }
+
+  .m-hero__cercle--1 {
+    width: 330px;
+    height: 330px;
+
+    top: -120px;
+    right: -190px;
+  }
+
+  .m-hero__cercle--2 {
+    width: 220px;
+    height: 220px;
+
+    left: -120px;
+    bottom: -100px;
+  }
+
+  .m-hero__ligne--1 {
+    width: 150px;
+
+    top: 30%;
+    right: -35px;
+  }
+
+  .m-hero__ligne--2 {
+    width: 130px;
+
+    left: -35px;
+    bottom: 27%;
+  }
+
+
+  /* -----------------------------------------
+     Repère
+     ----------------------------------------- */
+
+  .m-hero__bas {
+    width: calc(100% - 32px);
+
+    bottom: 14px;
+
+    font-size: 0.62rem;
+  }
+
+  .m-hero__bas-ligne {
+    width: 30px;
+  }
+
+}
+
+.filiales-hero__marker span:nth-child(2) {
+  width: 20px;
+  border-radius:100px;
+  background:#7EA2FF;
+}

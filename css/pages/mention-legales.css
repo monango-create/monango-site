@@ -1,0 +1,612 @@
+/* =========================================================
+   PAGE MENTIONS LÉGALES — MONANGO
+   ========================================================= */
+
+
+/* =========================================================
+   SECTIONS JURIDIQUES
+   ========================================================= */
+
+.m-legal-section {
+
+  background: var(--couleur-fond);
+
+}
+
+.m-legal-section--surface {
+
+  background: var(--couleur-surface);
+
+}
+
+
+/* =========================================================
+   CONTENEUR
+   ========================================================= */
+
+.m-legal-section__conteneur {
+
+  width: min(1200px, calc(100% - 64px));
+
+  margin-inline: auto;
+
+  padding-block: var(--espace-9);
+
+}
+
+
+/* =========================================================
+   CONTENU — TITRE À GAUCHE / TEXTE À DROITE
+   ========================================================= */
+
+.m-legal-section__contenu {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.8fr);
+
+  gap: var(--espace-8);
+
+  align-items: start;
+
+}
+
+
+/* =========================================================
+   GRAND TITRE
+   ========================================================= */
+
+.m-legal-section__contenu h2 {
+
+  max-width: 680px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  font-weight: 600;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.025em;
+
+  color: var(--couleur-group);
+
+}
+
+
+/* Mise en évidence */
+
+.m-legal-section__contenu h2 span {
+
+  color: var(--couleur-digital);
+
+}
+
+
+/* =========================================================
+   COLONNE TEXTE
+   ========================================================= */
+
+.m-legal-section__texte {
+
+  max-width: 560px;
+
+}
+
+
+/* =========================================================
+   PARAGRAPHES
+   ========================================================= */
+
+.m-legal-section__texte p {
+
+  margin: 0 0 var(--espace-3);
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+/* Dernier paragraphe */
+
+.m-legal-section__texte p:last-child {
+
+  margin-bottom: 0;
+
+}
+
+
+/* =========================================================
+   LIENS
+   ========================================================= */
+
+.m-legal-section__texte a:not(.m-bouton) {
+
+  color: var(--couleur-group);
+
+  font-weight: 600;
+
+  text-decoration-thickness: 1px;
+
+  text-underline-offset: 3px;
+
+}
+
+
+/* =========================================================
+   BLOC D'INFORMATIONS
+   ========================================================= */
+
+.m-legal-section__bloc {
+
+  padding: var(--espace-5);
+
+  border: 1px solid var(--couleur-bordure);
+
+  background: var(--couleur-fond);
+
+}
+
+
+/* =========================================================
+   DÉTAILS JURIDIQUES
+   ========================================================= */
+
+.m-legal-section__details {
+
+  display: grid;
+
+  gap: var(--espace-4);
+
+  margin: 0;
+
+}
+
+
+/* Ligne */
+
+.m-legal-section__details > div {
+
+  display: grid;
+
+  grid-template-columns: minmax(150px, 0.8fr) minmax(0, 1.2fr);
+
+  gap: var(--espace-4);
+
+  padding-bottom: var(--espace-3);
+
+  border-bottom: 1px solid var(--couleur-bordure);
+
+}
+
+
+/* Dernière ligne */
+
+.m-legal-section__details > div:last-child {
+
+  padding-bottom: 0;
+
+  border-bottom: 0;
+
+}
+
+
+/* Libellé */
+
+.m-legal-section__details dt {
+
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: 0.875rem;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  color: var(--couleur-texte);
+
+}
+
+
+/* Valeur */
+
+.m-legal-section__details dd {
+
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: 0.9375rem;
+
+  line-height: 1.6;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.m-legal-section__note {
+
+  margin-top: var(--espace-5) !important;
+
+  padding-left: var(--espace-4);
+
+  border-left: 2px solid var(--couleur-digital);
+
+  font-size: 0.875rem !important;
+
+}
+
+
+/* =========================================================
+   MISE À JOUR
+   ========================================================= */
+
+.m-legal-section__mise-a-jour {
+
+  margin: var(--espace-6) 0 0;
+
+  font-family: var(--police-texte);
+
+  font-size: 0.8125rem;
+
+  line-height: 1.5;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+/* =========================================================
+   SOMMAIRE DES INFORMATIONS LÉGALES
+   ========================================================= */
+
+.m-legal-sommaire {
+
+  background: var(--couleur-surface);
+
+  border-top: 1px solid var(--couleur-bordure);
+
+  border-bottom: 1px solid var(--couleur-bordure);
+
+}
+
+
+.m-legal-sommaire__conteneur {
+
+  width: min(1200px, calc(100% - 64px));
+
+  margin-inline: auto;
+
+  padding-block: var(--espace-6);
+
+}
+
+
+.m-legal-sommaire__intro {
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: var(--espace-4);
+
+  margin-bottom: var(--espace-4);
+
+}
+
+
+.m-legal-sommaire__intro .m-section__eyebrow {
+
+  margin: 0;
+
+}
+
+
+.m-legal-sommaire__description {
+
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: 0.875rem;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+/* =========================================================
+   LISTE
+   ========================================================= */
+
+.m-legal-sommaire__liste {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 1px;
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+
+  border: 1px solid var(--couleur-bordure);
+
+}
+
+
+.m-legal-sommaire__liste li {
+
+  min-width: 0;
+
+}
+
+
+.m-legal-sommaire__liste a {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--espace-1);
+
+  height: 100%;
+
+  padding: var(--espace-3);
+
+  background: var(--couleur-fond);
+
+  color: var(--couleur-texte);
+
+  text-decoration: none;
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+
+}
+
+
+.m-legal-sommaire__liste a span {
+
+  font-family: var(--police-titre);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  color: var(--couleur-digital);
+
+}
+
+
+.m-legal-sommaire__liste a {
+
+  font-family: var(--police-texte);
+
+  font-size: 0.875rem;
+
+  line-height: 1.4;
+
+  font-weight: 500;
+
+}
+
+
+.m-legal-sommaire__liste a:hover {
+
+  background: var(--couleur-group);
+
+  color: var(--couleur-fond);
+
+}
+
+
+.m-legal-sommaire__liste a:hover span {
+
+  color: inherit;
+
+}
+
+
+/* =========================================================
+   ANCRAGE DES SECTIONS
+   ========================================================= */
+
+.m-legal-section {
+
+  scroll-margin-top: 96px;
+
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-legal-sommaire__conteneur {
+
+    width: min(100% - 48px, 900px);
+
+  }
+
+
+  .m-legal-sommaire__liste {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-legal-sommaire__conteneur {
+
+    width: calc(100% - 32px);
+
+    padding-block: var(--espace-5);
+
+  }
+
+
+  .m-legal-sommaire__intro {
+
+    display: block;
+
+    margin-bottom: var(--espace-3);
+
+  }
+
+
+  .m-legal-sommaire__description {
+
+    margin-top: var(--espace-1);
+
+  }
+
+
+  .m-legal-sommaire__liste {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .m-legal-sommaire__liste a {
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: var(--espace-3);
+
+    padding: var(--espace-3);
+
+  }
+
+}
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-legal-section__conteneur {
+
+    width: min(100% - 48px, 900px);
+
+  }
+
+
+  .m-legal-section__contenu {
+
+    grid-template-columns: 1fr;
+
+    gap: var(--espace-5);
+
+  }
+
+
+  .m-legal-section__texte {
+
+    max-width: 700px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-legal-section__conteneur {
+
+    width: calc(100% - 32px);
+
+    padding-block: var(--espace-7);
+
+  }
+
+
+  .m-legal-section__contenu {
+
+    gap: var(--espace-4);
+
+  }
+
+
+  .m-legal-section__contenu h2 {
+
+    font-size: clamp(1.9rem, 9vw, 2.5rem);
+
+  }
+
+
+  .m-legal-section__texte p {
+
+    font-size: 0.9375rem;
+
+    line-height: 1.65;
+
+  }
+
+
+  .m-legal-section__bloc {
+
+    padding: var(--espace-4);
+
+  }
+
+
+  .m-legal-section__details {
+
+    gap: var(--espace-3);
+
+  }
+
+
+  .m-legal-section__details > div {
+
+    grid-template-columns: 1fr;
+
+    gap: var(--espace-1);
+
+    padding-bottom: var(--espace-3);
+
+  }
+
+}

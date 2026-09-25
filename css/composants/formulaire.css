@@ -1,0 +1,30 @@
+.m-champ {
+  display: flex;
+  flex-direction: column;   /* label au-dessus du champ, jamais à côté — plus lisible sur mobile */
+  gap: var(--espace-1);
+  margin-bottom: var(--espace-2);
+}
+ 
+.m-champ label { font-weight: 600; font-size: var(--taille-petit); }
+ 
+.m-champ input,
+.m-champ textarea {
+  padding: var(--espace-1) var(--espace-2);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon-defaut);
+  font-family: var(--police-texte);  /* sans cette ligne, le champ hérite de la police du système */
+}
+ 
+.m-champ input:focus,
+.m-champ textarea:focus {
+  outline: 2px solid var(--couleur-digital); /* jamais outline: none — indispensable au clavier */
+  outline-offset: 2px;                       /* petit espace entre le champ et son contour de focus */
+}
+ 
+.m-champ--erreur input {
+  border-color: var(--couleur-erreur);
+}
+
+.m-champ__message-erreur {
+  color: var(--couleur-erreur);
+}

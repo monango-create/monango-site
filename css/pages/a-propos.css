@@ -1,0 +1,2485 @@
+/* =========================================================
+   MONANGO — PAGE À PROPOS
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES LOCALES
+   ========================================================= */
+
+.m-a-propos-page {
+  --apropos-bleu: #172554;
+  --apropos-bleu-clair: #2E6BFF;
+  --apropos-bleu-tres-clair: #7EA2FF;
+
+  --apropos-fond: #f8fafc;
+  --apropos-fond-alt: #f1f5f9;
+  --apropos-fond-sombre: #eef2f7;
+
+  --apropos-texte: #172554;
+  --apropos-secondaire: #526071;
+  --apropos-bordure: #e2e8f0;
+
+  --apropos-tint: rgb(46 107 255 / 6%);
+  --apropos-tint-forte: rgb(46 107 255 / 11%);
+
+  --apropos-largeur: 1200px;
+}
+
+
+/* =========================================================
+   CONTENEUR
+   ========================================================= */
+
+.a-propos-container {
+  width: min(
+    var(--apropos-largeur),
+    calc(100% - 64px)
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   HERO — À PROPOS
+   ========================================================= */
+
+.a-propos-hero {
+  position: relative;
+
+  min-height: min(620px, 100svh);
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #172554 0%,
+      #172554 58%,
+      #1d326c 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   FOND GRAPHIQUE
+   --------------------------------------------------------- */
+
+.a-propos-hero__fond {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+.a-propos-hero__ligne {
+  position: absolute;
+
+  display: block;
+
+  height: 1px;
+
+  transform-origin: left center;
+
+  background: rgb(255 255 255 / 12%);
+}
+
+
+.a-propos-hero__ligne--1 {
+  top: 22%;
+  left: -4%;
+
+  width: 62%;
+
+  transform: rotate(22deg);
+}
+
+
+.a-propos-hero__ligne--2 {
+  top: 72%;
+  left: 38%;
+
+  width: 68%;
+
+  transform: rotate(-19deg);
+}
+
+
+.a-propos-hero__ligne--3 {
+  top: 42%;
+  left: 52%;
+
+  width: 46%;
+
+  opacity: .55;
+
+  transform: rotate(54deg);
+}
+
+
+/* ---------------------------------------------------------
+   POINTS
+   --------------------------------------------------------- */
+
+.a-propos-hero__point {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: rgb(255 255 255 / 72%);
+}
+
+
+.a-propos-hero__point--1 {
+  top: 21%;
+  left: 27%;
+}
+
+
+.a-propos-hero__point--2 {
+  top: 70%;
+  left: 67%;
+}
+
+
+.a-propos-hero__point--3 {
+  top: 37%;
+  right: 12%;
+}
+
+
+.a-propos-hero__point--4 {
+  bottom: 13%;
+  left: 49%;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENEUR HERO
+   --------------------------------------------------------- */
+
+.a-propos-hero__conteneur {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(360px, .95fr);
+
+  align-items: center;
+
+  gap: clamp(40px, 7vw, 96px);
+
+  padding: 28px 0 108px;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENU
+   --------------------------------------------------------- */
+
+.a-propos-hero__contenu {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 720px;
+}
+
+
+.a-propos-hero h1 {
+  max-width: 760px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+
+  font-size: clamp(
+    3.1rem,
+    6vw,
+    5.5rem
+  );
+
+  font-weight: 700;
+
+  line-height: .98;
+
+  letter-spacing: -.045em;
+
+  color: #ffffff;
+}
+
+
+.a-propos-hero h1 span {
+  display: block;
+
+  color: var(--apropos-bleu-tres-clair);
+}
+
+
+.a-propos-hero__description {
+  max-width: 620px;
+
+  margin: 28px 0 0;
+
+  font-family: var(--police-texte);
+
+  font-size: 1.08rem;
+
+  line-height: 1.75;
+
+  color: rgb(255 255 255 / 80%);
+}
+
+
+/* ---------------------------------------------------------
+   ACTIONS
+   --------------------------------------------------------- */
+
+.a-propos-hero__actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+
+/* ---------------------------------------------------------
+   BOUTON SECONDAIRE HERO
+   --------------------------------------------------------- */
+
+.m-bouton--hero-secondaire {
+  border: 1px solid rgb(255 255 255 / 28%);
+
+  background: rgb(255 255 255 / 7%);
+
+  color: #ffffff;
+
+  backdrop-filter: blur(8px);
+}
+
+
+.m-bouton--hero-secondaire:hover,
+.m-bouton--hero-secondaire:focus-visible {
+  border-color: rgb(255 255 255 / 48%);
+
+  background: rgb(255 255 255 / 13%);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   HERO — VISUEL CENTRAL
+   ========================================================= */
+
+.a-propos-hero__visual {
+  position: relative;
+
+  width: min(460px, 100%);
+
+  aspect-ratio: 1;
+
+  justify-self: center;
+}
+
+
+/* ---------------------------------------------------------
+   ORBITES
+   --------------------------------------------------------- */
+
+.a-propos-orbite {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid rgb(255 255 255 / 16%);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.a-propos-orbite--1 {
+  width: 96%;
+  height: 96%;
+}
+
+
+.a-propos-orbite--2 {
+  width: 68%;
+  height: 68%;
+}
+
+
+.a-propos-orbite--3 {
+  width: 39%;
+  height: 39%;
+
+  border-color: rgb(255 255 255 / 24%);
+}
+
+
+/* ---------------------------------------------------------
+   NOYAU MONANGO
+   --------------------------------------------------------- */
+
+.a-propos-hero__centre {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 92px;
+  height: 92px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid rgb(255 255 255 / 30%);
+
+  border-radius: 50%;
+
+  background: rgb(255 255 255 / 8%);
+
+  transform: translate(-50%, -50%);
+
+  backdrop-filter: blur(8px);
+}
+
+
+.a-propos-hero__centre img {
+  width: 44px;
+
+  height: auto;
+}
+
+
+/* ---------------------------------------------------------
+   NŒUDS
+   --------------------------------------------------------- */
+
+.a-propos-hero__noeud {
+  position: absolute;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 94px;
+
+  padding: 9px 12px;
+
+  border: 1px solid rgb(255 255 255 / 20%);
+
+  border-radius: 999px;
+
+  background: rgb(255 255 255 / 7%);
+
+  font-family: var(--police-titre);
+
+  font-size: .58rem;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  color: rgb(255 255 255 / 86%);
+
+  backdrop-filter: blur(8px);
+}
+
+
+.a-propos-hero__noeud::before {
+  content: "";
+
+  width: 5px;
+  height: 5px;
+
+  margin-right: 7px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+}
+
+
+.a-propos-hero__noeud--1 {
+  top: 5%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+
+.a-propos-hero__noeud--2 {
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-50%);
+}
+
+
+.a-propos-hero__noeud--3 {
+  bottom: 5%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+
+.a-propos-hero__noeud--4 {
+  top: 50%;
+  left: 0;
+
+  transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   INDICATEUR INFÉRIEUR DU HERO
+   ========================================================= */
+
+.a-propos-hero__marker {
+  position: absolute;
+
+  z-index: 4;
+
+  left: 50%;
+  bottom: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  width: max-content;
+
+  transform: translateX(-50%);
+}
+
+
+.a-propos-hero__marker span {
+  display: block;
+
+  width: 5px;
+  height: 5px;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: rgb(255 255 255 / 35%);
+}
+
+
+.a-propos-hero__marker span:nth-child(2) {
+  width: 24px;
+
+  border-radius: 999px;
+
+  background: var(--apropos-bleu-clair);
+}
+
+
+/* =========================================================
+   RESPONSIVE HERO — TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .a-propos-hero__conteneur {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(300px, .72fr);
+
+    gap: 28px;
+  }
+
+
+  .a-propos-hero h1 {
+    font-size: clamp(
+      2.8rem,
+      7vw,
+      4.6rem
+    );
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE HERO — MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .a-propos-hero {
+    min-height: 0;
+  }
+
+
+  .a-propos-hero__conteneur {
+    width: calc(100% - 32px);
+
+    min-height: 0;
+
+    grid-template-columns: 1fr;
+
+    gap: 36px;
+
+    padding: 30px 0 76px;
+  }
+
+
+  .a-propos-hero__contenu {
+    width: 100%;
+  }
+
+
+  .a-propos-hero h1 {
+    width: 100%;
+
+    max-width: 100%;
+
+    font-size: clamp(
+      2.45rem,
+      13vw,
+      3.5rem
+    );
+
+    overflow-wrap: break-word;
+  }
+
+
+  .a-propos-hero__description {
+    margin-top: 20px;
+
+    font-size: .92rem;
+
+    line-height: 1.65;
+  }
+
+
+  .a-propos-hero__actions {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    margin-top: 26px;
+  }
+
+
+  .a-propos-hero__actions .m-bouton {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .a-propos-hero__visual {
+    width: min(330px, 100%);
+
+    margin-inline: auto;
+  }
+
+
+  .a-propos-hero__centre {
+    width: 74px;
+    height: 74px;
+  }
+
+
+  .a-propos-hero__centre img {
+    width: 34px;
+  }
+
+
+  .a-propos-hero__noeud {
+    min-width: 80px;
+
+    padding: 7px 9px;
+
+    font-size: .49rem;
+  }
+
+
+  .a-propos-hero__marker {
+    bottom: 22px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .a-propos-hero *,
+  .a-propos-hero *::before,
+  .a-propos-hero *::after {
+    scroll-behavior: auto;
+  }
+
+}
+
+/* =========================================================
+   SECTIONS COMMUNES
+   ========================================================= */
+
+.a-propos-section {
+  padding-block: 112px;
+
+  background: var(--apropos-fond);
+
+  color: var(--apropos-texte);
+}
+
+
+.a-propos-section:nth-of-type(even) {
+  background: var(--apropos-fond-alt);
+}
+
+
+.a-propos-section__intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(320px, .95fr);
+
+  gap: 72px;
+
+  align-items: end;
+
+  margin-bottom: 64px;
+}
+
+
+.a-propos-section__heading {
+  max-width: 820px;
+
+  margin-bottom: 60px;
+}
+
+
+/* =========================================================
+   STANDARD TYPOGRAPHIQUE MONANGO
+   ========================================================= */
+
+.a-propos-section__heading h2,
+.a-propos-section__intro h2,
+.a-propos-raison__contenu h2,
+.a-propos-talents__contenu h2,
+.a-propos-vision__contenu h2 {
+  max-width: 820px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+
+  font-size: clamp(
+    2rem,
+    4vw,
+    3.5rem
+  );
+
+  font-weight: 600;
+
+  line-height: 1.12;
+
+  letter-spacing: -.025em;
+
+  color: var(--couleur-group);
+}
+
+
+.a-propos-section__heading h2 span,
+.a-propos-section__intro h2 span,
+.a-propos-talents__contenu h2 span,
+.a-propos-vision__contenu h2 span {
+  color: var(--couleur-digital);
+
+  opacity: 1;
+}
+
+
+.a-propos-section__heading > p:last-child {
+  max-width: 650px;
+
+  margin: 24px 0 0;
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+.a-propos-section__lead {
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+.a-propos-section__lead p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   01 — IDENTITÉ
+   ========================================================= */
+
+.a-propos-identite__grille {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid var(--apropos-bordure);
+
+  border-bottom: 1px solid var(--apropos-bordure);
+}
+
+
+.a-propos-identite__bloc {
+  position: relative;
+
+  min-height: 250px;
+
+  padding: 32px 28px;
+
+  border-right: 1px solid var(--apropos-bordure);
+
+  transition:
+    background-color 220ms ease,
+    transform 220ms ease;
+}
+
+
+.a-propos-identite__bloc:last-child {
+  border-right: 0;
+}
+
+
+.a-propos-identite__bloc:hover {
+  background: rgb(23 37 84 / 2.5%);
+
+  transform: translateY(-2px);
+}
+
+
+.a-propos-identite__numero {
+  display: block;
+
+  margin-bottom: 42px;
+
+  font-family: var(--police-titre);
+
+  font-size: .7rem;
+
+  font-weight: 700;
+
+  letter-spacing: .14em;
+
+  color: var(--apropos-bleu);
+
+  opacity: .55;
+}
+
+
+.a-propos-identite__bloc h3 {
+  margin: 0 0 12px;
+
+  font-family: var(--police-titre);
+
+  font-size: 1.25rem;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+.a-propos-identite__bloc p {
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: .9rem;
+
+  line-height: 1.7;
+
+  color: var(--apropos-secondaire);
+}
+
+
+/* =========================================================
+   02 — RAISON D'ÊTRE
+   ========================================================= */
+
+.a-propos-raison {
+  background: var(--apropos-fond-alt);
+}
+
+
+.a-propos-raison__grille {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(380px, .9fr);
+
+  gap: 96px;
+
+  align-items: center;
+}
+
+
+.a-propos-raison__contenu {
+  max-width: 670px;
+}
+
+
+.a-propos-raison__lead {
+  margin-top: 26px;
+
+  font-family: var(--police-texte);
+
+  font-size: 1.08rem;
+
+  font-weight: 500;
+
+  line-height: 1.7;
+
+  color: var(--apropos-bleu);
+}
+
+
+.a-propos-raison__contenu > p:not(.a-propos-raison__lead):not(.m-section__eyebrow) {
+  margin-top: 20px;
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--apropos-secondaire);
+}
+
+
+.a-propos-raison__contenu .m-bouton {
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   VISUEL CAPACITÉ
+   ========================================================= */
+
+.a-propos-raison__visual {
+  display: grid;
+
+  place-items: center;
+
+  min-height: 480px;
+}
+
+
+.a-propos-capacite {
+  position: relative;
+
+  width: min(430px, 100%);
+
+  aspect-ratio: 1;
+}
+
+
+.a-propos-capacite::before,
+.a-propos-capacite::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid var(--apropos-bordure);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.a-propos-capacite::before {
+  width: 94%;
+  height: 94%;
+}
+
+
+.a-propos-capacite::after {
+  width: 66%;
+  height: 66%;
+
+  border-color: rgb(23 37 84 / 14%);
+}
+
+
+.a-propos-capacite__centre {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 118px;
+  height: 118px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--apropos-bleu);
+
+  color: #ffffff;
+
+  font-family: var(--police-titre);
+
+  font-size: .7rem;
+
+  font-weight: 700;
+
+  letter-spacing: .14em;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.a-propos-capacite__element {
+  position: absolute;
+
+  z-index: 2;
+
+  padding: 11px 15px;
+
+  border: 1px solid var(--apropos-bordure);
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 24px rgb(15 23 42 / 7%);
+
+  font-family: var(--police-titre);
+
+  font-size: .62rem;
+
+  font-weight: 700;
+
+  letter-spacing: .1em;
+
+  color: var(--apropos-bleu);
+}
+
+
+.a-propos-capacite__element--1 {
+  top: 4%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+
+.a-propos-capacite__element--2 {
+  right: 0;
+  bottom: 17%;
+}
+
+
+.a-propos-capacite__element--3 {
+  bottom: 17%;
+  left: 0;
+}
+
+
+.a-propos-capacite__ligne {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 38%;
+  height: 1px;
+
+  background: var(--apropos-bordure);
+
+  transform-origin: left center;
+}
+
+
+.a-propos-capacite__ligne--1 {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+
+.a-propos-capacite__ligne--2 {
+  transform: translateY(-50%) rotate(29deg);
+}
+
+
+.a-propos-capacite__ligne--3 {
+  transform: translateY(-50%) rotate(151deg);
+}
+
+
+/* =========================================================
+   03 — MÉTHODE
+   ========================================================= */
+
+.a-propos-methode {
+  background: #ffffff;
+}
+
+
+.a-propos-methode__schema {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    42px
+    minmax(0, 1fr)
+    42px
+    minmax(0, 1fr)
+    42px
+    minmax(0, 1fr);
+
+  align-items: stretch;
+}
+
+
+.a-propos-etape {
+  position: relative;
+
+  min-height: 300px;
+
+  padding: 28px;
+
+  border: 1px solid var(--apropos-bordure);
+
+  background: #ffffff;
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+
+.a-propos-etape:hover {
+  border-color: rgb(23 37 84 / 26%);
+
+  box-shadow: 0 16px 34px rgb(15 23 42 / 7%);
+
+  transform: translateY(-4px);
+}
+
+
+.a-propos-etape__numero {
+  margin-bottom: 34px;
+
+  font-family: var(--police-titre);
+
+  font-size: .68rem;
+
+  font-weight: 700;
+
+  letter-spacing: .14em;
+
+  color: var(--apropos-bleu);
+
+  opacity: .55;
+}
+
+
+.a-propos-etape__icone {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin-bottom: 24px;
+
+  border-radius: 12px;
+
+  background: var(--apropos-tint);
+
+  color: var(--apropos-bleu);
+}
+
+
+.a-propos-etape__icone svg {
+  width: 22px;
+  height: 22px;
+}
+
+
+.a-propos-etape h3 {
+  margin: 0 0 10px;
+
+  font-family: var(--police-titre);
+
+  font-size: 1.2rem;
+
+  font-weight: 700;
+}
+
+
+.a-propos-etape p {
+  max-width: 220px;
+
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: .88rem;
+
+  line-height: 1.65;
+
+  color: var(--apropos-secondaire);
+}
+
+
+.a-propos-etape__liaison {
+  position: relative;
+
+  align-self: center;
+
+  height: 1px;
+
+  background: var(--apropos-bordure);
+}
+
+
+.a-propos-etape__liaison::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  right: -1px;
+
+  width: 7px;
+  height: 7px;
+
+  border-top: 1px solid var(--apropos-bleu);
+  border-right: 1px solid var(--apropos-bleu);
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+
+/* =========================================================
+   04 — TALENTS
+   ========================================================= */
+
+.a-propos-talents {
+  background: var(--apropos-fond-alt);
+}
+
+
+.a-propos-talents__grille {
+  display: grid;
+
+  grid-template-columns:
+    minmax(360px, .9fr)
+    minmax(0, 1.1fr);
+
+  gap: 96px;
+
+  align-items: center;
+}
+
+
+.a-propos-talents__visual {
+  position: relative;
+
+  min-height: 510px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--apropos-bordure);
+
+  background:
+    linear-gradient(
+      145deg,
+      #eef2f7 0%,
+      #f8fafc 100%
+    );
+}
+
+
+.a-propos-talents__fond {
+  position: absolute;
+
+  inset: 0;
+}
+
+
+.a-propos-talents__fond span {
+  position: absolute;
+
+  border: 1px solid rgb(23 37 84 / 10%);
+
+  border-radius: 50%;
+}
+
+
+.a-propos-talents__fond span:nth-child(1) {
+  top: 11%;
+  left: 11%;
+
+  width: 78%;
+
+  aspect-ratio: 1;
+}
+
+
+.a-propos-talents__fond span:nth-child(2) {
+  top: 24%;
+  left: 24%;
+
+  width: 52%;
+
+  aspect-ratio: 1;
+}
+
+
+.a-propos-talents__fond span:nth-child(3) {
+  top: 37%;
+  left: 37%;
+
+  width: 26%;
+
+  aspect-ratio: 1;
+}
+
+
+.a-propos-talents__bloc {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 220px;
+
+  display: grid;
+
+  gap: 8px;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.a-propos-talents__bloc span {
+  padding: 13px 16px;
+
+  border: 1px solid rgb(23 37 84 / 14%);
+
+  background: rgb(255 255 255 / 78%);
+
+  font-family: var(--police-titre);
+
+  font-size: .68rem;
+
+  font-weight: 700;
+
+  letter-spacing: .1em;
+
+  text-align: center;
+
+  color: var(--apropos-bleu);
+
+  backdrop-filter: blur(6px);
+}
+
+
+.a-propos-talents__mot {
+  position: absolute;
+
+  right: 24px;
+  bottom: 20px;
+
+  font-family: var(--police-titre);
+
+  font-size: .66rem;
+
+  font-weight: 700;
+
+  letter-spacing: .2em;
+
+  color: var(--apropos-bleu);
+
+  opacity: .45;
+}
+
+
+.a-propos-talents__contenu {
+  max-width: 680px;
+}
+
+
+.a-propos-talents__lead {
+  margin: 26px 0 0;
+
+  font-family: var(--police-texte);
+
+  font-size: 1.08rem;
+
+  font-weight: 500;
+
+  line-height: 1.7;
+
+  color: var(--apropos-bleu);
+}
+
+
+.a-propos-talents__contenu > p:not(.m-section__eyebrow):not(.a-propos-talents__lead) {
+  margin-top: 20px;
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--apropos-secondaire);
+}
+
+
+.a-propos-talents__principes {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  margin-top: 32px;
+
+  border-top: 1px solid var(--apropos-bordure);
+}
+
+
+.a-propos-talents__principes div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  padding: 18px 18px 18px 0;
+
+  border-bottom: 1px solid var(--apropos-bordure);
+}
+
+
+.a-propos-talents__principes div:nth-child(odd) {
+  border-right: 1px solid var(--apropos-bordure);
+}
+
+
+.a-propos-talents__principes div:nth-child(even) {
+  padding-left: 18px;
+}
+
+
+.a-propos-talents__principes strong {
+  font-family: var(--police-titre);
+
+  font-size: .85rem;
+
+  color: var(--apropos-bleu);
+}
+
+
+.a-propos-talents__principes span {
+  font-size: .8rem;
+
+  color: var(--apropos-secondaire);
+}
+
+
+/* =========================================================
+   05 — ÉCOSYSTÈME
+   ========================================================= */
+
+.a-propos-ecosysteme {
+  background: #ffffff;
+}
+
+
+.a-propos-ecosysteme__visual {
+  position: relative;
+
+  width: min(720px, 100%);
+
+  aspect-ratio: 1.8;
+
+  margin: 0 auto 46px;
+}
+
+
+.a-propos-ecosysteme__centre {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--apropos-bleu);
+
+  color: #ffffff;
+
+  transform: translate(-50%, -50%);
+
+  box-shadow: 0 18px 42px rgb(23 37 84 / 16%);
+}
+
+
+.a-propos-ecosysteme__centre span {
+  font-family: var(--police-titre);
+
+  font-size: .82rem;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+}
+
+
+.a-propos-ecosysteme__centre small {
+  margin-top: 4px;
+
+  font-size: .48rem;
+
+  font-weight: 600;
+
+  letter-spacing: .2em;
+
+  opacity: .62;
+}
+
+
+.a-propos-ecosysteme__axe {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 34%;
+  height: 1px;
+
+  transform-origin: left center;
+
+  background: var(--apropos-bordure);
+}
+
+
+.a-propos-ecosysteme__axe::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  right: 0;
+
+  width: 9px;
+  height: 9px;
+
+  border: 1px solid var(--apropos-bleu);
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  transform: translate(50%, -50%);
+}
+
+
+.a-propos-ecosysteme__axe--1 {
+  transform: translateY(-50%) rotate(-158deg);
+}
+
+
+.a-propos-ecosysteme__axe--2 {
+  transform: translateY(-50%) rotate(-108deg);
+}
+
+
+.a-propos-ecosysteme__axe--3 {
+  transform: translateY(-50%) rotate(-54deg);
+}
+
+
+.a-propos-ecosysteme__axe--4 {
+  transform: translateY(-50%) rotate(20deg);
+}
+
+
+.a-propos-ecosysteme__axe--5 {
+  transform: translateY(-50%) rotate(74deg);
+}
+
+
+.a-propos-ecosysteme__axe--6 {
+  transform: translateY(-50%) rotate(126deg);
+}
+
+
+.a-propos-ecosysteme__noeud {
+  position: absolute;
+
+  padding: 9px 12px;
+
+  border: 1px solid var(--apropos-bordure);
+
+  background: #ffffff;
+
+  font-family: var(--police-titre);
+
+  font-size: .57rem;
+
+  font-weight: 700;
+
+  letter-spacing: .1em;
+
+  color: var(--apropos-bleu);
+
+  box-shadow: 0 8px 20px rgb(15 23 42 / 5%);
+}
+
+
+.a-propos-ecosysteme__noeud--1 {
+  top: 4%;
+  left: 17%;
+}
+
+
+.a-propos-ecosysteme__noeud--2 {
+  top: 18%;
+  left: 5%;
+}
+
+
+.a-propos-ecosysteme__noeud--3 {
+  top: 4%;
+  right: 16%;
+}
+
+
+.a-propos-ecosysteme__noeud--4 {
+  top: 18%;
+  right: 3%;
+}
+
+
+.a-propos-ecosysteme__noeud--5 {
+  right: 17%;
+  bottom: 4%;
+}
+
+
+.a-propos-ecosysteme__noeud--6 {
+  bottom: 4%;
+  left: 18%;
+}
+
+
+.a-propos-ecosysteme__texte {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+
+  gap: 40px;
+
+  align-items: center;
+
+  max-width: 900px;
+
+  margin-inline: auto;
+
+  padding-top: 30px;
+
+  border-top: 1px solid var(--apropos-bordure);
+}
+
+
+.a-propos-ecosysteme__texte p {
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--apropos-secondaire);
+}
+
+
+/* =========================================================
+   06 — VISION
+   ========================================================= */
+
+.a-propos-vision {
+  background: var(--apropos-fond-alt);
+}
+
+
+.a-propos-vision__grille {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(360px, .95fr);
+
+  gap: 80px;
+
+  align-items: start;
+}
+
+
+.a-propos-vision__contenu {
+  max-width: 700px;
+}
+
+
+.a-propos-vision__lead {
+  margin-top: 26px;
+
+  font-family: var(--police-texte);
+
+  font-size: 1.08rem;
+
+  font-weight: 500;
+
+  line-height: 1.7;
+
+  color: var(--apropos-bleu);
+}
+
+
+.a-propos-vision__contenu > p:not(.m-section__eyebrow):not(.a-propos-vision__lead) {
+  margin-top: 20px;
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--apropos-secondaire);
+}
+
+
+.a-propos-vision__principes {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1px;
+
+  border: 1px solid var(--apropos-bordure);
+
+  background: var(--apropos-bordure);
+}
+
+
+.a-propos-vision__principes article {
+  min-height: 220px;
+
+  padding: 26px;
+
+  background: #ffffff;
+}
+
+
+.a-propos-vision__icone {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin-bottom: 24px;
+
+  border-radius: 10px;
+
+  background: var(--apropos-tint);
+
+  color: var(--apropos-bleu);
+}
+
+
+.a-propos-vision__icone svg {
+  width: 21px;
+  height: 21px;
+}
+
+
+.a-propos-vision__principes h3 {
+  margin: 0 0 10px;
+
+  font-family: var(--police-titre);
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+}
+
+
+.a-propos-vision__principes p {
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: .83rem;
+
+  line-height: 1.65;
+
+  color: var(--apropos-secondaire);
+}
+
+
+/* =========================================================
+   07 — SYNTHÈSE / CTA
+   ========================================================= */
+
+.a-propos-synthese {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-block: 88px;
+
+  background: var(--apropos-bleu);
+
+  color: #ffffff;
+}
+
+
+.a-propos-synthese::before,
+.a-propos-synthese::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgb(255 255 255 / 10%);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.a-propos-synthese::before {
+  top: -310px;
+  right: -130px;
+
+  width: 520px;
+  height: 520px;
+}
+
+
+.a-propos-synthese::after {
+  bottom: -220px;
+  left: -120px;
+
+  width: 300px;
+  height: 300px;
+}
+
+
+.a-propos-synthese .a-propos-container {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+
+  gap: 64px;
+
+  align-items: center;
+}
+
+
+.a-propos-synthese__label {
+  margin: 0 0 16px;
+
+  font-family: var(--police-titre);
+
+  font-size: .7rem;
+
+  font-weight: 700;
+
+  letter-spacing: .18em;
+
+  color: rgb(255 255 255 / 58%);
+}
+
+
+.a-propos-synthese h2 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+
+  font-size: clamp(
+    2.4rem,
+    5vw,
+    4.5rem
+  );
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -.04em;
+}
+
+
+.a-propos-synthese h2 span {
+  color: var(--couleur-digital);
+
+  opacity: 1;
+}
+
+
+.a-propos-synthese__contenu > p:last-child {
+  max-width: 620px;
+
+  margin: 22px 0 0;
+
+  font-family: var(--police-texte);
+
+  font-size: .98rem;
+
+  line-height: 1.7;
+
+  color: rgb(255 255 255 / 72%);
+}
+
+
+.a-propos-synthese__actions {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  min-width: 210px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .a-propos-container {
+    width: min(
+      var(--apropos-largeur),
+      calc(100% - 48px)
+    );
+  }
+
+
+  .a-propos-hero__conteneur {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(300px, .72fr);
+
+    gap: 28px;
+  }
+
+
+  .a-propos-hero h1 {
+    font-size: clamp(
+      2.8rem,
+      7vw,
+      4.6rem
+    );
+  }
+
+
+  .a-propos-section {
+    padding-block: 88px;
+  }
+
+
+  .a-propos-section__intro {
+    gap: 48px;
+  }
+
+
+  .a-propos-identite__grille {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .a-propos-identite__bloc:nth-child(2) {
+    border-right: 0;
+  }
+
+
+  .a-propos-identite__bloc:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--apropos-bordure);
+  }
+
+
+  .a-propos-raison__grille,
+  .a-propos-talents__grille,
+  .a-propos-vision__grille {
+    gap: 56px;
+  }
+
+
+  .a-propos-methode__schema {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+
+
+  .a-propos-etape__liaison {
+    display: none;
+  }
+
+
+  .a-propos-talents__visual {
+    min-height: 440px;
+  }
+
+
+  .a-propos-synthese .a-propos-container {
+    gap: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .a-propos-container {
+    width: calc(100% - 32px);
+  }
+
+
+  /* -------------------------------------------------------
+     HERO
+     ------------------------------------------------------- */
+
+  .a-propos-hero {
+    min-height: 0;
+  }
+
+
+  .a-propos-hero__conteneur {
+    width: calc(100% - 32px);
+
+    min-height: 0;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 36px;
+
+    padding-block: 30px 88px;
+  }
+
+
+  .a-propos-hero__contenu {
+    width: 100%;
+  }
+
+
+  .a-propos-hero h1 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(
+      2.45rem,
+      13vw,
+      3.5rem
+    );
+
+    overflow-wrap: break-word;
+  }
+
+
+  .a-propos-hero__description {
+    margin-top: 20px;
+
+    font-size: .92rem;
+
+    line-height: 1.65;
+  }
+
+
+  .a-propos-hero__actions {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    margin-top: 26px;
+  }
+
+
+  .a-propos-hero__actions .m-bouton {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .a-propos-hero__visual {
+    width: min(330px, 100%);
+
+    margin-inline: auto;
+  }
+
+
+  .a-propos-hero__centre {
+    width: 74px;
+    height: 74px;
+  }
+
+
+  .a-propos-hero__centre img {
+    width: 34px;
+  }
+
+
+  .a-propos-hero__noeud {
+    min-width: 80px;
+
+    padding: 7px 9px;
+
+    font-size: .49rem;
+  }
+
+
+  .a-propos-hero__signature {
+    left: 0;
+    bottom: 28px;
+  }
+
+
+  .a-propos-hero__signature img {
+    width: 108px;
+  }
+
+
+  .a-propos-hero__marker {
+    right: 0;
+    bottom: 30px;
+
+    max-width: 150px;
+
+    font-size: .48rem;
+
+    line-height: 1.5;
+
+    text-align: right;
+  }
+
+
+  /* -------------------------------------------------------
+     SECTIONS
+     ------------------------------------------------------- */
+
+  .a-propos-section {
+    padding-block: 72px;
+  }
+
+
+  .a-propos-section__intro {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+
+    margin-bottom: 40px;
+  }
+
+
+  .a-propos-section__heading {
+    margin-bottom: 42px;
+  }
+
+
+  .a-propos-section__heading h2,
+  .a-propos-section__intro h2,
+  .a-propos-raison__contenu h2,
+  .a-propos-talents__contenu h2,
+  .a-propos-vision__contenu h2 {
+    font-size: clamp(
+      1.9rem,
+      9vw,
+      2.5rem
+    );
+  }
+
+
+  .a-propos-section__lead {
+    font-size: .96rem;
+  }
+
+
+  /* -------------------------------------------------------
+     IDENTITÉ
+     ------------------------------------------------------- */
+
+  .a-propos-identite__grille {
+    grid-template-columns: 1fr;
+  }
+
+
+  .a-propos-identite__bloc {
+    min-height: 0;
+
+    padding: 26px 0;
+
+    border-right: 0;
+    border-bottom: 1px solid var(--apropos-bordure);
+  }
+
+
+  .a-propos-identite__bloc:last-child {
+    border-bottom: 0;
+  }
+
+
+  .a-propos-identite__numero {
+    margin-bottom: 24px;
+  }
+
+
+  /* -------------------------------------------------------
+     RAISON D'ÊTRE
+     ------------------------------------------------------- */
+
+  .a-propos-raison__grille {
+    grid-template-columns: 1fr;
+
+    gap: 48px;
+  }
+
+
+  .a-propos-raison__visual {
+    min-height: 330px;
+  }
+
+
+  .a-propos-capacite {
+    width: min(310px, 100%);
+  }
+
+
+  .a-propos-capacite__centre {
+    width: 88px;
+    height: 88px;
+
+    font-size: .58rem;
+  }
+
+
+  .a-propos-capacite__element {
+    padding: 8px 10px;
+
+    font-size: .49rem;
+  }
+
+
+  /* -------------------------------------------------------
+     MÉTHODE
+     ------------------------------------------------------- */
+
+  .a-propos-methode__schema {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  .a-propos-etape {
+    min-height: 0;
+
+    padding: 24px;
+  }
+
+
+  .a-propos-etape__numero {
+    margin-bottom: 24px;
+  }
+
+
+  .a-propos-etape p {
+    max-width: none;
+  }
+
+
+  /* -------------------------------------------------------
+     TALENTS
+     ------------------------------------------------------- */
+
+  .a-propos-talents__grille {
+    grid-template-columns: 1fr;
+
+    gap: 46px;
+  }
+
+
+  .a-propos-talents__visual {
+    min-height: 330px;
+  }
+
+
+  .a-propos-talents__bloc {
+    width: 190px;
+  }
+
+
+  .a-propos-talents__principes {
+    grid-template-columns: 1fr;
+  }
+
+
+  .a-propos-talents__principes div:nth-child(odd) {
+    border-right: 0;
+  }
+
+
+  .a-propos-talents__principes div:nth-child(even) {
+    padding-left: 0;
+  }
+
+
+  /* -------------------------------------------------------
+     ÉCOSYSTÈME
+     ------------------------------------------------------- */
+
+  .a-propos-ecosysteme__visual {
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    margin-bottom: 34px;
+  }
+
+
+  .a-propos-ecosysteme__centre {
+    width: 94px;
+    height: 94px;
+  }
+
+
+  .a-propos-ecosysteme__axe {
+    width: 29%;
+  }
+
+
+  .a-propos-ecosysteme__noeud {
+    padding: 7px 8px;
+
+    font-size: .45rem;
+  }
+
+
+  .a-propos-ecosysteme__noeud--1 {
+    top: 4%;
+    left: 7%;
+  }
+
+
+  .a-propos-ecosysteme__noeud--2 {
+    top: 24%;
+    left: 0;
+  }
+
+
+  .a-propos-ecosysteme__noeud--3 {
+    top: 4%;
+    right: 7%;
+  }
+
+
+  .a-propos-ecosysteme__noeud--4 {
+    top: 24%;
+    right: 0;
+  }
+
+
+  .a-propos-ecosysteme__noeud--5 {
+    right: 7%;
+    bottom: 4%;
+  }
+
+
+  .a-propos-ecosysteme__noeud--6 {
+    bottom: 4%;
+    left: 7%;
+  }
+
+
+  .a-propos-ecosysteme__texte {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+
+    padding-top: 24px;
+  }
+
+
+  .a-propos-ecosysteme__texte .m-bouton {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  /* -------------------------------------------------------
+     VISION
+     ------------------------------------------------------- */
+
+  .a-propos-vision__grille {
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+  }
+
+
+  .a-propos-vision__principes {
+    grid-template-columns: 1fr;
+  }
+
+
+  .a-propos-vision__principes article {
+    min-height: 0;
+
+    padding: 24px;
+  }
+
+
+  /* -------------------------------------------------------
+     SYNTHÈSE
+     ------------------------------------------------------- */
+
+  .a-propos-synthese {
+    padding-block: 68px;
+  }
+
+
+  .a-propos-synthese .a-propos-container {
+    grid-template-columns: 1fr;
+
+    gap: 36px;
+  }
+
+
+  .a-propos-synthese h2 {
+    font-size: clamp(
+      2.5rem,
+      12vw,
+      3.5rem
+    );
+  }
+
+
+  .a-propos-synthese__actions {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+
+  .a-propos-synthese__actions .m-bouton {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ — RÉDUCTION DES MOUVEMENTS
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .a-propos-etape,
+  .a-propos-identite__bloc {
+    transition: none;
+  }
+
+}

@@ -1,0 +1,664 @@
+ /* =========================================================
+    PAGE FILIALES — MONANGO
+    ========================================================= */
+
+    .m-filiales-page {
+  --filiales-bleu: #172554;
+  --filiales-bleu-clair: #2E6BFF;
+  --filiales-bleu-accent: #7EA2FF;
+
+  --filiales-fond: #f8fafc;
+  --filiales-fond-alt: #f1f5f9;
+  --filiales-fond-sombre: #eef2f7;
+
+
+  --filiales-texte: #172554;
+  --filiales-secondaire: #526071;
+
+  --filiales-bordure: #e2e8f0;
+
+  --filiales-tint: rgb(46 107 255 / 6%);
+  --filiales-tint-forte: rgb(46 107 255 / 11%);
+
+  overflow-x: hidden;
+}
+
+/* .filiales-hero__marker {
+  position: absolute;
+  z-index: 4;
+
+  left: 50%;
+  bottom: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  width: max-content;
+
+  transform: translateX(-50%);
+}
+
+.filiales-hero__marker span {
+  width: 5px;
+  height: 5px;
+  display: block;
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+  background: rgb(255 255 255 / 35%);
+}
+
+.filiales-hero__marker span:nth-child(2) {
+  width: 24px;
+  border-radius: 999px;
+  background:var(--filiales-bleu-accent);
+} */
+
+/* =========================================================
+   01 — ÉCOSYSTÈME
+   ========================================================= */
+
+.m-filiales {
+  background: var(--couleur-fond);
+}
+
+
+.m-filiales__conteneur {
+  width: min(1200px, calc(100% - 64px));
+
+  margin-inline: auto;
+
+  padding-block: var(--espace-9);
+}
+
+
+/* =========================================================
+   EN-TÊTE DE SECTION
+   ========================================================= */
+
+.m-filiales__entete {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(280px, 0.65fr);
+
+  gap: var(--espace-8);
+
+  align-items: end;
+  
+
+  margin-bottom: var(--espace-6);
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.m-filiales__entete .m-section__eyebrow {
+  margin-bottom: var(--espace-5);
+}
+
+
+/* =========================================================
+   GRANDS TITRES DE SECTION
+   Même langage que Confidentialité / pages
+   institutionnelles MONANGO
+   ========================================================= */
+
+.m-filiales__entete h2,
+.m-filiales__complementarite-contenu h2,
+.m-filiales__approche-contenu h2 {
+
+  max-width: 760px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  font-weight: 600;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.025em;
+
+  color: var(--couleur-group);
+}
+
+
+/* =========================================================
+   MOTS / PHRASES ACCENTUÉS
+   ========================================================= */
+
+.m-filiales__entete h2 span,
+.m-filiales__complementarite-contenu h2 span,
+.m-filiales__approche-contenu h2 span {
+
+  color: var(--couleur-digital);
+
+}
+
+
+/* =========================================================
+   TEXTE INTRODUCTIF
+   ========================================================= */
+
+.m-filiales__entete > p {
+
+  max-width: 680px;
+
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+/* =========================================================
+   GRILLE DES FILIALES
+   ========================================================= */
+
+.m-filiales .m-grille--filiales {
+
+  align-items: stretch;
+
+}
+
+
+/* =========================================================
+   02 — COMPLÉMENTARITÉ
+   ========================================================= */
+
+.m-filiales__complementarite {
+
+  background: var(--couleur-surface);
+
+}
+
+
+.m-filiales__complementarite-conteneur {
+
+  width: min(1200px, calc(100% - 64px));
+
+  margin-inline: auto;
+
+  padding-block: var(--espace-9);
+
+}
+
+
+.m-filiales__complementarite-contenu {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.8fr);
+
+  gap: var(--espace-8);
+
+  align-items: start;
+
+}
+
+
+/* =========================================================
+   TITRE COMPLÉMENTARITÉ
+   ========================================================= */
+
+.m-filiales__complementarite-contenu h2 {
+
+  max-width: 700px;
+
+}
+
+
+/* =========================================================
+   TEXTE COMPLÉMENTARITÉ
+   ========================================================= */
+
+.m-filiales__complementarite-contenu > div {
+
+  max-width: 560px;
+
+}
+
+
+.m-filiales__complementarite-contenu > div p {
+
+  margin: 0 0 var(--espace-3);
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+.m-filiales__complementarite-contenu > div p:last-child {
+
+  margin-bottom: 0;
+
+}
+
+
+/* =========================================================
+   CAPACITÉS
+   ========================================================= */
+
+.m-filiales__capacites {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  border-top: 1px solid var(--couleur-bordure);
+
+  border-left: 1px solid var(--couleur-bordure);
+
+}
+
+
+.m-filiales__capacite {
+
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    42px
+    minmax(0, 1fr);
+
+  gap: var(--espace-4);
+
+  min-height: 190px;
+
+  padding: var(--espace-5);
+
+  background: var(--couleur-fond);
+
+  border-right: 1px solid var(--couleur-bordure);
+
+  border-bottom: 1px solid var(--couleur-bordure);
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+
+}
+
+
+.m-filiales__capacite:hover {
+
+  transform: translateY(-2px);
+
+  background: var(--couleur-surface);
+
+  border-color: rgba(23, 37, 84, 0.18);
+
+  box-shadow: 0 12px 28px rgba(23, 37, 84, 0.06);
+
+}
+
+
+.m-filiales__capacite-numero {
+
+  font-family: var(--police-titre);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.08em;
+
+  color: var(--couleur-digital);
+
+}
+
+
+.m-filiales__capacite h3 {
+
+  margin: 0 0 var(--espace-2);
+
+  font-family: var(--police-titre);
+
+  font-size: 1.15rem;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  color: var(--couleur-group);
+
+}
+
+
+.m-filiales__capacite p {
+
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: 0.9375rem;
+
+  line-height: 1.65;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+/* =========================================================
+   03 — ALLER PLUS LOIN
+   ========================================================= */
+
+.m-filiales__approche {
+
+  background: var(--couleur-fond);
+
+}
+
+
+.m-filiales__approche-conteneur {
+
+  width: min(1200px, calc(100% - 64px));
+
+  margin-inline: auto;
+
+  padding-block: var(--espace-9);
+
+}
+
+
+.m-filiales__approche-contenu {
+
+  max-width: 820px;
+
+}
+
+
+/* =========================================================
+   TITRE CTA
+   ========================================================= */
+
+.m-filiales__approche-contenu h2 {
+
+  max-width: 760px;
+
+  margin: 0 0 var(--espace-4);
+
+}
+
+
+/* =========================================================
+   TEXTE CTA
+   ========================================================= */
+
+.m-filiales__approche-contenu > p {
+
+  max-width: 680px;
+
+  margin: 0 0 var(--espace-5);
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+
+}
+
+
+/* =========================================================
+   CTA FINAL — VERSION GROUPE
+   ========================================================= */
+
+.m-filiales__cta {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: var(--espace-7);
+
+  padding: var(--espace-7);
+
+  background: var(--couleur-group);
+
+  color: #ffffff;
+
+}
+
+
+.m-filiales__cta h2 {
+
+  max-width: 700px;
+
+  margin: 0 0 var(--espace-3);
+
+  font-family: var(--police-titre);
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  font-weight: 600;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.025em;
+
+  color: #ffffff;
+
+}
+
+
+.m-filiales__cta p {
+
+  max-width: 620px;
+
+  margin: 0;
+
+  font-family: var(--police-texte);
+
+  font-size: var(--taille-texte);
+
+  line-height: 1.75;
+
+  color: rgba(255, 255, 255, 0.78);
+
+}
+
+
+.m-filiales__cta .m-bouton {
+
+  flex-shrink: 0;
+
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-filiales__conteneur,
+  .m-filiales__complementarite-conteneur,
+  .m-filiales__approche-conteneur {
+
+    width: min(100% - 48px, 900px);
+
+  }
+
+
+  .m-filiales__entete {
+
+    grid-template-columns: 1fr;
+
+    gap: var(--espace-5);
+
+    align-items: start;
+
+    margin-bottom: var(--espace-5);
+
+  }
+
+
+  .m-filiales__entete > p {
+
+    max-width: 700px;
+
+  }
+
+
+  .m-filiales__complementarite-contenu {
+
+    grid-template-columns: 1fr;
+
+    gap: var(--espace-6);
+
+  }
+
+
+  .m-filiales__complementarite-contenu > div {
+
+    max-width: 700px;
+
+  }
+
+
+  .m-filiales__cta {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-filiales__conteneur,
+  .m-filiales__complementarite-conteneur,
+  .m-filiales__approche-conteneur {
+
+    width: calc(100% - 32px);
+
+    padding-block: var(--espace-7);
+
+  }
+
+
+  .m-filiales__entete {
+
+    gap: var(--espace-3);
+
+    margin-bottom: var(--espace-5);
+
+  }
+
+
+  .m-filiales__entete h2,
+  .m-filiales__complementarite-contenu h2,
+  .m-filiales__approche-contenu h2,
+  .m-filiales__cta h2 {
+
+    font-size: clamp(1.9rem, 9vw, 2.5rem);
+
+  }
+
+
+  .m-filiales__entete > p,
+  .m-filiales__complementarite-contenu > div p,
+  .m-filiales__approche-contenu > p,
+  .m-filiales__cta p {
+
+    font-size: 0.9375rem;
+
+    line-height: 1.65;
+
+  }
+
+
+  .m-filiales__capacites {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .m-filiales__capacite {
+
+    min-height: auto;
+
+    padding: var(--espace-4);
+
+  }
+
+
+  .m-filiales__cta {
+
+    padding: var(--espace-5);
+
+  }
+
+
+  .m-filiales__cta .m-bouton {
+
+    width: 100%;
+
+  }
+
+}
+
+
+/* =========================================================
+   RÉDUCTION DES ANIMATIONS
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .m-filiales__capacite {
+
+    transition: none;
+
+  }
+
+
+  .m-filiales__capacite:hover {
+
+    transform: none;
+
+  }
+
+}

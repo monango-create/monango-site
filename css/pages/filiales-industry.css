@@ -1,0 +1,1663 @@
+/* =========================================================
+   MONANGO INDUSTRY
+   Page filiale — Industrie & Production
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+.m-industry-page {
+  --industry-couleur: #0d9488;
+  --industry-couleur-sombre: #0f766e;
+  --industry-couleur-claire: #2dd4bf;
+
+  --industry-tint: rgb(13 148 136 / 7%);
+  --industry-tint-forte: rgb(13 148 136 / 13%);
+  --industry-bordure: rgb(13 148 136 / 22%);
+
+  --industry-fond: #f7faf9;
+  --industry-texte: #172554;
+  --industry-secondaire: #526071;
+}
+
+
+/* =========================================================
+   CONTENEUR
+   ========================================================= */
+
+.industry-container {
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.industry-hero {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: stretch;
+
+  background:
+    linear-gradient(
+      135deg,
+      #172554 0%,
+      #172554 52%,
+      #123c4b 100%
+    );
+
+  color: #fff;
+}
+
+
+.industry-hero__conteneur {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
+  align-items: center;
+  gap: 48px;
+
+  padding: 54px 0 100px;
+}
+
+
+.industry-hero__contenu {
+  max-width: 680px;
+}
+
+
+.industry-hero__label {
+  margin: 0 0 20px;
+
+  font-family: var(--police-titre);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--industry-couleur-claire);
+}
+
+
+.industry-hero h1 {
+  max-width: 720px;
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(3rem, 6vw, 5.25rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+
+.industry-hero h1 span {
+  color: var(--industry-couleur-claire);
+}
+
+
+.industry-hero__description {
+  max-width: 610px;
+  margin: 28px 0 0;
+
+  font-family: var(--police-corps);
+  font-size: 1.05rem;
+  line-height: 1.75;
+
+  color: rgb(255 255 255 / 76%);
+}
+
+
+.industry-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+
+.industry-hero__actions .m-bouton--primaire {
+  background: var(--industry-couleur);
+  border-color: var(--industry-couleur);
+}
+
+
+.industry-hero__actions .m-bouton--primaire:hover {
+  background: var(--industry-couleur-claire);
+  border-color: var(--industry-couleur-claire);
+}
+
+
+.industry-hero__actions .m-bouton--secondaire {
+  border-color: rgb(255 255 255 / 32%);
+  color: #fff;
+  background: rgb(255 255 255 / 6%);
+}
+
+
+.industry-hero__actions .m-bouton--secondaire:hover {
+  border-color: rgb(255 255 255 / 60%);
+  background: rgb(255 255 255 / 12%);
+}
+
+
+/* =========================================================
+   FOND GRAPHIQUE HERO
+   ========================================================= */
+
+.industry-hero__fond {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+
+.industry-hero__ligne {
+  position: absolute;
+  display: block;
+
+  height: 1px;
+
+  background: rgb(45 212 191 / 18%);
+  transform-origin: left center;
+}
+
+
+.industry-hero__ligne--1 {
+  width: 52%;
+  top: 25%;
+  right: -4%;
+  transform: rotate(-18deg);
+}
+
+
+.industry-hero__ligne--2 {
+  width: 44%;
+  top: 64%;
+  right: -3%;
+  transform: rotate(14deg);
+}
+
+
+.industry-hero__ligne--3 {
+  width: 28%;
+  top: 47%;
+  left: 53%;
+  transform: rotate(90deg);
+}
+
+
+.industry-hero__noeud {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  border: 1px solid var(--industry-couleur-claire);
+  border-radius: 50%;
+
+  background: #172554;
+  box-shadow: 0 0 0 6px rgb(45 212 191 / 7%);
+}
+
+
+.industry-hero__noeud--1 {
+  top: 24%;
+  right: 32%;
+}
+
+
+.industry-hero__noeud--2 {
+  top: 63%;
+  right: 17%;
+}
+
+
+.industry-hero__noeud--3 {
+  top: 46%;
+  right: 47%;
+}
+
+
+.industry-hero__bloc {
+  position: absolute;
+
+  border: 1px solid rgb(45 212 191 / 16%);
+  background: rgb(255 255 255 / 2%);
+}
+
+
+.industry-hero__bloc--1 {
+  width: 180px;
+  height: 180px;
+
+  right: 2%;
+  top: 8%;
+
+  transform: rotate(16deg);
+}
+
+
+.industry-hero__bloc--2 {
+  width: 120px;
+  height: 120px;
+
+  right: 31%;
+  bottom: 12%;
+
+  transform: rotate(32deg);
+}
+
+
+.industry-hero__bloc--3 {
+  width: 260px;
+  height: 260px;
+
+  right: 11%;
+  bottom: -12%;
+
+  transform: rotate(8deg);
+}
+
+
+/* =========================================================
+   VISUEL INDUSTRIEL
+   ========================================================= */
+
+.industry-hero__visual {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  min-height: 420px;
+}
+
+
+.industry-system {
+  position: relative;
+
+  width: min(400px, 100%);
+  aspect-ratio: 1;
+
+  display: grid;
+  place-items: center;
+}
+
+
+.industry-system__anneau {
+  position: absolute;
+
+  border: 1px solid rgb(45 212 191 / 24%);
+  border-radius: 50%;
+}
+
+
+.industry-system__anneau--1 {
+  width: 74%;
+  height: 74%;
+}
+
+
+.industry-system__anneau--2 {
+  width: 48%;
+  height: 48%;
+
+  border-color: rgb(45 212 191 / 38%);
+}
+
+
+.industry-system__centre {
+  position: relative;
+  z-index: 3;
+
+  width: 128px;
+  height: 128px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgb(45 212 191 / 60%);
+  border-radius: 50%;
+
+  background: rgb(23 37 84 / 88%);
+  box-shadow:
+    0 0 0 12px rgb(45 212 191 / 4%),
+    0 0 0 32px rgb(45 212 191 / 3%);
+}
+
+
+.industry-system__centre span {
+  font-family: var(--police-titre);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+
+  color: #fff;
+}
+
+
+.industry-system__module {
+  position: absolute;
+  z-index: 4;
+
+  min-width: 112px;
+  padding: 12px 14px;
+
+  border: 1px solid rgb(45 212 191 / 34%);
+  background: rgb(23 37 84 / 90%);
+  backdrop-filter: blur(8px);
+}
+
+
+.industry-system__module span:last-child {
+  display: block;
+
+  margin-top: 4px;
+
+  font-family: var(--police-titre);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+
+.industry-system__module-index {
+  display: block;
+
+  font-family: var(--police-titre);
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  color: var(--industry-couleur-claire);
+}
+
+
+.industry-system__module--1 {
+  top: 13%;
+  left: 2%;
+}
+
+
+.industry-system__module--2 {
+  top: 48%;
+  right: -2%;
+}
+
+
+.industry-system__module--3 {
+  bottom: 12%;
+  left: 16%;
+}
+
+
+.industry-system__axe {
+  position: absolute;
+
+  height: 1px;
+
+  background: rgb(45 212 191 / 28%);
+  transform-origin: left center;
+}
+
+
+.industry-system__axe--1 {
+  width: 120px;
+  top: 31%;
+  left: 26%;
+  transform: rotate(30deg);
+}
+
+
+.industry-system__axe--2 {
+  width: 130px;
+  top: 54%;
+  left: 52%;
+  transform: rotate(-22deg);
+}
+
+
+.industry-system__axe--3 {
+  width: 100px;
+  top: 69%;
+  left: 35%;
+  transform: rotate(32deg);
+}
+
+
+/* =========================================================
+   SIGNATURE + MARQUEUR
+   ========================================================= */
+
+.industry-hero__signature {
+  position: absolute;
+  z-index: 3;
+
+  left: max(32px, calc((100% - 1200px) / 2));
+  bottom: 34px;
+}
+
+
+.industry-hero__signature img {
+  display: block;
+
+  width: 112px;
+  height: auto;
+}
+
+
+.industry-hero__marker {
+  position: absolute;
+  z-index: 3;
+
+  right: max(32px, calc((100% - 1200px) / 2));
+  bottom: 40px;
+
+  font-family: var(--police-titre);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+
+  color: rgb(255 255 255 / 48%);
+}
+
+
+/* =========================================================
+   SECTIONS COMMUNES
+   ========================================================= */
+
+.industry-section {
+  padding: 112px 0;
+}
+
+
+.industry-section h2 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+
+  color: var(--industry-texte);
+}
+
+
+.industry-section h2 span {
+  color: var(--industry-couleur);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.industry-section--intro {
+  background: #fff;
+}
+
+
+.industry-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+  gap: 96px;
+  align-items: start;
+}
+
+
+.industry-intro__heading h2 {
+  max-width: 540px;
+}
+
+
+.industry-intro__content {
+  padding-top: 4px;
+}
+
+
+.industry-intro__content p {
+  max-width: 620px;
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: var(--industry-secondaire);
+}
+
+
+.industry-intro__content p + p {
+  margin-top: 20px;
+}
+
+
+.industry-intro__lead {
+  font-family: var(--police-titre);
+  font-size: 1.22rem !important;
+  font-weight: 600;
+  line-height: 1.55 !important;
+
+  color: var(--industry-texte) !important;
+}
+
+
+/* =========================================================
+   SCHÉMA INTRO
+   ========================================================= */
+
+.industry-intro__schema {
+  margin-top: 72px;
+}
+
+
+.industry-flow {
+  display: grid;
+  grid-template-columns: 1fr 72px 1fr 72px 1fr;
+  align-items: center;
+}
+
+
+.industry-flow__item {
+  min-height: 150px;
+  padding: 24px;
+
+  border: 1px solid #dce5e3;
+  background: #fff;
+}
+
+
+.industry-flow__item--active {
+  border-color: var(--industry-bordure);
+  background: var(--industry-tint);
+}
+
+
+.industry-flow__index {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-family: var(--police-titre);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  color: var(--industry-couleur);
+}
+
+
+.industry-flow__item strong {
+  display: block;
+
+  font-family: var(--police-titre);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  color: var(--industry-texte);
+}
+
+
+.industry-flow__item small {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 0.78rem;
+  line-height: 1.55;
+
+  color: var(--industry-secondaire);
+}
+
+
+.industry-flow__connector {
+  position: relative;
+
+  height: 1px;
+
+  background: var(--industry-bordure);
+}
+
+
+.industry-flow__connector::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  top: 50%;
+
+  width: 7px;
+  height: 7px;
+
+  border-top: 1px solid var(--industry-couleur);
+  border-right: 1px solid var(--industry-couleur);
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+
+/* =========================================================
+   EXPERTISES
+   ========================================================= */
+
+.industry-section--expertises {
+  background: var(--industry-fond);
+}
+
+
+.industry-section__heading {
+  max-width: 760px;
+  margin-bottom: 56px;
+}
+
+
+.industry-section__heading > p:last-child {
+  max-width: 600px;
+  margin: 20px 0 0;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: var(--industry-secondaire);
+}
+
+
+.industry-expertises {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+
+.industry-expertise {
+  position: relative;
+
+  min-height: 300px;
+  padding: 30px;
+
+  border: 1px solid #dce5e3;
+  background: #fff;
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+
+.industry-expertise::before {
+  content: "";
+
+  position: absolute;
+  inset: 0 auto auto 0;
+
+  width: 3px;
+  height: 56px;
+
+  background: var(--industry-couleur);
+}
+
+
+.industry-expertise:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--industry-bordure);
+
+  box-shadow:
+    0 14px 34px rgb(23 37 84 / 8%);
+}
+
+
+.industry-expertise__number {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  font-family: var(--police-titre);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  color: #9aa7a5;
+}
+
+
+.industry-expertise__icon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 28px;
+
+  border: 1px solid var(--industry-bordure);
+  background: var(--industry-tint);
+
+  color: var(--industry-couleur);
+}
+
+
+.industry-expertise__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+
+.industry-expertise h3 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  color: var(--industry-texte);
+}
+
+
+.industry-expertise p {
+  margin: 12px 0 0;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  color: var(--industry-secondaire);
+}
+
+
+/* =========================================================
+   PROCESSUS
+   ========================================================= */
+
+.industry-section--process {
+  background: #fff;
+}
+
+
+.industry-process {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.15fr);
+  gap: 96px;
+  align-items: center;
+}
+
+
+.industry-process__visual {
+  display: grid;
+  place-items: center;
+
+  min-height: 460px;
+}
+
+
+.industry-machine {
+  position: relative;
+
+  width: 340px;
+  height: 340px;
+
+  display: grid;
+  place-items: center;
+}
+
+
+.industry-machine__core {
+  position: relative;
+  z-index: 2;
+
+  width: 120px;
+  height: 120px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--industry-couleur);
+  box-shadow:
+    0 0 0 14px var(--industry-tint-forte),
+    0 0 0 42px var(--industry-tint);
+}
+
+
+.industry-machine__core span {
+  font-family: var(--police-titre);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+
+  color: #fff;
+}
+
+
+.industry-machine__ring {
+  position: absolute;
+
+  border: 1px solid var(--industry-bordure);
+  border-radius: 50%;
+}
+
+
+.industry-machine__ring--1 {
+  inset: 18%;
+}
+
+
+.industry-machine__ring--2 {
+  inset: 2%;
+  border-style: dashed;
+}
+
+
+.industry-machine__point {
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  border: 2px solid var(--industry-couleur);
+  border-radius: 50%;
+
+  background: #fff;
+}
+
+
+.industry-machine__point--1 {
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.industry-machine__point--2 {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.industry-machine__point--3 {
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.industry-machine__point--4 {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.industry-process__content {
+  max-width: 650px;
+}
+
+
+.industry-process__lead {
+  margin: 22px 0 34px;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: var(--industry-secondaire);
+}
+
+
+.industry-process__steps {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+.industry-process__steps li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 18px;
+
+  padding: 20px 0;
+
+  border-top: 1px solid #e5ebea;
+}
+
+
+.industry-process__steps li:last-child {
+  border-bottom: 1px solid #e5ebea;
+}
+
+
+.industry-process__steps > li > span {
+  font-family: var(--police-titre);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  color: var(--industry-couleur);
+}
+
+
+.industry-process__steps strong {
+  font-family: var(--police-titre);
+  font-size: 0.95rem;
+
+  color: var(--industry-texte);
+}
+
+
+.industry-process__steps p {
+  margin: 5px 0 0;
+
+  font-size: 0.84rem;
+  line-height: 1.6;
+
+  color: var(--industry-secondaire);
+}
+
+
+/* =========================================================
+   PERFORMANCE
+   ========================================================= */
+
+.industry-section--performance {
+  background: var(--industry-fond);
+}
+
+
+.industry-performance__heading {
+  max-width: 800px;
+  margin-bottom: 54px;
+}
+
+
+.industry-performance__heading > p:last-child {
+  max-width: 560px;
+  margin: 20px 0 0;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: var(--industry-secondaire);
+}
+
+
+.industry-performance {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+
+.industry-performance__card {
+  padding: 30px 26px;
+
+  border-top: 3px solid var(--industry-couleur);
+
+  background: #fff;
+}
+
+
+.industry-performance__card > span {
+  display: block;
+
+  margin-bottom: 34px;
+
+  font-family: var(--police-titre);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  color: var(--industry-couleur);
+}
+
+
+.industry-performance__card h3 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: 1.1rem;
+
+  color: var(--industry-texte);
+}
+
+
+.industry-performance__card p {
+  margin: 10px 0 0;
+
+  font-size: 0.84rem;
+  line-height: 1.65;
+
+  color: var(--industry-secondaire);
+}
+
+
+/* =========================================================
+   POSITIONNEMENT
+   ========================================================= */
+
+.industry-section--positionnement {
+  background: #fff;
+}
+
+
+.industry-positionnement {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.8fr);
+  gap: 100px;
+  align-items: center;
+}
+
+
+.industry-positionnement__content {
+  max-width: 650px;
+}
+
+
+.industry-positionnement__content > p:last-child {
+  margin: 26px 0 0;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: var(--industry-secondaire);
+}
+
+
+.industry-positionnement__principes {
+  display: grid;
+  gap: 0;
+}
+
+
+.industry-principe {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 4px 1fr;
+  column-gap: 18px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #e5ebea;
+}
+
+
+.industry-principe__ligne {
+  width: 4px;
+
+  background: var(--industry-couleur);
+}
+
+
+.industry-principe strong {
+  display: block;
+
+  font-family: var(--police-titre);
+  font-size: 0.95rem;
+
+  color: var(--industry-texte);
+}
+
+
+.industry-principe small {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 0.78rem;
+  line-height: 1.5;
+
+  color: var(--industry-secondaire);
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.industry-cta {
+  position: relative;
+  overflow: hidden;
+
+  padding: 104px 0;
+
+  background: var(--industry-couleur);
+  color: #fff;
+}
+
+
+.industry-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 460px;
+  height: 460px;
+
+  right: -180px;
+  top: -180px;
+
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 50%;
+}
+
+
+.industry-cta__contenu {
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+}
+
+
+.industry-cta__label {
+  margin: 0 0 18px;
+
+  font-family: var(--police-titre);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+
+  color: rgb(255 255 255 / 70%);
+}
+
+
+.industry-cta h2 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+
+  color: #fff;
+}
+
+
+.industry-cta__contenu > p:not(.industry-cta__label) {
+  max-width: 620px;
+  margin: 22px 0 0;
+
+  font-size: 1rem;
+  line-height: 1.75;
+
+  color: rgb(255 255 255 / 78%);
+}
+
+
+.industry-cta .m-bouton {
+  margin-top: 30px;
+
+  background: #fff;
+  border-color: #fff;
+
+  color: var(--industry-couleur-sombre);
+}
+
+
+.industry-cta .m-bouton:hover {
+  background: #f0fdfa;
+  border-color: #f0fdfa;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .industry-hero__contenu {
+    animation: industry-fade-up 650ms ease both;
+  }
+
+  .industry-hero__visual {
+    animation: industry-fade-up 750ms 120ms ease both;
+  }
+
+  .industry-system__anneau--1 {
+    animation: industry-rotate 30s linear infinite;
+  }
+
+  .industry-system__anneau--2 {
+    animation: industry-rotate-reverse 22s linear infinite;
+  }
+
+  .industry-expertise {
+    animation: industry-card-in 600ms ease both;
+  }
+
+  .industry-expertise:nth-child(2) {
+    animation-delay: 80ms;
+  }
+
+  .industry-expertise:nth-child(3) {
+    animation-delay: 160ms;
+  }
+
+  .industry-expertise:nth-child(4) {
+    animation-delay: 240ms;
+  }
+
+  .industry-expertise:nth-child(5) {
+    animation-delay: 320ms;
+  }
+
+  .industry-expertise:nth-child(6) {
+    animation-delay: 400ms;
+  }
+
+}
+
+
+@keyframes industry-fade-up {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes industry-card-in {
+
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes industry-rotate {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+@keyframes industry-rotate-reverse {
+
+  to {
+    transform: rotate(-360deg);
+  }
+
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .industry-hero {
+    min-height: 580px;
+  }
+
+
+  .industry-hero__conteneur {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.75fr);
+    gap: 30px;
+
+    padding-top: 44px;
+  }
+
+
+  .industry-hero h1 {
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+  }
+
+
+  .industry-hero__visual {
+    min-height: 360px;
+  }
+
+
+  .industry-system {
+    width: 330px;
+  }
+
+
+  .industry-intro {
+    gap: 56px;
+  }
+
+
+  .industry-expertises {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  .industry-process {
+    gap: 56px;
+  }
+
+
+  .industry-performance {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  .industry-positionnement {
+    gap: 60px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .industry-container {
+    width: calc(100% - 32px);
+  }
+
+
+  .industry-hero {
+    min-height: 0;
+  }
+
+
+  .industry-hero__conteneur {
+    width: calc(100% - 32px);
+
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+
+    padding: 30px 0 110px;
+  }
+
+
+  .industry-hero__label {
+    margin-bottom: 16px;
+  }
+
+
+  .industry-hero h1 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(2.35rem, 12vw, 3.35rem);
+
+    overflow-wrap: break-word;
+  }
+
+
+  .industry-hero__description {
+    margin-top: 20px;
+
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+
+  .industry-hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+
+    margin-top: 26px;
+  }
+
+
+  .industry-hero__actions .m-bouton {
+    width: 100%;
+    justify-content: center;
+  }
+
+
+  .industry-hero__visual {
+    min-height: 310px;
+  }
+
+
+  .industry-system {
+    width: min(310px, 100%);
+  }
+
+
+  .industry-system__module {
+    min-width: 94px;
+    padding: 9px 10px;
+  }
+
+
+  .industry-system__module span:last-child {
+    font-size: 0.55rem;
+  }
+
+
+  .industry-system__centre {
+    width: 105px;
+    height: 105px;
+  }
+
+
+  .industry-hero__signature {
+    left: 16px;
+    bottom: 28px;
+  }
+
+
+  .industry-hero__signature img {
+    width: 96px;
+  }
+
+
+  .industry-hero__marker {
+    right: 16px;
+    bottom: 31px;
+
+    max-width: 190px;
+
+    text-align: right;
+
+    font-size: 0.54rem;
+    line-height: 1.5;
+  }
+
+
+  .industry-section {
+    padding: 76px 0;
+  }
+
+
+  .industry-section h2 {
+    font-size: clamp(1.9rem, 9vw, 2.65rem);
+  }
+
+
+  .industry-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+
+  .industry-intro__lead {
+    font-size: 1.08rem !important;
+  }
+
+
+  .industry-intro__schema {
+    margin-top: 48px;
+  }
+
+
+  .industry-flow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+
+  .industry-flow__item {
+    min-height: 0;
+  }
+
+
+  .industry-flow__connector {
+    width: 1px;
+    height: 30px;
+
+    margin-left: 24px;
+  }
+
+
+  .industry-flow__connector::after {
+    right: auto;
+    bottom: 0;
+    top: auto;
+    left: -3px;
+
+    transform: rotate(135deg);
+  }
+
+
+  .industry-section__heading {
+    margin-bottom: 36px;
+  }
+
+
+  .industry-expertises {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+
+  .industry-expertise {
+    min-height: 0;
+    padding: 26px;
+  }
+
+
+  .industry-expertise__icon {
+    margin-bottom: 22px;
+  }
+
+
+  .industry-process {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 34px;
+  }
+
+
+  .industry-process__visual {
+    min-height: 280px;
+  }
+
+
+  .industry-machine {
+    width: 280px;
+    height: 280px;
+  }
+
+
+  .industry-machine__core {
+    width: 96px;
+    height: 96px;
+  }
+
+
+  .industry-performance {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+
+  .industry-performance__card {
+    padding: 26px;
+  }
+
+
+  .industry-performance__card > span {
+    margin-bottom: 24px;
+  }
+
+
+  .industry-positionnement {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 42px;
+  }
+
+
+  .industry-cta {
+    padding: 76px 0;
+  }
+
+
+  .industry-cta h2 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+
+  .industry-hero__bloc--1 {
+    right: -80px;
+  }
+
+
+  .industry-hero__bloc--2 {
+    right: -20px;
+  }
+
+
+  .industry-hero__bloc--3 {
+    right: -110px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .industry-system__anneau--1,
+  .industry-system__anneau--2,
+  .industry-hero__contenu,
+  .industry-hero__visual,
+  .industry-expertise {
+    animation: none;
+  }
+
+
+  .industry-expertise {
+    transition: none;
+  }
+
+}

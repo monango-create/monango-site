@@ -1,0 +1,483 @@
+/* =========================================================
+   HEADER — MONANGO
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEUR D'INJECTION
+   ========================================================= */
+
+#composant-header {
+  display: contents;
+}
+
+
+/* =========================================================
+   HEADER PRINCIPAL
+   ========================================================= */
+
+.m-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: var(--couleur-group);
+
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    backdrop-filter 0.25s ease;
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+
+/* =========================================================
+   CONTENEUR
+   ========================================================= */
+
+.m-header__conteneur {
+  width: min(1200px, calc(100% - 64px));
+
+  min-height: 76px;
+
+  margin-inline: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr
+    auto;
+
+  align-items: center;
+
+  column-gap: var(--espace-4);
+}
+
+
+/* =========================================================
+   LOGO MONANGO
+   ========================================================= */
+
+.m-header__logo {
+  display: inline-flex;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.m-header__logo img {
+  width: auto;
+  height: 42px;
+
+  display: block;
+}
+
+.m-header__logo--bleu {
+  display: none !important;
+}
+
+
+/* =========================================================
+   HEADER — ÉTAT APRÈS DÉFILEMENT
+   ========================================================= */
+
+.m-header.m-header--scrolled {
+  background: rgb(255 255 255 / 94%);
+
+  box-shadow:
+    0 4px 20px rgb(15 23 42 / 6%);
+
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.m-header.m-header--scrolled .m-header__logo--blanc {
+  display: none !important;
+}
+
+.m-header.m-header--scrolled .m-header__logo--bleu {
+  display: block !important;
+}
+
+
+/* =========================================================
+   NAVIGATION DESKTOP
+   ========================================================= */
+
+.m-nav {
+  grid-column: 3;
+}
+
+.m-nav__liste {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: var(--espace-4);
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.m-nav__liste a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 44px;
+
+  color: var(--couleur-texte-inverse);
+
+  font-family: var(--police-titre);
+  font-size: var(--taille-petit);
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   PAGE ACTIVE — DESKTOP
+   ========================================================= */
+
+.m-nav__liste a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 4px;
+
+  height: 2px;
+
+  background: var(--couleur-texte-inverse);
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.25s ease;
+}
+
+
+/* Survol */
+
+.m-nav__liste a:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Page active : marquage permanent */
+
+.m-nav__liste a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   NAVIGATION — ÉTAT APRÈS DÉFILEMENT
+   ========================================================= */
+
+.m-header.m-header--scrolled .m-nav__liste a {
+  color: var(--couleur-texte);
+}
+
+.m-header.m-header--scrolled .m-nav__liste a::after {
+  background: var(--couleur-group);
+}
+
+
+/* =========================================================
+   BOUTON MOBILE
+   ========================================================= */
+
+.m-nav__bascule {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   ICÔNE HAMBURGER
+   ========================================================= */
+
+.m-nav__icone {
+  position: relative;
+
+  width: 24px;
+  height: 2px;
+
+  background: var(--couleur-texte-inverse);
+
+  transition:
+    background-color 0.25s ease;
+}
+
+.m-nav__icone::before,
+.m-nav__icone::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  width: 24px;
+  height: 2px;
+
+  background: var(--couleur-texte-inverse);
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease,
+    top 0.2s ease;
+}
+
+.m-nav__icone::before {
+  top: -7px;
+}
+
+.m-nav__icone::after {
+  top: 7px;
+}
+
+
+/* Hamburger après défilement */
+
+.m-header.m-header--scrolled .m-nav__icone,
+.m-header.m-header--scrolled .m-nav__icone::before,
+.m-header.m-header--scrolled .m-nav__icone::after {
+  background: var(--couleur-group);
+}
+
+
+/* =========================================================
+   MENU OUVERT
+   ========================================================= */
+
+.m-nav__bascule[aria-expanded="true"] .m-nav__icone {
+  background: transparent;
+}
+
+.m-nav__bascule[aria-expanded="true"] .m-nav__icone::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.m-nav__bascule[aria-expanded="true"] .m-nav__icone::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+
+/* =========================================================
+   TABLETTE / MOBILE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-header__conteneur {
+    width: calc(100% - 32px);
+
+    min-height: 68px;
+  }
+
+
+  /* -------------------------------------------------------
+     BOUTON
+     ------------------------------------------------------- */
+
+  .m-nav__bascule {
+    grid-column: 3;
+
+    display: inline-flex;
+  }
+
+
+  /* -------------------------------------------------------
+     MENU
+     ------------------------------------------------------- */
+
+  .m-nav {
+    display: none;
+
+    grid-column: 1 / -1;
+
+    padding: 10px 0 16px;
+  }
+
+  .m-nav.m-nav--ouvert {
+    display: block;
+  }
+
+
+  /* -------------------------------------------------------
+     LISTE
+     ------------------------------------------------------- */
+
+  .m-nav__liste {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 4px;
+
+    padding: 8px;
+
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 16px;
+
+    background: rgb(255 255 255 / 8%);
+  }
+
+
+  /* -------------------------------------------------------
+     LIENS
+     ------------------------------------------------------- */
+
+  .m-nav__liste a {
+    position: relative;
+
+    width: 100%;
+    min-height: 50px;
+
+    justify-content: flex-start;
+
+    padding: 0 16px;
+
+    border-radius: 10px;
+
+    color: var(--couleur-texte-inverse);
+
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      padding-left 0.2s ease;
+  }
+
+
+  .m-nav__liste a:hover {
+    background: rgb(255 255 255 / 8%);
+  }
+
+
+  /* -------------------------------------------------------
+     SUPPRESSION DU SOULIGNEMENT DESKTOP
+     ------------------------------------------------------- */
+
+  .m-nav__liste a::after {
+    display: none;
+  }
+
+
+  /* -------------------------------------------------------
+     PAGE ACTIVE — MENU MOBILE
+     ------------------------------------------------------- */
+
+  .m-nav__liste a[aria-current="page"] {
+    padding-left: 22px;
+
+    color: var(--couleur-texte-inverse);
+
+    background: rgb(255 255 255 / 10%);
+  }
+
+  .m-nav__liste a[aria-current="page"]::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    top: 50%;
+
+    width: 3px;
+    height: 24px;
+
+    border-radius: 999px;
+
+    background: var(--couleur-texte-inverse);
+
+    transform: translateY(-50%);
+  }
+
+
+  /* -------------------------------------------------------
+     MENU APRÈS DÉFILEMENT
+     ------------------------------------------------------- */
+
+  .m-header.m-header--scrolled .m-nav {
+    padding-top: 10px;
+  }
+
+  .m-header.m-header--scrolled .m-nav__liste {
+    border-color: var(--couleur-bordure);
+
+    background: rgb(255 255 255 / 96%);
+
+    box-shadow:
+      0 12px 30px rgb(15 23 42 / 8%);
+  }
+
+  .m-header.m-header--scrolled .m-nav__liste a {
+    color: var(--couleur-texte);
+  }
+
+  .m-header.m-header--scrolled .m-nav__liste a:hover {
+    background: rgb(23 37 84 / 5%);
+  }
+
+  .m-header.m-header--scrolled .m-nav__liste a[aria-current="page"] {
+    color: var(--couleur-group);
+
+    background: rgb(23 37 84 / 6%);
+  }
+
+  .m-header.m-header--scrolled .m-nav__liste a[aria-current="page"]::before {
+    background: var(--couleur-group);
+  }
+}
+
+
+/* =========================================================
+   PETIT SMARTPHONE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-header__logo img {
+    height: 38px;
+  }
+
+  .m-nav {
+    padding-bottom: 12px;
+  }
+
+  .m-nav__liste {
+    border-radius: 14px;
+  }
+}
