@@ -106,6 +106,8 @@
   line-height: .98;
   letter-spacing: -.045em;
 
+   color: #fff;
+
   animation: energy-fade-up .75s .08s ease both;
 }
 

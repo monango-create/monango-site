@@ -48,7 +48,7 @@
 .a-propos-hero {
   position: relative;
 
-  min-height: min(620px, 100svh);
+  min-height: min(550px, 100svh);
 
   overflow: hidden;
 
@@ -139,10 +139,10 @@
   background: rgb(255 255 255 / 72%);
 }
 
-
+/* 
 .a-propos-hero__point--1 {
-  top: 21%;
-  left: 27%;
+  top: 50%;
+  left: 65%;
 }
 
 
@@ -154,14 +154,14 @@
 
 .a-propos-hero__point--3 {
   top: 37%;
-  right: 12%;
+  right: 17%;
 }
 
 
 .a-propos-hero__point--4 {
   bottom: 13%;
   left: 49%;
-}
+} */
 
 
 /* ---------------------------------------------------------
@@ -457,7 +457,7 @@
 }
 
 
-/* =========================================================
+/* /* =========================================================
    INDICATEUR INFÉRIEUR DU HERO
    ========================================================= */
 
@@ -501,7 +501,7 @@
   border-radius: 999px;
 
   background: var(--apropos-bleu-clair);
-}
+} */
 
 
 /* =========================================================
@@ -1899,6 +1899,8 @@
   line-height: 1;
 
   letter-spacing: -.04em;
+
+  color: #ffffff;
 }
 
 

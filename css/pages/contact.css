@@ -61,113 +61,14 @@
 }
 
 
-/* Lignes */
 
-.m-hero--contact .m-hero__ligne {
-  position: absolute;
-
-  display: block;
-
-  width: 1px;
-  height: 1px;
-
-  transform-origin: left center;
-
-  background: rgb(255 255 255 / 12%);
-}
-
-
-/* Ligne 1 */
-
-.m-hero--contact .m-hero__ligne--1 {
-  top: 20%;
-  left: -4%;
-
-  width: 64%;
-
-  transform: rotate(21deg);
-}
-
-
-/* Ligne 2 */
-
-.m-hero--contact .m-hero__ligne--2 {
-  top: 72%;
-  left: 35%;
-
-  width: 70%;
-
-  transform: rotate(-18deg);
-}
-
-
-/* Ligne 3 */
-
-.m-hero--contact .m-hero__ligne--3 {
-  top: 38%;
-  left: 55%;
-
-  width: 46%;
-
-  opacity: .5;
-
-  transform: rotate(55deg);
-}
-
-
-/* ==================================================
-   POINTS
-   ================================================== */
-
-.m-hero--contact .m-hero__point {
-  position: absolute;
-
-  width: 7px;
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: rgb(255 255 255 / 70%);
-}
-
-
-/* Point 1 */
-
-.m-hero--contact .m-hero__point--1 {
-  top: 20%;
-  left: 27%;
-}
-
-
-/* Point 2 */
-
-.m-hero--contact .m-hero__point--2 {
-  top: 70%;
-  left: 67%;
-}
-
-
-/* Point 3 */
-
-.m-hero--contact .m-hero__point--3 {
-  top: 35%;
-  right: 12%;
-}
-
-
-/* Point 4 */
-
-.m-hero--contact .m-hero__point--4 {
-  bottom: 14%;
-  left: 49%;
-}
 
 
 /* ==================================================
    CONTENEUR
    ================================================== */
 
-.m-hero--contact .m-hero__conteneur {
+.m-hero__conteneur {
   position: relative;
   z-index: 2;
 
@@ -175,7 +76,7 @@
 
   grid-template-columns:
     minmax(0, 1.05fr)
-    minmax(360px, .95fr);
+    minmax(360px, 0.95fr);
 
   align-items: center;
 
@@ -183,14 +84,14 @@
 
   width: min(
     var(--contact-largeur),
-    calc(100% - 48px)
+    calc(100% - 64px)
   );
 
-  min-height: min(620px, 100svh);
+  min-height: min(450px, 100svh);
 
   margin-inline: auto;
 
-  padding: 56px 0 108px;
+  padding: 28px 0 108px;
 }
 
 
@@ -198,11 +99,11 @@
    CONTENU
    ================================================== */
 
-.m-hero--contact .m-hero__contenu {
+.m-hero__contenu {
   position: relative;
   z-index: 2;
 
-  max-width: 700px;
+  max-width: 720px;
 }
 
 
@@ -210,7 +111,7 @@
    EYEBROW
    ================================================== */
 
-.m-hero--contact .m-hero__eyebrow {
+.m-hero__eyebrow {
   margin: 0 0 18px;
 
   font-family: var(--police-titre);
@@ -229,7 +130,7 @@
    TITRE
    ================================================== */
 
-.m-hero--contact h1 {
+.m-hero__contenu h1 {
   max-width: 760px;
 
   margin: 0;
@@ -253,10 +154,10 @@
 }
 
 
-.m-hero--contact h1 span {
+.m-hero__contenu h1 span {
   display: block;
 
-  color: var(--contact-bleu-tres-clair);
+  color: var(--contact-bleu-accent);
 }
 
 
@@ -483,55 +384,7 @@
 }
 
 
-/* ==================================================
-   MARKER BAS DU HERO
-   ================================================== */
 
-.contact-hero__marker {
-  position: absolute;
-
-  z-index: 4;
-
-  left: 50%;
-  bottom: 28px;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
-
-  width: max-content;
-
-  transform: translateX(-50%);
-}
-
-
-.contact-hero__marker span {
-  display: block;
-
-  width: 5px;
-  height: 5px;
-
-  flex: 0 0 auto;
-
-  border-radius: 50%;
-
-  background:
-    rgb(255 255 255 / 35%);
-}
-
-
-/* Élément central */
-
-.contact-hero__marker span:nth-child(2) {
-  width: 24px;
-
-  border-radius: 999px;
-
-  background:
-    var(--contact-bleu-clair);
-}
 
 
 /* ==================================================

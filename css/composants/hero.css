@@ -699,7 +699,7 @@
   }
 
   .m-hero__ecosysteme {
-    width: 360px;
+    width: 440px;
   }
 
   .m-hero__noyau {
@@ -708,7 +708,7 @@
   }
 
   .m-hero__domaine {
-    min-width: 102px;
+    min-width: 80px;
     min-height: 46px;
 
     padding: 8px 10px;
@@ -797,9 +797,9 @@
 
   .m-hero__ecosysteme {
 
-    width: min(100%, 340px);
+    width: min(100%, 250px);
 
-    max-width: 340px;
+    max-width: 300px;
 
     align-self: center;
 
@@ -949,10 +949,4 @@
     width: 30px;
   }
 
-}
-
-.filiales-hero__marker span:nth-child(2) {
-  width: 20px;
-  border-radius:100px;
-  background:#7EA2FF;
 }

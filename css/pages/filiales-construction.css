@@ -1,0 +1,1897 @@
+/* =========================================================
+   MONANGO CONSTRUCTION
+   Page filiale — Construction & Infrastructures
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+.m-construction-page {
+  --construction-couleur: #64748b;
+  --construction-couleur-sombre: #475569;
+  --construction-couleur-claire: #94a3b8;
+
+  --construction-tint: rgb(100 116 139 / 7%);
+  --construction-tint-forte: rgb(100 116 139 / 13%);
+  --construction-bordure: rgb(100 116 139 / 24%);
+
+  --construction-fond: #f8fafc;
+  --construction-texte: #172554;
+  --construction-secondaire: #526071;
+}
+
+
+/* =========================================================
+   CONTENEUR
+   ========================================================= */
+
+.construction-container {
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.construction-hero {
+  position: relative;
+  min-height: 620px;
+
+  display: flex;
+  align-items: stretch;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #172554 0%,
+      #172554 54%,
+      #26364f 100%
+    );
+
+  color: #fff;
+}
+
+
+.construction-hero__conteneur {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
+  align-items: center;
+
+  gap: 52px;
+
+  padding: 54px 0 100px;
+}
+
+
+.construction-hero__contenu {
+  max-width: 680px;
+}
+
+
+.construction-hero__label {
+  margin: 0 0 20px;
+
+  font-family: var(--police-titre);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.4;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--construction-couleur-claire);
+}
+
+
+.construction-hero h1 {
+  max-width: 720px;
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(3rem, 6vw, 5.25rem);
+  font-weight: 700;
+  line-height: 1.02;
+
+  letter-spacing: -0.045em;
+
+  color: #fff;
+}
+
+
+.construction-hero h1 span {
+  color: var(--construction-couleur-claire);
+}
+
+
+.construction-hero__description {
+  max-width: 610px;
+  margin: 28px 0 0;
+
+  font-family: var(--police-corps);
+  font-size: 1.05rem;
+  line-height: 1.75;
+
+  color: rgb(255 255 255 / 76%);
+}
+
+
+.construction-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+
+.construction-hero__actions .m-bouton--primaire {
+  background: var(--construction-couleur);
+  border-color: var(--construction-couleur);
+}
+
+
+.construction-hero__actions .m-bouton--primaire:hover {
+  background: var(--construction-couleur-claire);
+  border-color: var(--construction-couleur-claire);
+}
+
+
+.construction-hero__actions .m-bouton--secondaire {
+  border-color: rgb(255 255 255 / 32%);
+  background: rgb(255 255 255 / 6%);
+
+  color: #fff;
+}
+
+
+.construction-hero__actions .m-bouton--secondaire:hover {
+  border-color: rgb(255 255 255 / 60%);
+  background: rgb(255 255 255 / 12%);
+}
+
+
+/* =========================================================
+   FOND TECHNIQUE HERO
+   ========================================================= */
+
+.construction-hero__fond {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+
+.construction-hero__ligne {
+  position: absolute;
+
+  display: block;
+
+  height: 1px;
+
+  background: rgb(148 163 184 / 18%);
+
+  transform-origin: left center;
+}
+
+
+.construction-hero__ligne--1 {
+  width: 54%;
+  top: 22%;
+  right: -4%;
+
+  transform: rotate(-18deg);
+}
+
+
+.construction-hero__ligne--2 {
+  width: 46%;
+  top: 68%;
+  right: -2%;
+
+  transform: rotate(15deg);
+}
+
+
+.construction-hero__ligne--3 {
+  width: 34%;
+  top: 46%;
+  left: 53%;
+
+  transform: rotate(90deg);
+}
+
+
+.construction-hero__ligne--4 {
+  width: 22%;
+  top: 76%;
+  left: 58%;
+
+  transform: rotate(-42deg);
+}
+
+
+.construction-hero__repere {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  border: 1px solid var(--construction-couleur-claire);
+  border-radius: 50%;
+
+  background: #172554;
+
+  box-shadow:
+    0 0 0 6px rgb(148 163 184 / 7%);
+}
+
+
+.construction-hero__repere--1 {
+  top: 22%;
+  right: 30%;
+}
+
+
+.construction-hero__repere--2 {
+  top: 67%;
+  right: 16%;
+}
+
+
+.construction-hero__repere--3 {
+  top: 46%;
+  right: 46%;
+}
+
+
+.construction-hero__module {
+  position: absolute;
+
+  border: 1px solid rgb(148 163 184 / 17%);
+  background: rgb(255 255 255 / 2%);
+}
+
+
+.construction-hero__module--1 {
+  width: 190px;
+  height: 190px;
+
+  top: 8%;
+  right: 3%;
+
+  transform: rotate(18deg);
+}
+
+
+.construction-hero__module--2 {
+  width: 130px;
+  height: 130px;
+
+  right: 31%;
+  bottom: 11%;
+
+  transform: rotate(32deg);
+}
+
+
+.construction-hero__module--3 {
+  width: 270px;
+  height: 270px;
+
+  right: 10%;
+  bottom: -13%;
+
+  transform: rotate(8deg);
+}
+
+
+/* =========================================================
+   VISUEL BLUEPRINT
+   ========================================================= */
+
+.construction-hero__visual {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  min-height: 420px;
+}
+
+
+.construction-blueprint {
+  position: relative;
+
+  width: min(420px, 100%);
+  aspect-ratio: 1;
+}
+
+
+.construction-blueprint__cadre {
+  position: absolute;
+  inset: 8%;
+
+  border: 1px solid rgb(148 163 184 / 26%);
+}
+
+
+.construction-blueprint__cadre::before,
+.construction-blueprint__cadre::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgb(148 163 184 / 15%);
+}
+
+
+.construction-blueprint__cadre::before {
+  inset: 7%;
+}
+
+
+.construction-blueprint__cadre::after {
+  inset: 17%;
+}
+
+
+.construction-blueprint__axe {
+  position: absolute;
+
+  background: rgb(148 163 184 / 15%);
+}
+
+
+.construction-blueprint__axe--horizontal {
+  left: 5%;
+  right: 5%;
+  top: 50%;
+
+  height: 1px;
+}
+
+
+.construction-blueprint__axe--vertical {
+  top: 5%;
+  bottom: 5%;
+  left: 50%;
+
+  width: 1px;
+}
+
+
+/* Structure */
+
+.construction-blueprint__structure {
+  position: absolute;
+  inset: 19%;
+}
+
+
+.construction-blueprint__poteau {
+  position: absolute;
+
+  width: 14px;
+  height: 100%;
+
+  border: 1px solid rgb(148 163 184 / 42%);
+
+  background: rgb(148 163 184 / 6%);
+}
+
+
+.construction-blueprint__poteau--1 {
+  left: 0;
+}
+
+
+.construction-blueprint__poteau--2 {
+  left: 33%;
+}
+
+
+.construction-blueprint__poteau--3 {
+  left: 66%;
+}
+
+
+.construction-blueprint__poteau--4 {
+  right: 0;
+}
+
+
+.construction-blueprint__poutre {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  height: 14px;
+
+  border: 1px solid rgb(148 163 184 / 42%);
+
+  background: rgb(148 163 184 / 6%);
+}
+
+
+.construction-blueprint__poutre--1 {
+  top: 18%;
+}
+
+
+.construction-blueprint__poutre--2 {
+  top: 63%;
+}
+
+
+.construction-blueprint__dalle {
+  position: absolute;
+
+  left: 15%;
+  right: 15%;
+  top: 37%;
+
+  height: 20%;
+
+  border: 1px solid rgb(148 163 184 / 34%);
+
+  background: rgb(100 116 139 / 9%);
+}
+
+
+/* Annotations */
+
+.construction-blueprint__annotation {
+  position: absolute;
+
+  padding: 8px 11px;
+
+  border: 1px solid rgb(148 163 184 / 28%);
+  background: rgb(23 37 84 / 88%);
+
+  font-family: var(--police-titre);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  color: #fff;
+}
+
+
+.construction-blueprint__annotation span {
+  margin-right: 6px;
+
+  color: var(--construction-couleur-claire);
+}
+
+
+.construction-blueprint__annotation--1 {
+  top: 10%;
+  left: 1%;
+}
+
+
+.construction-blueprint__annotation--2 {
+  top: 43%;
+  right: 0;
+}
+
+
+.construction-blueprint__annotation--3 {
+  bottom: 10%;
+  left: 12%;
+}
+
+
+/* =========================================================
+   SIGNATURE + MARQUEUR
+   ========================================================= */
+
+.construction-hero__signature {
+  position: absolute;
+  z-index: 3;
+
+  left: max(32px, calc((100% - 1200px) / 2));
+  bottom: 34px;
+}
+
+
+.construction-hero__signature img {
+  display: block;
+
+  width: 112px;
+  height: auto;
+}
+
+
+.construction-hero__marker {
+  position: absolute;
+  z-index: 3;
+
+  right: max(32px, calc((100% - 1200px) / 2));
+  bottom: 40px;
+
+  font-family: var(--police-titre);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+
+  color: rgb(255 255 255 / 48%);
+}
+
+
+/* =========================================================
+   SECTIONS COMMUNES
+   ========================================================= */
+
+.construction-section {
+  padding: 112px 0;
+}
+
+
+.construction-section h2 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+
+  letter-spacing: -0.035em;
+
+  color: var(--construction-texte);
+}
+
+
+.construction-section h2 span {
+  color: var(--construction-couleur);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.construction-section--intro {
+  background: #fff;
+}
+
+
+.construction-intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1fr);
+
+  gap: 96px;
+
+  align-items: start;
+}
+
+
+.construction-intro__heading h2 {
+  max-width: 550px;
+}
+
+
+.construction-intro__content {
+  padding-top: 4px;
+}
+
+
+.construction-intro__content p {
+  max-width: 620px;
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: var(--construction-secondaire);
+}
+
+
+.construction-intro__content p + p {
+  margin-top: 20px;
+}
+
+
+.construction-intro__lead {
+  font-family: var(--police-titre);
+
+  font-size: 1.22rem !important;
+  font-weight: 600;
+  line-height: 1.55 !important;
+
+  color: var(--construction-texte) !important;
+}
+
+
+/* =========================================================
+   SCHÉMA INTRO
+   ========================================================= */
+
+.construction-intro__schema {
+  margin-top: 72px;
+}
+
+
+.construction-flow {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    72px
+    1fr
+    72px
+    1fr;
+
+  align-items: center;
+}
+
+
+.construction-flow__item {
+  min-height: 150px;
+  padding: 24px;
+
+  border: 1px solid #dfe5eb;
+
+  background: #fff;
+}
+
+
+.construction-flow__item--active {
+  border-color: var(--construction-bordure);
+
+  background: var(--construction-tint);
+}
+
+
+.construction-flow__index {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-family: var(--police-titre);
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  color: var(--construction-couleur);
+}
+
+
+.construction-flow__item strong {
+  display: block;
+
+  font-family: var(--police-titre);
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+
+  color: var(--construction-texte);
+}
+
+
+.construction-flow__item small {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 0.78rem;
+  line-height: 1.55;
+
+  color: var(--construction-secondaire);
+}
+
+
+.construction-flow__connector {
+  position: relative;
+
+  height: 1px;
+
+  background: var(--construction-bordure);
+}
+
+
+.construction-flow__connector::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  width: 7px;
+  height: 7px;
+
+  border-top: 1px solid var(--construction-couleur);
+  border-right: 1px solid var(--construction-couleur);
+
+  transform:
+    translateY(-50%)
+    rotate(45deg);
+}
+
+
+/* =========================================================
+   EXPERTISES
+   ========================================================= */
+
+.construction-section--expertises {
+  background: var(--construction-fond);
+}
+
+
+.construction-section__heading {
+  max-width: 800px;
+
+  margin-bottom: 56px;
+}
+
+
+.construction-section__heading > p:last-child {
+  max-width: 620px;
+
+  margin: 20px 0 0;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: var(--construction-secondaire);
+}
+
+
+.construction-expertises {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+.construction-expertise {
+  position: relative;
+
+  min-height: 300px;
+
+  padding: 30px;
+
+  border: 1px solid #dfe5eb;
+
+  background: #fff;
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+
+.construction-expertise::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 3px;
+  height: 56px;
+
+  background: var(--construction-couleur);
+}
+
+
+.construction-expertise:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--construction-bordure);
+
+  box-shadow:
+    0 14px 34px rgb(23 37 84 / 8%);
+}
+
+
+.construction-expertise__number {
+  position: absolute;
+
+  top: 24px;
+  right: 24px;
+
+  font-family: var(--police-titre);
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  color: #9aa4af;
+}
+
+
+.construction-expertise__icon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 28px;
+
+  border: 1px solid var(--construction-bordure);
+
+  background: var(--construction-tint);
+
+  color: var(--construction-couleur);
+}
+
+
+.construction-expertise__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+
+.construction-expertise h3 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  color: var(--construction-texte);
+}
+
+
+.construction-expertise p {
+  margin: 12px 0 0;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  color: var(--construction-secondaire);
+}
+
+
+/* =========================================================
+   PROCESSUS
+   ========================================================= */
+
+.construction-section--process {
+  background: #fff;
+}
+
+
+.construction-process {
+  display: grid;
+
+  grid-template-columns:
+    minmax(320px, 0.85fr)
+    minmax(0, 1.15fr);
+
+  gap: 96px;
+
+  align-items: center;
+}
+
+
+.construction-process__visual {
+  display: grid;
+  place-items: center;
+
+  min-height: 460px;
+}
+
+
+.construction-process__plan {
+  position: relative;
+
+  width: 360px;
+  height: 360px;
+
+  border: 1px solid var(--construction-bordure);
+
+  background:
+    linear-gradient(
+      rgb(100 116 139 / 5%) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(100 116 139 / 5%) 1px,
+      transparent 1px
+    );
+
+  background-size: 30px 30px;
+}
+
+
+.construction-process__plan::before {
+  content: "";
+
+  position: absolute;
+  inset: 22px;
+
+  border: 1px solid rgb(100 116 139 / 14%);
+}
+
+
+.construction-process__plan-line {
+  position: absolute;
+
+  background: var(--construction-bordure);
+}
+
+
+.construction-process__plan-line--1 {
+  top: 25%;
+  left: 10%;
+  right: 10%;
+
+  height: 1px;
+}
+
+
+.construction-process__plan-line--2 {
+  top: 50%;
+  left: 10%;
+  right: 10%;
+
+  height: 1px;
+}
+
+
+.construction-process__plan-line--3 {
+  top: 10%;
+  bottom: 10%;
+  left: 25%;
+
+  width: 1px;
+}
+
+
+.construction-process__plan-line--4 {
+  top: 10%;
+  bottom: 10%;
+  left: 75%;
+
+  width: 1px;
+}
+
+
+.construction-process__plan-core {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 120px;
+  height: 120px;
+
+  display: grid;
+  place-items: center;
+
+  border: 2px solid var(--construction-couleur);
+
+  background: #fff;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.construction-process__plan-core::after {
+  content: "";
+
+  position: absolute;
+  inset: 10px;
+
+  border: 1px solid var(--construction-bordure);
+}
+
+
+.construction-process__plan-core span {
+  position: relative;
+  z-index: 1;
+
+  font-family: var(--police-titre);
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  color: var(--construction-couleur-sombre);
+}
+
+
+.construction-process__plan-point {
+  position: absolute;
+
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--construction-couleur);
+
+  background: #fff;
+
+  font-family: var(--police-titre);
+  font-size: 0.62rem;
+  font-weight: 700;
+
+  color: var(--construction-couleur);
+}
+
+
+.construction-process__plan-point--1 {
+  top: 12%;
+  left: 12%;
+}
+
+
+.construction-process__plan-point--2 {
+  top: 12%;
+  right: 12%;
+}
+
+
+.construction-process__plan-point--3 {
+  bottom: 12%;
+  right: 12%;
+}
+
+
+.construction-process__plan-point--4 {
+  bottom: 12%;
+  left: 12%;
+}
+
+
+.construction-process__content {
+  max-width: 650px;
+}
+
+
+.construction-process__lead {
+  margin: 22px 0 34px;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: var(--construction-secondaire);
+}
+
+
+.construction-process__steps {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+.construction-process__steps li {
+  display: grid;
+
+  grid-template-columns: 42px 1fr;
+
+  gap: 18px;
+
+  padding: 20px 0;
+
+  border-top: 1px solid #e5e9ee;
+}
+
+
+.construction-process__steps li:last-child {
+  border-bottom: 1px solid #e5e9ee;
+}
+
+
+.construction-process__steps > li > span {
+  font-family: var(--police-titre);
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  color: var(--construction-couleur);
+}
+
+
+.construction-process__steps strong {
+  font-family: var(--police-titre);
+  font-size: 0.95rem;
+
+  color: var(--construction-texte);
+}
+
+
+.construction-process__steps p {
+  margin: 5px 0 0;
+
+  font-size: 0.84rem;
+  line-height: 1.6;
+
+  color: var(--construction-secondaire);
+}
+
+
+/* =========================================================
+   OUVRAGES
+   ========================================================= */
+
+.construction-section--ouvrages {
+  background: var(--construction-fond);
+}
+
+
+.construction-ouvrages {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+.construction-ouvrage {
+  min-height: 290px;
+
+  padding: 28px;
+
+  border: 1px solid #dfe5eb;
+
+  background: #fff;
+}
+
+
+.construction-ouvrage__index {
+  display: block;
+
+  margin-bottom: 28px;
+
+  font-family: var(--police-titre);
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  color: var(--construction-couleur);
+}
+
+
+.construction-ouvrage__icon {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 24px;
+
+  border: 1px solid var(--construction-bordure);
+
+  color: var(--construction-couleur);
+
+  background: var(--construction-tint);
+}
+
+
+.construction-ouvrage__icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+
+.construction-ouvrage h3 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: 1.05rem;
+
+  color: var(--construction-texte);
+}
+
+
+.construction-ouvrage p {
+  margin: 10px 0 0;
+
+  font-size: 0.82rem;
+  line-height: 1.65;
+
+  color: var(--construction-secondaire);
+}
+
+
+/* =========================================================
+   PRINCIPES
+   ========================================================= */
+
+.construction-section--principes {
+  background: #fff;
+}
+
+
+.construction-principes {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(340px, 0.8fr);
+
+  gap: 100px;
+
+  align-items: center;
+}
+
+
+.construction-principes__content {
+  max-width: 650px;
+}
+
+
+.construction-principes__content > p:last-child {
+  margin: 26px 0 0;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: var(--construction-secondaire);
+}
+
+
+.construction-principes__liste {
+  display: grid;
+}
+
+
+.construction-principe {
+  display: grid;
+
+  grid-template-columns: 4px 1fr;
+
+  column-gap: 18px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #e5e9ee;
+}
+
+
+.construction-principe__ligne {
+  width: 4px;
+
+  background: var(--construction-couleur);
+}
+
+
+.construction-principe strong {
+  display: block;
+
+  font-family: var(--police-titre);
+  font-size: 0.95rem;
+
+  color: var(--construction-texte);
+}
+
+
+.construction-principe small {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 0.78rem;
+  line-height: 1.5;
+
+  color: var(--construction-secondaire);
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.construction-cta {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 104px 0;
+
+  background: var(--construction-couleur);
+
+  color: #fff;
+}
+
+
+.construction-cta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -200px;
+  top: -210px;
+
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 50%;
+}
+
+
+.construction-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  right: 50px;
+  bottom: -190px;
+
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 50%;
+}
+
+
+.construction-cta__contenu {
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+}
+
+
+.construction-cta__label {
+  margin: 0 0 18px;
+
+  font-family: var(--police-titre);
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  color: rgb(255 255 255 / 70%);
+}
+
+
+.construction-cta h2 {
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+
+  letter-spacing: -0.035em;
+
+  color: #fff;
+}
+
+
+.construction-cta__contenu > p:not(.construction-cta__label) {
+  max-width: 620px;
+
+  margin: 22px 0 0;
+
+  font-size: 1rem;
+  line-height: 1.75;
+
+  color: rgb(255 255 255 / 78%);
+}
+
+
+.construction-cta .m-bouton {
+  margin-top: 30px;
+
+  background: #fff;
+  border-color: #fff;
+
+  color: var(--construction-couleur-sombre);
+}
+
+
+.construction-cta .m-bouton:hover {
+  background: #f8fafc;
+  border-color: #f8fafc;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .construction-hero__contenu {
+    animation:
+      construction-fade-up
+      650ms
+      ease
+      both;
+  }
+
+
+  .construction-hero__visual {
+    animation:
+      construction-fade-up
+      750ms
+      120ms
+      ease
+      both;
+  }
+
+
+  .construction-blueprint__structure {
+    animation:
+      construction-structure-in
+      850ms
+      180ms
+      ease
+      both;
+  }
+
+
+  .construction-expertise {
+    animation:
+      construction-card-in
+      600ms
+      ease
+      both;
+  }
+
+
+  .construction-expertise:nth-child(2) {
+    animation-delay: 80ms;
+  }
+
+
+  .construction-expertise:nth-child(3) {
+    animation-delay: 160ms;
+  }
+
+
+  .construction-expertise:nth-child(4) {
+    animation-delay: 240ms;
+  }
+
+
+  .construction-expertise:nth-child(5) {
+    animation-delay: 320ms;
+  }
+
+
+  .construction-expertise:nth-child(6) {
+    animation-delay: 400ms;
+  }
+
+}
+
+
+@keyframes construction-fade-up {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes construction-structure-in {
+
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes construction-card-in {
+
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .construction-hero {
+    min-height: 580px;
+  }
+
+
+  .construction-hero__conteneur {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(300px, 0.75fr);
+
+    gap: 30px;
+
+    padding-top: 44px;
+  }
+
+
+  .construction-hero h1 {
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+  }
+
+
+  .construction-hero__visual {
+    min-height: 360px;
+  }
+
+
+  .construction-blueprint {
+    width: 340px;
+  }
+
+
+  .construction-intro {
+    gap: 56px;
+  }
+
+
+  .construction-expertises {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .construction-process {
+    gap: 56px;
+  }
+
+
+  .construction-ouvrages {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .construction-principes {
+    gap: 60px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .construction-container {
+    width: calc(100% - 32px);
+  }
+
+
+  .construction-hero {
+    min-height: 0;
+  }
+
+
+  .construction-hero__conteneur {
+    width: calc(100% - 32px);
+
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 28px;
+
+    padding: 30px 0 110px;
+  }
+
+
+  .construction-hero__label {
+    margin-bottom: 16px;
+  }
+
+
+  .construction-hero h1 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(2.35rem, 12vw, 3.35rem);
+
+    overflow-wrap: break-word;
+  }
+
+
+  .construction-hero__description {
+    margin-top: 20px;
+
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+
+  .construction-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    margin-top: 26px;
+  }
+
+
+  .construction-hero__actions .m-bouton {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .construction-hero__visual {
+    min-height: 310px;
+  }
+
+
+  .construction-blueprint {
+    width: min(310px, 100%);
+  }
+
+
+  .construction-blueprint__annotation {
+    padding: 6px 8px;
+
+    font-size: 0.5rem;
+  }
+
+
+  .construction-hero__signature {
+    left: 16px;
+    bottom: 28px;
+  }
+
+
+  .construction-hero__signature img {
+    width: 96px;
+  }
+
+
+  .construction-hero__marker {
+    right: 16px;
+    bottom: 31px;
+
+    max-width: 190px;
+
+    text-align: right;
+
+    font-size: 0.54rem;
+    line-height: 1.5;
+  }
+
+
+  .construction-section {
+    padding: 76px 0;
+  }
+
+
+  .construction-section h2 {
+    font-size: clamp(1.9rem, 9vw, 2.65rem);
+  }
+
+
+  .construction-intro {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 30px;
+  }
+
+
+  .construction-intro__lead {
+    font-size: 1.08rem !important;
+  }
+
+
+  .construction-intro__schema {
+    margin-top: 48px;
+  }
+
+
+  .construction-flow {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 12px;
+  }
+
+
+  .construction-flow__item {
+    min-height: 0;
+  }
+
+
+  .construction-flow__connector {
+    width: 1px;
+    height: 30px;
+
+    margin-left: 24px;
+  }
+
+
+  .construction-flow__connector::after {
+    right: auto;
+
+    top: auto;
+    bottom: 0;
+    left: -3px;
+
+    transform: rotate(135deg);
+  }
+
+
+  .construction-section__heading {
+    margin-bottom: 36px;
+  }
+
+
+  .construction-expertises {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 12px;
+  }
+
+
+  .construction-expertise {
+    min-height: 0;
+
+    padding: 26px;
+  }
+
+
+  .construction-expertise__icon {
+    margin-bottom: 22px;
+  }
+
+
+  .construction-process {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 34px;
+  }
+
+
+  .construction-process__visual {
+    min-height: 300px;
+  }
+
+
+  .construction-process__plan {
+    width: 290px;
+    height: 290px;
+
+    background-size: 24px 24px;
+  }
+
+
+  .construction-process__plan-core {
+    width: 96px;
+    height: 96px;
+  }
+
+
+  .construction-process__plan-point {
+    width: 30px;
+    height: 30px;
+  }
+
+
+  .construction-ouvrages {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 12px;
+  }
+
+
+  .construction-ouvrage {
+    min-height: 0;
+
+    padding: 26px;
+  }
+
+
+  .construction-principes {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 42px;
+  }
+
+
+  .construction-cta {
+    padding: 76px 0;
+  }
+
+
+  .construction-cta h2 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+
+  .construction-hero__module--1 {
+    right: -80px;
+  }
+
+
+  .construction-hero__module--2 {
+    right: -20px;
+  }
+
+
+  .construction-hero__module--3 {
+    right: -110px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .construction-hero__contenu,
+  .construction-hero__visual,
+  .construction-blueprint__structure,
+  .construction-expertise {
+    animation: none;
+  }
+
+
+  .construction-expertise {
+    transition: none;
+  }
+
+}

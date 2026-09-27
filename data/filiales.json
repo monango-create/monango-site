@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "slug": "academy",
+    "nom": "MONANGO Academy",
+    "domaine": "Formation & compétences",
+    "description": "Formation, certification et développement des compétences pour accompagner les parcours et révéler les talents",
+    "couleur": "#D4A72C",
+    "logo": "/assets/logo/academy.svg",
+    "visuel": "/assets/illustrations/academy.png",
+    "statut": "active"
+  },
+  {
+    "id": 2,
+    "slug": "energy",
+    "nom": "MONANGO Energy",
+    "domaine": "Énergie & ingénierie électrique",
+    "description": "Solutions électriques, installations, maintenance et systèmes énergétiques adaptés aux besoins des organisations",
+    "couleur": "#F97316",
+    "logo": "/assets/logo/energy.svg",
+    "visuel": "/assets/illustrations/energy.png",
+    "statut": "active"
+  },
+  {
+    "id": 3,
+    "slug": "creation",
+    "nom": "MONANGO Creation",
+    "domaine": "Création & design",
+    "description": "Couture, stylisme, perlage et création artisanale au service de l’expression et du savoir-faire",
+    "couleur": "#7C3AED",
+    "logo": "/assets/logo/creation.svg",
+    "visuel": "/assets/illustrations/creation.png",
+    "statut": "active"
+  },
+  {
+    "id": 4,
+    "slug": "digital",
+    "nom": "MONANGO Digital",
+    "domaine": "Numérique & systèmes",
+    "description": "Solutions numériques, systèmes d’information et technologies pour accompagner la transformation des organisations",
+    "couleur": "#2E6BFF",
+    "logo": "/assets/logo/digital.svg",
+    "visuel": "/assets/illustrations/digital.png",
+    "statut": "active"
+  },
+  {
+    "id": 5,
+    "slug": "industry",
+    "nom": "MONANGO Industry",
+    "domaine": "Industrie & production",
+    "description": "Développement de solutions industrielles et de capacités de production adaptées aux besoins locaux",
+    "couleur": "#0D9488",
+    "logo": "/assets/logo/industry.svg",
+    "visuel": "/assets/illustrations/industry.png",
+    "statut": "active"
+  },
+  {
+    "id": 6,
+    "slug": "agro",
+    "nom": "MONANGO Agro",
+    "domaine": "Agriculture & agro-industrie",
+    "description": "Solutions agricoles et agro-industrielles pour valoriser les ressources, les compétences et les chaînes de valeur locales",
+    "couleur": "#16A34A",
+    "logo": "/assets/logo/agro.svg",
+    "visuel": "/assets/illustrations/agro.png",
+    "statut": "active"
+  },
+  {
+    "id": 7,
+    "slug": "media",
+    "nom": "MONANGO Media",
+    "domaine": "Média & communication",
+    "description": "Création de contenus, communication et valorisation des projets, expertises et initiatives de l’écosystème",
+    "couleur": "#DB2777",
+    "logo": "/assets/logo/media.svg",
+    "visuel": "/assets/illustrations/media.png",
+    "statut": "active"
+  },
+  {
+    "id": 8,
+    "slug": "construction",
+    "nom": "MONANGO Construction",
+    "domaine": "Construction & infrastructures",
+    "description": "Solutions de construction et d’infrastructure pour accompagner le développement des projets et des territoires",
+    "couleur": "#64748B",
+    "logo": "/assets/logo/construction.svg",
+    "visuel": "/assets/illustrations/construction.png",
+    "statut": "active"
+  }
+]

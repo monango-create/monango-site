@@ -1,0 +1,967 @@
+/* =========================================================
+   PAGES FILIALES — MONANGO
+   Gabarit commun des pages individuelles
+   ========================================================= */
+
+
+/* =========================================================
+   1. CONTEXTE DE LA FILIALE
+   ========================================================= */
+
+.m-filiale {
+  --couleur-filiale: var(--couleur-academy);
+  --couleur-filiale-rgb: 212 167 44;
+}
+
+
+/* =========================================================
+   2. HERO FILIALE
+   ========================================================= */
+
+.m-filiale-hero {
+  position: relative;
+}
+
+.m-filiale-hero__fond {
+  pointer-events: none;
+}
+
+.m-filiale-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgb(255 255 255 / 18%),
+      transparent
+    );
+  pointer-events: none;
+}
+
+.m-filiale-hero__fond .m-hero__cercle--1 {
+  border-color:
+    rgb(var(--couleur-filiale-rgb) / 35%);
+}
+
+.m-filiale-hero__fond .m-hero__cercle--2 {
+  border-color:
+    rgb(var(--couleur-filiale-rgb) / 18%);
+}
+
+.m-filiale-hero__fond .m-hero__ligne--1,
+.m-filiale-hero__fond .m-hero__ligne--2 {
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgb(var(--couleur-filiale-rgb) / 28%),
+      transparent
+    );
+}
+
+.m-filiale-hero__sur-titre {
+  margin: 0 0 var(--espace-4);
+
+  font-family: var(--police-titre);
+  font-size: var(--taille-petit);
+  font-weight: 600;
+  line-height: 1.4;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color:
+    rgb(255 255 255 / 78%);
+}
+
+.m-filiale-hero h1 span {
+  color: var(--couleur-filiale);
+}
+
+
+/* =========================================================
+   3. STRUCTURE GÉNÉRALE DES SECTIONS
+   ========================================================= */
+
+.m-filiale-section {
+  position: relative;
+}
+
+.m-filiale-section--clair {
+  background: var(--couleur-fond);
+}
+
+.m-filiale-section--surface {
+  background: var(--couleur-surface);
+}
+
+.m-filiale-section--accent {
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgb(var(--couleur-filiale-rgb) / 7%),
+      var(--couleur-fond) 58%
+    );
+}
+
+.m-filiale-section__conteneur {
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+  padding-block: var(--espace-9);
+}
+
+
+/* =========================================================
+   4. INTRODUCTION DE SECTION
+   ========================================================= */
+
+.m-filiale-section__intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.78fr);
+
+  gap: var(--espace-8);
+
+  align-items: start;
+
+  margin-bottom: var(--espace-8);
+}
+
+.m-filiale-section__titre h2 {
+  max-width: 700px;
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+
+  color: var(--couleur-group);
+}
+
+.m-filiale-section__titre h2 span {
+  color: var(--couleur-filiale);
+}
+
+.m-filiale-section__texte {
+  max-width: 560px;
+}
+
+.m-filiale-section__texte p {
+  margin: 0 0 var(--espace-3);
+
+  font-family: var(--police-texte);
+  font-size: var(--taille-texte);
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+.m-filiale-section__texte p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   5. PRINCIPES — SAVOIR / SAVOIR-FAIRE / SAVOIR-ÊTRE
+   ========================================================= */
+
+.m-filiale-principes {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 1px;
+
+  border: 1px solid rgb(23 37 84 / 9%);
+  background: rgb(23 37 84 / 9%);
+}
+
+.m-filiale-principe {
+  position: relative;
+
+  min-height: 260px;
+  padding: var(--espace-6);
+
+  background: var(--couleur-fond);
+}
+
+.m-filiale-principe::before {
+  content: "";
+
+  position: absolute;
+  inset: 0 auto auto 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: var(--couleur-filiale);
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.25s ease;
+}
+
+.m-filiale-principe:hover::before {
+  transform: scaleX(1);
+}
+
+.m-filiale-principe__numero {
+  display: block;
+
+  margin-bottom: var(--espace-6);
+
+  font-family: var(--police-titre);
+  font-size: var(--taille-petit);
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+
+  color: var(--couleur-filiale);
+}
+
+.m-filiale-principe h3 {
+  margin: 0 0 var(--espace-3);
+
+  font-family: var(--police-titre);
+  font-size: 1.45rem;
+  font-weight: 600;
+
+  color: var(--couleur-group);
+}
+
+.m-filiale-principe p {
+  max-width: 330px;
+  margin: 0;
+
+  font-size: 0.9375rem;
+  line-height: 1.7;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   6. DOMAINES DE FORMATION
+   ========================================================= */
+
+.m-filiale-domaines {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: var(--espace-4);
+}
+
+.m-filiale-domaine {
+  min-height: 270px;
+
+  padding: var(--espace-6);
+
+  border: 1px solid rgb(23 37 84 / 9%);
+  border-radius: 8px;
+
+  background: var(--couleur-fond);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.m-filiale-domaine:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgb(var(--couleur-filiale-rgb) / 38%);
+
+  box-shadow:
+    0 18px 45px
+    rgb(23 37 84 / 7%);
+}
+
+.m-filiale-domaine__entete {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--espace-3);
+
+  margin-bottom: var(--espace-6);
+}
+
+.m-filiale-domaine__index {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background:
+    rgb(var(--couleur-filiale-rgb) / 10%);
+
+  font-family: var(--police-titre);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  color: var(--couleur-filiale);
+}
+
+.m-filiale-domaine__marque {
+  font-family: var(--police-titre);
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+.m-filiale-domaine h3 {
+  margin: 0 0 var(--espace-3);
+
+  font-family: var(--police-titre);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+
+  color: var(--couleur-group);
+}
+
+.m-filiale-domaine p {
+  max-width: 520px;
+  margin: 0;
+
+  font-size: 0.9375rem;
+  line-height: 1.7;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   7. PROCESSUS PÉDAGOGIQUE
+   ========================================================= */
+
+.m-filiale-processus {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: var(--espace-5);
+}
+
+.m-filiale-processus__ligne {
+  position: absolute;
+
+  top: 24px;
+  left: 12%;
+  right: 12%;
+
+  height: 1px;
+
+  background:
+    rgb(var(--couleur-filiale-rgb) / 28%);
+}
+
+.m-filiale-processus__etape {
+  position: relative;
+  z-index: 1;
+}
+
+.m-filiale-processus__etape > span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: var(--espace-4);
+
+  border: 1px solid
+    rgb(var(--couleur-filiale-rgb) / 35%);
+
+  border-radius: 50%;
+
+  background: var(--couleur-fond);
+
+  font-family: var(--police-titre);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  color: var(--couleur-filiale);
+}
+
+.m-filiale-processus__etape h3 {
+  margin: 0 0 var(--espace-2);
+
+  font-family: var(--police-titre);
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  color: var(--couleur-group);
+}
+
+.m-filiale-processus__etape p {
+  max-width: 250px;
+  margin: 0;
+
+  font-size: 0.9rem;
+  line-height: 1.65;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   8. PARCOURS
+   ========================================================= */
+
+.m-filiale-parcours {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: var(--espace-4);
+}
+
+.m-filiale-parcours__carte {
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+
+  gap: var(--espace-4);
+
+  min-height: 250px;
+
+  padding: var(--espace-6);
+
+  border-top: 3px solid var(--couleur-filiale);
+
+  background: var(--couleur-surface);
+}
+
+.m-filiale-parcours__numero {
+  font-family: var(--police-titre);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  color: var(--couleur-filiale);
+}
+
+.m-filiale-parcours__label {
+  display: block;
+
+  margin-bottom: var(--espace-3);
+
+  font-family: var(--police-titre);
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+.m-filiale-parcours__carte h3 {
+  margin: 0 0 var(--espace-3);
+
+  font-family: var(--police-titre);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+
+  color: var(--couleur-group);
+}
+
+.m-filiale-parcours__carte p {
+  margin: 0;
+
+  font-size: 0.9rem;
+  line-height: 1.65;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   9. APPRENTISSAGE NUMÉRIQUE
+   ========================================================= */
+
+.m-filiale-numerique {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(320px, 1fr);
+
+  gap: var(--espace-9);
+
+  align-items: start;
+}
+
+.m-filiale-numerique__principal h2 {
+  max-width: 620px;
+  margin: 0 0 var(--espace-5);
+
+  font-family: var(--police-titre);
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+
+  color: var(--couleur-group);
+}
+
+.m-filiale-numerique__principal h2 span {
+  color: var(--couleur-filiale);
+}
+
+.m-filiale-numerique__principal p {
+  max-width: 600px;
+  margin: 0 0 var(--espace-3);
+
+  font-size: var(--taille-texte);
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+.m-filiale-numerique__principal p:last-child {
+  margin-bottom: 0;
+}
+
+.m-filiale-numerique__modules {
+  border-top: 1px solid rgb(23 37 84 / 10%);
+}
+
+.m-filiale-module {
+  display: grid;
+
+  grid-template-columns: 48px 1fr;
+
+  gap: var(--espace-4);
+
+  padding-block: var(--espace-4);
+
+  border-bottom: 1px solid rgb(23 37 84 / 10%);
+}
+
+.m-filiale-module > span {
+  font-family: var(--police-titre);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  color: var(--couleur-filiale);
+}
+
+.m-filiale-module h3 {
+  margin: 0 0 6px;
+
+  font-family: var(--police-titre);
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: var(--couleur-group);
+}
+
+.m-filiale-module p {
+  max-width: 470px;
+  margin: 0;
+
+  font-size: 0.875rem;
+  line-height: 1.6;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+
+/* =========================================================
+   10. DE LA CONNAISSANCE À L'ACTION
+   ========================================================= */
+
+.m-filiale-action {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.78fr);
+
+  gap: var(--espace-8);
+
+  align-items: start;
+}
+
+.m-filiale-action__titre h2 {
+  max-width: 680px;
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+
+  color: var(--couleur-group);
+}
+
+.m-filiale-action__titre h2 span {
+  color: var(--couleur-filiale);
+}
+
+.m-filiale-action__contenu {
+  max-width: 560px;
+}
+
+.m-filiale-action__contenu p {
+  margin: 0 0 var(--espace-3);
+
+  font-size: var(--taille-texte);
+  line-height: 1.75;
+
+  color: var(--couleur-texte-secondaire);
+}
+
+.m-filiale-action__contenu p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   11. MANIFESTE
+   ========================================================= */
+
+.m-filiale-manifeste {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--espace-4);
+
+  margin-top: var(--espace-8);
+
+  padding-top: var(--espace-5);
+
+  border-top: 1px solid
+    rgb(var(--couleur-filiale-rgb) / 22%);
+}
+
+.m-filiale-manifeste__trait {
+  width: 44px;
+  height: 3px;
+
+  flex: 0 0 auto;
+
+  background: var(--couleur-filiale);
+}
+
+.m-filiale-manifeste p {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+  font-size: 1rem;
+  line-height: 1.5;
+
+  color: var(--couleur-group);
+}
+
+.m-filiale-manifeste strong {
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   12. CTA FINAL
+   ========================================================= */
+
+.m-filiale-cta {
+  position: relative;
+  overflow: hidden;
+
+  background: var(--couleur-group);
+
+  color: var(--couleur-texte-inverse);
+}
+
+.m-filiale-cta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  top: -280px;
+  right: -140px;
+
+  border: 1px solid
+    rgb(var(--couleur-filiale-rgb) / 28%);
+
+  border-radius: 50%;
+}
+
+.m-filiale-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  bottom: -190px;
+  left: -100px;
+
+  border: 1px solid
+    rgb(var(--couleur-filiale-rgb) / 18%);
+
+  border-radius: 50%;
+}
+
+.m-filiale-cta__conteneur {
+  position: relative;
+  z-index: 1;
+
+  width: min(900px, calc(100% - 64px));
+
+  margin-inline: auto;
+
+  padding-block: var(--espace-9);
+
+  text-align: center;
+}
+
+.m-filiale-cta .m-section__eyebrow {
+  color:
+    rgb(255 255 255 / 62%);
+}
+
+.m-filiale-cta h2 {
+  max-width: 780px;
+
+  margin: 0 auto var(--espace-4);
+
+  font-family: var(--police-titre);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+
+  color: var(--couleur-texte-inverse);
+}
+
+.m-filiale-cta p:not(.m-section__eyebrow) {
+  max-width: 650px;
+
+  margin: 0 auto var(--espace-6);
+
+  font-size: var(--taille-texte);
+  line-height: 1.75;
+
+  color:
+    rgb(255 255 255 / 72%);
+}
+
+.m-filiale-cta .m-bouton {
+  background: var(--couleur-filiale);
+  border-color: var(--couleur-filiale);
+  color: var(--couleur-group);
+}
+
+.m-filiale-cta .m-bouton:hover {
+  filter: brightness(1.06);
+}
+
+
+/* =========================================================
+   13. TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-filiale-section__conteneur {
+    width: min(100% - 48px, 900px);
+  }
+
+  .m-filiale-section__intro,
+  .m-filiale-numerique,
+  .m-filiale-action {
+    grid-template-columns: 1fr;
+    gap: var(--espace-5);
+  }
+
+  .m-filiale-principes {
+    grid-template-columns: 1fr;
+  }
+
+  .m-filiale-principe {
+    min-height: 0;
+  }
+
+  .m-filiale-domaines {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .m-filiale-processus {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--espace-7);
+  }
+
+  .m-filiale-processus__ligne {
+    display: none;
+  }
+
+  .m-filiale-parcours {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   14. MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-filiale-section__conteneur {
+    width: calc(100% - 32px);
+    padding-block: var(--espace-7);
+  }
+
+  .m-filiale-hero__sur-titre {
+    margin-bottom: var(--espace-3);
+    font-size: 0.7rem;
+  }
+
+  .m-filiale-section__intro {
+    margin-bottom: var(--espace-6);
+  }
+
+  .m-filiale-section__titre h2,
+  .m-filiale-numerique__principal h2,
+  .m-filiale-action__titre h2 {
+    font-size: clamp(1.9rem, 9vw, 2.55rem);
+  }
+
+  .m-filiale-section__texte p,
+  .m-filiale-numerique__principal p,
+  .m-filiale-action__contenu p {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  .m-filiale-principe,
+  .m-filiale-domaine,
+  .m-filiale-parcours__carte {
+    padding: var(--espace-5);
+  }
+
+  .m-filiale-principe {
+    min-height: 0;
+  }
+
+  .m-filiale-domaines {
+    grid-template-columns: 1fr;
+  }
+
+  .m-filiale-domaine {
+    min-height: 0;
+  }
+
+  .m-filiale-processus {
+    grid-template-columns: 1fr;
+    gap: var(--espace-5);
+  }
+
+  .m-filiale-processus__etape {
+    display: grid;
+
+    grid-template-columns: 48px 1fr;
+
+    column-gap: var(--espace-4);
+  }
+
+  .m-filiale-processus__etape > span {
+    grid-row: span 2;
+
+    margin-bottom: 0;
+  }
+
+  .m-filiale-processus__etape h3 {
+    align-self: end;
+  }
+
+  .m-filiale-processus__etape p {
+    grid-column: 2;
+
+    margin-top: 6px;
+  }
+
+  .m-filiale-parcours {
+    gap: var(--espace-3);
+  }
+
+  .m-filiale-parcours__carte {
+    min-height: 0;
+  }
+
+  .m-filiale-module {
+    grid-template-columns: 36px 1fr;
+    gap: var(--espace-3);
+  }
+
+  .m-filiale-manifeste {
+    align-items: flex-start;
+  }
+
+  .m-filiale-manifeste p {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .m-filiale-cta__conteneur {
+    width: calc(100% - 32px);
+    padding-block: var(--espace-7);
+  }
+
+  .m-filiale-cta h2 {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .m-filiale-cta p:not(.m-section__eyebrow) {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  .m-filiale-cta .m-bouton {
+    width: 100%;
+  }
+
+}
