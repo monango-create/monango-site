@@ -48,7 +48,7 @@
 .a-propos-hero {
   position: relative;
 
-  min-height: min(550px, 100svh);
+  min-height: min(820px, 100svh);
 
   overflow: hidden;
 
@@ -139,29 +139,28 @@
   background: rgb(255 255 255 / 72%);
 }
 
-/* 
+
+/*
 .a-propos-hero__point--1 {
   top: 50%;
   left: 65%;
 }
-
 
 .a-propos-hero__point--2 {
   top: 70%;
   left: 67%;
 }
 
-
 .a-propos-hero__point--3 {
   top: 37%;
   right: 17%;
 }
 
-
 .a-propos-hero__point--4 {
   bottom: 13%;
   left: 49%;
-} */
+}
+*/
 
 
 /* ---------------------------------------------------------
@@ -188,7 +187,7 @@
 
 
 /* ---------------------------------------------------------
-   CONTENU
+   CONTENU HERO
    --------------------------------------------------------- */
 
 .a-propos-hero__contenu {
@@ -246,7 +245,7 @@
 
 
 /* ---------------------------------------------------------
-   ACTIONS
+   ACTIONS HERO
    --------------------------------------------------------- */
 
 .a-propos-hero__actions {
@@ -259,6 +258,22 @@
   margin-top: 32px;
 }
 
+/* ---------------------------------------------------------
+   BOUTON HERO
+   --------------------------------------------------------- */
+
+.m-bouton--blanc {
+  background: #ffffff;
+  color: #172554;
+  border: 1px solid #ffffff;
+}
+
+.m-bouton--blanc:hover,
+.m-bouton--blanc:focus-visible {
+  background: #ffffff;
+  color: #172554;
+  border-color: #ffffff;
+}
 
 /* ---------------------------------------------------------
    BOUTON SECONDAIRE HERO
@@ -457,7 +472,7 @@
 }
 
 
-/* /* =========================================================
+/* =========================================================
    INDICATEUR INFÉRIEUR DU HERO
    ========================================================= */
 
@@ -501,151 +516,8 @@
   border-radius: 999px;
 
   background: var(--apropos-bleu-clair);
-} */
-
-
-/* =========================================================
-   RESPONSIVE HERO — TABLETTE
-   ========================================================= */
-
-@media (max-width: 1023px) {
-
-  .a-propos-hero__conteneur {
-    grid-template-columns:
-      minmax(0, 1fr)
-      minmax(300px, .72fr);
-
-    gap: 28px;
-  }
-
-
-  .a-propos-hero h1 {
-    font-size: clamp(
-      2.8rem,
-      7vw,
-      4.6rem
-    );
-  }
-
 }
 
-
-/* =========================================================
-   RESPONSIVE HERO — MOBILE
-   ========================================================= */
-
-@media (max-width: 639px) {
-
-  .a-propos-hero {
-    min-height: 0;
-  }
-
-
-  .a-propos-hero__conteneur {
-    width: calc(100% - 32px);
-
-    min-height: 0;
-
-    grid-template-columns: 1fr;
-
-    gap: 36px;
-
-    padding: 30px 0 76px;
-  }
-
-
-  .a-propos-hero__contenu {
-    width: 100%;
-  }
-
-
-  .a-propos-hero h1 {
-    width: 100%;
-
-    max-width: 100%;
-
-    font-size: clamp(
-      2.45rem,
-      13vw,
-      3.5rem
-    );
-
-    overflow-wrap: break-word;
-  }
-
-
-  .a-propos-hero__description {
-    margin-top: 20px;
-
-    font-size: .92rem;
-
-    line-height: 1.65;
-  }
-
-
-  .a-propos-hero__actions {
-    flex-direction: column;
-
-    align-items: stretch;
-
-    margin-top: 26px;
-  }
-
-
-  .a-propos-hero__actions .m-bouton {
-    width: 100%;
-
-    justify-content: center;
-  }
-
-
-  .a-propos-hero__visual {
-    width: min(330px, 100%);
-
-    margin-inline: auto;
-  }
-
-
-  .a-propos-hero__centre {
-    width: 74px;
-    height: 74px;
-  }
-
-
-  .a-propos-hero__centre img {
-    width: 34px;
-  }
-
-
-  .a-propos-hero__noeud {
-    min-width: 80px;
-
-    padding: 7px 9px;
-
-    font-size: .49rem;
-  }
-
-
-  .a-propos-hero__marker {
-    bottom: 22px;
-  }
-
-}
-
-
-/* =========================================================
-   ACCESSIBILITÉ
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .a-propos-hero *,
-  .a-propos-hero *::before,
-  .a-propos-hero *::after {
-    scroll-behavior: auto;
-  }
-
-}
 
 /* =========================================================
    SECTIONS COMMUNES
@@ -1479,6 +1351,7 @@
   flex-direction: column;
 
   align-items: center;
+
   justify-content: center;
 
   border-radius: 50%;
@@ -1938,10 +1811,22 @@
 
 
 /* =========================================================
+   RESPONSIVE
+   =========================================================
+   TABLETTE : 640px → 1023px
+   MOBILE   : ≤ 639px
+   ========================================================= */
+
+
+/* =========================================================
    RESPONSIVE — TABLETTE
    ========================================================= */
 
 @media (max-width: 1023px) {
+
+  /* -------------------------------------------------------
+     CONTENEUR
+     ------------------------------------------------------- */
 
   .a-propos-container {
     width: min(
@@ -1950,6 +1835,10 @@
     );
   }
 
+
+  /* -------------------------------------------------------
+     HERO
+     ------------------------------------------------------- */
 
   .a-propos-hero__conteneur {
     grid-template-columns:
@@ -1969,6 +1858,10 @@
   }
 
 
+  /* -------------------------------------------------------
+     SECTIONS
+     ------------------------------------------------------- */
+
   .a-propos-section {
     padding-block: 88px;
   }
@@ -1978,6 +1871,10 @@
     gap: 48px;
   }
 
+
+  /* -------------------------------------------------------
+     IDENTITÉ
+     ------------------------------------------------------- */
 
   .a-propos-identite__grille {
     grid-template-columns:
@@ -1995,12 +1892,20 @@
   }
 
 
+  /* -------------------------------------------------------
+     RAISON D'ÊTRE
+     ------------------------------------------------------- */
+
   .a-propos-raison__grille,
   .a-propos-talents__grille,
   .a-propos-vision__grille {
     gap: 56px;
   }
 
+
+  /* -------------------------------------------------------
+     MÉTHODE
+     ------------------------------------------------------- */
 
   .a-propos-methode__schema {
     grid-template-columns:
@@ -2015,10 +1920,18 @@
   }
 
 
+  /* -------------------------------------------------------
+     TALENTS
+     ------------------------------------------------------- */
+
   .a-propos-talents__visual {
     min-height: 440px;
   }
 
+
+  /* -------------------------------------------------------
+     SYNTHÈSE
+     ------------------------------------------------------- */
 
   .a-propos-synthese .a-propos-container {
     gap: 40px;
@@ -2032,6 +1945,10 @@
    ========================================================= */
 
 @media (max-width: 639px) {
+
+  /* -------------------------------------------------------
+     CONTENEUR
+     ------------------------------------------------------- */
 
   .a-propos-container {
     width: calc(100% - 32px);
@@ -2067,6 +1984,7 @@
 
   .a-propos-hero h1 {
     width: 100%;
+
     max-width: 100%;
 
     font-size: clamp(
@@ -2133,6 +2051,7 @@
 
   .a-propos-hero__signature {
     left: 0;
+
     bottom: 28px;
   }
 
@@ -2144,6 +2063,7 @@
 
   .a-propos-hero__marker {
     right: 0;
+
     bottom: 30px;
 
     max-width: 150px;
@@ -2212,6 +2132,7 @@
     padding: 26px 0;
 
     border-right: 0;
+
     border-bottom: 1px solid var(--apropos-bordure);
   }
 
@@ -2478,6 +2399,13 @@
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
+  .a-propos-hero *,
+  .a-propos-hero *::before,
+  .a-propos-hero *::after {
+    scroll-behavior: auto;
+  }
+
 
   .a-propos-etape,
   .a-propos-identite__bloc {

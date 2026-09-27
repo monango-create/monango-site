@@ -193,7 +193,7 @@
    ========================================================= */
 
 .m-header.m-header--scrolled .m-nav__liste a {
-  color: var(--couleur-texte);
+  color: var(--couleur-group);
 }
 
 .m-header.m-header--scrolled .m-nav__liste a::after {
@@ -270,6 +270,7 @@
 
 /* Hamburger après défilement */
 
+.m-header.m-header--scrolled .m-nav__icone,
 .m-header.m-header--scrolled .m-nav__icone,
 .m-header.m-header--scrolled .m-nav__icone::before,
 .m-header.m-header--scrolled .m-nav__icone::after {
@@ -444,7 +445,7 @@
   }
 
   .m-header.m-header--scrolled .m-nav__liste a {
-    color: var(--couleur-texte);
+    color: var(--couleur-group);
   }
 
   .m-header.m-header--scrolled .m-nav__liste a:hover {

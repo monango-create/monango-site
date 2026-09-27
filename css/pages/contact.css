@@ -2,7 +2,12 @@
    PAGE CONTACT — MONANGO
    ========================================================= */
 
-   .m-contact-page {
+
+/* =========================================================
+   00 — VARIABLES LOCALES
+   ========================================================= */
+
+.m-contact-page {
   --contact-bleu: #172554;
   --contact-bleu-clair: #2E6BFF;
   --contact-bleu-accent: #7EA2FF;
@@ -11,7 +16,6 @@
   --contact-fond-alt: #f1f5f9;
   --contact-fond-sombre: #eef2f7;
 
-
   --contact-texte: #172554;
   --contact-secondaire: #526071;
 
@@ -19,28 +23,33 @@
 
   --contact-tint: rgb(46 107 255 / 6%);
   --contact-tint-forte: rgb(46 107 255 / 11%);
- 
+
   --contact-largeur: 1200px;
 
   overflow-x: hidden;
 }
 
 
-
-/* ==================================================
-   HERO
-   ================================================== */
+/* =========================================================
+   HERO — CONTACT
+   ========================================================= */
 
 .m-hero--contact {
   position: relative;
-  min-height: min(620px, 100svh);
   overflow: hidden;
 
+  min-height: 620px;
+
   background:
+    radial-gradient(
+      circle at 82% 50%,
+      rgb(126 162 255 / 8%) 0,
+      transparent 34%
+    ),
     linear-gradient(
       135deg,
       #172554 0%,
-      #172554 58%,
+      #172554 62%,
       #1d326c 100%
     );
 
@@ -48,122 +57,99 @@
 }
 
 
-/* ==================================================
-   FOND — RÉSEAU GRAPHIQUE
-   ================================================== */
-
-.m-hero--contact .m-hero__fond {
-  position: absolute;
-  inset: 0;
-
-  overflow: hidden;
-  pointer-events: none;
-}
-
-
-
-
-
-/* ==================================================
+/* =========================================================
    CONTENEUR
-   ================================================== */
+   ========================================================= */
 
-.m-hero__conteneur {
+.m-hero--contact .m-hero__conteneur {
   position: relative;
   z-index: 2;
 
   display: grid;
-
   grid-template-columns:
-    minmax(0, 1.05fr)
-    minmax(360px, 0.95fr);
+    minmax(0, 1fr)
+    minmax(320px, 0.78fr);
 
   align-items: center;
 
-  gap: clamp(40px, 7vw, 96px);
-
   width: min(
-    var(--contact-largeur),
+    1200px,
     calc(100% - 64px)
   );
 
-  min-height: min(450px, 100svh);
+  min-height: 620px;
 
   margin-inline: auto;
 
-  padding: 28px 0 108px;
+  padding-block: 72px 96px;
+
+  gap: clamp(40px, 6vw, 88px);
 }
 
 
-/* ==================================================
+/* =========================================================
    CONTENU
-   ================================================== */
+   ========================================================= */
 
-.m-hero__contenu {
-  position: relative;
-  z-index: 2;
-
-  max-width: 720px;
+.m-hero--contact .m-hero__contenu {
+  min-width: 0;
+  max-width: 680px;
 }
 
 
-/* ==================================================
+/* =========================================================
    EYEBROW
-   ================================================== */
+   ========================================================= */
 
-.m-hero__eyebrow {
-  margin: 0 0 18px;
+.m-hero--contact .m-hero__eyebrow {
+  margin: 0 0 20px;
 
-  font-family: var(--police-titre);
-  font-size: .72rem;
+  font-family: var(--police-texte);
+  font-size: 0.82rem;
   font-weight: 600;
   line-height: 1.4;
 
-  letter-spacing: .14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 
-  color: rgb(255 255 255 / 68%);
+  color: rgb(255 255 255 / 72%);
 }
 
 
-/* ==================================================
+/* =========================================================
    TITRE
-   ================================================== */
+   ========================================================= */
 
-.m-hero__contenu h1 {
-  max-width: 760px;
-
+.m-hero--contact .m-hero__contenu h1 {
   margin: 0;
 
+  max-width: 680px;
+
   font-family: var(--police-titre);
-
-  font-size:
-    clamp(
-      3.1rem,
-      6vw,
-      5.5rem
-    );
-
+  font-size: clamp(3.1rem, 6vw, 5.5rem);
   font-weight: 700;
+  line-height: 0.98;
 
-  line-height: .98;
-
-  letter-spacing: -.045em;
+  letter-spacing: -0.045em;
 
   color: #ffffff;
 }
 
 
-.m-hero__contenu h1 span {
-  display: block;
+/* =========================================================
+   ACCENT — « PROJET »
+   ========================================================= */
 
-  color: var(--contact-bleu-accent);
+.m-hero--contact .m-hero__contenu h1 span {
+  display: inline;
+
+  color: #7EA2FF;
 }
 
 
-/* ==================================================
+/* =========================================================
    DESCRIPTION
-   ================================================== */
+   ========================================================= */
 
 .m-hero--contact .m-hero__description {
   max-width: 620px;
@@ -171,194 +157,205 @@
   margin: 28px 0 0;
 
   font-family: var(--police-texte);
-
   font-size: 1.08rem;
-
+  font-weight: 400;
   line-height: 1.75;
 
-  color: rgb(255 255 255 / 80%);
+  color: rgb(255 255 255 / 82%);
 }
 
 
-/* ==================================================
-   ACTION
-   ================================================== */
+/* =========================================================
+   ACTIONS
+   ========================================================= */
 
 .m-hero--contact .m-hero__actions {
   display: flex;
-  flex-wrap: wrap;
-
-  gap: 12px;
+  align-items: center;
 
   margin-top: 32px;
 }
 
 
-/* ==================================================
-   VISUEL — ÉCOSYSTÈME DE CONTACT
-   ================================================== */
+/* =========================================================
+   BOUTON PRINCIPAL
+   ========================================================= */
+
+.m-hero--contact .m-bouton--blanc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 12px 22px;
+
+  border: 1px solid #2E6BFF;
+  border-radius: 8px;
+
+  background: #2E6BFF;
+  color: #ffffff;
+
+  font-family: var(--police-texte);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+
+/* =========================================================
+   BOUTON — HOVER
+   ========================================================= */
+
+.m-hero--contact .m-bouton--blanc:hover {
+  background: #2458d6;
+  border-color: #2458d6;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   BOUTON — FOCUS
+   ========================================================= */
+
+.m-hero--contact .m-bouton--blanc:focus-visible {
+  outline: 3px solid rgb(126 162 255 / 55%);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   VISUEL
+   ========================================================= */
 
 .m-hero--contact .m-hero__visual {
   position: relative;
 
-  width: min(460px, 100%);
-
-  aspect-ratio: 1;
+  width: min(100%, 430px);
+  aspect-ratio: 1 / 1;
 
   justify-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
-/* ==================================================
+/* =========================================================
    ORBITES
-   ================================================== */
+   ========================================================= */
 
 .m-hero--contact .m-hero__orbite {
   position: absolute;
 
-  top: 50%;
-  left: 50%;
-
-  border: 1px solid rgb(255 255 255 / 16%);
-
+  border: 1px solid rgb(126 162 255 / 22%);
   border-radius: 50%;
 
-  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
-
-
-/* Orbite externe */
 
 .m-hero--contact .m-hero__orbite--1 {
-  width: 96%;
-  height: 96%;
+  width: 48%;
+  height: 48%;
 }
-
-
-/* Orbite intermédiaire */
 
 .m-hero--contact .m-hero__orbite--2 {
-  width: 68%;
-  height: 68%;
+  width: 70%;
+  height: 70%;
 }
-
-
-/* Orbite interne */
 
 .m-hero--contact .m-hero__orbite--3 {
-  width: 39%;
-  height: 39%;
-
-  border-color: rgb(255 255 255 / 25%);
+  width: 92%;
+  height: 92%;
 }
 
 
-/* ==================================================
+/* =========================================================
    CENTRE
-   ================================================== */
+   ========================================================= */
 
 .m-hero--contact .m-hero__centre {
-  position: absolute;
+  position: relative;
+  z-index: 3;
 
-  top: 50%;
-  left: 50%;
-
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 92px;
   height: 92px;
 
-  border:
-    1px solid
-    rgb(255 255 255 / 30%);
-
+  border: 1px solid rgb(255 255 255 / 18%);
   border-radius: 50%;
 
-  background:
-    rgb(255 255 255 / 8%);
-
-  transform:
-    translate(-50%, -50%);
+  background: rgb(255 255 255 / 7%);
 
   backdrop-filter: blur(8px);
 }
 
-
 .m-hero--contact .m-hero__centre img {
-  width: 44px;
-  height: auto;
+  display: block;
+
+  width: 42px;
+  height: 42px;
+
+  object-fit: contain;
 }
 
 
-/* ==================================================
-   NOEUDS
-   ================================================== */
+/* =========================================================
+   NŒUDS
+   ========================================================= */
 
 .m-hero--contact .m-hero__noeud {
   position: absolute;
+  z-index: 4;
 
-  display: flex;
-
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
   min-width: 94px;
+  max-width: 150px;
 
   padding: 9px 12px;
 
-  border:
-    1px solid
-    rgb(255 255 255 / 20%);
-
+  border: 1px solid rgb(126 162 255 / 24%);
   border-radius: 999px;
 
-  background:
-    rgb(255 255 255 / 7%);
+  background: rgb(23 37 84 / 82%);
 
-  font-family: var(--police-titre);
+  color: rgb(255 255 255 / 88%);
 
-  font-size: .58rem;
+  font-family: var(--police-texte);
+  font-size: 0.58rem;
+  font-weight: 600;
+  line-height: 1.2;
 
-  font-weight: 700;
-
-  letter-spacing: .12em;
-
-  color: rgb(255 255 255 / 86%);
+  letter-spacing: 0.06em;
+  text-align: center;
+  white-space: nowrap;
 
   backdrop-filter: blur(8px);
-
-  white-space: nowrap;
 }
-
-
-.m-hero--contact .m-hero__noeud::before {
-  content: "";
-
-  width: 5px;
-  height: 5px;
-
-  margin-right: 7px;
-
-  flex: 0 0 auto;
-
-  border-radius: 50%;
-
-  background: currentColor;
-}
-
-
-/* ==================================================
-   POSITIONNEMENT DES NOEUDS
-   ================================================== */
 
 .m-hero--contact .m-hero__noeud--1 {
-  top: 5%;
+  top: 8%;
   left: 50%;
 
   transform: translateX(-50%);
 }
-
 
 .m-hero--contact .m-hero__noeud--2 {
   top: 50%;
@@ -367,14 +364,12 @@
   transform: translateY(-50%);
 }
 
-
 .m-hero--contact .m-hero__noeud--3 {
-  bottom: 5%;
+  bottom: 8%;
   left: 50%;
 
   transform: translateX(-50%);
 }
-
 
 .m-hero--contact .m-hero__noeud--4 {
   top: 50%;
@@ -384,211 +379,159 @@
 }
 
 
-
-
-
-/* ==================================================
+/* =========================================================
    TABLETTE
-   ================================================== */
+   ========================================================= */
 
 @media (max-width: 1023px) {
 
+  .m-hero--contact {
+    min-height: auto;
+  }
+
   .m-hero--contact .m-hero__conteneur {
-    grid-template-columns:
-      minmax(0, 1fr)
-      minmax(300px, .72fr);
+    grid-template-columns: 1fr;
 
-    gap: 28px;
+    width: min(
+      900px,
+      calc(100% - 48px)
+    );
+
+    min-height: auto;
+
+    padding-block: 64px 80px;
+
+    gap: 52px;
   }
 
-
-  .m-hero--contact h1 {
-    font-size:
-      clamp(
-        2.8rem,
-        7vw,
-        4.6rem
-      );
+  .m-hero--contact .m-hero__contenu {
+    max-width: 720px;
   }
-
 
   .m-hero--contact .m-hero__visual {
-    width: min(390px, 100%);
-  }
+    width: min(100%, 390px);
 
+    justify-self: center;
+  }
 }
 
 
-/* ==================================================
+/* =========================================================
    MOBILE
-   ================================================== */
+   ========================================================= */
 
 @media (max-width: 639px) {
-
-  .m-hero--contact {
-    min-height: 0;
-  }
-
 
   .m-hero--contact .m-hero__conteneur {
     width: calc(100% - 32px);
 
-    min-height: 0;
+    padding-block: 48px 64px;
 
-    grid-template-columns: 1fr;
-
-    gap: 38px;
-
-    padding:
-      34px 0
-      78px;
+    gap: 42px;
   }
-
-
-  /* Contenu */
-
-  .m-hero--contact .m-hero__contenu {
-    width: 100%;
-  }
-
-
-  /* Eyebrow */
 
   .m-hero--contact .m-hero__eyebrow {
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 
-    font-size: .62rem;
+    font-size: 0.72rem;
   }
 
-
-  /* Titre */
-
-  .m-hero--contact h1 {
-    width: 100%;
+  .m-hero--contact .m-hero__contenu h1 {
     max-width: 100%;
 
-    font-size:
-      clamp(
-        2.45rem,
-        13vw,
-        3.5rem
-      );
+    font-size: clamp(
+      2.45rem,
+      13vw,
+      3.5rem
+    );
 
-    overflow-wrap: break-word;
+    line-height: 1;
   }
-
-
-  /* Description */
 
   .m-hero--contact .m-hero__description {
-    margin-top: 20px;
+    margin-top: 22px;
 
-    font-size: .92rem;
-
-    line-height: 1.65;
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
-
-
-  /* Bouton */
 
   .m-hero--contact .m-hero__actions {
-    flex-direction: column;
-    align-items: stretch;
-
-    margin-top: 26px;
+    margin-top: 28px;
   }
 
+  .m-hero--contact .m-bouton--blanc {
+    min-height: 46px;
 
-  .m-hero--contact .m-hero__actions .m-bouton {
-    width: 100%;
+    padding: 11px 19px;
 
-    justify-content: center;
+    font-size: 0.9rem;
   }
-
-
-  /* Visuel */
 
   .m-hero--contact .m-hero__visual {
-    width: min(330px, 100%);
-
-    margin-inline: auto;
+    width: min(100%, 310px);
   }
-
-
-  /* Centre */
 
   .m-hero--contact .m-hero__centre {
     width: 74px;
     height: 74px;
   }
 
-
   .m-hero--contact .m-hero__centre img {
     width: 34px;
+    height: 34px;
   }
 
-
-  /* Noeuds */
-
   .m-hero--contact .m-hero__noeud {
-    min-width: 80px;
+    min-width: 0;
 
     padding: 7px 9px;
 
-    font-size: .49rem;
+    font-size: 0.47rem;
+
+    letter-spacing: 0.04em;
   }
-
-
-  /* Marker */
-
-  .contact-hero__marker {
-    bottom: 22px;
-  }
-
 }
 
 
-/* ==================================================
-   PETITS ÉCRANS
-   ================================================== */
+/* =========================================================
+   TRÈS PETITS ÉCRANS
+   ========================================================= */
 
 @media (max-width: 380px) {
 
   .m-hero--contact .m-hero__conteneur {
     width: calc(100% - 24px);
-
-    padding-top: 28px;
   }
 
+  .m-hero--contact .m-hero__contenu h1 {
+    font-size: clamp(
+      2.3rem,
+      13vw,
+      3.1rem
+    );
+  }
 
   .m-hero--contact .m-hero__visual {
-    width: min(290px, 100%);
+    width: min(100%, 280px);
   }
-
 
   .m-hero--contact .m-hero__noeud {
-    min-width: 72px;
+    padding: 6px 8px;
 
-    font-size: .45rem;
+    font-size: 0.43rem;
   }
-
 }
 
 
-/* ==================================================
+/* =========================================================
    ACCESSIBILITÉ — RÉDUCTION DES MOUVEMENTS
-   ================================================== */
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-  .m-hero--contact *,
-  .m-hero--contact *::before,
-  .m-hero--contact *::after {
-    scroll-behavior: auto;
-    transition: none !important;
-    animation: none !important;
+  .m-hero--contact .m-bouton--blanc {
+    transition: none;
   }
-
 }
 
 /* =========================================================
@@ -599,14 +542,17 @@
   background: var(--couleur-fond);
 }
 
-.m-contact-section__conteneur {
-  width: min(1200px, calc(100% - 64px));
-  margin-inline: auto;
-  padding-block: var(--espace-9);
-}
 
-.m-contact-section__conteneur  {
-  margin: 0 0 var(--espace-4);
+.m-contact-section__conteneur {
+  width:
+    min(
+      1200px,
+      calc(100% - 64px)
+    );
+
+  margin-inline: auto;
+
+  padding-block: var(--espace-9);
 }
 
 
@@ -616,49 +562,70 @@
 
 .m-contact-introduction {
   display: grid;
+
   grid-template-columns:
     minmax(0, 1fr)
     minmax(320px, 0.8fr);
 
   gap: var(--espace-8);
+
   align-items: start;
 }
 
+
 .m-contact-introduction h2 {
   max-width: 680px;
+
   margin: 0;
 
   font-family: var(--police-titre);
-  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  font-size:
+    clamp(
+      2rem,
+      4vw,
+      3.5rem
+    );
+
   font-weight: 600;
+
   line-height: 1.12;
+
   letter-spacing: -0.025em;
 
   color: var(--couleur-group);
 }
 
+
 .m-contact-introduction h2 span {
   color: var(--couleur-digital);
 }
+
 
 .m-contact-introduction__texte {
   max-width: 560px;
 }
 
+
 .m-contact-introduction__texte p {
   margin: 0 0 var(--espace-3);
 
   font-family: var(--police-texte);
+
   font-size: var(--taille-texte);
+
   line-height: 1.75;
 
   color: var(--couleur-texte-secondaire);
 }
 
+
 .m-contact-introduction__texte strong {
   font-weight: 650;
+
   color: inherit;
 }
+
 
 .m-contact-introduction__texte p:last-child {
   margin-bottom: 0;
@@ -673,43 +640,63 @@
   background: var(--couleur-surface);
 }
 
+
 .m-contact-demande__conteneur {
-  width: min(1200px, calc(100% - 64px));
+  width:
+    min(
+      1200px,
+      calc(100% - 64px)
+    );
+
   margin-inline: auto;
+
   padding-block: var(--espace-9);
 }
 
-.m-contact-demande__intro {
-  max-width: 720px;
-  margin-bottom: var(--espace-7);
-}
 
 .m-contact-demande__intro {
+  max-width: 720px;
+
   margin: 0 0 var(--espace-5);
 }
+
 
 .m-contact-demande__intro h2 {
   margin: 0 0 var(--espace-3);
 
   font-family: var(--police-titre);
-  font-size: clamp(2rem, 4vw, 3.25rem);
+
+  font-size:
+    clamp(
+      2rem,
+      4vw,
+      3.25rem
+    );
+
   font-weight: 600;
+
   line-height: 1.12;
+
   letter-spacing: -0.025em;
 
   color: var(--couleur-group);
 }
 
+
 .m-contact-demande__intro h2 span {
   color: var(--couleur-digital);
 }
 
+
 .m-contact-demande__intro > p:last-child {
   max-width: 620px;
+
   margin: 0;
 
   font-family: var(--police-texte);
+
   font-size: var(--taille-texte);
+
   line-height: 1.75;
 
   color: var(--couleur-texte-secondaire);
@@ -722,33 +709,90 @@
 
 .m-formulaire {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--espace-5) var(--espace-6);
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap:
+    var(--espace-5)
+    var(--espace-6);
+
+  width: 100%;
 
   max-width: 900px;
+
+  margin-inline: auto;
+
+  padding:
+    clamp(
+      24px,
+      4vw,
+      40px
+    );
+
+  border:
+    1px solid
+    rgb(23 37 84 / 10%);
+
+  border-radius: 12px;
+
+  background: var(--couleur-fond);
+
+  box-shadow:
+    0 18px 50px
+    rgb(23 37 84 / 7%);
 }
+
 
 .m-formulaire__groupe {
   display: flex;
+
   flex-direction: column;
+
   gap: 8px;
+
+  min-width: 0;
 }
+
 
 .m-formulaire__groupe--large {
   grid-column: 1 / -1;
 }
 
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
 .m-formulaire__groupe label {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 6px;
+
+  margin: 0;
+
   font-family: var(--police-titre);
+
   font-size: 0.875rem;
+
   font-weight: 600;
+
+  line-height: 1.4;
 
   color: var(--couleur-group);
 }
 
+
 .m-formulaire__groupe label span {
   font-family: var(--police-texte);
-  font-size: 0.8125rem;
+
+  font-size: 0.75rem;
+
   font-weight: 400;
 
   color: var(--couleur-texte-secondaire);
@@ -764,39 +808,73 @@
 .m-formulaire__groupe textarea {
   width: 100%;
 
-  padding: 14px 16px;
+  border:
+    1px solid
+    rgb(23 37 84 / 16%);
 
-  border: 1px solid rgb(23 37 84 / 16%);
-  border-radius: 4px;
+  border-radius: 6px;
 
-  background: var(--couleur-fond);
+  background: #ffffff;
+
+  color: var(--couleur-texte);
 
   font-family: var(--police-texte);
+
   font-size: 0.9375rem;
+
   line-height: 1.5;
 
-  color: var(--couleur-group);
-
   transition:
-    border-color 160ms ease,
-    box-shadow 160ms ease,
-    background-color 160ms ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
+
+
+.m-formulaire__groupe input,
+.m-formulaire__groupe select {
+  min-height: 50px;
+
+  padding:
+    0 15px;
+}
+
 
 .m-formulaire__groupe textarea {
   min-height: 170px;
-  resize: vertical;
-}
 
-.m-formulaire__groupe input::placeholder,
-.m-formulaire__groupe textarea::placeholder {
-  color: var(--couleur-texte-secondaire);
-  opacity: 0.7;
+  padding:
+    14px 15px;
+
+  resize: vertical;
 }
 
 
 /* =========================================================
-   FOCUS
+   PLACEHOLDERS
+   ========================================================= */
+
+.m-formulaire__groupe input::placeholder,
+.m-formulaire__groupe textarea::placeholder {
+  color:
+    rgb(71 85 105 / 65%);
+}
+
+
+/* =========================================================
+   SURVOL DES CHAMPS
+   ========================================================= */
+
+.m-formulaire__groupe input:hover,
+.m-formulaire__groupe select:hover,
+.m-formulaire__groupe textarea:hover {
+  border-color:
+    rgb(23 37 84 / 28%);
+}
+
+
+/* =========================================================
+   FOCUS DES CHAMPS
    ========================================================= */
 
 .m-formulaire__groupe input:focus,
@@ -804,12 +882,14 @@
 .m-formulaire__groupe textarea:focus {
   outline: none;
 
-  border-color: var(--couleur-digital);
+  border-color:
+    var(--couleur-group);
 
   box-shadow:
-    0 0 0 3px rgb(46 107 255 / 12%);
+    0 0 0 3px
+    rgb(23 37 84 / 8%);
 
-  background: var(--couleur-fond);
+  background: #ffffff;
 }
 
 
@@ -821,40 +901,123 @@
   grid-column: 1 / -1;
 
   max-width: 680px;
+
+  margin-top: var(--espace-2);
+
+  padding-top: var(--espace-4);
+
+  border-top:
+    1px solid
+    rgb(23 37 84 / 8%);
 }
+
 
 .m-formulaire__consentement label {
   display: flex;
+
   align-items: flex-start;
+
   gap: 10px;
 
+  cursor: pointer;
+
   font-family: var(--police-texte);
+
   font-size: 0.8125rem;
+
   line-height: 1.55;
 
   color: var(--couleur-texte-secondaire);
 }
 
+
 .m-formulaire__consentement input {
-  flex: 0 0 auto;
-  width: 16px;
-  height: 16px;
+  flex:
+    0 0 auto;
+
+  width: 17px;
+  height: 17px;
+
   margin-top: 2px;
 
-  accent-color: var(--couleur-digital);
+  accent-color:
+    var(--couleur-group);
 }
 
 
 /* =========================================================
-   ACTION
+   ACTIONS DU FORMULAIRE
    ========================================================= */
 
 .m-formulaire__actions {
   grid-column: 1 / -1;
 
   display: flex;
+
   align-items: center;
+
+  justify-content: flex-end;
+
+  margin-top: var(--espace-5);
 }
+
+
+.m-formulaire__actions .m-bouton {
+  min-width: 190px;
+}
+
+
+/* =========================================================
+   MESSAGE DU FORMULAIRE
+   ========================================================= */
+
+.m-formulaire__message {
+  grid-column: 1 / -1;
+
+  margin-top: var(--espace-4);
+
+  padding: 14px 16px;
+
+  border-radius: 6px;
+
+  font-family: var(--police-texte);
+
+  font-size: 0.875rem;
+
+  line-height: 1.55;
+}
+
+
+.m-formulaire__message--succes {
+  border:
+    1px solid
+    rgb(22 163 74 / 20%);
+
+  background:
+    rgb(22 163 74 / 7%);
+
+  color: #166534;
+}
+
+
+.m-formulaire__message--erreur {
+  border:
+    1px solid
+    rgb(220 38 38 / 20%);
+
+  background:
+    rgb(220 38 38 / 7%);
+
+  color: #991b1b;
+}
+
+
+.m-formulaire button:disabled {
+  cursor: wait;
+
+  opacity: 0.65;
+}
+
 
 /* =========================================================
    WHATSAPP — CONTACT DIRECT
@@ -862,22 +1025,25 @@
 
 .m-contact-whatsapp {
   max-width: 900px;
+
   margin-top: var(--espace-8);
 }
 
 
 /* =========================================================
-   SÉPARATEUR
+   WHATSAPP — SÉPARATEUR
    ========================================================= */
 
 .m-contact-whatsapp__separateur {
   display: flex;
+
   align-items: center;
 
   gap: var(--espace-3);
 
   margin-bottom: var(--espace-5);
 }
+
 
 .m-contact-whatsapp__separateur::before,
 .m-contact-whatsapp__separateur::after {
@@ -887,14 +1053,18 @@
 
   height: 1px;
 
-  background: rgb(23 37 84 / 12%);
+  background:
+    rgb(23 37 84 / 12%);
 }
+
 
 .m-contact-whatsapp__separateur span {
   flex: 0 0 auto;
 
   font-family: var(--police-titre);
+
   font-size: 0.75rem;
+
   font-weight: 600;
 
   letter-spacing: 0.08em;
@@ -904,19 +1074,24 @@
 
 
 /* =========================================================
-   CONTENU
+   WHATSAPP — CONTENU
    ========================================================= */
 
 .m-contact-whatsapp__contenu {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   gap: var(--espace-6);
 
   padding: var(--espace-5);
 
-  border: 1px solid rgb(23 37 84 / 10%);
+  border:
+    1px solid
+    rgb(23 37 84 / 10%);
+
   border-radius: 8px;
 
   background: var(--couleur-fond);
@@ -924,12 +1099,13 @@
 
 
 /* =========================================================
-   TEXTE
+   WHATSAPP — TEXTE
    ========================================================= */
 
 .m-contact-whatsapp__texte {
   max-width: 620px;
 }
+
 
 .m-contact-whatsapp__label {
   display: block;
@@ -937,20 +1113,26 @@
   margin-bottom: var(--espace-2);
 
   font-family: var(--police-titre);
+
   font-size: 0.75rem;
+
   font-weight: 600;
 
   letter-spacing: 0.08em;
+
   text-transform: uppercase;
 
   color: var(--couleur-texte-secondaire);
 }
 
+
 .m-contact-whatsapp__texte h3 {
   margin: 0 0 var(--espace-2);
 
   font-family: var(--police-titre);
+
   font-size: 1.5rem;
+
   font-weight: 600;
 
   line-height: 1.2;
@@ -958,9 +1140,11 @@
   color: var(--couleur-group);
 }
 
+
 .m-contact-whatsapp__texte h3 span {
   color: var(--couleur-digital);
 }
+
 
 .m-contact-whatsapp__texte p {
   max-width: 560px;
@@ -968,6 +1152,7 @@
   margin: 0;
 
   font-family: var(--police-texte);
+
   font-size: 0.9375rem;
 
   line-height: 1.65;
@@ -977,55 +1162,93 @@
 
 
 /* =========================================================
-   BOUTON WHATSAPP
+   WHATSAPP — BOUTON
    ========================================================= */
 
 .m-contact-whatsapp__bouton {
   flex: 0 0 auto;
 
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
   gap: 10px;
 
   min-height: 48px;
 
-  padding: 0 20px;
+  padding:
+    0 20px;
 
-  border: 1px solid var(--couleur-group);
-  border-radius: 4px;
+  border:
+    1px solid
+    var(--couleur-group);
 
-  background: var(--couleur-group);
+  border-radius: 6px;
 
-  color: var(--couleur-texte-inverse);
+  background:
+    #25d366;
+
+  color:
+    var(--couleur-texte-inverse);
 
   font-family: var(--police-titre);
+
   font-size: 0.875rem;
+
   font-weight: 600;
 
   text-decoration: none;
 
   transition:
+    transform 0.2s ease,
     background-color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
+    border-color 0.2s ease;
 }
 
-.m-contact-whatsapp__bouton span:last-child {
-  font-size: 1.1rem;
 
-  transition: transform 0.2s ease;
+.m-contact-whatsapp__icone {
+  width: 20px;
+  height: 20px;
+
+  flex: 0 0 auto;
+
+  fill: currentColor;
 }
+
 
 .m-contact-whatsapp__bouton:hover {
   transform: translateY(-1px);
+
+  background:
+    var(--couleur-digital);
+
+  border-color:
+    var(--couleur-digital);
 }
+
 
 .m-contact-whatsapp__bouton:hover span:last-child {
   transform: translateX(4px);
 }
 
+
+.m-contact-whatsapp__bouton span:last-child {
+  font-size: 1.1rem;
+
+  transition:
+    transform 0.2s ease;
+}
+
+
+.m-contact-whatsapp__bouton:focus-visible {
+  outline:
+    3px solid
+    rgb(46 107 255 / 25%);
+
+  outline-offset: 3px;
+}
 
 
 /* =========================================================
@@ -1036,38 +1259,58 @@
   background: var(--couleur-fond);
 }
 
+
 .m-contact-informations__conteneur {
-  width: min(1200px, calc(100% - 64px));
+  width:
+    min(
+      1200px,
+      calc(100% - 64px)
+    );
+
   margin-inline: auto;
+
   padding-block: var(--espace-9);
 }
 
-.m-contact-informations__conteneur  {
-  margin: 0 0 var(--espace-5);
-}
 
 .m-contact-informations__contenu {
   display: grid;
+
   grid-template-columns:
     minmax(0, 1fr)
     minmax(320px, 0.8fr);
 
   gap: var(--espace-8);
+
   align-items: start;
+
+  width: 100%;
 }
+
 
 .m-contact-informations__contenu h2 {
   max-width: 680px;
+
   margin: 0;
 
   font-family: var(--police-titre);
-  font-size: clamp(2rem, 4vw, 3.25rem);
+
+  font-size:
+    clamp(
+      2rem,
+      4vw,
+      3.25rem
+    );
+
   font-weight: 600;
+
   line-height: 1.12;
+
   letter-spacing: -0.025em;
 
   color: var(--couleur-group);
 }
+
 
 .m-contact-informations__contenu h2 span {
   color: var(--couleur-digital);
@@ -1075,64 +1318,102 @@
 
 
 /* =========================================================
-   INFORMATIONS
+   INFORMATIONS — DÉTAILS
    ========================================================= */
 
 .m-contact-informations__details {
   display: flex;
+
   flex-direction: column;
+
   gap: var(--espace-5);
 
   max-width: 520px;
 }
 
+
 .m-contact-information {
   padding-bottom: var(--espace-4);
 
-  border-bottom: 1px solid rgb(23 37 84 / 12%);
+  border-bottom:
+    1px solid
+    rgb(23 37 84 / 12%);
 }
+
 
 .m-contact-information:last-child {
   padding-bottom: 0;
+
   border-bottom: 0;
 }
 
+
+/* =========================================================
+   INFORMATIONS — LABEL
+   ========================================================= */
+
 .m-contact-information__label {
   display: block;
+
   margin-bottom: 6px;
 
   font-family: var(--police-titre);
+
   font-size: 0.8125rem;
+
   font-weight: 600;
+
   letter-spacing: 0.04em;
+
   text-transform: uppercase;
 
   color: var(--couleur-texte-secondaire);
 }
+
+
+/* =========================================================
+   INFORMATIONS — CONTENU
+   ========================================================= */
 
 .m-contact-information a,
 .m-contact-information p {
   margin: 0;
 
   font-family: var(--police-texte);
+
   font-size: var(--taille-texte);
+
   line-height: 1.6;
 
   color: var(--couleur-group);
 }
 
+
 .m-contact-information a {
-  text-decoration: none;
   font-weight: 500;
+
+  text-decoration: none;
 }
+
 
 .m-contact-information a:hover {
   color: var(--couleur-digital);
 }
 
 
+.m-contact-information a:focus-visible {
+  outline:
+    3px solid
+    rgb(46 107 255 / 20%);
+
+  outline-offset: 3px;
+
+  border-radius: 2px;
+}
+
+
 /* =========================================================
-   TABLETTE
+   RESPONSIVE — TABLETTE
    ========================================================= */
 
 @media (max-width: 1023px) {
@@ -1140,101 +1421,161 @@
   .m-contact-section__conteneur,
   .m-contact-demande__conteneur,
   .m-contact-informations__conteneur {
-    width: min(100% - 48px, 900px);
+    width:
+      min(
+        calc(100% - 48px),
+        900px
+      );
   }
+
 
   .m-contact-introduction,
   .m-contact-informations__contenu {
     grid-template-columns: 1fr;
+
     gap: var(--espace-5);
   }
+
 
   .m-contact-introduction__texte,
   .m-contact-informations__details {
     max-width: 700px;
   }
 
+
   .m-formulaire {
     max-width: 100%;
   }
+
 }
 
 
 /* =========================================================
-   MOBILE
+   RESPONSIVE — MOBILE
    ========================================================= */
 
 @media (max-width: 639px) {
 
+  /* -------------------------------------------------------
+     CONTENEURS
+     ------------------------------------------------------- */
+
   .m-contact-section__conteneur,
   .m-contact-demande__conteneur,
   .m-contact-informations__conteneur {
-    width: calc(100% - 32px);
-    padding-block: var(--espace-7);
+    width:
+      calc(100% - 32px);
+
+    padding-block:
+      var(--espace-7);
   }
+
+
+  /* -------------------------------------------------------
+     INTRODUCTIONS
+     ------------------------------------------------------- */
 
   .m-contact-introduction,
   .m-contact-informations__contenu {
     gap: var(--espace-4);
   }
 
+
   .m-contact-introduction h2,
   .m-contact-demande__intro h2,
   .m-contact-informations__contenu h2 {
-    font-size: clamp(1.9rem, 9vw, 2.5rem);
+    font-size:
+      clamp(
+        1.9rem,
+        9vw,
+        2.5rem
+      );
   }
+
 
   .m-contact-introduction__texte p,
   .m-contact-demande__intro > p:last-child,
   .m-contact-information a,
   .m-contact-information p {
     font-size: 0.9375rem;
+
     line-height: 1.65;
   }
+
+
+  /* -------------------------------------------------------
+     DEMANDE
+     ------------------------------------------------------- */
 
   .m-contact-demande__intro {
     margin-bottom: var(--espace-6);
   }
 
+
+  /* -------------------------------------------------------
+     FORMULAIRE
+     ------------------------------------------------------- */
+
   .m-formulaire {
     grid-template-columns: 1fr;
+
     gap: var(--espace-4);
+
+    padding:
+      22px 18px;
+
+    border-radius: 10px;
   }
+
 
   .m-formulaire__groupe--large,
   .m-formulaire__consentement,
-  .m-formulaire__actions {
+  .m-formulaire__actions,
+  .m-formulaire__message {
     grid-column: 1;
   }
 
+
   .m-formulaire__groupe input,
-  .m-formulaire__groupe select,
-  .m-formulaire__groupe textarea {
-    padding: 13px 14px;
+  .m-formulaire__groupe select {
+    min-height: 48px;
+
+    padding-inline: 14px;
   }
+
 
   .m-formulaire__groupe textarea {
     min-height: 150px;
+
+    padding:
+      13px 14px;
   }
+
+
+  .m-formulaire__actions {
+    justify-content: stretch;
+  }
+
 
   .m-formulaire__actions .m-bouton {
     width: 100%;
+
     justify-content: center;
   }
-}
 
-/* =========================================================
-   WHATSAPP — CONTACT DIRECT
-   ========================================================= */
 
-@media (max-width: 639px) {
+  /* -------------------------------------------------------
+     WHATSAPP
+     ------------------------------------------------------- */
 
   .m-contact-whatsapp {
     margin-top: var(--espace-7);
   }
 
+
   .m-contact-whatsapp__contenu {
     align-items: stretch;
+
     flex-direction: column;
 
     gap: var(--espace-4);
@@ -1242,405 +1583,57 @@
     padding: var(--espace-4);
   }
 
+
   .m-contact-whatsapp__texte h3 {
     font-size: 1.35rem;
   }
 
+
   .m-contact-whatsapp__bouton {
     width: 100%;
   }
+
 }
 
-/* ====================================================
-   FORMULAIRE — RAFFINEMENT V1
-   ==================================================== */
 
-.m-formulaire {
-  width: 100%;
-  max-width: 900px;
-  margin-inline: auto;
-  padding: clamp(24px, 4vw, 40px);
-  border: 1px solid rgb(23 37 84 / 10%);
-  border-radius: 12px;
-  background: var(--couleur-fond);
-  box-shadow: 0 18px 50px rgb(23 37 84 / 7%);
-}
+/* =========================================================
+   RESPONSIVE — TRÈS PETITS ÉCRANS
+   ========================================================= */
 
-.m-formulaire__groupe {
-  min-width: 0;
-}
-
-.m-formulaire__groupe label {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  margin-bottom: 8px;
-  font-family: var(--police-titre);
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.4;
-  color: var(--couleur-group);
-}
-
-.m-formulaire__groupe label span {
-  font-family: var(--police-texte);
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: var(--couleur-texte-secondaire);
-}
-
-.m-formulaire__groupe input,
-.m-formulaire__groupe select,
-.m-formulaire__groupe textarea {
-  width: 100%;
-  border: 1px solid rgb(23 37 84 / 16%);
-  border-radius: 6px;
-  background: #fff;
-  color: var(--couleur-texte);
-  font-family: var(--police-texte);
-  font-size: 0.9375rem;
-  line-height: 1.5;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
-}
-
-.m-formulaire__groupe input,
-.m-formulaire__groupe select {
-  min-height: 50px;
-  padding: 0 15px;
-}
-
-.m-formulaire__groupe textarea {
-  min-height: 170px;
-  padding: 14px 15px;
-  resize: vertical;
-}
-
-.m-formulaire__groupe input::placeholder,
-.m-formulaire__groupe textarea::placeholder {
-  color: rgb(71 85 105 / 65%);
-}
-
-.m-formulaire__groupe input:hover,
-.m-formulaire__groupe select:hover,
-.m-formulaire__groupe textarea:hover {
-  border-color: rgb(23 37 84 / 28%);
-}
-
-.m-formulaire__groupe input:focus,
-.m-formulaire__groupe select:focus,
-.m-formulaire__groupe textarea:focus {
-  outline: none;
-  border-color: var(--couleur-group);
-  box-shadow: 0 0 0 3px rgb(23 37 84 / 8%);
-  background: #fff;
-}
-
-.m-formulaire__consentement {
-  margin-top: var(--espace-2);
-  padding-top: var(--espace-4);
-  border-top: 1px solid rgb(23 37 84 / 8%);
-}
-
-.m-formulaire__consentement label {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  cursor: pointer;
-  font-family: var(--police-texte);
-  font-size: 0.8125rem;
-  line-height: 1.55;
-  color: var(--couleur-texte-secondaire);
-}
-
-.m-formulaire__consentement input {
-  flex: 0 0 auto;
-  width: 17px;
-  height: 17px;
-  margin-top: 2px;
-  accent-color: var(--couleur-group);
-}
-
-.m-formulaire__actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-top: var(--espace-5);
-}
-
-.m-formulaire__actions .m-bouton {
-  min-width: 190px;
-}
-
-/* ====================================================
-   MESSAGE FORMULAIRE
-   ==================================================== */
-
-.m-formulaire__message {
-  margin-top: var(--espace-4);
-  padding: 14px 16px;
-  border-radius: 6px;
-  font-family: var(--police-texte);
-  font-size: 0.875rem;
-  line-height: 1.55;
-}
-
-.m-formulaire__message--succes {
-  border: 1px solid rgb(22 163 74 / 20%);
-  background: rgb(22 163 74 / 7%);
-  color: #166534;
-}
-
-.m-formulaire__message--erreur {
-  border: 1px solid rgb(220 38 38 / 20%);
-  background: rgb(220 38 38 / 7%);
-  color: #991b1b;
-}
-
-.m-formulaire button:disabled {
-  cursor: wait;
-  opacity: 0.65;
-}
-
-/* ====================================================
-   WHATSAPP
-   ==================================================== */
-
-.m-contact-whatsapp__bouton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 48px;
-  padding: 0 20px;
-  border: 1px solid var(--couleur-group);
-  border-radius: 6px;
-  background: var(--couleur-group);
-  color: var(--couleur-texte-inverse);
-  font-family: var(--police-titre);
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.m-contact-whatsapp__icone {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 auto;
-  fill: currentColor;
-}
-
-.m-contact-whatsapp__bouton:hover {
-  transform: translateY(-1px);
-  background: var(--couleur-digital);
-  border-color: var(--couleur-digital);
-}
-
-.m-contact-whatsapp__bouton:focus-visible {
-  outline: 3px solid rgb(46 107 255 / 25%);
-  outline-offset: 3px;
-}
-
-/* ====================================================
-   ALIGNEMENT DES SECTIONS CONTACT
-   ==================================================== */
-
-.m-contact-section__conteneur,
-.m-contact-demande__conteneur,
-.m-contact-informations__conteneur {
-  width: min(1200px, calc(100% - 64px));
-  margin-inline: auto;
-}
-
-.m-contact-section__conteneur,
-.m-contact-informations__conteneur {
-  margin-block: 0;
-}
-
-.m-contact-introduction,
-.m-contact-informations__contenu {
-  width: 100%;
-}
-
-/* ====================================================
-   RESPONSIVE
-   ==================================================== */
-
-@media (max-width: 639px) {
-
-  .m-formulaire {
-    padding: 22px 18px;
-    border-radius: 10px;
-  }
-
-  .m-formulaire__actions {
-    justify-content: stretch;
-  }
-
-  .m-formulaire__actions .m-bouton {
-    width: 100%;
-  }
+@media (max-width: 380px) {
 
   .m-contact-section__conteneur,
   .m-contact-demande__conteneur,
   .m-contact-informations__conteneur {
-    width: calc(100% - 32px);
-  }
-
-  .m-contact-whatsapp__bouton {
-    width: 100%;
-  }
-}
-
-/* =========================================================
-   HERO — CONTACT
-   ========================================================= */
-
-.m-hero--contact .m-hero__conteneur {
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(320px, 0.75fr);
-
-  gap: clamp(48px, 7vw, 96px);
-
-  padding-block: 14px 88px;
-}
-
-
-.m-hero--contact .m-hero__contenu {
-  max-width: 680px;
-}
-
-
-.m-hero--contact h1 {
-  max-width: 720px;
-}
-
-
-/* =========================================================
-   SIGNATURE MONANGO
-   ========================================================= */
-
-.m-hero--contact .m-hero__signature {
-  align-self: center;
-  justify-self: end;
-
-  display: flex;
-  align-items: center;
-  gap: var(--espace-4);
-
-  width: min(100%, 420px);
-}
-
-
-.m-hero--contact .m-hero__signature-cercle {
-  flex: 0 0 auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 112px;
-  height: 112px;
-
-  border: 1px solid rgb(255 255 255 / 22%);
-  border-radius: 50%;
-
-  background: rgb(255 255 255 / 6%);
-}
-
-
-.m-hero--contact .m-hero__signature-icone {
-  width: 54px;
-  height: 54px;
-
-  object-fit: contain;
-}
-
-
-.m-hero--contact .m-hero__signature-logo {
-  display: block;
-
-  width: min(100%, 220px);
-  height: auto;
-
-  object-fit: contain;
-}
-
-
-/* =========================================================
-   MARQUEUR BAS DU HERO
-   ========================================================= */
-
-.m-hero--contact .m-hero__bas {
-  letter-spacing: 0.08em;
-}
-
-
-/* =========================================================
-   TABLETTE
-   ========================================================= */
-
-@media (max-width: 1023px) {
-
-  .m-hero--contact .m-hero__conteneur {
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-
-    padding-block: 16px 80px;
+    width:
+      calc(100% - 24px);
   }
 
 
-  .m-hero--contact .m-hero__signature {
-    justify-self: start;
+  .m-formulaire {
+    padding-inline: 15px;
   }
 
 }
 
 
 /* =========================================================
-   MOBILE
+   ACCESSIBILITÉ — RÉDUCTION DES MOUVEMENTS
    ========================================================= */
 
-@media (max-width: 639px) {
+@media (prefers-reduced-motion: reduce) {
 
-  .m-hero--contact .m-hero__conteneur {
-    width: calc(100% - 32px);
+  .m-hero--contact *,
+  .m-hero--contact *::before,
+  .m-hero--contact *::after,
+  .m-formulaire *,
+  .m-contact-whatsapp__bouton,
+  .m-contact-whatsapp__bouton span:last-child {
+    scroll-behavior: auto;
 
-    gap: 30px;
+    transition: none !important;
 
-    padding-block: 16px 72px;
-  }
-
-
-  .m-hero--contact .m-hero__signature {
-    width: 100%;
-
-    gap: var(--espace-3);
-  }
-
-
-  .m-hero--contact .m-hero__signature-cercle {
-    width: 82px;
-    height: 82px;
-  }
-
-
-  .m-hero--contact .m-hero__signature-icone {
-    width: 40px;
-    height: 40px;
-  }
-
-
-  .m-hero--contact .m-hero__signature-logo {
-    width: min(100%, 170px);
+    animation: none !important;
   }
 
 }
