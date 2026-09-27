@@ -38,12 +38,12 @@ async function initialiserComposants() {
   await Promise.all([
     chargerComposant(
       '#composant-header',
-      '/COMPOSANTS/header.html'
+      '/composants/header.html'
     ),
 
     chargerComposant(
       '#composant-footer',
-      '/COMPOSANTS/footer.html'
+      '/composants/footer.html'
     )
   ]);
 
