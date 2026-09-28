@@ -55,72 +55,132 @@
   <main>
 
     <!-- ====================================================
-         HERO
-         ==================================================== -->
+     HERO — CONFIDENTIALITÉ
+     ==================================================== -->
 
-    <section class="m-hero m-hero--page">
+<section
+  class="m-hero m-hero--page m-hero--confidentialite"
+  aria-labelledby="hero-titre"
+>
 
-      <div class="m-hero__fond" aria-hidden="true">
+  <!-- FOND DÉCORATIF -->
+  <div
+    class="m-hero__fond"
+    aria-hidden="true"
+  >
 
-        <span class="m-hero__cercle m-hero__cercle--1"></span>
-        <span class="m-hero__cercle m-hero__cercle--2"></span>
+    <span class="m-hero__cercle m-hero__cercle--1"></span>
+    <span class="m-hero__cercle m-hero__cercle--2"></span>
 
-        <span class="m-hero__ligne m-hero__ligne--1"></span>
-        <span class="m-hero__ligne m-hero__ligne--2"></span>
+    <span class="m-hero__ligne m-hero__ligne--1"></span>
+    <span class="m-hero__ligne m-hero__ligne--2"></span>
+
+  </div>
+
+
+  <!-- CONTENU PRINCIPAL -->
+  <div class="m-hero__conteneur">
+
+    <!-- TEXTE -->
+    <div class="m-hero__contenu">
+
+      <h1 id="hero-titre">
+        Votre vie privée,
+        <span>notre responsabilité</span>
+      </h1>
+
+      <p class="m-hero__description">
+        Cette politique présente la manière dont MONANGO
+        collecte, utilise, conserve et protège les données
+        personnelles susceptibles d'être traitées dans le
+        cadre de ses activités et de ses services numériques.
+      </p>
+
+    </div>
+
+
+    <!-- ILLUSTRATION — PROTECTION DES DONNÉES -->
+    <div
+      class="m-hero__privacy-visual"
+      aria-hidden="true"
+    >
+
+      <!-- HALO DE PROTECTION -->
+      <span class="m-hero__privacy-halo"></span>
+
+
+      <!-- BOUCLIER -->
+      <div class="m-hero__privacy-shield">
+
+        <svg
+          class="m-hero__privacy-shield-icon"
+          viewBox="0 0 120 140"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+
+          <path
+            d="M60 8L105 24V61C105 91 87 116 60 130C33 116 15 91 15 61V24L60 8Z"
+            stroke="currentColor"
+            stroke-width="4"
+          />
+
+          <path
+            d="M42 66L54 78L80 49"
+            stroke="currentColor"
+            stroke-width="5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+
+        </svg>
 
       </div>
 
-      <div class="m-hero__conteneur">
 
-        <div class="m-hero__contenu">
+      <!-- REPÈRES DE DONNÉES -->
+      <span class="m-hero__privacy-node m-hero__privacy-node--1">
+        <span></span>
+      </span>
 
-          <h1 id="hero-titre">
-            Votre vie privée,
-            <span>notre responsabilité.</span>
-          </h1>
+      <span class="m-hero__privacy-node m-hero__privacy-node--2">
+        <span></span>
+      </span>
 
-          <p class="m-hero__description">
-            Cette politique présente la manière dont MONANGO
-            collecte, utilise, conserve et protège les données
-            personnelles susceptibles d'être traitées dans le
-            cadre de ses activités et de ses services numériques.
-          </p>
+      <span class="m-hero__privacy-node m-hero__privacy-node--3">
+        <span></span>
+      </span>
 
-        </div>
 
-        <div class="m-hero__signature" aria-hidden="true">
+      <!-- ÉTIQUETTES -->
+      <span class="m-hero__privacy-tag m-hero__privacy-tag--1">
+        DONNÉES
+      </span>
 
-          <div class="m-hero__signature-cercle">
+      <span class="m-hero__privacy-tag m-hero__privacy-tag--2">
+        PROTECTION
+      </span>
 
-            <img
-              class="m-hero__signature-icone"
-              src="/assets/icones/monango-icone-blanc.svg"
-              alt=""
-            >
+    </div>
 
-          </div>
+  </div>
 
-          <img
-            class="m-hero__signature-logo"
-            src="/assets/logo/monango-blanc.svg"
-            alt=""
-          >
 
-        </div>
+  <!-- INDICATEUR DE SECTION -->
+  <div
+    class="m-hero__bas"
+    aria-hidden="true"
+  >
 
-      </div>
+    <span class="m-hero__bas-ligne"></span>
 
-      <div class="m-hero__bas" aria-hidden="true">
+    <span class="m-hero__bas-texte">
+      CONFIDENTIALITÉ
+    </span>
 
-        <span class="m-hero__bas-ligne"></span>
+  </div>
 
-        <span>
-          CONFIDENTIALITÉ
-        </span>
-
-      </div>
-
-    </section>
+</section>
 
 
     <!-- ====================================================

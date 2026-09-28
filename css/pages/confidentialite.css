@@ -2,6 +2,937 @@
    PAGE CONFIDENTIALITÉ — MONANGO
    ========================================================= */
 
+/* =========================================================
+   HERO — CONFIDENTIALITÉ
+   ========================================================= */
+
+
+/* =========================================================
+   STRUCTURE PRINCIPALE
+   ========================================================= */
+
+.m-hero.m-hero--confidentialite {
+
+  position: relative;
+
+  min-height: 560px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 82% 48%,
+      rgb(126 162 255 / 8%) 0,
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #172554 0%,
+      #172554 64%,
+      #1d326c 100%
+    );
+
+  color: #ffffff;
+
+}
+
+
+/* =========================================================
+   FOND DÉCORATIF
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__fond {
+
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+}
+
+
+/* =========================================================
+   CERCLES
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__cercle {
+
+  position: absolute;
+
+  display: block;
+
+  border: 1px solid rgb(126 162 255 / 16%);
+
+  border-radius: 50%;
+
+}
+
+
+.m-hero--confidentialite .m-hero__cercle--1 {
+
+  width: 460px;
+  height: 460px;
+
+  top: 50%;
+  right: -120px;
+
+  transform: translateY(-50%);
+
+}
+
+
+.m-hero--confidentialite .m-hero__cercle--2 {
+
+  width: 700px;
+  height: 700px;
+
+  top: 50%;
+  right: -240px;
+
+  transform: translateY(-50%);
+
+  border-color: rgb(126 162 255 / 9%);
+
+}
+
+
+/* =========================================================
+   LIGNES DÉCORATIVES
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__ligne {
+
+  position: absolute;
+
+  display: block;
+
+  width: 360px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgb(126 162 255 / 18%),
+      transparent
+    );
+
+  transform-origin: center;
+
+}
+
+
+.m-hero--confidentialite .m-hero__ligne--1 {
+
+  top: 26%;
+
+  right: 8%;
+
+  transform: rotate(-32deg);
+
+}
+
+
+.m-hero--confidentialite .m-hero__ligne--2 {
+
+  right: 4%;
+
+  bottom: 25%;
+
+  transform: rotate(28deg);
+
+}
+
+
+/* =========================================================
+   CONTENEUR
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__conteneur {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(280px, 0.55fr);
+
+  align-items: center;
+
+  width: min(
+    1200px,
+    calc(100% - 64px)
+  );
+
+  min-height: 560px;
+
+  margin-inline: auto;
+
+  padding-block: 72px 88px;
+
+  gap: clamp(
+    48px,
+    8vw,
+    110px
+  );
+
+}
+
+
+/* =========================================================
+   CONTENU TEXTE
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__contenu {
+
+  min-width: 0;
+
+  max-width: 720px;
+
+}
+
+
+/* =========================================================
+   TITRE
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__contenu h1 {
+
+  max-width: 720px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+
+  font-size: clamp(
+    3.4rem,
+    6.5vw,
+    5.8rem
+  );
+
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+
+  color: #ffffff;
+
+}
+
+
+/* =========================================================
+   ACCENT DU TITRE
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__contenu h1 span {
+
+  display: inline;
+
+  color: #7EA2FF;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__description {
+
+  max-width: 650px;
+
+  margin: 28px 0 0;
+
+  font-family: var(--police-texte);
+
+  font-size: 1.05rem;
+
+  font-weight: 400;
+
+  line-height: 1.75;
+
+  color: rgb(255 255 255 / 80%);
+
+}
+
+
+/* =========================================================
+   ILLUSTRATION — PROTECTION DES DONNÉES
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__privacy-visual {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  justify-self: center;
+
+  width: min(
+    100%,
+    390px
+  );
+
+  aspect-ratio: 1 / 1;
+
+}
+
+
+/* =========================================================
+   HALO
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__privacy-halo {
+
+  position: absolute;
+
+  width: 280px;
+
+  height: 280px;
+
+  border: 1px solid rgb(126 162 255 / 18%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgb(126 162 255 / 10%) 0%,
+      rgb(126 162 255 / 3%) 45%,
+      transparent 72%
+    );
+
+}
+
+
+/* =========================================================
+   BOUCLIER
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__privacy-shield {
+
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 190px;
+
+  height: 220px;
+
+  border: 1px solid rgb(126 162 255 / 30%);
+
+  border-radius: 24px;
+
+  background: rgb(255 255 255 / 6%);
+
+  box-shadow:
+    0 24px 60px rgb(0 0 0 / 14%);
+
+  backdrop-filter: blur(8px);
+
+}
+
+
+/* =========================================================
+   ICÔNE BOUCLIER
+   ========================================================= */
+
+.m-hero--confidentialite
+.m-hero__privacy-shield-icon {
+
+  width: 110px;
+
+  height: 128px;
+
+  color: #7EA2FF;
+
+}
+
+
+/* =========================================================
+   NŒUDS DE DONNÉES
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__privacy-node {
+
+  position: absolute;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 38px;
+
+  height: 38px;
+
+  border: 1px solid rgb(126 162 255 / 35%);
+
+  border-radius: 50%;
+
+  background: #172554;
+
+  box-shadow:
+    0 10px 24px rgb(0 0 0 / 14%);
+
+}
+
+
+.m-hero--confidentialite .m-hero__privacy-node span {
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #7EA2FF;
+
+}
+
+
+.m-hero--confidentialite .m-hero__privacy-node--1 {
+
+  top: 18%;
+
+  right: 12%;
+
+}
+
+
+.m-hero--confidentialite .m-hero__privacy-node--2 {
+
+  right: 4%;
+
+  bottom: 25%;
+
+}
+
+
+.m-hero--confidentialite .m-hero__privacy-node--3 {
+
+  bottom: 15%;
+
+  left: 13%;
+
+}
+
+
+/* =========================================================
+   ÉTIQUETTES
+   ========================================================= */
+
+.m-hero--confidentialite .m-hero__privacy-tag {
+
+  position: absolute;
+
+  z-index: 4;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgb(126 162 255 / 25%);
+
+  border-radius: 999px;
+
+  background: rgb(23 37 84 / 88%);
+
+  color: rgb(255 255 255 / 82%);
+
+  font-family: var(--police-texte);
+
+  font-size: 0.55rem;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.08em;
+
+  white-space: nowrap;
+
+  backdrop-filter: blur(8px);
+
+}
+
+
+.m-hero--confidentialite .m-hero__privacy-tag--1 {
+
+  top: 22%;
+
+  left: 2%;
+
+}
+
+
+.m-hero--confidentialite .m-hero__privacy-tag--2 {
+
+  right: 2%;
+
+  bottom: 16%;
+
+  color: #7EA2FF;
+
+}
+
+
+/* =========================================================
+   INDICATEUR DE SECTION
+   ========================================================= */
+
+/* .m-hero--confidentialite .m-hero__bas {
+
+  position: absolute;
+
+  right: 0;
+
+  bottom: 0;
+
+  left: 0;
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  width: min(
+    1200px,
+    calc(100% - 64px)
+  );
+
+  margin-inline: auto;
+
+  padding-bottom: 24px;
+
+  gap: 16px;
+
+  color: rgb(255 255 255 / 72%);
+
+  font-family: var(--police-texte);
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.12em;
+
+  white-space: nowrap;
+
+}
+
+
+.m-hero--confidentialite .m-hero__bas-ligne {
+
+  display: block;
+
+  flex: 0 0 48px;
+
+  width: 48px;
+
+  height: 1px;
+
+  background: #7EA2FF;
+
+}
+
+
+.m-hero--confidentialite .m-hero__bas-texte {
+
+  display: block;
+
+} */
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-hero.m-hero--confidentialite {
+
+    min-height: auto;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__conteneur {
+
+    grid-template-columns: 1fr;
+
+    width: min(
+      900px,
+      calc(100% - 48px)
+    );
+
+    min-height: auto;
+
+    padding-block: 64px 96px;
+
+    gap: 56px;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__contenu {
+
+    max-width: 720px;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__privacy-visual {
+
+    justify-self: center;
+
+  }
+
+
+  /* .m-hero--confidentialite .m-hero__bas {
+
+    width: min(
+      900px,
+      calc(100% - 48px)
+    );
+
+  } */
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-hero.m-hero--confidentialite {
+
+    min-height: auto;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__conteneur {
+
+    width: calc(100% - 32px);
+
+    padding-block: 48px 88px;
+
+    gap: 44px;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__contenu h1 {
+
+    max-width: 100%;
+
+    font-size: clamp(
+      2.55rem,
+      13vw,
+      3.6rem
+    );
+
+    line-height: 1;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__description {
+
+    max-width: 100%;
+
+    margin-top: 22px;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__privacy-visual {
+
+    width: min(
+      100%,
+      300px
+    );
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__privacy-halo {
+
+    width: 220px;
+
+    height: 220px;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__privacy-shield {
+
+    width: 155px;
+
+    height: 185px;
+
+    border-radius: 20px;
+
+  }
+
+
+  .m-hero--confidentialite
+  .m-hero__privacy-shield-icon {
+
+    width: 88px;
+
+    height: 104px;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__privacy-node {
+
+    width: 32px;
+
+    height: 32px;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__privacy-node span {
+
+    width: 6px;
+
+    height: 6px;
+
+  }
+
+
+  .m-hero--confidentialite
+  .m-hero__privacy-node--1 {
+
+    top: 18%;
+
+    right: 7%;
+
+  }
+
+
+  .m-hero--confidentialite
+  .m-hero__privacy-node--2 {
+
+    right: 0;
+
+    bottom: 23%;
+
+  }
+
+
+  .m-hero--confidentialite
+  .m-hero__privacy-node--3 {
+
+    bottom: 13%;
+
+    left: 7%;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__privacy-tag {
+
+    padding: 7px 9px;
+
+    font-size: 0.45rem;
+
+  }
+
+
+  .m-hero--confidentialite
+  .m-hero__privacy-tag--1 {
+
+    top: 16%;
+
+    left: -2px;
+
+  }
+
+
+  .m-hero--confidentialite
+  .m-hero__privacy-tag--2 {
+
+    right: -2px;
+
+    bottom: 14%;
+
+  }
+
+/* 
+  .m-hero--confidentialite .m-hero__bas {
+
+    width: calc(100% - 32px);
+
+    padding-bottom: 18px;
+
+    gap: 10px;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.09em;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__bas-ligne {
+
+    flex: 0 0 32px;
+
+    width: 32px;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__bas-texte {
+
+    white-space: nowrap;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__cercle--1 {
+
+    width: 300px;
+
+    height: 300px;
+
+    right: -150px;
+
+  } */
+
+
+  .m-hero--confidentialite .m-hero__cercle--2 {
+
+    width: 460px;
+
+    height: 460px;
+
+    right: -250px;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__ligne {
+
+    width: 220px;
+
+  }
+
+}
+
+
+/* =========================================================
+   TRÈS PETITS ÉCRANS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .m-hero--confidentialite .m-hero__conteneur {
+
+    width: calc(100% - 24px);
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__contenu h1 {
+
+    font-size: clamp(
+      2.35rem,
+      13vw,
+      3.15rem
+    );
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__description {
+
+    font-size: 0.92rem;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__privacy-visual {
+
+    width: 280px;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__privacy-shield {
+
+    width: 145px;
+
+    height: 175px;
+
+  }
+
+
+  .m-hero--confidentialite .m-hero__bas {
+
+    width: calc(100% - 24px);
+
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .m-hero--confidentialite *,
+  .m-hero--confidentialite *::before,
+  .m-hero--confidentialite *::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+  }
+
+}
 
 /* =========================================================
    SOMMAIRE DE LA POLITIQUE DE CONFIDENTIALITÉ

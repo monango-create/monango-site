@@ -2,6 +2,908 @@
    PAGE MENTIONS LÉGALES — MONANGO
    ========================================================= */
 
+/* =========================================================
+   HERO — MENTIONS LÉGALES
+   ========================================================= */
+
+.m-hero.m-hero--page {
+
+  position: relative;
+
+  min-height: 560px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 82% 48%,
+      rgb(126 162 255 / 8%) 0,
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #172554 0%,
+      #172554 64%,
+      #1d326c 100%
+    );
+
+  color: #ffffff;
+
+}
+
+
+/* =========================================================
+   FOND DÉCORATIF
+   ========================================================= */
+
+.m-hero--page .m-hero__fond {
+
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+}
+
+
+/* =========================================================
+   CERCLES
+   ========================================================= */
+
+.m-hero--page .m-hero__cercle {
+
+  position: absolute;
+
+  display: block;
+
+  border: 1px solid rgb(126 162 255 / 16%);
+
+  border-radius: 50%;
+
+}
+
+
+.m-hero--page .m-hero__cercle--1 {
+
+  width: 460px;
+  height: 460px;
+
+  top: 50%;
+  right: -120px;
+
+  transform: translateY(-50%);
+
+}
+
+
+.m-hero--page .m-hero__cercle--2 {
+
+  width: 700px;
+  height: 700px;
+
+  top: 50%;
+  right: -240px;
+
+  transform: translateY(-50%);
+
+  border-color: rgb(126 162 255 / 9%);
+
+}
+
+
+/* =========================================================
+   LIGNES DÉCORATIVES
+   ========================================================= */
+
+.m-hero--page .m-hero__ligne {
+
+  position: absolute;
+
+  display: block;
+
+  width: 360px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(126 162 255 / 18%),
+    transparent
+  );
+
+  transform-origin: center;
+
+}
+
+
+.m-hero--page .m-hero__ligne--1 {
+
+  top: 26%;
+  right: 8%;
+
+  transform: rotate(-32deg);
+
+}
+
+
+.m-hero--page .m-hero__ligne--2 {
+
+  right: 4%;
+  bottom: 25%;
+
+  transform: rotate(28deg);
+
+}
+
+
+/* =========================================================
+   CONTENEUR PRINCIPAL
+   ========================================================= */
+
+.m-hero--page .m-hero__conteneur {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(280px, 0.55fr);
+
+  align-items: center;
+
+  width: min(
+    1200px,
+    calc(100% - 64px)
+  );
+
+  min-height: 560px;
+
+  margin-inline: auto;
+
+  padding-block: 72px 88px;
+
+  gap: clamp(
+    48px,
+    8vw,
+    110px
+  );
+
+}
+
+
+/* =========================================================
+   CONTENU TEXTE
+   ========================================================= */
+
+.m-hero--page .m-hero__contenu {
+
+  min-width: 0;
+
+  max-width: 720px;
+
+}
+
+
+/* =========================================================
+   TITRE
+   ========================================================= */
+
+.m-hero--page .m-hero__contenu h1 {
+
+  max-width: 700px;
+
+  margin: 0;
+
+  font-family: var(--police-titre);
+
+  font-size: clamp(
+    3.4rem,
+    6.5vw,
+    5.8rem
+  );
+
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+
+  color: #ffffff;
+
+}
+
+
+/* =========================================================
+   ACCENT DU TITRE
+   ========================================================= */
+
+.m-hero--page .m-hero__contenu h1 span {
+
+  display: inline;
+
+  color: #7EA2FF;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.m-hero--page .m-hero__description {
+
+  max-width: 650px;
+
+  margin: 28px 0 0;
+
+  font-family: var(--police-texte);
+
+  font-size: 1.05rem;
+
+  font-weight: 400;
+
+  line-height: 1.75;
+
+  color: rgb(255 255 255 / 80%);
+
+}
+
+
+/* =========================================================
+   ILLUSTRATION — MENTIONS LÉGALES
+   ========================================================= */
+
+.m-hero--page .m-hero__legal-visual {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  justify-self: center;
+
+  width: min(
+    100%,
+    390px
+  );
+
+  aspect-ratio: 1 / 1;
+
+}
+
+
+/* =========================================================
+   DOCUMENT
+   ========================================================= */
+
+.m-hero--page .m-hero__legal-document {
+
+  position: relative;
+
+  width: 210px;
+  height: 270px;
+
+  padding: 28px 24px;
+
+  border: 1px solid rgb(255 255 255 / 18%);
+
+  border-radius: 10px;
+
+  background: rgb(255 255 255 / 6%);
+
+  box-shadow:
+    0 24px 60px rgb(0 0 0 / 12%);
+
+  transform: rotate(-5deg);
+
+  backdrop-filter: blur(8px);
+
+}
+
+
+/* =========================================================
+   EN-TÊTE DU DOCUMENT
+   ========================================================= */
+
+.m-hero--page .m-hero__legal-document__header {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 28px;
+
+}
+
+
+.m-hero--page
+.m-hero__legal-document__header span:first-child {
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 6px;
+
+  background: #7EA2FF;
+
+}
+
+
+.m-hero--page
+.m-hero__legal-document__header span:last-child {
+
+  width: 74px;
+  height: 8px;
+
+  border-radius: 999px;
+
+  background: rgb(255 255 255 / 42%);
+
+}
+
+
+/* =========================================================
+   LIGNES DU DOCUMENT
+   ========================================================= */
+
+.m-hero--page .m-hero__legal-document__lines {
+
+  display: grid;
+
+  gap: 13px;
+
+}
+
+
+.m-hero--page .m-hero__legal-document__lines span {
+
+  display: block;
+
+  width: 100%;
+  height: 5px;
+
+  border-radius: 999px;
+
+  background: rgb(255 255 255 / 18%);
+
+}
+
+
+.m-hero--page
+.m-hero__legal-document__lines span:nth-child(2) {
+
+  width: 84%;
+
+}
+
+
+.m-hero--page
+.m-hero__legal-document__lines span:nth-child(3) {
+
+  width: 92%;
+
+}
+
+
+.m-hero--page
+.m-hero__legal-document__lines span:nth-child(4) {
+
+  width: 68%;
+
+}
+
+
+.m-hero--page
+.m-hero__legal-document__lines span:nth-child(5) {
+
+  width: 78%;
+
+}
+
+
+/* =========================================================
+   SCEAU / REPÈRE MONANGO
+   ========================================================= */
+
+.m-hero--page .m-hero__legal-document__seal {
+
+  position: absolute;
+
+  right: -28px;
+  bottom: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 72px;
+  height: 72px;
+
+  border: 1px solid rgb(126 162 255 / 45%);
+
+  border-radius: 50%;
+
+  background: #172554;
+
+  box-shadow:
+    0 12px 30px rgb(0 0 0 / 15%);
+
+}
+
+
+.m-hero--page .m-hero__legal-document__seal img {
+
+  display: block;
+
+  width: 34px;
+  height: 34px;
+
+  object-fit: contain;
+
+}
+
+
+/* =========================================================
+   REPÈRES VISUELS
+   ========================================================= */
+
+.m-hero--page .m-hero__legal-tag {
+
+  position: absolute;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgb(126 162 255 / 25%);
+
+  border-radius: 999px;
+
+  background: rgb(23 37 84 / 88%);
+
+  color: rgb(255 255 255 / 82%);
+
+  font-family: var(--police-texte);
+
+  font-size: 0.55rem;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.08em;
+
+  white-space: nowrap;
+
+  backdrop-filter: blur(8px);
+
+}
+
+
+.m-hero--page .m-hero__legal-tag--1 {
+
+  top: 18%;
+  right: 0;
+
+}
+
+
+.m-hero--page .m-hero__legal-tag--2 {
+
+  bottom: 18%;
+  left: 0;
+
+  color: #7EA2FF;
+
+}
+
+
+/* =========================================================
+   INDICATEUR BAS — INFORMATIONS LÉGALES
+   ========================================================= */
+
+/* .m-hero--page .m-hero__bas {
+
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  width: min(
+    1200px,
+    calc(100% - 64px)
+  );
+
+  margin-inline: auto;
+
+  padding: 0 0 32px;
+
+  gap: 16px;
+
+  color: rgb(255 255 255 / 72%);
+
+  font-family: var(--police-texte);
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.12em;
+
+  white-space: nowrap;
+
+}
+
+
+.m-hero--page .m-hero__bas-ligne {
+
+  display: block;
+
+  flex: 0 0 48px;
+
+  width: 48px;
+
+  height: 1px;
+
+  background: #7EA2FF;
+
+}
+
+
+.m-hero--page .m-hero__bas-texte {
+
+  display: block;
+
+  color: rgb(255 255 255 / 72%);
+
+}
+
+ */
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .m-hero.m-hero--page {
+
+    min-height: auto;
+
+  }
+
+
+  .m-hero--page .m-hero__conteneur {
+
+    grid-template-columns: 1fr;
+
+    width: min(
+      900px,
+      calc(100% - 48px)
+    );
+
+    min-height: auto;
+
+    padding-block: 64px 96px;
+
+    gap: 56px;
+
+  }
+
+
+  .m-hero--page .m-hero__contenu {
+
+    max-width: 720px;
+
+  }
+
+
+  .m-hero--page .m-hero__legal-visual {
+
+    justify-self: center;
+
+  }
+
+/* 
+  .m-hero--page .m-hero__bas {
+
+    width: min(
+      900px,
+      calc(100% - 48px)
+    );
+
+    padding-bottom: 28px;
+
+  } */
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  .m-hero.m-hero--page {
+
+    min-height: auto;
+
+  }
+
+
+  .m-hero--page .m-hero__conteneur {
+
+    width: calc(100% - 32px);
+
+    padding-block: 48px 88px;
+
+    gap: 44px;
+
+  }
+
+
+  .m-hero--page .m-hero__contenu h1 {
+
+    max-width: 100%;
+
+    font-size: clamp(
+      2.55rem,
+      13vw,
+      3.6rem
+    );
+
+    line-height: 1;
+
+  }
+
+
+  .m-hero--page .m-hero__description {
+
+    max-width: 100%;
+
+    margin-top: 22px;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+  }
+
+
+  .m-hero--page .m-hero__legal-visual {
+
+    width: min(
+      100%,
+      300px
+    );
+
+  }
+
+
+  .m-hero--page .m-hero__legal-document {
+
+    width: 170px;
+    height: 220px;
+
+    padding: 22px 18px;
+
+  }
+
+
+  .m-hero--page
+  .m-hero__legal-document__seal {
+
+    width: 58px;
+    height: 58px;
+
+    right: -22px;
+    bottom: 24px;
+
+  }
+
+
+  .m-hero--page
+  .m-hero__legal-document__seal img {
+
+    width: 28px;
+    height: 28px;
+
+  }
+
+
+  .m-hero--page .m-hero__legal-tag {
+
+    padding: 7px 9px;
+
+    font-size: 0.45rem;
+
+  }
+
+
+  .m-hero--page .m-hero__legal-tag--1 {
+
+    top: 14%;
+    right: -4px;
+
+  }
+
+
+  .m-hero--page .m-hero__legal-tag--2 {
+
+    bottom: 14%;
+    left: -4px;
+
+  }
+
+
+  /* .m-hero--page .m-hero__bas {
+
+    width: calc(100% - 32px);
+
+    padding-bottom: 22px;
+
+    gap: 10px;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.09em;
+
+  }
+
+
+  .m-hero--page .m-hero__bas-ligne {
+
+    flex: 0 0 32px;
+
+    width: 32px;
+
+  } */
+
+  .m-hero--page .m-hero__bas-texte {
+
+    white-space: nowrap;
+
+  }
+
+
+  .m-hero--page .m-hero__cercle--1 {
+
+    width: 300px;
+    height: 300px;
+
+    right: -150px;
+
+  }
+
+
+  .m-hero--page .m-hero__cercle--2 {
+
+    width: 460px;
+    height: 460px;
+
+    right: -250px;
+
+  }
+
+
+  .m-hero--page .m-hero__ligne {
+
+    width: 220px;
+
+  }
+
+}
+
+
+/* =========================================================
+   TRÈS PETITS ÉCRANS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .m-hero--page .m-hero__conteneur {
+
+    width: calc(100% - 24px);
+
+  }
+
+
+  .m-hero--page .m-hero__contenu h1 {
+
+    font-size: clamp(
+      2.35rem,
+      13vw,
+      3.15rem
+    );
+
+  }
+
+
+  .m-hero--page .m-hero__description {
+
+    font-size: 0.92rem;
+
+  }
+
+
+  .m-hero--page .m-hero__legal-visual {
+
+    width: 280px;
+
+  }
+
+
+  .m-hero--page .m-hero__legal-document {
+
+    width: 160px;
+    height: 208px;
+
+  }
+
+
+.m-hero--page .m-hero__bas {
+
+    width: calc(100% - 24px);
+
+    padding-bottom: 18px;
+
+    font-size: 0.54rem;
+
+    letter-spacing: 0.07em;
+
+    gap: 8px;
+
+  }
+
+
+  .m-hero--page .m-hero__bas-ligne {
+
+    flex: 0 0 26px;
+
+    width: 26px;
+
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ — RÉDUCTION DES MOUVEMENTS
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .m-hero--page *,
+  .m-hero--page *::before,
+  .m-hero--page *::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+  }
+
+}
 
 /* =========================================================
    SECTIONS JURIDIQUES

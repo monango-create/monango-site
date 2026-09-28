@@ -17,6 +17,8 @@
    ========================================================= */
 
 .m-header {
+  --couleur-nav: var(--couleur-texte-inverse);
+
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -87,7 +89,9 @@
    ========================================================= */
 
 .m-header.m-header--scrolled {
-  background: rgb(255 255 255 / 94%);
+  --couleur-nav: var(--couleur-group);
+
+  background: var(--couleur-header);
 
   box-shadow:
     0 4px 20px rgb(15 23 42 / 6%);
@@ -134,7 +138,7 @@
 
   min-height: 44px;
 
-  color: var(--couleur-texte-inverse);
+  color: var(--couleur-nav);
 
   font-family: var(--police-titre);
   font-size: var(--taille-petit);
@@ -163,7 +167,7 @@
 
   height: 2px;
 
-  background: var(--couleur-texte-inverse);
+  background: var(--couleur-nav);
 
   transform: scaleX(0);
   transform-origin: center;
@@ -185,19 +189,6 @@
 
 .m-nav__liste a[aria-current="page"]::after {
   transform: scaleX(1);
-}
-
-
-/* =========================================================
-   NAVIGATION — ÉTAT APRÈS DÉFILEMENT
-   ========================================================= */
-
-.m-header.m-header--scrolled .m-nav__liste a {
-  color: var(--couleur-group);
-}
-
-.m-header.m-header--scrolled .m-nav__liste a::after {
-  background: var(--couleur-group);
 }
 
 
@@ -234,7 +225,7 @@
   width: 24px;
   height: 2px;
 
-  background: var(--couleur-texte-inverse);
+  background: var(--couleur-nav);
 
   transition:
     background-color 0.25s ease;
@@ -251,7 +242,7 @@
   width: 24px;
   height: 2px;
 
-  background: var(--couleur-texte-inverse);
+  background: var(--couleur-nav);
 
   transition:
     background-color 0.25s ease,
@@ -265,16 +256,6 @@
 
 .m-nav__icone::after {
   top: 7px;
-}
-
-
-/* Hamburger après défilement */
-
-.m-header.m-header--scrolled .m-nav__icone,
-.m-header.m-header--scrolled .m-nav__icone,
-.m-header.m-header--scrolled .m-nav__icone::before,
-.m-header.m-header--scrolled .m-nav__icone::after {
-  background: var(--couleur-group);
 }
 
 
@@ -373,7 +354,7 @@
 
     border-radius: 10px;
 
-    color: var(--couleur-texte-inverse);
+    color: var(--couleur-nav);
 
     transition:
       background-color 0.2s ease,
@@ -381,6 +362,10 @@
       padding-left 0.2s ease;
   }
 
+
+  /* -------------------------------------------------------
+     SURVOL
+     ------------------------------------------------------- */
 
   .m-nav__liste a:hover {
     background: rgb(255 255 255 / 8%);
@@ -403,7 +388,7 @@
   .m-nav__liste a[aria-current="page"] {
     padding-left: 22px;
 
-    color: var(--couleur-texte-inverse);
+    color: var(--couleur-nav);
 
     background: rgb(255 255 255 / 10%);
   }
@@ -421,7 +406,7 @@
 
     border-radius: 999px;
 
-    background: var(--couleur-texte-inverse);
+    background: var(--couleur-nav);
 
     transform: translateY(-50%);
   }
@@ -444,22 +429,12 @@
       0 12px 30px rgb(15 23 42 / 8%);
   }
 
-  .m-header.m-header--scrolled .m-nav__liste a {
-    color: var(--couleur-group);
-  }
-
   .m-header.m-header--scrolled .m-nav__liste a:hover {
     background: rgb(23 37 84 / 5%);
   }
 
   .m-header.m-header--scrolled .m-nav__liste a[aria-current="page"] {
-    color: var(--couleur-group);
-
     background: rgb(23 37 84 / 6%);
-  }
-
-  .m-header.m-header--scrolled .m-nav__liste a[aria-current="page"]::before {
-    background: var(--couleur-group);
   }
 }
 

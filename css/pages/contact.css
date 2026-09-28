@@ -378,6 +378,156 @@
   transform: translateY(-50%);
 }
 
+/* =========================================================
+   HERO — ANIMATION D'APPARITION
+   ========================================================= */
+
+/* État initial */
+
+.m-hero--contact .m-hero__eyebrow,
+.m-hero--contact .m-hero__contenu h1,
+.m-hero--contact .m-hero__description,
+.m-hero--contact .m-hero__actions,
+.m-hero--contact .m-hero__visual {
+  opacity: 0;
+}
+
+
+/* ---------------------------------------------------------
+   EYEBROW
+   --------------------------------------------------------- */
+
+.m-hero--contact .m-hero__eyebrow {
+  transform: translateY(12px);
+
+  animation:
+    contact-hero-apparition
+    0.55s
+    ease-out
+    0.10s
+    forwards;
+}
+
+
+/* ---------------------------------------------------------
+   TITRE
+   --------------------------------------------------------- */
+
+.m-hero--contact .m-hero__contenu h1 {
+  transform: translateY(16px);
+
+  animation:
+    contact-hero-apparition
+    0.65s
+    ease-out
+    0.20s
+    forwards;
+}
+
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+   --------------------------------------------------------- */
+
+.m-hero--contact .m-hero__description {
+  transform: translateY(16px);
+
+  animation:
+    contact-hero-apparition
+    0.65s
+    ease-out
+    0.35s
+    forwards;
+}
+
+
+/* ---------------------------------------------------------
+   ACTION
+   --------------------------------------------------------- */
+
+.m-hero--contact .m-hero__actions {
+  transform: translateY(16px);
+
+  animation:
+    contact-hero-apparition
+    0.65s
+    ease-out
+    0.50s
+    forwards;
+}
+
+
+/* ---------------------------------------------------------
+   VISUEL
+   --------------------------------------------------------- */
+
+.m-hero--contact .m-hero__visual {
+  transform: translateY(20px) scale(0.98);
+
+  animation:
+    contact-hero-visuel
+    0.85s
+    ease-out
+    0.30s
+    forwards;
+}
+
+
+/* ---------------------------------------------------------
+   KEYFRAMES
+   --------------------------------------------------------- */
+
+@keyframes contact-hero-apparition {
+
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes contact-hero-visuel {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ — RÉDUCTION DES MOUVEMENTS
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .m-hero--contact .m-hero__eyebrow,
+  .m-hero--contact .m-hero__contenu h1,
+  .m-hero--contact .m-hero__description,
+  .m-hero--contact .m-hero__actions,
+  .m-hero--contact .m-hero__visual {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .m-hero--contact .m-bouton--blanc {
+    transition: none;
+  }
+
+}
 
 /* =========================================================
    TABLETTE

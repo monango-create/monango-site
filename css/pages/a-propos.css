@@ -471,12 +471,94 @@
   transform: translateY(-50%);
 }
 
+/* ==========================================================================
+   HERO — ANIMATION D'APPARITION
+   ========================================================================== */
+
+.a-propos-hero__contenu,
+.a-propos-hero__visual {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: a-propos-hero-apparition 0.8s ease-out forwards;
+}
+
+.a-propos-hero__contenu {
+  animation-delay: 0.15s;
+}
+
+.a-propos-hero__visual {
+  animation-delay: 0.35s;
+}
+
+@keyframes a-propos-hero-apparition {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Éléments internes du contenu
+   -------------------------------------------------------------------------- */
+
+.a-propos-hero h1 {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: a-propos-hero-element-apparition 0.65s ease-out 0.25s forwards;
+}
+
+.a-propos-hero__description {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: a-propos-hero-element-apparition 0.65s ease-out 0.4s forwards;
+}
+
+.a-propos-hero__actions {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: a-propos-hero-element-apparition 0.65s ease-out 0.55s forwards;
+}
+
+@keyframes a-propos-hero-element-apparition {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Réduction des animations
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .a-propos-hero__contenu,
+  .a-propos-hero__visual,
+  .a-propos-hero h1,
+  .a-propos-hero__description,
+  .a-propos-hero__actions {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+}
 
 /* =========================================================
    INDICATEUR INFÉRIEUR DU HERO
    ========================================================= */
 
-.a-propos-hero__marker {
+/* .a-propos-hero__marker {
   position: absolute;
 
   z-index: 4;
@@ -516,7 +598,7 @@
   border-radius: 999px;
 
   background: var(--apropos-bleu-clair);
-}
+} */
 
 
 /* =========================================================

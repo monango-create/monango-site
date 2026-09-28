@@ -56,13 +56,19 @@
   <main>
 
     <!-- ====================================================
-         HERO
-         Réutilisation du composant hero global
-         ==================================================== -->
+        HERO — MENTIONS LÉGALES
+        ==================================================== -->
 
-    <section class="m-hero m-hero--page">
+    <section
+      class="m-hero m-hero--page"
+      aria-labelledby="hero-titre"
+    >
 
-      <div class="m-hero__fond" aria-hidden="true">
+      <!-- FOND DÉCORATIF -->
+      <div
+        class="m-hero__fond"
+        aria-hidden="true"
+      >
 
         <span class="m-hero__cercle m-hero__cercle--1"></span>
         <span class="m-hero__cercle m-hero__cercle--2"></span>
@@ -72,13 +78,16 @@
 
       </div>
 
+
+      <!-- CONTENU PRINCIPAL -->
       <div class="m-hero__conteneur">
 
+        <!-- TEXTE -->
         <div class="m-hero__contenu">
 
           <h1 id="hero-titre">
             Mentions
-          <span>légales</span>
+            <span>légales</span>
           </h1>
 
           <p class="m-hero__description">
@@ -90,33 +99,71 @@
 
         </div>
 
-        <div class="m-hero__signature" aria-hidden="true">
 
-          <div class="m-hero__signature-cercle">
+        <!-- ILLUSTRATION JURIDIQUE -->
+        <div
+          class="m-hero__legal-visual"
+          aria-hidden="true"
+        >
 
-            <img
-              class="m-hero__signature-icone"
-              src="/assets/icones/monango-icone-blanc.svg"
-              alt=""
-            >
+          <!-- DOCUMENT -->
+          <div class="m-hero__legal-document">
+
+            <div class="m-hero__legal-document__header">
+
+              <span></span>
+              <span></span>
+
+            </div>
+
+
+            <div class="m-hero__legal-document__lines">
+
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+
+            </div>
+
+
+            <!-- REPÈRE MONANGO -->
+            <div class="m-hero__legal-document__seal">
+
+              <img
+                src="/assets/icones/monango-icone-blanc.svg"
+                alt=""
+              >
+
+            </div>
 
           </div>
 
-          <img
-            class="m-hero__signature-logo"
-            src="/assets/logo/monango-blanc.svg"
-            alt=""
-          >
+
+          <!-- REPÈRES VISUELS -->
+          <span class="m-hero__legal-tag m-hero__legal-tag--1">
+            INFORMATIONS
+          </span>
+
+          <span class="m-hero__legal-tag m-hero__legal-tag--2">
+            CONFORMITÉ
+          </span>
 
         </div>
 
       </div>
 
-      <div class="m-hero__bas" aria-hidden="true">
+
+      <!-- INDICATEUR DE SECTION -->
+      <div
+        class="m-hero__bas"
+        aria-hidden="true"
+      >
 
         <span class="m-hero__bas-ligne"></span>
 
-        <span>
+        <span class="m-hero__bas-texte">
           INFORMATIONS LÉGALES
         </span>
 
