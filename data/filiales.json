@@ -52,7 +52,7 @@
     "couleur": "#0D9488",
     "logo": "/assets/logo/industry.svg",
     "visuel": "/assets/illustrations/industry.png",
-    "statut": "active"
+    "statut": "désactivé"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "couleur": "#16A34A",
     "logo": "/assets/logo/agro.svg",
     "visuel": "/assets/illustrations/agro.png",
-    "statut": "active"
+    "statut": "désactivé"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "couleur": "#DB2777",
     "logo": "/assets/logo/media.svg",
     "visuel": "/assets/illustrations/media.png",
-    "statut": "active"
+    "statut": "désactivé"
   },
   {
     "id": 8,
@@ -85,6 +85,6 @@
     "couleur": "#64748B",
     "logo": "/assets/logo/construction.svg",
     "visuel": "/assets/illustrations/construction.png",
-    "statut": "active"
+    "statut": "désactivé"
   }
 ]
